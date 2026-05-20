@@ -1,0 +1,185 @@
+"use client";
+import { useState } from "react";
+
+interface FormState {
+  fullName: string;
+  email: string;
+  phone: string;
+  country: string;
+  enquiryType: string;
+  subject: string;
+  message: string;
+}
+
+const INITIAL: FormState = {
+  fullName: "", email: "", phone: "", country: "",
+  enquiryType: "", subject: "", message: "",
+};
+
+const ENQUIRY_TYPES = [
+  "General Enquiry",
+  "Account Support",
+  "Deposit / Withdrawal",
+  "Partnership / Affiliate",
+  "Complaint",
+  "Technical Support",
+];
+
+function FieldLabel({ label, required }: { label: string; required?: boolean }) {
+  return (
+    <label className="block text-[12px] font-semibold text-gray-600 uppercase tracking-wider mb-1.5">
+      {label}{required && <span className="text-[#00CC44] ml-0.5">*</span>}
+    </label>
+  );
+}
+
+const inputClass =
+  "w-full border border-gray-200 rounded-xl px-4 py-3 text-[14px] text-[#111827] bg-white focus:outline-none focus:border-[#00CC44] focus:ring-2 focus:ring-[#00CC44]/10 transition-all placeholder-gray-300";
+
+export default function ContactForm() {
+  const [form, setForm] = useState<FormState>(INITIAL);
+  const [errors, setErrors] = useState<Partial<FormState>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const set = (field: keyof FormState) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setForm((prev) => ({ ...prev, [field]: e.target.value }));
+    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: "" }));
+  };
+
+  const validate = (): boolean => {
+    const newErrors: Partial<FormState> = {};
+    if (!form.fullName.trim())    newErrors.fullName    = "Full name is required.";
+    if (!form.email.trim())       newErrors.email       = "Email address is required.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+                                  newErrors.email       = "Please enter a valid email address.";
+    if (!form.enquiryType)        newErrors.enquiryType = "Please select an enquiry type.";
+    if (!form.subject.trim())     newErrors.subject     = "Subject is required.";
+    if (!form.message.trim())     newErrors.message     = "Please enter your message.";
+    else if (form.message.trim().length < 20)
+                                  newErrors.message     = "Message must be at least 20 characters.";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validate()) return;
+    setSubmitting(true);
+    await new Promise((r) => setTimeout(r, 1200));
+    setSubmitting(false);
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <div className="flex flex-col items-center justify-center text-center py-16 px-8">
+        {/* Success icon */}
+        <div className="w-16 h-16 rounded-full flex items-center justify-center mb-5"
+          style={{ background: "rgba(0,204,68,0.12)", border: "2px solid rgba(0,204,68,0.25)" }}>
+          <svg className="w-8 h-8 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold text-[#111827] mb-2">Message Sent</h3>
+        <p className="text-[14px] text-gray-500 max-w-sm leading-relaxed mb-6">
+          Thank you for contacting Olla Trade. Our team will review your enquiry and respond to <strong className="text-[#111827]">{form.email}</strong> within one business day.
+        </p>
+        <button
+          onClick={() => { setForm(INITIAL); setSubmitted(false); }}
+          className="text-[13px] font-semibold text-[#00CC44] hover:text-[#00AA38] transition-colors underline underline-offset-4"
+        >
+          Send another message
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      {/* Row 1: Name + Email */}
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div>
+          <FieldLabel label="Full Name" required />
+          <input type="text" placeholder="Your full name" value={form.fullName} onChange={set("fullName")} className={inputClass} />
+          {errors.fullName && <p className="text-[11px] text-red-500 mt-1">{errors.fullName}</p>}
+        </div>
+        <div>
+          <FieldLabel label="Email Address" required />
+          <input type="email" placeholder="your@email.com" value={form.email} onChange={set("email")} className={inputClass} />
+          {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
+        </div>
+      </div>
+
+      {/* Row 2: Phone + Country */}
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div>
+          <FieldLabel label="Phone Number" />
+          <input type="tel" placeholder="+1 234 567 8900" value={form.phone} onChange={set("phone")} className={inputClass} />
+        </div>
+        <div>
+          <FieldLabel label="Country" />
+          <input type="text" placeholder="Your country" value={form.country} onChange={set("country")} className={inputClass} />
+        </div>
+      </div>
+
+      {/* Enquiry type */}
+      <div>
+        <FieldLabel label="Enquiry Type" required />
+        <select value={form.enquiryType} onChange={set("enquiryType")} className={inputClass + " appearance-none cursor-pointer"}>
+          <option value="">Select enquiry type…</option>
+          {ENQUIRY_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
+        </select>
+        {errors.enquiryType && <p className="text-[11px] text-red-500 mt-1">{errors.enquiryType}</p>}
+      </div>
+
+      {/* Subject */}
+      <div>
+        <FieldLabel label="Subject" required />
+        <input type="text" placeholder="Brief subject of your message" value={form.subject} onChange={set("subject")} className={inputClass} />
+        {errors.subject && <p className="text-[11px] text-red-500 mt-1">{errors.subject}</p>}
+      </div>
+
+      {/* Message */}
+      <div>
+        <FieldLabel label="Message" required />
+        <textarea
+          rows={5}
+          placeholder="Please describe your enquiry in detail…"
+          value={form.message}
+          onChange={set("message")}
+          className={inputClass + " resize-none"}
+        />
+        {errors.message && <p className="text-[11px] text-red-500 mt-1">{errors.message}</p>}
+        <p className="text-[11px] text-gray-400 mt-1">{form.message.length} characters (minimum 20)</p>
+      </div>
+
+      {/* Disclaimer */}
+      <p className="text-[11px] text-gray-400 leading-relaxed">
+        By submitting this form, you confirm that the information provided is accurate. For account security, never share your password or PIN with anyone, including Olla Trade staff.
+      </p>
+
+      {/* Submit */}
+      <button
+        type="submit"
+        disabled={submitting}
+        className="w-full flex items-center justify-center gap-2 font-bold py-4 rounded-xl text-[15px] transition-all"
+        style={{ background: submitting ? "#00994D" : "#00CC44", color: "#000", opacity: submitting ? 0.8 : 1 }}
+      >
+        {submitting ? (
+          <>
+            <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+            </svg>
+            Sending…
+          </>
+        ) : (
+          "Send Message"
+        )}
+      </button>
+    </form>
+  );
+}

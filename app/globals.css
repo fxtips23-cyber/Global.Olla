@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* ── Tailwind v4: class-based dark mode ──────────────────────────────── */
+@variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --color-brand:       #00CC44;
+  --color-brand-hover: #00DD4A;
+  --color-accent:      #1E88E5;
+  --color-dark:        #081018;
+  --color-soft:        #F5F7FA;
+  --color-text:        #111827;
+}
+
+/* ─── Base ─────────────────────────────────────────────────────────── */
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #081018; }
+::-webkit-scrollbar-thumb { background: #00CC44; border-radius: 4px; }
+
+/* ─── Market ticker ────────────────────────────────────────────────── */
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track { animation: ticker-scroll 40s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ─── Gradient text ────────────────────────────────────────────────── */
+.grad-green {
+  background: linear-gradient(135deg, #00CC44 0%, #00FF66 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Card hover lift ──────────────────────────────────────────────── */
+.card-lift { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.card-lift:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.10); }
+
+/* ─── Responsive helpers ───────────────────────────────────────────── */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+img, svg { max-width: 100%; }
+
+/* ══════════════════════════════════════════════════════════════════════
+   DARK MODE — fallback CSS overrides
+   These fire when .dark class is on <html>.
+   They supplement Tailwind's dark: prefix for pages that use
+   plain bg-white / bg-gray classes without dark: variants.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* Section backgrounds */
+.dark .bg-white            { background-color: #0F1720 !important; }
+.dark .bg-gray-50          { background-color: #0A1220 !important; }
+.dark .bg-gray-100         { background-color: #111827 !important; }
+.dark .bg-amber-50         { background-color: #1c1208 !important; }
+.dark .bg-red-50           { background-color: #1c0808 !important; }
+
+/* Text */
+.dark .text-gray-900       { color: #F9FAFB !important; }
+.dark .text-gray-800       { color: #E5E7EB !important; }
+.dark .text-gray-700       { color: #D1D5DB !important; }
+.dark .text-gray-600       { color: #9CA3AF !important; }
+.dark .text-gray-500       { color: #6B7280 !important; }
+.dark .text-gray-400       { color: #4B5563 !important; }
+.dark .text-\[\#111827\]   { color: #F9FAFB !important; }
+.dark .text-\[\#374151\]   { color: #D1D5DB !important; }
+
+/* Borders */
+.dark .border-gray-100     { border-color: #1F2937 !important; }
+.dark .border-gray-200     { border-color: #374151 !important; }
+.dark .border-amber-200    { border-color: #92400e !important; }
+.dark .border-red-200      { border-color: #7f1d1d !important; }
+
+/* Form inputs */
+.dark input, .dark textarea, .dark select {
+  background-color: #0F1720 !important;
+  color: #F9FAFB !important;
+  border-color: #1F2937 !important;
+}
+.dark input::placeholder, .dark textarea::placeholder { color: #4B5563 !important; }
+
+/* Tables */
+.dark table  { background-color: #0F1720; }
+.dark thead  { background-color: #0A1220 !important; }
+.dark th     { color: #9CA3AF !important; border-color: #1F2937 !important; }
+.dark td     { color: #D1D5DB !important; border-color: #1F2937 !important; }
+.dark tr:hover { background-color: rgba(0,204,68,0.04) !important; }
+
+/* Compliance warning boxes */
+.dark .text-amber-800 { color: #fcd34d !important; }
+.dark .text-amber-700 { color: #fbbf24 !important; }
+.dark .text-red-800   { color: #fca5a5 !important; }
+.dark .text-red-700   { color: #f87171 !important; }
+
+/* Smooth theme transition */
+section, div, p, h1, h2, h3, h4, h5, h6, span, a, button {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.15s ease;
+}
