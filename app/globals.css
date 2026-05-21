@@ -57,6 +57,10 @@ img, svg { max-width: 100%; }
 .dark .bg-gray-100         { background-color: #111827 !important; }
 .dark .bg-amber-50         { background-color: #1c1208 !important; }
 .dark .bg-red-50           { background-color: #1c0808 !important; }
+/* Soft gray — must go dark so text-[#111827]→white stays readable */
+.dark .bg-\[\#F5F7FA\]    { background-color: #0A1220 !important; }
+.dark .bg-\[\#F8FAFC\]    { background-color: #0A1220 !important; }
+.dark .bg-\[\#F9FAFB\]    { background-color: #0A1220 !important; }
 
 /* Text */
 .dark .text-gray-900       { color: #F9FAFB !important; }
