@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 export default function Testimonials() {
   const t = useTranslations("home.testimonials");
   return (
-    <section className="py-20 lg:py-28 bg-white dark:bg-[#050A0F]">
+    <section className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Header ─────────────────────────────────────────── */}
@@ -14,26 +14,23 @@ export default function Testimonials() {
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">
               {t("badge")}
             </div>
-            <h2 className="text-4xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">
+            <h2 className="text-4xl font-extrabold text-[#111827] mb-3">
               {t("title")}
             </h2>
-            <p className="text-gray-500 dark:text-[#9CA3AF] text-[15px] leading-relaxed">
+            <p className="text-gray-500 text-[15px] leading-relaxed">
               {t("subtitle")}
             </p>
           </div>
 
           {/* Trustpilot brand badge */}
           <div className="flex-shrink-0">
-            <div className="inline-flex flex-col items-center gap-2 bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl px-6 py-5">
-              {/* Trustpilot logo text */}
+            <div className="inline-flex flex-col items-center gap-2 bg-[#F5F7FA] border border-gray-100 rounded-2xl px-6 py-5">
               <div className="flex items-center gap-2 mb-1">
-                {/* Trustpilot "T" star icon */}
                 <svg viewBox="0 0 111 100" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M55.5 0L68.3 40.5H111L76.1 65.5L89 106L55.5 81.5L22 106L34.9 65.5L0 40.5H42.7L55.5 0Z" fill="#00B67A"/>
                 </svg>
-                <span className="text-[14px] font-extrabold text-[#111827] dark:text-[#F9FAFB] tracking-tight">Trustpilot</span>
+                <span className="text-[14px] font-extrabold text-[#111827] tracking-tight">Trustpilot</span>
               </div>
-              {/* 5 green stars */}
               <div className="flex gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <svg key={i} viewBox="0 0 24 24" className="w-5 h-5" fill="#00B67A">
@@ -41,10 +38,10 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <div className="text-[11px] font-semibold text-[#111827] dark:text-[#F9FAFB]">
+              <div className="text-[11px] font-semibold text-[#111827]">
                 {t("rated")}
               </div>
-              <div className="text-[10px] text-gray-400 dark:text-[#6B7280] text-center">
+              <div className="text-[10px] text-gray-400 text-center">
                 {t("reviews_note")}
               </div>
             </div>
@@ -52,36 +49,26 @@ export default function Testimonials() {
         </div>
 
         {/* ── Review cards — skeleton state ─────────────────── */}
-        {/* Trustpilot blocks server-side fetching. Reviews load on Trustpilot directly. */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {Array.from({ length: 4 }).map((_, i) => (
-            <div
-              key={i}
-              className="border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6 bg-[#F5F7FA] dark:bg-[#0F1720] flex flex-col"
-            >
-              {/* Stars skeleton */}
+            <div key={i} className="border border-gray-100 rounded-2xl p-6 bg-[#F5F7FA] flex flex-col">
               <div className="flex gap-1 mb-5">
                 {Array.from({ length: 5 }).map((_, j) => (
-                  <div
-                    key={j}
-                    className="w-4 h-4 rounded-sm animate-pulse"
-                    style={{ background: "#00B67A", opacity: 0.25 }}
-                  />
+                  <div key={j} className="w-4 h-4 rounded-sm animate-pulse"
+                    style={{ background: "#00B67A", opacity: 0.25 }} />
                 ))}
               </div>
-              {/* Text skeleton */}
               <div className="space-y-2.5 mb-6 flex-1">
-                <div className="h-2.5 bg-gray-200 dark:bg-white/8 rounded-full w-full animate-pulse" />
-                <div className="h-2.5 bg-gray-200 dark:bg-white/8 rounded-full w-full animate-pulse" />
-                <div className="h-2.5 bg-gray-200 dark:bg-white/8 rounded-full w-4/5 animate-pulse" />
-                <div className="h-2.5 bg-gray-200 dark:bg-white/8 rounded-full w-3/5 animate-pulse" />
+                <div className="h-2.5 bg-gray-200 rounded-full w-full animate-pulse" />
+                <div className="h-2.5 bg-gray-200 rounded-full w-full animate-pulse" />
+                <div className="h-2.5 bg-gray-200 rounded-full w-4/5 animate-pulse" />
+                <div className="h-2.5 bg-gray-200 rounded-full w-3/5 animate-pulse" />
               </div>
-              {/* Author skeleton */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-100 dark:border-[#1F2937]">
-                <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-white/8 animate-pulse flex-shrink-0" />
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse flex-shrink-0" />
                 <div className="space-y-1.5 flex-1">
-                  <div className="h-2.5 bg-gray-200 dark:bg-white/8 rounded-full w-20 animate-pulse" />
-                  <div className="h-2 bg-gray-100 dark:bg-white/5 rounded-full w-14 animate-pulse" />
+                  <div className="h-2.5 bg-gray-200 rounded-full w-20 animate-pulse" />
+                  <div className="h-2 bg-gray-100 rounded-full w-14 animate-pulse" />
                 </div>
               </div>
             </div>
@@ -90,9 +77,7 @@ export default function Testimonials() {
 
         {/* ── Empty state notice ─────────────────────────────── */}
         <div className="text-center mb-8">
-          <p className="text-[12px] text-gray-400 dark:text-[#6B7280]">
-            {t("loading_note")}
-          </p>
+          <p className="text-[12px] text-gray-400">{t("loading_note")}</p>
         </div>
 
         {/* ── Trustpilot CTA button ──────────────────────────── */}
@@ -101,9 +86,8 @@ export default function Testimonials() {
             href="https://www.trustpilot.com/review/ollatrade.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white dark:bg-[#0F1720] border border-gray-200 dark:border-[#1F2937] hover:border-[#00B67A]/40 hover:shadow-md rounded-2xl px-7 py-4 transition-all duration-200 group"
+            className="inline-flex items-center gap-3 bg-white border border-gray-200 hover:border-[#00B67A]/40 hover:shadow-md rounded-2xl px-7 py-4 transition-all duration-200 group"
           >
-            {/* Trustpilot green stars */}
             <div className="flex gap-0.5 flex-shrink-0">
               {Array.from({ length: 5 }).map((_, i) => (
                 <svg key={i} viewBox="0 0 24 24" className="w-5 h-5" fill="#00B67A">
@@ -111,21 +95,14 @@ export default function Testimonials() {
                 </svg>
               ))}
             </div>
-
             <div className="text-left">
-              <div className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] group-hover:text-[#00B67A] transition-colors">
+              <div className="text-[14px] font-bold text-[#111827] group-hover:text-[#00B67A] transition-colors">
                 {t("cta_title")}
               </div>
-              <div className="text-[11px] text-gray-400 dark:text-[#6B7280]">
-                {t("cta_url")}
-              </div>
+              <div className="text-[11px] text-gray-400">{t("cta_url")}</div>
             </div>
-
-            {/* External link icon */}
-            <svg
-              className="w-4 h-4 text-gray-400 dark:text-[#6B7280] group-hover:text-[#00B67A] transition-colors flex-shrink-0 ml-1"
-              fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"
-            >
+            <svg className="w-4 h-4 text-gray-400 group-hover:text-[#00B67A] transition-colors flex-shrink-0 ml-1"
+              fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
