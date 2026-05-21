@@ -1,5 +1,6 @@
 import { fundingFaqs } from '../data/faqs';
 import type { Metadata } from "next";
+import FundingVisual from "../components/visuals/FundingVisual";
 import Link from "next/link";
 import PageHero from "../components/ui/PageHero";
 import FAQSection from "../components/ui/FAQSection";
@@ -176,6 +177,18 @@ export default function FundingAndWithdrawalsPage() {
           </Link>
         </div>
       </PageHero>
+
+      {/* ── Visual: Secure payment flow ────────────────────────── */}
+      <section className="py-12 bg-[#050C15]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">How It Works</div>
+          <h2 className="text-2xl font-extrabold text-white mb-6 text-center">Secure End-to-End Transaction Flow</h2>
+          <FundingVisual />
+          <p className="text-[11px] text-white/25 text-center mt-4 leading-relaxed">
+            All transactions are conducted through your SSL-encrypted client portal. Olla Trade never requests payment via email or third-party links.
+          </p>
+        </div>
+      </section>
 
       {/* ── 2. Funding methods ─────────────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">

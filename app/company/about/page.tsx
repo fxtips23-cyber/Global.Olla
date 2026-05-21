@@ -5,6 +5,7 @@ import CTASection from "../../components/CTASection";
 import FeatureGrid from "../../components/ui/FeatureGrid";
 import { SITE } from "../../lib/constants";
 import { IconTarget, IconShieldCheck, IconLock, IconBook, IconGlobe, IconUsers } from "../../components/ui/Icons";
+import GlobalMarketsVisual from "../../components/visuals/GlobalMarketsVisual";
 
 export const metadata: Metadata = { title: "About Us", description: "Learn about Olla Trade — our mission, vision, platform, and commitment to providing professional online trading services worldwide." };
 
@@ -55,6 +56,18 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Global markets visual */}
+      <section className="py-12 bg-[#050C15]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Global Reach</div>
+          <h2 className="text-2xl font-extrabold text-white mb-6 text-center">Connected to Global Financial Markets</h2>
+          <GlobalMarketsVisual />
+          <p className="text-[11px] text-white/25 text-center mt-4 leading-relaxed">
+            Olla Trade provides access to financial markets across multiple asset classes and global exchanges from a single account.
+          </p>
         </div>
       </section>
 

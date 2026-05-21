@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../../components/ui/PageHero";
+import VPSInfraVisual from "../../components/visuals/VPSInfraVisual";
 import FAQSection from "../../components/ui/FAQSection";
 import CTASection from "../../components/CTASection";
 import { IconServer, IconBolt, IconShield, IconGlobe, IconCode, IconClock, IconDatabase, IconSettings, IconCheck } from "../../components/ui/Icons";
@@ -44,6 +45,18 @@ export default function VPSPage() {
   return (
     <>
       <PageHero badge="Automated Trading" title="VPS Guide for MT4" subtitle="A Virtual Private Server (VPS) allows your Expert Advisors to run 24 hours a day, 5 days a week — without needing your computer to stay on." breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "VPS Guide" }]} stats={[{ value: "24/5", label: "Always-on operation" }, { value: "EA", label: "Expert Advisor support" }, { value: "RDP", label: "Remote access" }]} />
+
+      {/* ── VPS infrastructure visual ─────────────────────────── */}
+      <section className="py-12 bg-[#050C15]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Infrastructure</div>
+          <h2 className="text-2xl font-extrabold text-white mb-6 text-center">VPS Global Network Architecture</h2>
+          <VPSInfraVisual />
+          <p className="text-[11px] text-white/25 text-center mt-4 leading-relaxed">
+            A VPS hosted close to trading servers minimises latency. Your MT4 installation runs continuously — unaffected by local power cuts, internet issues, or computer restarts.
+          </p>
+        </div>
+      </section>
 
       {/* What is VPS */}
       <section className="py-16 bg-white dark:bg-[#050A0F]">

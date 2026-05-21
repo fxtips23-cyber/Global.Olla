@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ExecutionFlowVisual from "../components/visuals/ExecutionFlowVisual";
 import FAQSection from "../components/ui/FAQSection";
 import CTASection from "../components/CTASection";
 import PageHero from "../components/ui/PageHero";
@@ -91,6 +92,18 @@ export default function ExecutionInformationPage() {
           </Link>
         </div>
       </div>
+
+      {/* ── Visual: Execution flow diagram ──────────────────────────── */}
+      <section className="py-12 bg-[#050C15]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Architecture</div>
+          <h2 className="text-2xl font-extrabold text-white mb-6 text-center">Order Routing Flow</h2>
+          <ExecutionFlowVisual />
+          <p className="text-[11px] text-white/25 text-center mt-4 leading-relaxed">
+            Orders are transmitted from client terminal through Olla Trade's execution engine to liquidity providers. Best available price is selected and confirmed back to the client. Execution times and prices may vary under different market conditions.
+          </p>
+        </div>
+      </section>
 
       {/* ── 2. Introduction — white section ─────────────────────────── */}
       <section className="py-16 bg-white dark:bg-[#050A0F]">
