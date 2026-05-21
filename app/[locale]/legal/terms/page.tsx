@@ -30,33 +30,33 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
       <PageHero badge={t("badge")} title={t("title")} subtitle="Please read these Terms and Conditions carefully before using Olla Trade services. By registering an account, you confirm your acceptance of these Terms." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Terms & Conditions" }]} />
 
       {/* Important notice */}
-      <section className="py-8 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-8 bg-[#F5F7FA]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border border-blue-200 dark:border-blue-900/40 bg-blue-50 dark:bg-blue-900/10 rounded-xl p-5 text-center">
-            <p className="text-[13px] text-blue-800 dark:text-blue-300">By opening an account with Olla Trade, you confirm you have read, understood, and agreed to these Terms and Conditions. Last reviewed: 2025.</p>
+          <div className="border border-blue-200 bg-blue-50 rounded-xl p-5 text-center">
+            <p className="text-[13px] text-blue-800">By opening an account with Olla Trade, you confirm you have read, understood, and agreed to these Terms and Conditions. Last reviewed: 2025.</p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[240px_1fr] gap-12 items-start">
             <div className="hidden lg:block sticky top-24">
-              <div className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-5">
-                <div className="text-[10px] font-bold text-gray-400 dark:text-[#6B7280] uppercase tracking-widest mb-4">Sections</div>
-                <nav className="space-y-0.5">{sections.map(s=><a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 dark:text-[#9CA3AF] hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">{s.title}</a>)}</nav>
+              <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5">
+                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Sections</div>
+                <nav className="space-y-0.5">{sections.map(s=><a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}</nav>
               </div>
             </div>
             <div className="space-y-8">
               {sections.map(({ id, title, content }) => (
-                <div key={id} id={id} className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
-                  <h2 className="text-[16px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-3">{title}</h2>
-                  <p className="text-[14px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed">{content}</p>
+                <div key={id} id={id} className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-6">
+                  <h2 className="text-[16px] font-bold text-[#111827] mb-3">{title}</h2>
+                  <p className="text-[14px] text-gray-600 leading-relaxed">{content}</p>
                 </div>
               ))}
-              <div className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
-                <h3 className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-2">Company Details</h3>
-                <div className="text-[13px] text-gray-600 dark:text-[#9CA3AF] space-y-1">
+              <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-6">
+                <h3 className="text-[14px] font-bold text-[#111827] mb-2">Company Details</h3>
+                <div className="text-[13px] text-gray-600 space-y-1">
                   <p>Olla Trade Ltd. · Incorporated in Anguilla · Registration No. A000001849</p>
                   <p>Registered Address: Grace Complex, The Valley, AI 2640, Anguilla</p>
                   <p>Contact: <a href="mailto:info@ollatrade.com" className="text-[#00CC44] hover:underline">info@ollatrade.com</a></p>

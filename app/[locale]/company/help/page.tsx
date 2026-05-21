@@ -44,21 +44,21 @@ export default async function HelpPage({ params }: { params: Promise<{ locale: s
       <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Get Help" }]} stats={[{ value: "24/5", label: "Support hours" }, { value: "1 day", label: "Typical response" }, { value: "Email+Phone", label: "Channels" }]} />
 
       {/* Categories */}
-      <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Browse by Topic</div>
-            <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">Support Categories</h2>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">Support Categories</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {categories.map(({ Icon, title, desc, links }) => (
-              <div key={title} className="bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-5 flex flex-col hover:border-[#00CC44]/20 hover:shadow-md transition-all">
-                <div className="w-9 h-9 rounded-xl border border-gray-200 dark:border-[#1F2937] bg-[#F5F7FA] dark:bg-[#0A1220] text-gray-500 dark:text-[#6B7280] flex items-center justify-center mb-3"><Icon className="w-4 h-4" /></div>
-                <h3 className="text-[13px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-1.5">{title}</h3>
-                <p className="text-[11px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed mb-4 flex-1">{desc}</p>
-                <div className="space-y-1 border-t border-gray-50 dark:border-[#1F2937] pt-3">
+              <div key={title} className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col hover:border-[#00CC44]/20 hover:shadow-md transition-all">
+                <div className="w-9 h-9 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-3"><Icon className="w-4 h-4" /></div>
+                <h3 className="text-[13px] font-bold text-[#111827] mb-1.5">{title}</h3>
+                <p className="text-[11px] text-gray-500 leading-relaxed mb-4 flex-1">{desc}</p>
+                <div className="space-y-1 border-t border-gray-50 pt-3">
                   {links.map(([label, url]) => (
-                    <Link key={label} href={url} className="flex items-center justify-between text-[11px] text-gray-500 dark:text-[#9CA3AF] hover:text-[#00CC44] transition-colors py-0.5 group">
+                    <Link key={label} href={url} className="flex items-center justify-between text-[11px] text-gray-500 hover:text-[#00CC44] transition-colors py-0.5 group">
                       <span>{label}</span>
                       <IconArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
@@ -71,18 +71,18 @@ export default async function HelpPage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* Support steps */}
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Process</div>
-            <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">Getting Your Issue Resolved</h2>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">Getting Your Issue Resolved</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[["01","Check the FAQs","Most common questions are answered in the FAQs on this page and throughout the website."],["02","Contact Support","Email or call our team with your account number and a clear description of your query."],["03","We Respond","Our team aims to respond within one business day via the contact method you used."],["04","Issue Resolved","Our team will work with you to resolve your query and confirm the outcome in writing."]].map(([n,t,d])=>(
-              <div key={n} className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-5 text-center">
+              <div key={n} className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5 text-center">
                 <div className="text-2xl font-extrabold text-[#00CC44] mb-3">{n}</div>
-                <h4 className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-2">{t}</h4>
-                <p className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{d}</p>
+                <h4 className="text-[14px] font-bold text-[#111827] mb-2">{t}</h4>
+                <p className="text-[12px] text-gray-500 leading-relaxed">{d}</p>
               </div>
             ))}
           </div>
@@ -90,23 +90,23 @@ export default async function HelpPage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* Contact section */}
-      <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Direct Contact</div>
-            <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">Still Need Help?</h2>
-            <p className="text-gray-500 dark:text-[#9CA3AF] text-[15px]">Our support team is available Monday to Friday, 24 hours a day.</p>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">Still Need Help?</h2>
+            <p className="text-gray-500 text-[15px]">Our support team is available Monday to Friday, 24 hours a day.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-5 mb-6">
             {[
               { Icon: IconMail,  title: "Email",       detail: "info@ollatrade.com", sub: "cst@ollatrade.com", href: "mailto:info@ollatrade.com", cta: "Send Email" },
               { Icon: IconPhone, title: "Phone (24/5)", detail: "+44 7418 641736",   sub: "Monday – Friday, 24/5",   href: "tel:+447418641736",         cta: "Call Now" },
             ].map(({ Icon, title, detail, sub, href, cta }) => (
-              <div key={title} className="bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
-                <div className="w-9 h-9 rounded-xl border border-gray-200 dark:border-[#1F2937] bg-[#F5F7FA] dark:bg-[#0A1220] text-gray-500 dark:text-[#6B7280] flex items-center justify-center mb-3"><Icon className="w-4 h-4" /></div>
-                <h3 className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-1">{title}</h3>
-                <div className="text-[13px] text-gray-600 dark:text-[#9CA3AF]">{detail}</div>
-                <div className="text-[12px] text-gray-400 dark:text-[#6B7280] mb-4">{sub}</div>
+              <div key={title} className="bg-white border border-gray-100 rounded-2xl p-6">
+                <div className="w-9 h-9 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-3"><Icon className="w-4 h-4" /></div>
+                <h3 className="text-[14px] font-bold text-[#111827] mb-1">{title}</h3>
+                <div className="text-[13px] text-gray-600">{detail}</div>
+                <div className="text-[12px] text-gray-400 mb-4">{sub}</div>
                 <Link href={href} className="w-full flex items-center justify-center border border-[#00CC44]/25 hover:bg-[#00CC44] hover:text-black hover:border-[#00CC44] text-[#00CC44] font-semibold py-2.5 rounded-xl text-[12px] transition-all">{cta}</Link>
               </div>
             ))}
@@ -169,20 +169,20 @@ export default async function HelpPage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* Response times table */}
-      <section className="py-14 bg-white dark:bg-[#050A0F]">
+      <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Support Availability</div>
-          <h2 className="text-2xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-8 text-center">Response Times by Enquiry Type</h2>
-          <div className="overflow-x-auto rounded-2xl border border-gray-100 dark:border-[#1F2937] shadow-sm">
+          <h2 className="text-2xl font-extrabold text-[#111827] mb-8 text-center">Response Times by Enquiry Type</h2>
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
             <table className="w-full text-sm">
-              <thead className="bg-[#F5F7FA] dark:bg-[#0A1220] border-b border-gray-100 dark:border-[#1F2937]">
+              <thead className="bg-[#F5F7FA] border-b border-gray-100">
                 <tr>
                   {["Enquiry Type","Contact Method","Expected Response","Priority"].map(h => (
-                    <th key={h} className="px-5 py-3.5 text-left text-[11px] font-bold text-gray-400 dark:text-[#6B7280] uppercase tracking-wider">{h}</th>
+                    <th key={h} className="px-5 py-3.5 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider">{h}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-50 dark:divide-[#1F2937]">
+              <tbody className="divide-y divide-gray-50">
                 {[
                   ["Account Support",        "Email / Phone", "Same business day",  "High"],
                   ["General Enquiry",        "Email / Form",  "1 business day",     "Standard"],
@@ -192,9 +192,9 @@ export default async function HelpPage({ params }: { params: Promise<{ locale: s
                   ["Partnership / Affiliate","Email",         "2–3 business days",  "Standard"],
                   ["Formal Complaints",      "Email",         "2 business days (acknowledgement)", "Compliance"],
                 ].map(([type, method, response, priority]) => (
-                  <tr key={type} className="hover:bg-[#F9FAFB] dark:hover:bg-[#0F1720]">
-                    <td className="px-5 py-3 font-semibold text-[#111827] dark:text-[#F9FAFB] text-[13px]">{type}</td>
-                    <td className="px-5 py-3 text-gray-500 dark:text-[#9CA3AF] text-[13px]">{method}</td>
+                  <tr key={type} className="hover:bg-[#F9FAFB]">
+                    <td className="px-5 py-3 font-semibold text-[#111827] text-[13px]">{type}</td>
+                    <td className="px-5 py-3 text-gray-500 text-[13px]">{method}</td>
                     <td className="px-5 py-3 text-[#00CC44] font-semibold text-[13px]">{response}</td>
                     <td className="px-5 py-3 text-[12px]">
                       <span className="px-2.5 py-0.5 rounded-full font-semibold"
@@ -210,7 +210,7 @@ export default async function HelpPage({ params }: { params: Promise<{ locale: s
               </tbody>
             </table>
           </div>
-          <p className="text-[11px] text-gray-400 dark:text-[#6B7280] mt-3 text-center">Response times are targets during business hours (Monday–Friday). Weekend availability may be limited.</p>
+          <p className="text-[11px] text-gray-400 mt-3 text-center">Response times are targets during business hours (Monday–Friday). Weekend availability may be limited.</p>
         </div>
       </section>
 

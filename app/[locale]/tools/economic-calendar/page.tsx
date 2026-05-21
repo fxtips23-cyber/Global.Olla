@@ -138,20 +138,20 @@ export default async function EconomicCalendarPage({ params }: { params: Promise
       </section>
 
       {/* ── How to read the calendar ─────────────────────────────── */}
-      <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">How to Read</div>
-              <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-5">Understanding the Calendar Columns</h2>
-              <p className="text-[14px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed mb-6">
+              <h2 className="text-3xl font-extrabold text-[#111827] mb-5">Understanding the Calendar Columns</h2>
+              <p className="text-[14px] text-gray-600 leading-relaxed mb-6">
                 Each row in the economic calendar represents a scheduled data release or event. Understanding what each column means helps you interpret the information and assess its relevance to your trades.
               </p>
               <div className="space-y-2">
                 {calendarColumns.map(({ col, desc }) => (
-                  <div key={col} className="flex items-start gap-3 bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-xl px-4 py-3">
-                    <span className="text-[12px] font-bold text-[#111827] dark:text-[#F9FAFB] min-w-[90px] flex-shrink-0">{col}</span>
-                    <span className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{desc}</span>
+                  <div key={col} className="flex items-start gap-3 bg-white border border-gray-100 rounded-xl px-4 py-3">
+                    <span className="text-[12px] font-bold text-[#111827] min-w-[90px] flex-shrink-0">{col}</span>
+                    <span className="text-[12px] text-gray-500 leading-relaxed">{desc}</span>
                   </div>
                 ))}
               </div>
@@ -166,9 +166,9 @@ export default async function EconomicCalendarPage({ params }: { params: Promise
                   { t: "Spreads widen around key events",              d: "During and immediately after high-impact releases, spreads may widen significantly. Factor this into stop loss placement and trade sizing." },
                   { t: "Use the previous value for trend context",     d: "A series of improving GDP or CPI readings can confirm a trend, giving greater weight to the current release and its market impact." },
                 ].map(({ t, d }) => (
-                  <div key={t} className="bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-xl p-4">
-                    <div className="text-[13px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-1">{t}</div>
-                    <div className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{d}</div>
+                  <div key={t} className="bg-white border border-gray-100 rounded-xl p-4">
+                    <div className="text-[13px] font-bold text-[#111827] mb-1">{t}</div>
+                    <div className="text-[12px] text-gray-500 leading-relaxed">{d}</div>
                   </div>
                 ))}
               </div>
@@ -178,12 +178,12 @@ export default async function EconomicCalendarPage({ params }: { params: Promise
       </section>
 
       {/* ── Impact levels ────────────────────────────────────────── */}
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Impact Levels</div>
-            <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">Understanding Event Impact</h2>
-            <p className="text-gray-500 dark:text-[#9CA3AF] max-w-xl mx-auto text-[15px]">Each event is rated by its expected market impact. Use these ratings to prioritise which events to monitor and plan for.</p>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">Understanding Event Impact</h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-[15px]">Each event is rated by its expected market impact. Use these ratings to prioritise which events to monitor and plan for.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
@@ -194,13 +194,13 @@ export default async function EconomicCalendarPage({ params }: { params: Promise
               <div key={level} className="rounded-2xl p-6" style={{ background: bgColor, border: `1px solid ${borderColor}` }}>
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-3 h-3 rounded-full" style={{ background: color }} />
-                  <span className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB]">{level}</span>
+                  <span className="text-[14px] font-bold text-[#111827]">{level}</span>
                 </div>
-                <p className="text-[12px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed mb-4">{desc}</p>
-                <div className="text-[10px] font-bold text-gray-400 dark:text-[#6B7280] uppercase tracking-wider mb-2">Key Examples</div>
+                <p className="text-[12px] text-gray-600 leading-relaxed mb-4">{desc}</p>
+                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Key Examples</div>
                 <ul className="space-y-1">
                   {examples.map(e => (
-                    <li key={e} className="text-[12px] text-gray-600 dark:text-[#9CA3AF] flex items-center gap-2">
+                    <li key={e} className="text-[12px] text-gray-600 flex items-center gap-2">
                       <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: color }} />
                       {e}
                     </li>
@@ -249,16 +249,16 @@ export default async function EconomicCalendarPage({ params }: { params: Promise
       </section>
 
       {/* ── Volatility warning ────────────────────────────────────── */}
-      <section className="py-12 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-12 bg-[#F5F7FA]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border border-amber-200 dark:border-amber-900/40 bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-6 flex items-start gap-4">
+          <div className="border border-amber-200 bg-amber-50 rounded-2xl p-6 flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 flex-shrink-0"
               style={{ background: "rgba(245,158,11,0.12)", border: "1px solid rgba(245,158,11,0.25)" }}>
-              <IconInfo className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+              <IconInfo className="w-5 h-5 text-amber-600" />
             </div>
             <div>
-              <div className="text-[14px] font-bold text-amber-900 dark:text-amber-300 mb-2">Volatility & Risk Warning</div>
-              <p className="text-[13px] text-amber-800 dark:text-amber-200/60 leading-relaxed">
+              <div className="text-[14px] font-bold text-amber-900 mb-2">Volatility & Risk Warning</div>
+              <p className="text-[13px] text-amber-800 leading-relaxed">
                 During high-impact economic events, market prices can move rapidly and significantly within seconds of a data release. Spreads may widen substantially, slippage may occur, and stop-loss orders may be executed at prices different from those requested. Always ensure adequate risk management is in place before trading around major news releases. Economic calendar data is for informational purposes only and does not constitute investment advice. Past performance is not indicative of future results.
               </p>
             </div>

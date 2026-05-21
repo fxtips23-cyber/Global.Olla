@@ -52,7 +52,7 @@ function Field({
 }) {
   return (
     <div>
-      <label className="block text-[12px] font-semibold text-gray-600 dark:text-[#9CA3AF] uppercase tracking-wider mb-1.5">
+      <label className="block text-[12px] font-semibold text-gray-600 uppercase tracking-wider mb-1.5">
         {label}
       </label>
       <div className="relative">
@@ -64,20 +64,20 @@ function Field({
           step={step}
           disabled={disabled}
           onChange={(e) => onChange(e.target.value)}
-          className={`w-full border rounded-xl px-4 py-3 text-[14px] font-medium bg-white dark:bg-[#0F1720] focus:outline-none transition-colors pr-${suffix ? "16" : "4"} ${
-            error
-              ? "border-red-400 dark:border-red-600 text-red-700 dark:text-red-400 focus:border-red-500"
-              : "border-gray-200 dark:border-[#1F2937] text-[#111827] dark:text-[#F9FAFB] focus:border-[#00CC44] dark:focus:border-[#00CC44]"
-          } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+          className={`w-full border rounded-xl px-4 py-3 text-[14px] font-medium bg-white focus:outline-none transition-colors pr-${suffix ? "16" : "4"} ${
+ error
+ ? "border-red-400 text-red-700 focus:border-red-500"
+ : "border-gray-200 text-[#111827] focus:border-[#00CC44] "
+ } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
         />
         {suffix && (
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[12px] text-gray-400 dark:text-[#6B7280] font-medium pointer-events-none">
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[12px] text-gray-400 font-medium pointer-events-none">
             {suffix}
           </span>
         )}
       </div>
-      {error && <p className="text-[11px] text-red-500 dark:text-red-400 mt-1">{error}</p>}
-      {hint && !error && <p className="text-[11px] text-gray-400 dark:text-[#6B7280] mt-1">{hint}</p>}
+      {error && <p className="text-[11px] text-red-500 mt-1">{error}</p>}
+      {hint && !error && <p className="text-[11px] text-gray-400 mt-1">{hint}</p>}
     </div>
   );
 }
@@ -94,13 +94,13 @@ function SelectField({
 
   return (
     <div>
-      <label className="block text-[12px] font-semibold text-gray-600 dark:text-[#9CA3AF] uppercase tracking-wider mb-1.5">
+      <label className="block text-[12px] font-semibold text-gray-600 uppercase tracking-wider mb-1.5">
         {label}
       </label>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full border border-gray-200 dark:border-[#1F2937] rounded-xl px-4 py-3 text-[14px] font-medium bg-white dark:bg-[#0F1720] text-[#111827] dark:text-[#F9FAFB] focus:outline-none focus:border-[#00CC44] transition-colors appearance-none cursor-pointer"
+        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-[14px] font-medium bg-white text-[#111827] focus:outline-none focus:border-[#00CC44] transition-colors appearance-none cursor-pointer"
       >
         {ungrouped.map((o) => (
           <option key={o.value} value={o.value}>{o.label}</option>
@@ -120,12 +120,12 @@ function SelectField({
 /* ─── Result row ─────────────────────────────────────────────────────── */
 function ResultRow({ label, value, highlight, sub }: { label: string; value: string; highlight?: boolean; sub?: string }) {
   return (
-    <div className="flex items-start justify-between py-3 border-b border-gray-50 dark:border-[#1F2937] last:border-0">
+    <div className="flex items-start justify-between py-3 border-b border-gray-50 last:border-0">
       <div>
-        <span className="text-[13px] text-gray-500 dark:text-[#9CA3AF]">{label}</span>
-        {sub && <div className="text-[11px] text-gray-400 dark:text-[#6B7280] mt-0.5">{sub}</div>}
+        <span className="text-[13px] text-gray-500">{label}</span>
+        {sub && <div className="text-[11px] text-gray-400 mt-0.5">{sub}</div>}
       </div>
-      <span className={`text-[15px] font-bold font-mono ${highlight ? "text-[#00CC44]" : "text-[#111827] dark:text-[#F9FAFB]"}`}>
+      <span className={`text-[15px] font-bold font-mono ${highlight ? "text-[#00CC44]" : "text-[#111827] "}`}>
         {value}
       </span>
     </div>
@@ -138,16 +138,16 @@ function ResultsCard({ title, rows, empty }: {
   empty?: boolean;
 }) {
   return (
-    <div className="bg-[#F5F7FA] dark:bg-[#0A1220] border border-gray-200 dark:border-[#1F2937] rounded-2xl p-5 h-full shadow-inner dark:shadow-none">
-      <div className="text-[10px] font-bold text-gray-400 dark:text-[#6B7280] uppercase tracking-widest mb-4">{title}</div>
+    <div className="bg-[#F5F7FA] border border-gray-200 rounded-2xl p-5 h-full shadow-inner">
+      <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">{title}</div>
       {empty ? (
         <div className="flex flex-col items-center justify-center py-8 text-center">
-          <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center mb-3">
-            <svg className="w-5 h-5 text-gray-300 dark:text-white/20" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+          <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mb-3">
+            <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 20h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </div>
-          <p className="text-[12px] text-gray-400 dark:text-[#6B7280]">Enter values and click<br /><strong className="text-gray-500 dark:text-[#9CA3AF]">Calculate</strong> to see results</p>
+          <p className="text-[12px] text-gray-400">Enter values and click<br /><strong className="text-gray-500">Calculate</strong> to see results</p>
         </div>
       ) : (
         <div>{rows.map((r) => <ResultRow key={r.label} {...r} />)}</div>
@@ -169,7 +169,7 @@ function CalcBtn({ onClick, loading = false }: { onClick: () => void; loading?: 
 function ResetBtn({ onClick }: { onClick: () => void }) {
   return (
     <button onClick={onClick}
-      className="flex-shrink-0 border border-gray-200 dark:border-[#1F2937] hover:border-gray-300 dark:hover:border-[#374151] text-gray-500 dark:text-[#9CA3AF] hover:text-gray-700 dark:hover:text-[#E5E7EB] font-medium py-3.5 px-5 rounded-xl text-[13px] transition-colors">
+      className="flex-shrink-0 border border-gray-200 hover:border-gray-300 text-gray-500 hover:text-gray-700 font-medium py-3.5 px-5 rounded-xl text-[13px] transition-colors">
       Reset
     </button>
   );
@@ -234,8 +234,8 @@ function PositionSizeCalc() {
           <CalcBtn onClick={calculate} />
           <ResetBtn onClick={reset} />
         </div>
-        <div className="text-[11px] text-gray-400 dark:text-[#6B7280] bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/8 rounded-xl px-4 py-3">
-          <strong className="text-gray-500 dark:text-[#9CA3AF]">Formula:</strong> Risk Amount = Balance × Risk% · Lot Size = Risk Amount ÷ (Stop Loss Pips × Pip Value per lot)
+        <div className="text-[11px] text-gray-400 bg-gray-100 border border-gray-200 rounded-xl px-4 py-3">
+          <strong className="text-gray-500">Formula:</strong> Risk Amount = Balance × Risk% · Lot Size = Risk Amount ÷ (Stop Loss Pips × Pip Value per lot)
         </div>
       </div>
       <ResultsCard
@@ -291,8 +291,8 @@ function PipValueCalc() {
         {inst.needsPrice && (
           <Field label={`Current ${inst.symbol} Rate`} value={price} onChange={setPrice} min="0" step="0.00001" hint="Required to convert pip value to USD" error={errors.price} />
         )}
-        <div className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-xl px-4 py-3 text-[12px] text-gray-500 dark:text-[#9CA3AF]">
-          <span className="font-semibold text-[#111827] dark:text-[#E5E7EB]">{inst.symbol}</span> · Pip size: <strong>{inst.pipSize}</strong> · Contract size: <strong>{inst.contractSize.toLocaleString()}</strong> · Quote currency: <strong>{inst.quoteCurrency}</strong>
+        <div className="bg-[#F5F7FA] border border-gray-100 rounded-xl px-4 py-3 text-[12px] text-gray-500">
+          <span className="font-semibold text-[#111827]">{inst.symbol}</span> · Pip size: <strong>{inst.pipSize}</strong> · Contract size: <strong>{inst.contractSize.toLocaleString()}</strong> · Quote currency: <strong>{inst.quoteCurrency}</strong>
         </div>
         <div className="flex gap-3">
           <CalcBtn onClick={calculate} />
@@ -360,8 +360,8 @@ function MarginCalc() {
           <CalcBtn onClick={calculate} />
           <ResetBtn onClick={reset} />
         </div>
-        <div className="text-[11px] text-gray-400 dark:text-[#6B7280] bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/8 rounded-xl px-4 py-3">
-          <strong className="text-gray-500 dark:text-[#9CA3AF]">Formula:</strong> Notional Value = Lots × Contract Size × Price · Required Margin = Notional ÷ Leverage
+        <div className="text-[11px] text-gray-400 bg-gray-100 border border-gray-200 rounded-xl px-4 py-3">
+          <strong className="text-gray-500">Formula:</strong> Notional Value = Lots × Contract Size × Price · Required Margin = Notional ÷ Leverage
         </div>
       </div>
       <ResultsCard
@@ -419,17 +419,17 @@ function PnLCalc() {
         <div className="grid sm:grid-cols-2 gap-4">
           <SelectField label="Currency Pair" value={symbol} onChange={(v) => { setSymbol(v); setResult(null); }} options={INSTRUMENTS.map((i) => ({ value: i.symbol, label: i.symbol, group: i.category }))} />
           <div>
-            <label className="block text-[12px] font-semibold text-gray-600 dark:text-[#9CA3AF] uppercase tracking-wider mb-1.5">Direction</label>
-            <div className="flex rounded-xl overflow-hidden border border-gray-200 dark:border-[#1F2937]">
+            <label className="block text-[12px] font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Direction</label>
+            <div className="flex rounded-xl overflow-hidden border border-gray-200">
               {(["buy", "sell"] as const).map((d) => (
                 <button key={d} onClick={() => { setDirection(d); setResult(null); }}
                   className={`flex-1 py-3 text-[13px] font-bold transition-colors capitalize ${
-                    direction === d
-                      ? d === "buy"
-                        ? "bg-[#00CC44] text-black"
-                        : "bg-red-500 text-white"
-                      : "bg-white dark:bg-[#0F1720] text-gray-400 dark:text-[#6B7280] hover:bg-gray-50 dark:hover:bg-white/5"
-                  }`}>{d}</button>
+ direction === d
+ ? d === "buy"
+ ? "bg-[#00CC44] text-black"
+ : "bg-red-500 text-white"
+ : "bg-white text-gray-400 hover:bg-gray-50 "
+ }`}>{d}</button>
               ))}
             </div>
           </div>
@@ -443,8 +443,8 @@ function PnLCalc() {
           <CalcBtn onClick={calculate} />
           <ResetBtn onClick={reset} />
         </div>
-        <div className="text-[11px] text-gray-400 dark:text-[#6B7280] bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/8 rounded-xl px-4 py-3">
-          <strong className="text-gray-500 dark:text-[#9CA3AF]">Formula (Buy):</strong> P&amp;L = (Close − Open) × Lots × Contract Size · <strong className="text-gray-500 dark:text-[#9CA3AF]">Sell:</strong> P&amp;L = (Open − Close) × Lots × Contract Size
+        <div className="text-[11px] text-gray-400 bg-gray-100 border border-gray-200 rounded-xl px-4 py-3">
+          <strong className="text-gray-500">Formula (Buy):</strong> P&amp;L = (Close − Open) × Lots × Contract Size · <strong className="text-gray-500">Sell:</strong> P&amp;L = (Open − Close) × Lots × Contract Size
         </div>
       </div>
       <ResultsCard
@@ -478,17 +478,17 @@ function SwapInfo() {
   return (
     <div className="grid lg:grid-cols-2 gap-8 items-start">
       <div>
-        <h3 className="text-xl font-bold text-[#111827] dark:text-[#F9FAFB] mb-3">Swap / Rollover Information</h3>
-        <div className="space-y-3 text-[14px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed">
+        <h3 className="text-xl font-bold text-[#111827] mb-3">Swap / Rollover Information</h3>
+        <div className="space-y-3 text-[14px] text-gray-600 leading-relaxed">
           <p>Swap (or rollover) charges are applied to positions held open past the daily server rollover time — typically 00:00 server time. Swap rates reflect the interest rate differential between the two currencies in a pair, adjusted by the broker.</p>
           <p>Swap rates vary by instrument, direction (long/short), account type, and are subject to change without notice based on market and interbank rate changes.</p>
-          <p><strong className="text-[#111827] dark:text-[#E5E7EB]">Where to find live swap rates:</strong> Open your MetaTrader 4 platform → Right-click any instrument in Market Watch → Select "Specification" → View the Long Swap and Short Swap values.</p>
+          <p><strong className="text-[#111827]">Where to find live swap rates:</strong> Open your MetaTrader 4 platform → Right-click any instrument in Market Watch → Select "Specification" → View the Long Swap and Short Swap values.</p>
         </div>
       </div>
       <div className="space-y-4">
-        <div className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-[#00CC44]/20 rounded-2xl p-5">
+        <div className="bg-[#F5F7FA] border border-[#00CC44]/20 rounded-2xl p-5">
           <div className="text-[11px] font-bold text-[#00CC44] uppercase tracking-widest mb-3">Live Rates in MT4</div>
-          <ol className="space-y-2 text-[13px] text-gray-600 dark:text-[#9CA3AF]">
+          <ol className="space-y-2 text-[13px] text-gray-600">
             {[
               "Open MetaTrader 4",
               "Go to Market Watch",
@@ -503,9 +503,9 @@ function SwapInfo() {
             ))}
           </ol>
         </div>
-        <div className="border border-amber-200 dark:border-amber-900/40 bg-amber-50 dark:bg-amber-900/10 rounded-xl p-4">
-          <div className="text-[12px] font-bold text-amber-800 dark:text-amber-300 mb-1">Important Note</div>
-          <p className="text-[12px] text-amber-700 dark:text-amber-200/60 leading-relaxed">
+        <div className="border border-amber-200 bg-amber-50 rounded-xl p-4">
+          <div className="text-[12px] font-bold text-amber-800 mb-1">Important Note</div>
+          <p className="text-[12px] text-amber-700 leading-relaxed">
             Swap rates vary by symbol and account type. This calculator does not display swap rates as they change frequently. Please check live MT4 specifications or contact Olla Trade support at <a href="mailto:cst@ollatrade.com" className="font-semibold underline hover:no-underline">cst@ollatrade.com</a> for current rates.
           </p>
         </div>
@@ -533,16 +533,16 @@ export default function ForexCalculator() {
   return (
     <div>
       {/* Tab bar — sits on white section bg, uses gray tray for contrast */}
-      <div className="flex overflow-x-auto gap-1 mb-8 p-1.5 bg-gray-100 dark:bg-[#0A1220] border border-gray-200 dark:border-[#1F2937] rounded-2xl">
+      <div className="flex overflow-x-auto gap-1 mb-8 p-1.5 bg-gray-100 border border-gray-200 rounded-2xl">
         {TABS.map(({ key, label, shortLabel }) => (
           <button
             key={key}
             onClick={() => setActiveTab(key)}
             className={`flex-shrink-0 flex-1 px-3 py-2.5 rounded-xl text-[13px] font-semibold whitespace-nowrap transition-all ${
-              activeTab === key
-                ? "bg-[#00CC44] text-black shadow-sm"
-                : "text-gray-500 dark:text-[#9CA3AF] hover:text-[#111827] dark:hover:text-[#E5E7EB] hover:bg-white dark:hover:bg-white/6"
-            }`}
+ activeTab === key
+ ? "bg-[#00CC44] text-black shadow-sm"
+ : "text-gray-500 hover:text-[#111827] hover:bg-white "
+ }`}
           >
             <span className="hidden sm:inline">{label}</span>
             <span className="sm:hidden">{shortLabel}</span>
@@ -560,9 +560,9 @@ export default function ForexCalculator() {
       </div>
 
       {/* Disclaimer */}
-      <div className="mt-8 border-t border-gray-100 dark:border-[#1F2937] pt-6">
-        <p className="text-[11px] text-gray-400 dark:text-[#6B7280] leading-relaxed text-center max-w-3xl mx-auto">
-          <strong className="text-gray-500 dark:text-[#9CA3AF]">Disclaimer:</strong> Calculator results are for informational purposes only. Actual trading conditions, contract sizes, pip values, margin requirements, swaps, and pricing may vary depending on market conditions, account type, platform specifications, and Olla Trade terms and conditions. All calculations assume a USD account currency.
+      <div className="mt-8 border-t border-gray-100 pt-6">
+        <p className="text-[11px] text-gray-400 leading-relaxed text-center max-w-3xl mx-auto">
+          <strong className="text-gray-500">Disclaimer:</strong> Calculator results are for informational purposes only. Actual trading conditions, contract sizes, pip values, margin requirements, swaps, and pricing may vary depending on market conditions, account type, platform specifications, and Olla Trade terms and conditions. All calculations assume a USD account currency.
         </p>
       </div>
     </div>

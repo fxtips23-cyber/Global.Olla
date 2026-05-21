@@ -562,49 +562,49 @@ export default function PlatformPage() {
       />
 
       {/* ── Section 1: Features + Visual 1 (4-chart workstation) ── */}
-      <section className="py-16 lg:py-20 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — content */}
             <div>
               <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">MetaTrader 4</div>
-              <h2 className="text-4xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-5 leading-tight">
+              <h2 className="text-4xl font-extrabold text-[#111827] mb-5 leading-tight">
                 The World&apos;s Most Popular<br />Trading Platform
               </h2>
-              <p className="text-gray-500 dark:text-[#9CA3AF] leading-relaxed mb-8 text-[15px]">
+              <p className="text-gray-500 leading-relaxed mb-8 text-[15px]">
                 Advanced charting, automated trading, and real-time execution across all global markets — on every device you own. Download or access via browser with no installation required.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {features.slice(0, 6).map(({ Icon, title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md border border-gray-200 dark:border-[#1F2937] bg-[#F5F7FA] dark:bg-[#0A1220] flex items-center justify-center flex-shrink-0 text-gray-400 dark:text-[#6B7280] mt-0.5">
+                    <div className="w-7 h-7 rounded-md border border-gray-200 bg-[#F5F7FA] flex items-center justify-center flex-shrink-0 text-gray-400 mt-0.5">
                       <Icon className="w-3.5 h-3.5" />
                     </div>
                     <div>
-                      <div className="text-[12px] font-semibold text-[#111827] dark:text-[#F9FAFB] mb-0.5">{title}</div>
-                      <div className="text-[11px] text-gray-400 dark:text-[#6B7280] leading-relaxed">{desc}</div>
+                      <div className="text-[12px] font-semibold text-[#111827] mb-0.5">{title}</div>
+                      <div className="text-[11px] text-gray-400 leading-relaxed">{desc}</div>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="mb-8">
-                <div className="text-[10px] font-bold text-gray-400 dark:text-[#6B7280] uppercase tracking-widest mb-3">Available on</div>
+                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Available on</div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {platforms.map(({ name, sub, tag, Icon }) => (
                     <Link key={name} href="/trading/platform"
-                      className="group flex flex-col items-center gap-2 border border-gray-200 dark:border-[#1F2937] bg-[#F5F7FA] dark:bg-[#0A1220] hover:bg-[#111827] hover:border-[#111827] rounded-xl px-3 py-3.5 transition-all">
-                      <Icon className="w-5 h-5 text-gray-500 dark:text-[#6B7280] group-hover:text-white transition-colors" />
+                      className="group flex flex-col items-center gap-2 border border-gray-200 bg-[#F5F7FA] hover:bg-[#111827] hover:border-[#111827] rounded-xl px-3 py-3.5 transition-all">
+                      <Icon className="w-5 h-5 text-gray-500 group-hover:text-white transition-colors" />
                       <div className="text-center">
-                        <div className="text-[12px] font-bold text-[#111827] dark:text-[#F9FAFB] group-hover:text-white transition-colors leading-none">{name}</div>
-                        <div className="text-[10px] text-gray-400 dark:text-[#6B7280] group-hover:text-white/50 mt-0.5">{sub}</div>
+                        <div className="text-[12px] font-bold text-[#111827] group-hover:text-white transition-colors leading-none">{name}</div>
+                        <div className="text-[10px] text-gray-400 group-hover:text-white/50 mt-0.5">{sub}</div>
                       </div>
-                      <span className="text-[9px] text-gray-400 dark:text-[#6B7280] group-hover:text-[#00CC44] font-medium">{tag}</span>
+                      <span className="text-[9px] text-gray-400 group-hover:text-[#00CC44] font-medium">{tag}</span>
                     </Link>
                   ))}
                 </div>
               </div>
               <Link href="https://direct.ollatrade.com/auth/register"
-                className="inline-flex items-center gap-2 bg-[#111827] dark:bg-[#00CC44] hover:bg-[#00CC44] dark:hover:bg-[#00DD4A] text-white dark:text-black hover:text-black font-bold px-6 py-3 rounded-lg text-[13px] transition-all">
+                className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#00CC44] text-white hover:text-black font-bold px-6 py-3 rounded-lg text-[13px] transition-all">
                 Explore MT4 Platform
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6"/></svg>
               </Link>
@@ -636,13 +636,13 @@ export default function PlatformPage() {
       </section>
 
       {/* ── Section 3: Cross-device + order management content ─── */}
-      <section className="py-16 lg:py-20 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-16 lg:py-20 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — VISUAL 2: original cross-device ecosystem */}
             <div className="relative order-last lg:order-first">
               <div className="absolute -inset-4 bg-[#1E88E5]/5 blur-3xl rounded-3xl pointer-events-none"/>
-              <div className="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-[#1F2937] shadow-2xl shadow-black/30">
+              <div className="relative rounded-2xl overflow-hidden border border-gray-200 shadow-2xl shadow-black/30">
                 <CrossDeviceVisual />
               </div>
             </div>
@@ -650,10 +650,10 @@ export default function PlatformPage() {
             {/* Right — content */}
             <div>
               <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">Cross-Device Trading</div>
-              <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-5 leading-tight">
+              <h2 className="text-3xl font-extrabold text-[#111827] mb-5 leading-tight">
                 One Account.<br />Every Device. Always Synced.
               </h2>
-              <p className="text-gray-500 dark:text-[#9CA3AF] leading-relaxed mb-6 text-[15px]">
+              <p className="text-gray-500 leading-relaxed mb-6 text-[15px]">
                 Your Olla Trade MT4 account is fully synchronized across every platform. Open a position on desktop, monitor it on mobile, and manage it from your tablet — all in real time with the same account credentials.
               </p>
               <div className="space-y-4 mb-8">
@@ -666,8 +666,8 @@ export default function PlatformPage() {
                   <div key={t} className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#00CC44] flex-shrink-0 mt-2"/>
                     <div>
-                      <div className="text-[13px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-0.5">{t}</div>
-                      <div className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{d}</div>
+                      <div className="text-[13px] font-bold text-[#111827] mb-0.5">{t}</div>
+                      <div className="text-[12px] text-gray-500 leading-relaxed">{d}</div>
                     </div>
                   </div>
                 ))}
@@ -678,7 +678,7 @@ export default function PlatformPage() {
                   Open Account
                 </Link>
                 <Link href="/tools/vps"
-                  className="inline-flex items-center gap-2 border border-gray-200 dark:border-[#1F2937] text-gray-600 dark:text-[#9CA3AF] hover:text-[#111827] dark:hover:text-white font-medium px-6 py-3 rounded-lg text-[13px] transition-colors">
+                  className="inline-flex items-center gap-2 border border-gray-200 text-gray-600 hover:text-[#111827] font-medium px-6 py-3 rounded-lg text-[13px] transition-colors">
                   VPS Guide →
                 </Link>
               </div>
@@ -688,10 +688,10 @@ export default function PlatformPage() {
       </section>
 
       {/* ── Section 4: All features ─────────────────────────────── */}
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3 text-center">All MT4 Platform Features</h2>
-          <p className="text-gray-500 dark:text-[#9CA3AF] text-center mb-10 max-w-xl mx-auto text-[15px]">
+          <h2 className="text-3xl font-extrabold text-[#111827] mb-3 text-center">All MT4 Platform Features</h2>
+          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">
             Everything a professional trader needs — built into the world's most trusted trading platform.
           </p>
           <FeatureGrid features={features} cols={4} />

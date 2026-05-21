@@ -28,17 +28,17 @@ export default function TradingPage() {
         subtitle="Professional trading conditions, multiple account types, and the power of MetaTrader 4."
         breadcrumbs={[{ label: "Trading" }]}
       />
-      <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {links.map(({ Icon, title, sub, href }) => (
               <Link key={title} href={href}
-                className="group bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6 hover:border-[#00CC44]/25 hover:shadow-lg hover:-translate-y-1 transition-all">
-                <div className="w-10 h-10 rounded-xl border border-gray-200 dark:border-[#1F2937] bg-[#F5F7FA] dark:bg-[#0A1220] text-gray-500 dark:text-[#6B7280] flex items-center justify-center mb-4 group-hover:border-[#111827]/20 group-hover:text-[#111827] dark:group-hover:text-[#E5E7EB] transition-colors">
+                className="group bg-white border border-gray-100 rounded-2xl p-6 hover:border-[#00CC44]/25 hover:shadow-lg hover:-translate-y-1 transition-all">
+                <div className="w-10 h-10 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-4 group-hover:border-[#111827]/20 group-hover:text-[#111827] transition-colors">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-1 group-hover:text-[#00AA38] dark:group-hover:text-[#00CC44] transition-colors">{title}</h3>
-                <p className="text-[12px] text-gray-400 dark:text-[#6B7280]">{sub}</p>
+                <h3 className="text-[14px] font-bold text-[#111827] mb-1 group-hover:text-[#00AA38] transition-colors">{title}</h3>
+                <p className="text-[12px] text-gray-400">{sub}</p>
               </Link>
             ))}
           </div>

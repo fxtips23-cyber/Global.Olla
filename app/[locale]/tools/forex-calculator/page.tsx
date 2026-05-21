@@ -78,31 +78,31 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
       />
 
       {/* ── Calculator component ──────────────────────────────────── */}
-      <section className="py-14 bg-white dark:bg-[#050A0F]">
+      <section className="py-14 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ForexCalculator />
         </div>
       </section>
 
       {/* ── Calculator guide ─────────────────────────────────────── */}
-      <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Calculator Guide</div>
-          <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-4 text-center">How to Use Each Calculator</h2>
-          <p className="text-gray-500 dark:text-[#9CA3AF] text-center mb-10 max-w-2xl mx-auto text-[15px]">Each calculator serves a specific purpose in the trade planning process. Use them together for a complete picture of any trade before opening it.</p>
+          <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">How to Use Each Calculator</h2>
+          <p className="text-gray-500 text-center mb-10 max-w-2xl mx-auto text-[15px]">Each calculator serves a specific purpose in the trade planning process. Use them together for a complete picture of any trade before opening it.</p>
           <div className="grid md:grid-cols-2 gap-5">
             {calculatorGuide.map(({ title, color, inputs, output, example, why }) => (
-              <div key={title} className="bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
+              <div key={title} className="bg-white border border-gray-100 rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ background: color }} />
-                  <h3 className="text-[15px] font-bold text-[#111827] dark:text-[#F9FAFB]">{title}</h3>
+                  <h3 className="text-[15px] font-bold text-[#111827]">{title}</h3>
                 </div>
                 <div className="space-y-4">
                   <div>
                     <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Inputs Required</div>
                     <ul className="space-y-1">
                       {inputs.map(i => (
-                        <li key={i} className="flex items-start gap-2 text-[12px] text-gray-500 dark:text-[#9CA3AF]">
+                        <li key={i} className="flex items-start gap-2 text-[12px] text-gray-500">
                           <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5" style={{ background: color }} />
                           {i}
                         </li>
@@ -111,15 +111,15 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
                   </div>
                   <div>
                     <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Output</div>
-                    <p className="text-[12px] text-gray-600 dark:text-[#9CA3AF]">{output}</p>
+                    <p className="text-[12px] text-gray-600">{output}</p>
                   </div>
-                  <div className="bg-[#F5F7FA] dark:bg-[#0A1220] rounded-xl p-3">
+                  <div className="bg-[#F5F7FA] rounded-xl p-3">
                     <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Example</div>
-                    <p className="text-[12px] font-mono text-[#111827] dark:text-[#E5E7EB]">{example}</p>
+                    <p className="text-[12px] font-mono text-[#111827]">{example}</p>
                   </div>
                   <div>
                     <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Why It Matters</div>
-                    <p className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{why}</p>
+                    <p className="text-[12px] text-gray-500 leading-relaxed">{why}</p>
                   </div>
                 </div>
               </div>
@@ -129,33 +129,33 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
       </section>
 
       {/* ── Lot sizes reference ──────────────────────────────────── */}
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Reference</div>
-          <h2 className="text-2xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-4 text-center">Lot Size Reference Table</h2>
-          <p className="text-gray-500 dark:text-[#9CA3AF] text-center mb-8 max-w-xl mx-auto text-[14px]">Lot size determines how many units of a currency or commodity you are buying or selling. Olla Trade supports micro lots from 0.01 — allowing precise position sizing for any account size.</p>
-          <div className="overflow-x-auto rounded-2xl border border-gray-100 dark:border-[#1F2937] shadow-sm">
+          <h2 className="text-2xl font-extrabold text-[#111827] mb-4 text-center">Lot Size Reference Table</h2>
+          <p className="text-gray-500 text-center mb-8 max-w-xl mx-auto text-[14px]">Lot size determines how many units of a currency or commodity you are buying or selling. Olla Trade supports micro lots from 0.01 — allowing precise position sizing for any account size.</p>
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
             <table className="w-full text-sm">
-              <thead className="bg-[#F5F7FA] dark:bg-[#0A1220] border-b border-gray-100 dark:border-[#1F2937]">
+              <thead className="bg-[#F5F7FA] border-b border-gray-100">
                 <tr>
                   {["Lot Type","Units per Lot","Pip Value (EUR/USD)","Notes"].map(h => (
-                    <th key={h} className="px-5 py-4 text-left text-[11px] font-bold text-gray-400 dark:text-[#6B7280] uppercase tracking-wider">{h}</th>
+                    <th key={h} className="px-5 py-4 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider">{h}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-50 dark:divide-[#1F2937]">
+              <tbody className="divide-y divide-gray-50">
                 {lotSizes.map(({ name, size, pipValue, notes }) => (
-                  <tr key={name} className="hover:bg-[#F9FAFB] dark:hover:bg-[#0F1720]">
-                    <td className="px-5 py-3.5 font-bold text-[#111827] dark:text-[#F9FAFB] text-[13px]">{name}</td>
-                    <td className="px-5 py-3.5 font-mono text-gray-600 dark:text-[#9CA3AF] text-[13px]">{size}</td>
+                  <tr key={name} className="hover:bg-[#F9FAFB]">
+                    <td className="px-5 py-3.5 font-bold text-[#111827] text-[13px]">{name}</td>
+                    <td className="px-5 py-3.5 font-mono text-gray-600 text-[13px]">{size}</td>
                     <td className="px-5 py-3.5 font-mono text-[#00CC44] font-semibold text-[13px]">{pipValue}</td>
-                    <td className="px-5 py-3.5 text-gray-500 dark:text-[#9CA3AF] text-[12px]">{notes}</td>
+                    <td className="px-5 py-3.5 text-gray-500 text-[12px]">{notes}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-[11px] text-gray-400 dark:text-[#6B7280] mt-3 text-center">Pip values are approximate and vary by instrument and current exchange rate. Use the calculator above for precise values.</p>
+          <p className="text-[11px] text-gray-400 mt-3 text-center">Pip values are approximate and vary by instrument and current exchange rate. Use the calculator above for precise values.</p>
         </div>
       </section>
 
@@ -187,12 +187,12 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────── */}
-      <section className="py-14 bg-[#F5F7FA] dark:bg-[#081018] border-t border-gray-100 dark:border-[#1F2937]">
+      <section className="py-14 bg-[#F5F7FA] border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl px-7 py-6 flex flex-col sm:flex-row items-center justify-between gap-5">
+          <div className="bg-white border border-gray-100 rounded-2xl px-7 py-6 flex flex-col sm:flex-row items-center justify-between gap-5">
             <div>
-              <div className="text-[15px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-1">Ready to put your calculations into action?</div>
-              <div className="text-[13px] text-gray-500 dark:text-[#9CA3AF]">Open a live or demo account and trade with the conditions you calculated.</div>
+              <div className="text-[15px] font-bold text-[#111827] mb-1">Ready to put your calculations into action?</div>
+              <div className="text-[13px] text-gray-500">Open a live or demo account and trade with the conditions you calculated.</div>
             </div>
             <div className="flex gap-3 flex-shrink-0">
               <Link href="https://direct.ollatrade.com/auth/register"
@@ -201,7 +201,7 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
                 Open Account
               </Link>
               <Link href="/trading/conditions"
-                className="inline-flex items-center font-medium px-6 py-3 rounded-xl text-[13px] border border-gray-200 dark:border-[#1F2937] text-[#111827] dark:text-[#F9FAFB] hover:border-gray-300 transition-colors">
+                className="inline-flex items-center font-medium px-6 py-3 rounded-xl text-[13px] border border-gray-200 text-[#111827] hover:border-gray-300 transition-colors">
                 View Conditions
               </Link>
             </div>

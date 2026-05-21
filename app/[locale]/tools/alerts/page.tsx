@@ -46,13 +46,13 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
       <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "Trading Alerts" }]} stats={[{ value: "MT4", label: "Platform" }, { value: "Free", label: "All accounts" }, { value: "3", label: "Alert channels" }]} />
 
       {/* What are alerts */}
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Overview</div>
-              <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-5 leading-tight">What Are Trading Alerts?</h2>
-              <div className="space-y-4 text-[14px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed">
+              <h2 className="text-3xl font-extrabold text-[#111827] mb-5 leading-tight">What Are Trading Alerts?</h2>
+              <div className="space-y-4 text-[14px] text-gray-600 leading-relaxed">
                 <p>Trading alerts are automated notifications that fire when a pre-set condition is met — such as a price reaching a specific level, a technical indicator crossing a threshold, or a time condition being triggered.</p>
                 <p>In MetaTrader 4, alerts are a built-in feature available on all platforms: desktop, WebTrader, iOS, and Android. They allow you to step away from your screens while staying informed about critical market levels.</p>
                 <p>Alerts are purely informational — they do not automatically execute trades. For automated trade execution, you would use an Expert Advisor (EA).</p>
@@ -60,9 +60,9 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[["Price Alerts","Set notifications at any price level"],["Indicator Alerts","Trigger on MA crosses, RSI levels"],["Time Alerts","Remind yourself of scheduled events"],["Margin Alerts","Monitor your account risk level"]].map(([t,d])=>(
-                <div key={t} className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-xl p-4">
-                  <div className="text-[13px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-1">{t}</div>
-                  <div className="text-[12px] text-gray-500 dark:text-[#9CA3AF]">{d}</div>
+                <div key={t} className="bg-[#F5F7FA] border border-gray-100 rounded-xl p-4">
+                  <div className="text-[13px] font-bold text-[#111827] mb-1">{t}</div>
+                  <div className="text-[12px] text-gray-500">{d}</div>
                 </div>
               ))}
             </div>
@@ -71,19 +71,19 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
       </section>
 
       {/* Alert types */}
-      <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Alert Types</div>
-            <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">Types of Trading Alerts</h2>
-            <p className="text-gray-500 dark:text-[#9CA3AF] max-w-xl mx-auto text-[15px]">MetaTrader 4 supports several types of alert conditions to suit different monitoring needs.</p>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">Types of Trading Alerts</h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-[15px]">MetaTrader 4 supports several types of alert conditions to suit different monitoring needs.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {alertTypes.map(({ Icon, title, desc }) => (
-              <div key={title} className="bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
-                <div className="w-10 h-10 rounded-xl border border-gray-200 dark:border-[#1F2937] bg-[#F5F7FA] dark:bg-[#0A1220] text-gray-500 dark:text-[#6B7280] flex items-center justify-center mb-4"><Icon className="w-5 h-5" /></div>
-                <h3 className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-2">{title}</h3>
-                <p className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{desc}</p>
+              <div key={title} className="bg-white border border-gray-100 rounded-2xl p-6">
+                <div className="w-10 h-10 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-4"><Icon className="w-5 h-5" /></div>
+                <h3 className="text-[14px] font-bold text-[#111827] mb-2">{title}</h3>
+                <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -91,18 +91,18 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
       </section>
 
       {/* Delivery channels */}
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Delivery</div>
-            <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">How Alerts Are Delivered</h2>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">How Alerts Are Delivered</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {deliveryChannels.map(({ Icon, title, desc }) => (
-              <div key={title} className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
-                <div className="w-10 h-10 rounded-xl border border-gray-200 dark:border-[#1F2937] bg-white dark:bg-[#0A1220] text-gray-500 dark:text-[#6B7280] flex items-center justify-center mb-4"><Icon className="w-5 h-5" /></div>
-                <h3 className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-2">{title}</h3>
-                <p className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{desc}</p>
+              <div key={title} className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-6">
+                <div className="w-10 h-10 rounded-xl border border-gray-200 bg-white text-gray-500 flex items-center justify-center mb-4"><Icon className="w-5 h-5" /></div>
+                <h3 className="text-[14px] font-bold text-[#111827] mb-2">{title}</h3>
+                <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -110,22 +110,22 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
       </section>
 
       {/* How to set up */}
-      <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Setup Guide</div>
-            <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">How to Set Up Alerts in MT4</h2>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">How to Set Up Alerts in MT4</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-5 mb-8">
             {[
               { platform: "Desktop (Windows)", steps: ["Open MetaTrader 4 on your computer.","Right-click any price level on a chart — select 'Set Alert'.","Configure the alert condition, type, and notification method.","Click 'Add' to activate the alert.","Manage all alerts via View → Terminal → Alerts tab."] },
               { platform: "Mobile (iOS/Android)", steps: ["Open the MT4 mobile app and navigate to a chart.","Tap and hold on the price level where you want an alert.","Select 'Set Alert' from the context menu.","Choose the alert condition and enable push notifications.","Ensure push notifications are enabled in your device settings for MT4."] },
             ].map(({ platform, steps }) => (
-              <div key={platform} className="bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
-                <h3 className="text-[15px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-4">{platform}</h3>
+              <div key={platform} className="bg-white border border-gray-100 rounded-2xl p-6">
+                <h3 className="text-[15px] font-bold text-[#111827] mb-4">{platform}</h3>
                 <ol className="space-y-2.5">
                   {steps.map((s, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[13px] text-gray-600 dark:text-[#9CA3AF]">
+                    <li key={i} className="flex items-start gap-3 text-[13px] text-gray-600">
                       <span className="w-5 h-5 rounded-full bg-[#00CC44] text-black text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i+1}</span>{s}
                     </li>
                   ))}
@@ -137,18 +137,18 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
       </section>
 
       {/* Use cases */}
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">How Traders Use Alerts</div>
-            <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">Practical Alert Strategies</h2>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">Practical Alert Strategies</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {useCases.map(({ step, title, desc }) => (
-              <div key={step} className="bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
+              <div key={step} className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-6">
                 <div className="text-2xl font-extrabold text-[#00CC44] mb-3">{step}</div>
-                <h4 className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-2">{title}</h4>
-                <p className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{desc}</p>
+                <h4 className="text-[14px] font-bold text-[#111827] mb-2">{title}</h4>
+                <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -195,14 +195,14 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
       </section>
 
       {/* MT4 alert settings reference */}
-      <section className="py-16 bg-white dark:bg-[#050A0F]">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">MT4 Settings</div>
-              <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-5">Configuring Alerts in MT4</h2>
-              <p className="text-[14px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed mb-6">
-                MT4 provides several configuration options for how alerts behave. Access these settings from <strong className="text-[#111827] dark:text-[#E5E7EB]">Tools → Options → Events</strong> in the MT4 desktop terminal.
+              <h2 className="text-3xl font-extrabold text-[#111827] mb-5">Configuring Alerts in MT4</h2>
+              <p className="text-[14px] text-gray-600 leading-relaxed mb-6">
+                MT4 provides several configuration options for how alerts behave. Access these settings from <strong className="text-[#111827]">Tools → Options → Events</strong> in the MT4 desktop terminal.
               </p>
               <div className="space-y-3">
                 {[
@@ -212,10 +212,10 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
                   { setting: "Alert expiry",               value: "Unlimited / Once only",   path: "Alert configuration dialog" },
                   { setting: "Alert type (Bid/Ask)",       value: "Select Bid or Ask price", path: "Alert condition dropdown" },
                 ].map(({ setting, value, path }) => (
-                  <div key={setting} className="flex items-start gap-3 bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-xl px-4 py-3">
+                  <div key={setting} className="flex items-start gap-3 bg-[#F5F7FA] border border-gray-100 rounded-xl px-4 py-3">
                     <div className="flex-1 min-w-0">
-                      <div className="text-[12px] font-bold text-[#111827] dark:text-[#F9FAFB]">{setting}</div>
-                      <div className="text-[11px] text-gray-400 dark:text-[#6B7280] font-mono mt-0.5">{path}</div>
+                      <div className="text-[12px] font-bold text-[#111827]">{setting}</div>
+                      <div className="text-[11px] text-gray-400 font-mono mt-0.5">{path}</div>
                     </div>
                     <span className="text-[11px] text-[#00CC44] font-medium flex-shrink-0">{value}</span>
                   </div>
@@ -224,8 +224,8 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
             </div>
             <div>
               <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Push Notification Setup</div>
-              <h3 className="text-[20px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-4">Enable Mobile Push Alerts</h3>
-              <p className="text-[14px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed mb-5">To receive push notifications on your phone from MT4 desktop:</p>
+              <h3 className="text-[20px] font-bold text-[#111827] mb-4">Enable Mobile Push Alerts</h3>
+              <p className="text-[14px] text-gray-600 leading-relaxed mb-5">To receive push notifications on your phone from MT4 desktop:</p>
               <ol className="space-y-3">
                 {[
                   "Install the MT4 mobile app on your iOS or Android device.",
@@ -235,7 +235,7 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
                   "Enable 'Enable Push Notifications', enter your MetaQuotes ID, click Test to verify.",
                   "Now any desktop alert set to 'Push Notification' will appear on your phone instantly.",
                 ].map((step, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[13px] text-gray-600 dark:text-[#9CA3AF]">
+                  <li key={i} className="flex items-start gap-3 text-[13px] text-gray-600">
                     <span className="w-6 h-6 rounded-full bg-[#00CC44] text-black text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
                     {step}
                   </li>
@@ -247,15 +247,15 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
       </section>
 
       {/* Risk reminder */}
-      <section className="py-12 bg-[#F5F7FA] dark:bg-[#081018]">
+      <section className="py-12 bg-[#F5F7FA]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border border-amber-200 dark:border-amber-900/40 bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-6 flex items-start gap-4">
+          <div className="border border-amber-200 bg-amber-50 rounded-2xl p-6 flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(245,158,11,0.12)", border: "1px solid rgba(245,158,11,0.25)" }}>
-              <IconShield className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+              <IconShield className="w-5 h-5 text-amber-600" />
             </div>
             <div>
-              <div className="text-[14px] font-bold text-amber-900 dark:text-amber-300 mb-2">Risk Management Reminder</div>
-              <p className="text-[13px] text-amber-800 dark:text-amber-200/60 leading-relaxed">Trading alerts are a tool to help you monitor markets — they do not remove trading risk. Receiving an alert does not guarantee that a trade will be profitable. Always apply appropriate risk management including stop-loss orders, position sizing, and never risk more than you can afford to lose. Past performance is not indicative of future results.</p>
+              <div className="text-[14px] font-bold text-amber-900 mb-2">Risk Management Reminder</div>
+              <p className="text-[13px] text-amber-800 leading-relaxed">Trading alerts are a tool to help you monitor markets — they do not remove trading risk. Receiving an alert does not guarantee that a trade will be profitable. Always apply appropriate risk management including stop-loss orders, position sizing, and never risk more than you can afford to lose. Past performance is not indicative of future results.</p>
             </div>
           </div>
         </div>

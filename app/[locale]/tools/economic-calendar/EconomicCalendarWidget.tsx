@@ -41,14 +41,14 @@ export default function EconomicCalendarWidget() {
 
   if (error) {
     return (
-      <div className="rounded-2xl border border-gray-100 dark:border-[#1F2937] bg-[#F5F7FA] dark:bg-[#0F1720] p-10 text-center">
-        <div className="w-14 h-14 rounded-2xl border border-gray-200 dark:border-[#374151] bg-white dark:bg-[#0A1220] flex items-center justify-center mx-auto mb-5">
+      <div className="rounded-2xl border border-gray-100 bg-[#F5F7FA] p-10 text-center">
+        <div className="w-14 h-14 rounded-2xl border border-gray-200 bg-white flex items-center justify-center mx-auto mb-5">
           <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
         </div>
-        <h3 className="text-[15px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-2">Calendar Unavailable</h3>
-        <p className="text-[13px] text-gray-500 dark:text-[#9CA3AF] mb-6 max-w-sm mx-auto leading-relaxed">
+        <h3 className="text-[15px] font-bold text-[#111827] mb-2">Calendar Unavailable</h3>
+        <p className="text-[13px] text-gray-500 mb-6 max-w-sm mx-auto leading-relaxed">
           The live calendar could not be loaded. Access the full economic calendar directly on MQL5 or TradingView.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
@@ -58,7 +58,7 @@ export default function EconomicCalendarWidget() {
             MQL5 Economic Calendar
           </Link>
           <Link href="https://www.tradingview.com/economic-calendar/" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-xl text-[13px] border border-gray-200 dark:border-[#374151] text-[#111827] dark:text-[#F9FAFB] hover:border-[#00CC44]/30 transition-colors">
+            className="inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-xl text-[13px] border border-gray-200 text-[#111827] hover:border-[#00CC44]/30 transition-colors">
             TradingView Calendar
           </Link>
         </div>
@@ -67,7 +67,7 @@ export default function EconomicCalendarWidget() {
   }
 
   return (
-    <div className="relative rounded-2xl overflow-hidden border border-gray-100 dark:border-[#1F2937] shadow-sm bg-[#050C15]" style={{ minHeight: 620 }}>
+    <div className="relative rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-[#050C15]" style={{ minHeight: 620 }}>
       {!loaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-[#050C15]">
           <div className="flex flex-col items-center gap-3">
