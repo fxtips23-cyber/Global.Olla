@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IconChevronDown } from "./ui/Icons";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 /* ─── Icon helpers (inline SVG — no emoji) ─────────────────────────── */
 function NavIcon({ d, className = "w-4 h-4" }: { d: string; className?: string }) {
@@ -210,8 +212,9 @@ export default function Header() {
               </Link>
             </nav>
 
-            {/* Desktop CTAs */}
+            {/* Desktop CTAs + Language switcher */}
             <div className="hidden lg:flex items-center gap-2 ml-auto">
+              <LanguageSwitcher />
               <Link href="https://direct.ollatrade.com/auth/login" className="text-[13px] font-medium text-white/55 hover:text-white border border-white/12 hover:border-white/25 px-4 py-2 rounded-lg transition-all">
                 Login
               </Link>
@@ -261,6 +264,7 @@ export default function Header() {
               <Link href="https://direct.ollatrade.com/auth/login" className="text-center text-[13px] font-medium border border-white/15 text-white/60 py-3 rounded-xl" onClick={() => setMobileOpen(false)}>Login</Link>
               <Link href="https://direct.ollatrade.com/auth/register" className="text-center text-[13px] font-bold bg-[#00CC44] text-black py-3 rounded-xl" onClick={() => setMobileOpen(false)}>Open Account</Link>
             </div>
+            <LanguageSwitcher mobile />
           </div>
         </div>
       )}
