@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import MarketTicker from "./components/MarketTicker";
 import Hero from "./components/home/Hero";
 import MarketsSection from "./components/home/MarketsSection";
 import WhyOllaTrade from "./components/home/WhyOllaTrade";
@@ -23,9 +22,7 @@ export default function HomePage() {
       <RiskDisclaimer />
       {/* 1 — Hero */}
       <Hero />
-      {/* 2 — Market Ticker */}
-      <MarketTicker />
-      {/* 3 — Markets overview */}
+      {/* 2 — Markets overview */}
       <MarketsSection />
       {/* 4 — Why choose Olla Trade */}
       <WhyOllaTrade />
