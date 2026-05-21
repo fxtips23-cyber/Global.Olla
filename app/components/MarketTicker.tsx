@@ -1,46 +1,28 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import React from "react";
 
-const WIDGET_CONFIG = {
-  symbols: [
-    { proName: "FOREXCOM:SPXUSD", title: "S&P 500 Index" },
-    { proName: "FOREXCOM:NSXUSD", title: "US 100 Cash CFD" },
-    { proName: "FX_IDC:EURUSD",   title: "EUR to USD" },
-    { proName: "BITSTAMP:BTCUSD", title: "Bitcoin" },
-    { proName: "BITSTAMP:ETHUSD", title: "Ethereum" },
-    { proName: "FX:XAGUSD",       title: "" },
-  ],
-  colorTheme:    "dark",
-  locale:        "en",
-  largeChartUrl: "",
-  isTransparent: true,
-  showSymbolLogo: false,
-};
+const SCRIPT_SRC = "https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js";
 
 export default function MarketTicker() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    /* Prevent double-injection on hot reload */
-    if (container.querySelector("script")) return;
+    if (document.querySelector(`script[src="${SCRIPT_SRC}"]`)) return;
 
     const script = document.createElement("script");
-    script.type  = "text/javascript";
-    script.src   = "https://s3.tradingview.com/external-embedding/embed-widget-tickers.js";
-    script.async = true;
-    script.innerHTML = JSON.stringify(WIDGET_CONFIG);
-
-    container.appendChild(script);
+    script.type = "module";
+    script.src  = SCRIPT_SRC;
+    document.head.appendChild(script);
   }, []);
 
   return (
-    <div className="bg-[#081018] border-b border-white/10">
-      <div ref={containerRef} className="tradingview-widget-container">
-        <div className="tradingview-widget-container__widget" />
-      </div>
+    <div className="bg-[#081018] border-b border-white/10 overflow-hidden">
+      {React.createElement("tv-ticker-tape", {
+        symbols:           "FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD,OANDA:XAGUSD,OANDA:GBPUSD",
+        "hide-chart":      "",
+        "line-chart-type": "Baseline",
+        "item-size":       "compact",
+        "hover-type":      "chart",
+      })}
     </div>
   );
 }
