@@ -1,9 +1,9 @@
-/** Trustpilot review section.
- *  Trustpilot blocks server-side scraping (HTTP 403).
- *  Real reviews are displayed directly on Trustpilot via the CTA link.
- *  Skeleton cards shown as placeholders; no fake reviews used.
- */
+"use client";
+import { useTranslations } from "next-intl";
+
+/** Trustpilot review section — skeleton placeholders, no fake reviews. */
 export default function Testimonials() {
+  const t = useTranslations("home.testimonials");
   return (
     <section className="py-20 lg:py-28 bg-white dark:bg-[#050A0F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,14 +12,13 @@ export default function Testimonials() {
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-12">
           <div className="max-w-xl">
             <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">
-              Client Reviews
+              {t("badge")}
             </div>
             <h2 className="text-4xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-3">
-              Trusted by Traders Worldwide
+              {t("title")}
             </h2>
             <p className="text-gray-500 dark:text-[#9CA3AF] text-[15px] leading-relaxed">
-              Real reviews from real clients. Read what traders say about their experience
-              with Olla Trade — rated on Trustpilot.
+              {t("subtitle")}
             </p>
           </div>
 
@@ -43,10 +42,10 @@ export default function Testimonials() {
                 ))}
               </div>
               <div className="text-[11px] font-semibold text-[#111827] dark:text-[#F9FAFB]">
-                Rated on Trustpilot
+                {t("rated")}
               </div>
               <div className="text-[10px] text-gray-400 dark:text-[#6B7280] text-center">
-                Client reviews on Trustpilot
+                {t("reviews_note")}
               </div>
             </div>
           </div>
@@ -92,7 +91,7 @@ export default function Testimonials() {
         {/* ── Empty state notice ─────────────────────────────── */}
         <div className="text-center mb-8">
           <p className="text-[12px] text-gray-400 dark:text-[#6B7280]">
-            Reviews are loading from Trustpilot. View all verified client reviews directly on Trustpilot.
+            {t("loading_note")}
           </p>
         </div>
 
@@ -115,10 +114,10 @@ export default function Testimonials() {
 
             <div className="text-left">
               <div className="text-[14px] font-bold text-[#111827] dark:text-[#F9FAFB] group-hover:text-[#00B67A] transition-colors">
-                View reviews on Trustpilot
+                {t("cta_title")}
               </div>
               <div className="text-[11px] text-gray-400 dark:text-[#6B7280]">
-                trustpilot.com/review/ollatrade.com
+                {t("cta_url")}
               </div>
             </div>
 

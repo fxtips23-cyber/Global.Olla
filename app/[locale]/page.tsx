@@ -130,6 +130,20 @@ function Hero() {
   );
 }
 
+/* ─── Translated homepage CTA ────────────────────────────────── */
+function HomeCTA() {
+  const t = useTranslations("home.cta");
+  return (
+    <CTASection
+      title={t("title")}
+      subtitle={t("subtitle")}
+      primaryLabel={t("primary")}
+      secondaryLabel={t("secondary")}
+      secondaryHref="/trading/conditions"
+    />
+  );
+}
+
 /* ─── Page ────────────────────────────────────────────────────── */
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -147,13 +161,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <DepositSection />
       <ToolsSection />
       <Testimonials />
-      <CTASection
-        title="Start Trading with Olla Trade"
-        subtitle="Open a live account in minutes. Access 500+ instruments with professional conditions on MetaTrader 4."
-        primaryLabel="Open Free Account"
-        secondaryLabel="View Trading Conditions"
-        secondaryHref="/trading/conditions"
-      />
+      <HomeCTA />
     </>
   );
 }

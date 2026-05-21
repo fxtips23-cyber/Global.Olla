@@ -1,3 +1,5 @@
+"use client";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { IconBarChart, IconCode, IconBell, IconLayers, IconClock, IconActivity } from "../ui/Icons";
 
@@ -493,38 +495,24 @@ function TabletMockup() {
   );
 }
 
-/* ─── Feature list ─────────────────────────────────────────────────────── */
-const features = [
-  { Icon: IconBarChart, title: "30+ Technical Indicators",  desc: "Built-in MA, MACD, RSI, Bollinger Bands, Ichimoku, and 25+ more indicator types." },
-  { Icon: IconCode,     title: "Expert Advisors (EAs)",     desc: "Full MQL4 automated trading support. Backtest strategies on historical price data." },
-  { Icon: IconBell,     title: "Custom Alerts",             desc: "Price, indicator, and margin alerts via MT4 desktop, mobile push, or email." },
-  { Icon: IconLayers,   title: "Multi-Chart Layout",        desc: "Multiple instruments and timeframes simultaneously on a single screen." },
-  { Icon: IconClock,    title: "9 Chart Timeframes",        desc: "M1 through MN — candlestick, bar, and line chart types available." },
-  { Icon: IconActivity, title: "One-Click Execution",       desc: "Direct chart trading with instant market order submission." },
-];
-
-const platforms = [
-  { Icon: WinIcon,     name: "Desktop",    sub: "Windows MT4",   tag: "Most popular" },
-  { Icon: BrowserIcon, name: "WebTrader",  sub: "Any browser",   tag: "No install" },
-  { Icon: AppleIcon,   name: "iOS",        sub: "iPhone & iPad", tag: "App Store" },
-  { Icon: AndroidIcon, name: "Android",    sub: "All devices",   tag: "Google Play" },
-];
+/* ─── Feature + platform keys ─────────────────────────────────────────── */
+const FEAT_ICONS = [IconBarChart, IconCode, IconBell, IconLayers, IconClock, IconActivity];
+const FEAT_KEYS  = ["feat1","feat2","feat3","feat4","feat5","feat6"] as const;
+const PLAT_ICONS = [WinIcon, BrowserIcon, AppleIcon, AndroidIcon];
+const PLAT_KEYS  = ["desktop","web","ios","android"] as const;
 
 /* ─── Main section ─────────────────────────────────────────────────────── */
 export default function PlatformSection() {
+  const t = useTranslations("home.platform");
   return (
     <section className="py-20 lg:py-28 bg-[#060E18]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Header ─────────────────────────────────────────────── */}
         <div className="text-center mb-12">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">MetaTrader 4</div>
-          <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight">
-            The World&apos;s Most Popular Trading Platform
-          </h2>
-          <p className="text-white/40 max-w-2xl mx-auto text-[15px]">
-            Advanced charting, automated trading, and real-time execution across all global markets — on every device you own. Download or access via browser with no installation required.
-          </p>
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("badge")}</div>
+          <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight">{t("title")}</h2>
+          <p className="text-white/40 max-w-2xl mx-auto text-[15px]">{t("subtitle")}</p>
         </div>
 
         {/* ── Three-device composition — hidden on mobile, scrollable on tablet ── */}
@@ -533,15 +521,15 @@ export default function PlatformSection() {
           <MonitorMockup />
           <TabletMockup />
         </div>
-        {/* Mobile fallback — simple platform badge */}
+        {/* Mobile fallback */}
         <div className="sm:hidden flex justify-center mb-10">
           <div className="bg-[#0D1520] border border-white/10 rounded-2xl px-6 py-5 text-center max-w-xs w-full">
-            <div className="text-[11px] font-bold text-[#00CC44] uppercase tracking-widest mb-2">MetaTrader 4</div>
-            <div className="text-xl font-extrabold text-white mb-1">Available on All Devices</div>
-            <div className="text-[13px] text-white/40 mb-4">Desktop · WebTrader · iOS · Android</div>
+            <div className="text-[11px] font-bold text-[#00CC44] uppercase tracking-widest mb-2">{t("mobile_badge")}</div>
+            <div className="text-xl font-extrabold text-white mb-1">{t("mobile_title")}</div>
+            <div className="text-[13px] text-white/40 mb-4">{t("mobile_sub")}</div>
             <div className="flex justify-center gap-2 flex-wrap">
-              {["Desktop","WebTrader","iOS","Android"].map(p=>(
-                <span key={p} className="text-[11px] bg-white/6 border border-white/10 text-white/50 px-3 py-1.5 rounded-lg">{p}</span>
+              {PLAT_KEYS.map(k => (
+                <span key={k} className="text-[11px] bg-white/6 border border-white/10 text-white/50 px-3 py-1.5 rounded-lg">{t(k)}</span>
               ))}
             </div>
           </div>
@@ -550,42 +538,48 @@ export default function PlatformSection() {
         {/* ── Platform download buttons ──────────────────────────── */}
         <div className="flex justify-center mb-12">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {platforms.map(({ Icon, name, sub, tag }) => (
-              <Link key={name} href="/trading/platform"
-                className="group flex flex-col items-center gap-2 border border-white/10 bg-white/[0.03] hover:bg-[#00CC44]/8 hover:border-[#00CC44]/30 rounded-xl px-5 py-4 transition-all duration-200">
-                <Icon className="w-5 h-5 text-white/40 group-hover:text-[#00CC44] transition-colors" />
-                <div className="text-center">
-                  <div className="text-[13px] font-bold text-white/70 group-hover:text-white transition-colors">{name}</div>
-                  <div className="text-[10px] text-white/30">{sub}</div>
-                </div>
-                <span className="text-[9px] text-white/22 group-hover:text-[#00CC44] transition-colors">{tag}</span>
-              </Link>
-            ))}
+            {PLAT_KEYS.map((key, i) => {
+              const Icon = PLAT_ICONS[i];
+              return (
+                <Link key={key} href="/trading/platform"
+                  className="group flex flex-col items-center gap-2 border border-white/10 bg-white/[0.03] hover:bg-[#00CC44]/8 hover:border-[#00CC44]/30 rounded-xl px-5 py-4 transition-all duration-200">
+                  <Icon className="w-5 h-5 text-white/40 group-hover:text-[#00CC44] transition-colors" />
+                  <div className="text-center">
+                    <div className="text-[13px] font-bold text-white/70 group-hover:text-white transition-colors">{t(key)}</div>
+                    <div className="text-[10px] text-white/30">{t(`${key}_sub`)}</div>
+                  </div>
+                  <span className="text-[9px] text-white/22 group-hover:text-[#00CC44] transition-colors">{t(`${key}_tag`)}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
 
         {/* ── Feature grid ──────────────────────────────────────────── */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-          {features.map(({ Icon, title, desc }) => (
-            <div key={title} className="flex items-start gap-3 rounded-xl p-4"
-              style={{ background:"rgba(255,255,255,0.03)", border:"1px solid rgba(255,255,255,0.07)" }}>
-              <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
-                style={{ background:"rgba(0,204,68,0.12)", border:"1px solid rgba(0,204,68,0.2)" }}>
-                <Icon className="w-3.5 h-3.5 text-[#00CC44]" />
+          {FEAT_KEYS.map((key, i) => {
+            const Icon = FEAT_ICONS[i];
+            return (
+              <div key={key} className="flex items-start gap-3 rounded-xl p-4"
+                style={{ background:"rgba(255,255,255,0.03)", border:"1px solid rgba(255,255,255,0.07)" }}>
+                <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                  style={{ background:"rgba(0,204,68,0.12)", border:"1px solid rgba(0,204,68,0.2)" }}>
+                  <Icon className="w-3.5 h-3.5 text-[#00CC44]" />
+                </div>
+                <div>
+                  <div className="text-[12px] font-semibold text-white/75 mb-0.5">{t(`${key}_title`)}</div>
+                  <div className="text-[11px] text-white/35 leading-relaxed">{t(`${key}_desc`)}</div>
+                </div>
               </div>
-              <div>
-                <div className="text-[12px] font-semibold text-white/75 mb-0.5">{title}</div>
-                <div className="text-[11px] text-white/35 leading-relaxed">{desc}</div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="text-center">
           <Link href="/trading/platform"
             className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
             style={{ background:"#00CC44", color:"#000" }}>
-            Explore MT4 Features
+            {t("cta")}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
             </svg>
