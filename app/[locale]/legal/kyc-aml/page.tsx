@@ -3,7 +3,7 @@ import PageHero from "../../../components/ui/PageHero";
 import FAQSection from "../../../components/ui/FAQSection";
 import { IconShieldCheck, IconUsers, IconLock, IconDatabase, IconCheck, IconActivity } from "../../../components/ui/Icons";
 import { kycAmlFaqs } from "../../../data/extra-faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "KYC / AML Policy", description: "Olla Trade's Know Your Customer and Anti-Money Laundering policy — identity verification requirements, document acceptance, and compliance procedures." };
 
@@ -16,9 +16,10 @@ export function generateStaticParams() {
 export default async function KYCAMLPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "legal.kyc" });
   return (
     <>
-      <PageHero badge="Compliance" title="KYC / AML Policy" subtitle="Olla Trade is committed to preventing financial crime and complying with applicable Know Your Customer (KYC) and Anti-Money Laundering (AML) regulations." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "KYC/AML Policy" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle="Olla Trade is committed to preventing financial crime and complying with applicable Know Your Customer (KYC) and Anti-Money Laundering (AML) regulations." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "KYC/AML Policy" }]} />
 
       <section className="py-16 bg-white dark:bg-[#050A0F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

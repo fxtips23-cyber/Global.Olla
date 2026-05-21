@@ -11,7 +11,7 @@ import {
 } from "../../components/ui/Icons";
 import { executionFaqs } from "../../data/faqs";
 import type { ComponentType } from "react";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Execution Information",
@@ -59,6 +59,7 @@ export function generateStaticParams() {
 export default async function ExecutionInformationPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "trading.conditions" });
   return (
     <>
       {/* ── 1. Hero (always dark — same as every inner page) ─────────── */}

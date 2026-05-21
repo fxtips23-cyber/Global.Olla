@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
 import FAQSection from "../../components/ui/FAQSection";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import {
   IconMail,
   IconPhone,
@@ -117,6 +117,7 @@ export function generateStaticParams() {
 export default async function ContactUsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "company.contact" });
   return (
     <>
       {/* ── 1. Hero ──────────────────────────────────────────────── */}

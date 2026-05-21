@@ -5,7 +5,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import { IconInfo } from "../../../components/ui/Icons";
 import { econCalFaqs } from "../../../data/extra-faqs";
 import EconomicCalendarWidget from "./EconomicCalendarWidget";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Economic Calendar — Live Market Events",
@@ -104,12 +104,13 @@ export function generateStaticParams() {
 export default async function EconomicCalendarPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "tools.calendar" });
   return (
     <>
       <PageHero
-        badge="Free Tool"
-        title="Economic Calendar"
-        subtitle="Track upcoming economic events, central bank announcements, and market-moving data releases to plan and manage your trading more effectively."
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "Economic Calendar" }]}
         stats={[{ value: "Live", label: "Real-time updates" }, { value: "3", label: "Impact levels" }, { value: "Free", label: "All accounts" }]}
       />
@@ -266,7 +267,7 @@ export default async function EconomicCalendarPage({ params }: { params: Promise
       </section>
 
       <FAQSection
-        title="Economic Calendar FAQs"
+        title={t("faq_title")}
         subtitle="Common questions about using the economic calendar for trading."
         faqs={econCalFaqs}
       />

@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageHero from "../../../components/ui/PageHero";
 import FAQSection from "../../../components/ui/FAQSection";
 import { IconUsers, IconCreditCard, IconMonitor, IconShieldCheck, IconBook, IconSettings, IconActivity, IconMail, IconPhone, IconArrowRight } from "../../../components/ui/Icons";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Get Help",
@@ -38,9 +38,10 @@ export function generateStaticParams() {
 export default async function HelpPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "company.help" });
   return (
     <>
-      <PageHero badge="Support Centre" title="How Can We Help?" subtitle="Find answers to common questions about accounts, trading, deposits, verification, and more. Our support team is available 24/5, Monday to Friday." breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Get Help" }]} stats={[{ value: "24/5", label: "Support hours" }, { value: "1 day", label: "Typical response" }, { value: "Email+Phone", label: "Channels" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Get Help" }]} stats={[{ value: "24/5", label: "Support hours" }, { value: "1 day", label: "Typical response" }, { value: "Email+Phone", label: "Channels" }]} />
 
       {/* Categories */}
       <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
@@ -213,7 +214,7 @@ export default async function HelpPage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <FAQSection title="Help Centre FAQs" subtitle="Answers to the most common questions from Olla Trade clients." faqs={faqs} />
+      <FAQSection title={t("faq_title")} subtitle="Answers to the most common questions from Olla Trade clients." faqs={faqs} />
     </>
   );
 }

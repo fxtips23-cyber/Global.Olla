@@ -6,7 +6,7 @@ import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { SITE } from "../../../lib/constants";
 import { IconTarget, IconShieldCheck, IconLock, IconBook, IconGlobe, IconUsers } from "../../../components/ui/Icons";
 import GlobalMarketsVisual from "../../../components/visuals/GlobalMarketsVisual";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "About Us", description: "Learn about Olla Trade — our mission, vision, platform, and commitment to providing professional online trading services worldwide." };
 
@@ -35,9 +35,10 @@ export function generateStaticParams() {
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "company.about" });
   return (
     <>
-      <PageHero badge="About Olla Trade" title="Your All-in-One Hub for Smarter Trading" subtitle="Olla Trade is a professional online trading platform built to empower traders of all levels to access global markets with confidence, using the tools professionals rely on." breadcrumbs={[{ label: "Company", href: "/company" }, { label: "About Us" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Company", href: "/company" }, { label: "About Us" }]} />
 
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,9 +53,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             </div>
             <div className="space-y-4">
               {[
-                { title: "Our Vision",      body: "To build a world where financial freedom is accessible to all — where anyone, anywhere can access global markets with professional tools and fair conditions." },
-                { title: "Our Mission",     body: "To provide a secure, intuitive, and reliable trading platform that enables individuals worldwide to trade global markets with confidence." },
-                { title: "Our Commitment", body: "Transparency in pricing, honesty in risk communication, reliability in execution, and a client-first approach in every decision we make." },
+                { title: t("vision_title"),      body: "To build a world where financial freedom is accessible to all — where anyone, anywhere can access global markets with professional tools and fair conditions." },
+                { title: t("mission_title"),     body: "To provide a secure, intuitive, and reliable trading platform that enables individuals worldwide to trade global markets with confidence." },
+                { title: t("commitment_title"),  body: "Transparency in pricing, honesty in risk communication, reliability in execution, and a client-first approach in every decision we make." },
               ].map((v) => (
                 <div key={v.title} className="bg-white rounded-2xl border border-gray-100 p-5">
                   <h3 className="text-[14px] font-bold text-[#111827] mb-2">{v.title}</h3>
@@ -123,7 +124,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      <CTASection title="Start Your Trading Journey" subtitle="Open an account in minutes and join thousands of traders on Olla Trade." primaryLabel="Open Account" secondaryLabel="Contact Us" secondaryHref="/company/contact" />
+      <CTASection title={t("cta_title")} subtitle={t("cta_subtitle")} primaryLabel="Open Account" secondaryLabel="Contact Us" secondaryHref="/company/contact" />
     </>
   );
 }

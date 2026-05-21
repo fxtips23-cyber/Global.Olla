@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Terms & Conditions", description: "Olla Trade Terms and Conditions — governing the use of our trading services, account registration, deposits, withdrawals, and client obligations." };
 
@@ -24,9 +24,10 @@ export function generateStaticParams() {
 export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "legal.terms" });
   return (
     <>
-      <PageHero badge="Legal" title="Terms & Conditions" subtitle="Please read these Terms and Conditions carefully before using Olla Trade services. By registering an account, you confirm your acceptance of these Terms." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Terms & Conditions" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle="Please read these Terms and Conditions carefully before using Olla Trade services. By registering an account, you confirm your acceptance of these Terms." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Terms & Conditions" }]} />
 
       {/* Important notice */}
       <section className="py-8 bg-[#F5F7FA] dark:bg-[#081018]">

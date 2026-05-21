@@ -7,7 +7,7 @@ import TradingConditionsTable from "../../../components/ui/TradingConditionsTabl
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconDroplet, IconClock, IconPercent, IconRefresh, IconCode, IconLayers } from "../../../components/ui/Icons";
 import { forexFaqs } from "../../../data/faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Forex Trading — 70+ Currency Pairs",
@@ -55,12 +55,13 @@ export function generateStaticParams() {
 export default async function ForexPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "markets.forex" });
   return (
     <>
       <PageHero
-        badge="Forex Markets"
-        title="Trade 70+ Forex Currency Pairs"
-        subtitle="Access the world's most liquid market with tight spreads from 0.0 pips, leverage up to 1:500, and 24/5 trading on MetaTrader 4."
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Markets", href: "/markets" }, { label: "Forex" }]}
         cta={{ label: "Start Trading Forex", href: "https://direct.ollatrade.com/auth/register" }}
         stats={[{ value: "70+", label: "Currency Pairs" }, { value: "0.0", label: "Pips From" }, { value: "1:500", label: "Max Leverage" }]}
@@ -239,10 +240,10 @@ export default async function ForexPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      <FAQSection title="Forex Trading FAQs" faqs={forexFaqs} />
+      <FAQSection title={t("faq_title")} faqs={forexFaqs} />
       <CTASection
-        title="Start Trading Forex Today"
-        subtitle="Open your account and access 70+ currency pairs with tight spreads, 1:500 leverage, and full MT4 support."
+        title={t("cta_title")}
+        subtitle={t("cta_subtitle")}
         primaryLabel="Open Account"
         secondaryLabel="Compare Accounts"
         secondaryHref="/trading/accounts"

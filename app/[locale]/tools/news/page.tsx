@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "../../../lib/constants";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Articles — Market Analysis & Trading Insights",
@@ -27,6 +27,7 @@ export function generateStaticParams() {
 export default async function ArticlesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "tools.articles" });
   return (
     <>
       {/* ── 1. Hero ──────────────────────────────────────────────── */}

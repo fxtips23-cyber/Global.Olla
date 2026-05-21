@@ -4,7 +4,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import CTASection from "../../../components/CTASection";
 import { IconShield, IconActivity, IconRefresh, IconDroplet, IconServer, IconInfo, IconBarChart } from "../../../components/ui/Icons";
 import { riskFaqs } from "../../../data/extra-faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Risk Disclosures",
@@ -40,9 +40,10 @@ export function generateStaticParams() {
 export default async function RiskDisclosuresPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "legal.risk" });
   return (
     <>
-      <PageHero badge="Important — Please Read" title="Risk Disclosures" subtitle="Trading financial instruments involves significant risk. Please read and understand the following risk disclosures in full before opening a live account with Olla Trade." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Risk Disclosures" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Risk Disclosures" }]} />
 
       {/* High-risk banner */}
       <section className="py-8 bg-[#F5F7FA] dark:bg-[#081018]">

@@ -6,7 +6,7 @@ import CTASection from "../../../components/CTASection";
 import FAQSection from "../../../components/ui/FAQSection";
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconDollar, IconBarChart, IconUsers, IconHeadset, IconTarget, IconBell, IconBook, IconGlobe, IconMonitor, IconNewspaper, IconActivity, IconSettings } from "../../../components/ui/Icons";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Partner / Affiliate Program",
@@ -61,9 +61,10 @@ export function generateStaticParams() {
 export default async function AffiliatePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "company.affiliate" });
   return (
     <>
-      <PageHero badge="Affiliate & Partner Program" title="Earn Commissions by Partnering with Olla Trade" subtitle="Join our affiliate program and earn commissions from eligible clients you refer. Access real-time tracking, dedicated support, and professional marketing materials." breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Partner / Affiliate" }]} cta={{ label: "Apply to Become a Partner", href: "https://direct.ollatrade.com/auth/register" }} stats={[{ value: "3", label: "Commission Models" }, { value: "Real-Time", label: "Tracking" }, { value: "24/5", label: "Partner Support" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Partner / Affiliate" }]} cta={{ label: "Apply to Become a Partner", href: "https://direct.ollatrade.com/auth/register" }} stats={[{ value: "3", label: "Commission Models" }, { value: "Real-Time", label: "Tracking" }, { value: "24/5", label: "Partner Support" }]} />
 
       {/* Why partner */}
       <section className="py-16 bg-[#F5F7FA]">

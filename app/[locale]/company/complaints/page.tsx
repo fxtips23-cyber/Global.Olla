@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "../../../lib/constants";
 import FAQSection from "../../../components/ui/FAQSection";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Complaints",
@@ -43,6 +43,7 @@ export function generateStaticParams() {
 export default async function ComplaintsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "company.complaints" });
   return (
     <>
       {/* ── 1. Hero ──────────────────────────────────────────────── */}
@@ -84,7 +85,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
       {/* ── 2. Step-by-step process ──────────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Complaint Process" />
+          <SectionLabel text={t("process_label")} />
           <h2 className="text-3xl font-extrabold text-[#111827] mb-4">How to Submit a Complaint</h2>
           <p className="text-gray-500 text-[15px] mb-12 max-w-2xl leading-relaxed">
             Follow these steps to ensure your complaint is handled quickly and thoroughly.
@@ -136,7 +137,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <SectionLabel text="Required Information" />
+              <SectionLabel text={t("info_label")} />
               <h2 className="text-3xl font-extrabold text-[#111827] mb-4">What to Include in Your Complaint</h2>
               <p className="text-[14px] text-gray-600 leading-relaxed mb-8">
                 To ensure your complaint is processed without delay, please include the following information in your initial complaint email. Incomplete submissions may require us to request additional information, which can extend the review timeline.
@@ -193,7 +194,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
       {/* ── 4. Review & response process ─────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Review Process" />
+          <SectionLabel text={t("review_label")} />
           <h2 className="text-3xl font-extrabold text-[#111827] mb-10">How We Review Your Complaint</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
@@ -216,7 +217,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
       {/* ── 5. Timeline ──────────────────────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Response Timelines" />
+          <SectionLabel text={t("timeline_label")} />
           <h2 className="text-3xl font-extrabold text-[#111827] mb-10">What to Expect and When</h2>
           <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
             <table className="w-full text-sm">
@@ -252,7 +253,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <SectionLabel text="Escalation" />
+              <SectionLabel text={t("escalation_label")} />
               <h2 className="text-3xl font-extrabold text-white mb-4">Not Satisfied with the Outcome?</h2>
               <p className="text-white/45 text-[15px] leading-relaxed mb-6">
                 If you are not satisfied with our final written response, you have the right to escalate your complaint to an appropriate external body or seek independent legal advice. Olla Trade will co-operate fully with any external review process.
@@ -317,7 +318,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
 
       {/* ── 8. FAQ ───────────────────────────────────────────────── */}
       <FAQSection
-        title="Complaint FAQ"
+        title={t("faq_title")}
         subtitle="Common questions about our complaint handling process and timelines."
         faqs={complaintFaqs}
       />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import { IconPhone, IconMail, IconMapPin } from "../../../components/ui/Icons";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Contact Us", description: "Get in touch with Olla Trade support. Phone, email, and office address for all enquiries." };
 
@@ -12,9 +12,10 @@ export function generateStaticParams() {
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "company.contact" });
   return (
     <>
-      <PageHero badge="Get in Touch" title="Contact Us" subtitle="Our support team is available 24/5 to assist you with any questions about your account, trading, or promotions." breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Contact Us" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Contact Us" }]} />
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6 mb-8">

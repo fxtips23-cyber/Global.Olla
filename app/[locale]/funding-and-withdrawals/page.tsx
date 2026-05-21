@@ -20,7 +20,7 @@ import {
   IconDatabase,
 } from "../../components/ui/Icons";
 import type { ComponentType } from "react";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Funding and Withdrawals",
@@ -156,13 +156,14 @@ export function generateStaticParams() {
 export default async function FundingAndWithdrawalsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "trading.funding" });
   return (
     <>
       {/* ── 1. Hero ────────────────────────────────────────────── */}
       <PageHero
-        badge="Client Portal"
-        title="Funding and Withdrawals"
-        subtitle="Manage your deposits and withdrawals securely through the Olla Trade client portal. No Olla Trade fees. Transparent processing."
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Funding and Withdrawals" }]}
         stats={[
           { value: "0%", label: "Olla Trade Fees" },

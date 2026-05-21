@@ -7,7 +7,7 @@ import TradingConditionsTable from "../../../components/ui/TradingConditionsTabl
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconBarChart, IconNewspaper, IconRefresh, IconDroplet, IconPercent, IconCalculator } from "../../../components/ui/Icons";
 import { indicesFaqs } from "../../../data/faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Stock Market Indices — CFD Trading",
@@ -57,12 +57,13 @@ export function generateStaticParams() {
 export default async function IndicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "markets.indices" });
   return (
     <>
       <PageHero
-        badge="Global Indices"
-        title="Trade World Stock Market Indices"
-        subtitle="Access CFDs on the world's most important stock market indices. Broad market exposure without buying individual stocks — leverage up to 1:100."
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Markets", href: "/markets" }, { label: "Indices" }]}
         cta={{ label: "Start Trading Indices", href: "https://direct.ollatrade.com/auth/register" }}
         stats={[{ value: "10+", label: "Indices" }, { value: "1 pt", label: "Spread From" }, { value: "1:100", label: "Max Leverage" }]}
@@ -176,10 +177,10 @@ export default async function IndicesPage({ params }: { params: Promise<{ locale
         </div>
       </section>
 
-      <FAQSection title="Indices Trading FAQs" faqs={indicesFaqs} />
+      <FAQSection title={t("faq_title")} faqs={indicesFaqs} />
       <CTASection
-        title="Trade Global Indices with Olla Trade"
-        subtitle="Open your account and speculate on US, European, and Asian stock market indices with competitive spreads."
+        title={t("cta_title")}
+        subtitle={t("cta_subtitle")}
         primaryLabel="Open Account"
         secondaryLabel="Compare Accounts"
         secondaryHref="/trading/accounts"

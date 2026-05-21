@@ -3,7 +3,7 @@ import PageHero from "../../../components/ui/PageHero";
 import FAQSection from "../../../components/ui/FAQSection";
 import { IconCreditCard, IconShield, IconClock, IconDatabase, IconCheck, IconInfo } from "../../../components/ui/Icons";
 import { withdrawalCondFaqs } from "../../../data/extra-faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Withdrawal Conditions", description: "Olla Trade withdrawal conditions — requirements, processing times, verification, crypto withdrawals, fees, and bonus restrictions." };
 
@@ -16,9 +16,10 @@ export function generateStaticParams() {
 export default async function WithdrawalConditionsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "legal.withdrawal" });
   return (
     <>
-      <PageHero badge="Policy" title="Withdrawal Conditions" subtitle="All terms and conditions governing withdrawal requests from your Olla Trade account. Please read before submitting a withdrawal." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Withdrawal Conditions" }]} />
+      <PageHero badge="Policy" title={t("title")} subtitle="All terms and conditions governing withdrawal requests from your Olla Trade account. Please read before submitting a withdrawal." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Withdrawal Conditions" }]} />
 
       <section className="py-16 bg-white dark:bg-[#050A0F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

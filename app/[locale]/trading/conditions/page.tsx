@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SITE } from "../../../lib/constants";
 import FAQSection from "../../../components/ui/FAQSection";
 import { conditionsFaqs } from "../../../data/faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Trading Conditions",
@@ -43,6 +43,7 @@ export function generateStaticParams() {
 export default async function ConditionsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "trading.conditions" });
   return (
     <>
       {/* ── 1. Hero ──────────────────────────────────────────────── */}
@@ -100,7 +101,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
       {/* ── 3. Conditions overview cards ─────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Conditions Overview" />
+          <SectionLabel text={t("overview_label")} />
           <h2 className="text-3xl font-extrabold text-[#111827] mb-3">How We Execute Your Trades</h2>
           <p className="text-gray-500 text-[15px] mb-10 max-w-2xl leading-relaxed">
             Olla Trade uses market execution across all accounts. Orders are filled at the best available market price at the time of submission, subject to available liquidity and market conditions.
@@ -119,7 +120,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
       {/* ── 4. Account conditions table ──────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Account Types" />
+          <SectionLabel text={t("accounts_label")} />
           <h2 className="text-3xl font-extrabold text-[#111827] mb-3">Conditions by Account Type</h2>
           <p className="text-gray-500 text-[15px] mb-10 max-w-2xl leading-relaxed">
             Three account types designed for different experience levels and capital sizes — all on MetaTrader 4.
@@ -164,7 +165,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
       {/* ── 5. Spreads & pricing ─────────────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Spreads & Pricing" />
+          <SectionLabel text={t("spreads_label")} />
           <h2 className="text-3xl font-extrabold text-[#111827] mb-10">Spreads by Instrument Class</h2>
           <div className="overflow-x-auto rounded-2xl border border-gray-100 bg-white shadow-sm">
             <table className="w-full text-sm min-w-[640px]">
@@ -202,7 +203,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <SectionLabel text="Leverage & Margin" />
+              <SectionLabel text={t("leverage_label")} />
               <h2 className="text-3xl font-extrabold text-[#111827] mb-4">Leverage up to 1:500</h2>
               <p className="text-[14px] text-gray-600 leading-relaxed mb-6">
                 Leverage allows traders to control a larger position with a smaller amount of capital. Olla Trade offers leverage up to 1:500 on Forex pairs. Leverage is not fixed — different instruments have different maximum leverage limits based on risk characteristics.
@@ -244,7 +245,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
       <section className="py-16 bg-[#050C15]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <SectionLabel text="Order Execution" />
+            <SectionLabel text={t("execution_label")} />
             <h2 className="text-3xl font-extrabold text-white mb-3">Market Execution Model</h2>
             <p className="text-white/40 max-w-2xl mx-auto text-[15px] leading-relaxed">
               All Olla Trade accounts use market execution. Orders are transmitted directly to liquidity providers at the best available price.
@@ -279,7 +280,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
       {/* ── 8. Order types ───────────────────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Order Types" />
+          <SectionLabel text={t("orders_label")} />
           <h2 className="text-3xl font-extrabold text-[#111827] mb-10">Supported Order Types</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -305,7 +306,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
       {/* ── 9. Trading hours ─────────────────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Trading Hours" />
+          <SectionLabel text={t("hours_label")} />
           <h2 className="text-3xl font-extrabold text-[#111827] mb-4">Market Hours by Asset</h2>
           <p className="text-gray-500 text-[15px] mb-10 max-w-2xl leading-relaxed">
             Olla Trade follows standard international market hours. All times are in server time (GMT+2 during daylight saving, GMT+3 in winter).
@@ -386,7 +387,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
 
       {/* ── 12. FAQ ──────────────────────────────────────────────── */}
       <FAQSection
-        title="Trading Conditions FAQ"
+        title={t("faq_title")}
         subtitle="Common questions about Olla Trade's spreads, leverage, execution, and account conditions."
         faqs={conditionsFaqs}
       />

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Privacy Policy", description: "Olla Trade Privacy Policy — how we collect, use, store, and protect your personal data in compliance with applicable data protection laws." };
 
@@ -23,9 +23,10 @@ export function generateStaticParams() {
 export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "legal.privacy" });
   return (
     <>
-      <PageHero badge="Privacy" title="Privacy Policy" subtitle="Your privacy is important to us. This policy explains how Olla Trade collects, uses, and protects your personal information." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Privacy Policy" }]} />
+      <PageHero badge="Privacy" title={t("title")} subtitle="Your privacy is important to us. This policy explains how Olla Trade collects, uses, and protects your personal information." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Privacy Policy" }]} />
 
       <section className="py-8 bg-[#F5F7FA] dark:bg-[#081018]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

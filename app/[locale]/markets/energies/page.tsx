@@ -7,7 +7,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import TradingConditionsTable from "../../../components/ui/TradingConditionsTable";
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconBuilding, IconBarChart, IconGlobe, IconDollar, IconActivity, IconRefresh } from "../../../components/ui/Icons";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Oil & Energy CFD Trading — Brent & WTI Crude",
@@ -44,12 +44,13 @@ export function generateStaticParams() {
 export default async function EnergiesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "markets.energies" });
   return (
     <>
       <PageHero
-        badge="Energy Markets"
-        title="Trade Crude Oil CFDs"
-        subtitle="Speculate on global energy markets with Brent Crude and WTI Crude Oil CFDs. Leverage up to 1:100 — no physical delivery or storage required."
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Markets", href: "/markets" }, { label: "Energies" }]}
         cta={{ label: "Start Trading Energies", href: "https://direct.ollatrade.com/auth/register" }}
         stats={[{ value: "2", label: "Energy Instruments" }, { value: "3 pts", label: "Spread From" }, { value: "1:100", label: "Max Leverage" }]}
@@ -193,10 +194,10 @@ export default async function EnergiesPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
-      <FAQSection title="Energy Trading FAQs" faqs={energiesFaqs} />
+      <FAQSection title={t("faq_title")} faqs={energiesFaqs} />
       <CTASection
-        title="Trade Crude Oil with Olla Trade"
-        subtitle="Access Brent and WTI crude oil CFDs with professional conditions — no physical delivery required."
+        title={t("cta_title")}
+        subtitle={t("cta_subtitle")}
         primaryLabel="Open Account"
         secondaryLabel="View All Markets"
         secondaryHref="/markets"

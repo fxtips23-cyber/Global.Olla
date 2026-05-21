@@ -7,7 +7,7 @@ import TradingConditionsTable from "../../../components/ui/TradingConditionsTabl
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconShieldCheck, IconBuilding, IconTrendingUp, IconBarChart, IconBolt, IconRefresh } from "../../../components/ui/Icons";
 import { metalsFaqs } from "../../../data/faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Gold & Silver Trading — Precious Metals CFDs",
@@ -46,12 +46,13 @@ export function generateStaticParams() {
 export default async function MetalsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "markets.metals" });
   return (
     <>
       <PageHero
-        badge="Precious Metals"
-        title="Trade Gold & Silver CFDs"
-        subtitle="Speculate on Gold (XAUUSD) and Silver (XAGUSD) with tight spreads and leverage up to 1:200. No physical ownership, no storage — trade directly on MT4."
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Markets", href: "/markets" }, { label: "Metals" }]}
         cta={{ label: "Start Trading Metals", href: "https://direct.ollatrade.com/auth/register" }}
         stats={[{ value: "2", label: "Instruments" }, { value: "25 pts", label: "Gold Spread" }, { value: "1:200", label: "Max Leverage" }]}
@@ -192,10 +193,10 @@ export default async function MetalsPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      <FAQSection title="Metals Trading FAQs" faqs={metalsFaqs} />
+      <FAQSection title={t("faq_title")} faqs={metalsFaqs} />
       <CTASection
-        title="Trade Gold & Silver with Olla Trade"
-        subtitle="Open your account and access precious metals markets with competitive spreads and leverage up to 1:200."
+        title={t("cta_title")}
+        subtitle={t("cta_subtitle")}
         primaryLabel="Open Account"
         secondaryLabel="View All Markets"
         secondaryHref="/markets"

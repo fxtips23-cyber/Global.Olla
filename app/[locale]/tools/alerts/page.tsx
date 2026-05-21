@@ -5,7 +5,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import CTASection from "../../../components/CTASection";
 import { IconBell, IconMonitor, IconPhone, IconMail, IconShield, IconActivity, IconClock, IconSettings, IconInfo } from "../../../components/ui/Icons";
 import { alertsFaqs } from "../../../data/extra-faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Trading Alerts",
@@ -40,9 +40,10 @@ export function generateStaticParams() {
 export default async function AlertsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "tools.alerts" });
   return (
     <>
-      <PageHero badge="Free Tool" title="Trading Alerts" subtitle="Set custom price and indicator alerts in MetaTrader 4 and receive notifications on desktop, mobile, or email — so you never miss a key market move." breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "Trading Alerts" }]} stats={[{ value: "MT4", label: "Platform" }, { value: "Free", label: "All accounts" }, { value: "3", label: "Alert channels" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "Trading Alerts" }]} stats={[{ value: "MT4", label: "Platform" }, { value: "Free", label: "All accounts" }, { value: "3", label: "Alert channels" }]} />
 
       {/* What are alerts */}
       <section className="py-16 bg-white dark:bg-[#050A0F]">
@@ -260,8 +261,8 @@ export default async function AlertsPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      <FAQSection title="Trading Alerts FAQs" subtitle="Common questions about setting up and using trading alerts in MetaTrader 4." faqs={alertsFaqs} />
-      <CTASection title="Start Using Trading Alerts" subtitle="Open an account and access the full MT4 alert system at no extra cost." primaryLabel="Open Account" secondaryLabel="Download MT4" secondaryHref="/trading/platform" />
+      <FAQSection title={t("faq_title")} subtitle="Common questions about setting up and using trading alerts in MetaTrader 4." faqs={alertsFaqs} />
+      <CTASection title={t("cta_title")} subtitle="Open an account and access the full MT4 alert system at no extra cost." primaryLabel="Open Account" secondaryLabel="Download MT4" secondaryHref="/trading/platform" />
     </>
   );
 }

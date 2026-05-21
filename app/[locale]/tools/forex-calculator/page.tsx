@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../../components/ui/PageHero";
 import ForexCalculator from "./ForexCalculator";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Forex Calculator — Position Size, Pip Value, Margin & P&L",
@@ -66,12 +66,13 @@ export function generateStaticParams() {
 export default async function ForexCalculatorPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "tools.calculator" });
   return (
     <>
       <PageHero
-        badge="Free Trading Tool"
-        title="Forex Calculator"
-        subtitle="Calculate position size, pip value, margin requirements, and potential profit or loss for any instrument before you open a trade."
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "Forex Calculator" }]}
         stats={[{ value: "4", label: "Calculators" }, { value: "Free", label: "For All Traders" }, { value: "All FX", label: "& CFD Instruments" }]}
       />

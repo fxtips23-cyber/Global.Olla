@@ -4,7 +4,7 @@ import PageHero from "../../../components/ui/PageHero";
 import FAQSection from "../../../components/ui/FAQSection";
 import { IconCheck, IconShield, IconInfo, IconUsers, IconClock } from "../../../components/ui/Icons";
 import { promotionsFaqs } from "../../../data/faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Promotions",
@@ -54,9 +54,10 @@ export function generateStaticParams() {
 export default async function PromotionsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "company.promotions" });
   return (
     <>
-      <PageHero badge="Special Offers" title="Promotions & Bonuses" subtitle="Boost your trading capital with Olla Trade's exclusive promotions. All bonuses are subject to eligibility criteria, terms and conditions, and are not guaranteed." breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Promotions" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Promotions" }]} />
 
       {/* Promotions grid */}
       <section className="py-16 bg-[#F5F7FA] dark:bg-[#081018]">
@@ -210,7 +211,7 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
         </div>
       </section>
 
-      <FAQSection title="Promotions FAQs" faqs={promotionsFaqs} />
+      <FAQSection title={t("faq_title")} faqs={promotionsFaqs} />
     </>
   );
 }

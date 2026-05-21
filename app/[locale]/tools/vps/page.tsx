@@ -5,7 +5,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import CTASection from "../../../components/CTASection";
 import { IconServer, IconBolt, IconShield, IconGlobe, IconCode, IconClock, IconDatabase, IconSettings, IconCheck } from "../../../components/ui/Icons";
 import { vpsFaqs } from "../../../data/extra-faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "VPS Guide",
@@ -49,9 +49,10 @@ export function generateStaticParams() {
 export default async function VPSPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "tools.vps" });
   return (
     <>
-      <PageHero badge="Automated Trading" title="VPS Guide for MT4" subtitle="A Virtual Private Server (VPS) allows your Expert Advisors to run 24 hours a day, 5 days a week — without needing your computer to stay on." breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "VPS Guide" }]} stats={[{ value: "24/5", label: "Always-on operation" }, { value: "EA", label: "Expert Advisor support" }, { value: "RDP", label: "Remote access" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "VPS Guide" }]} stats={[{ value: "24/5", label: "Always-on operation" }, { value: "EA", label: "Expert Advisor support" }, { value: "RDP", label: "Remote access" }]} />
 
       {/* What is VPS */}
       <section className="py-16 bg-white dark:bg-[#050A0F]">
@@ -213,8 +214,8 @@ export default async function VPSPage({ params }: { params: Promise<{ locale: st
         </div>
       </section>
 
-      <FAQSection title="VPS Guide FAQs" faqs={vpsFaqs} />
-      <CTASection title="Start Automating Your Trading" subtitle="Open an MT4 account and deploy your Expert Advisors on a VPS for uninterrupted operation." primaryLabel="Open Account" secondaryLabel="View MT4 Platform" secondaryHref="/trading/platform" />
+      <FAQSection title={t("faq_title")} faqs={vpsFaqs} />
+      <CTASection title={t("cta_title")} subtitle="Open an MT4 account and deploy your Expert Advisors on a VPS for uninterrupted operation." primaryLabel="Open Account" secondaryLabel="View MT4 Platform" secondaryHref="/trading/platform" />
     </>
   );
 }

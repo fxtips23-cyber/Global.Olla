@@ -5,7 +5,7 @@ import CTASection from "../../../components/CTASection";
 import FAQSection from "../../../components/ui/FAQSection";
 import TradingConditionsTable from "../../../components/ui/TradingConditionsTable";
 import { cryptoFaqs } from "../../../data/faqs";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Cryptocurrency CFD Trading — Bitcoin, Ethereum & More",
@@ -62,12 +62,13 @@ export function generateStaticParams() {
 export default async function CryptoPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "markets.crypto" });
   return (
     <>
       <PageHero
-        badge="Cryptocurrencies"
-        title="Trade Crypto CFDs — No Wallet Needed"
-        subtitle="Speculate on Bitcoin, Ethereum, Litecoin, and Ripple price movements as CFDs. No wallet, no exchange account — trade directly from MT4."
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Markets", href: "/markets" }, { label: "Crypto" }]}
         cta={{ label: "Start Trading Crypto", href: "https://direct.ollatrade.com/auth/register" }}
         stats={[{ value: "4+", label: "Crypto CFDs" }, { value: "1:10", label: "Max Leverage" }, { value: "No wallet", label: "Required" }]}
@@ -185,10 +186,10 @@ export default async function CryptoPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      <FAQSection title="Crypto Trading FAQs" faqs={cryptoFaqs} />
+      <FAQSection title={t("faq_title")} faqs={cryptoFaqs} />
       <CTASection
-        title="Trade Crypto CFDs with Olla Trade"
-        subtitle="Access Bitcoin, Ethereum, Litecoin, and Ripple price movements directly from your MT4 account — no wallet required."
+        title={t("cta_title")}
+        subtitle={t("cta_subtitle")}
         primaryLabel="Open Account"
         secondaryLabel="View All Markets"
         secondaryHref="/markets"
