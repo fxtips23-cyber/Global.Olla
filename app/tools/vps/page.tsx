@@ -46,18 +46,6 @@ export default function VPSPage() {
     <>
       <PageHero badge="Automated Trading" title="VPS Guide for MT4" subtitle="A Virtual Private Server (VPS) allows your Expert Advisors to run 24 hours a day, 5 days a week — without needing your computer to stay on." breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "VPS Guide" }]} stats={[{ value: "24/5", label: "Always-on operation" }, { value: "EA", label: "Expert Advisor support" }, { value: "RDP", label: "Remote access" }]} />
 
-      {/* ── VPS infrastructure visual ─────────────────────────── */}
-      <section className="py-12 bg-[#050C15]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Infrastructure</div>
-          <h2 className="text-2xl font-extrabold text-white mb-6 text-center">VPS Global Network Architecture</h2>
-          <VPSInfraVisual />
-          <p className="text-[11px] text-white/25 text-center mt-4 leading-relaxed">
-            A VPS hosted close to trading servers minimises latency. Your MT4 installation runs continuously — unaffected by local power cuts, internet issues, or computer restarts.
-          </p>
-        </div>
-      </section>
-
       {/* What is VPS */}
       <section className="py-16 bg-white dark:bg-[#050A0F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,6 +94,47 @@ export default function VPSPage() {
                 <p className="text-[12px] text-gray-500 dark:text-[#9CA3AF] leading-relaxed">{desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VPS infrastructure visual — content section */}
+      <section className="py-16 bg-[#050C15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+              <VPSInfraVisual />
+            </div>
+            <div>
+              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Stable MT4 Access from Anywhere</div>
+              <h2 className="text-3xl font-extrabold text-white mb-5">Global Datacenter Infrastructure</h2>
+              <p className="text-white/45 text-[14px] leading-relaxed mb-6">
+                A VPS hosted close to your broker's servers reduces the physical distance your orders must travel. The result is consistently lower latency — critical for time-sensitive trading strategies and Expert Advisor execution.
+              </p>
+              <div className="space-y-3">
+                {[
+                  { label: "24/5 Uninterrupted MT4",      desc: "Your EAs run continuously even when your computer is off, in sleep mode, or your internet is down." },
+                  { label: "Close to Trading Servers",     desc: "Choose a datacenter in the same region as your broker's infrastructure to minimise order transmission time." },
+                  { label: "Remote Desktop Access",        desc: "Manage your MT4 installation and EAs from any device via RDP — laptop, tablet, or smartphone." },
+                  { label: "Multiple MT4 Instances",       desc: "Run multiple MT4 accounts or strategies on a single VPS, subject to available server resources." },
+                ].map(({ label, desc }) => (
+                  <div key={label} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#00CC44]/15 border border-[#00CC44]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-[13px] font-semibold text-white/75 mb-0.5">{label}</div>
+                      <div className="text-[12px] text-white/35 leading-relaxed">{desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-[11px] text-white/20 mt-6 leading-relaxed">
+                Olla Trade does not provide VPS services directly. The illustration above represents a typical VPS-to-server infrastructure concept. Clients are responsible for selecting and configuring their own VPS provider.
+              </p>
+            </div>
           </div>
         </div>
       </section>

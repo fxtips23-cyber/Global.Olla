@@ -178,18 +178,6 @@ export default function FundingAndWithdrawalsPage() {
         </div>
       </PageHero>
 
-      {/* ── Visual: Secure payment flow ────────────────────────── */}
-      <section className="py-12 bg-[#050C15]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">How It Works</div>
-          <h2 className="text-2xl font-extrabold text-white mb-6 text-center">Secure End-to-End Transaction Flow</h2>
-          <FundingVisual />
-          <p className="text-[11px] text-white/25 text-center mt-4 leading-relaxed">
-            All transactions are conducted through your SSL-encrypted client portal. Olla Trade never requests payment via email or third-party links.
-          </p>
-        </div>
-      </section>
-
       {/* ── 2. Funding methods ─────────────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -239,6 +227,44 @@ export default function FundingAndWithdrawalsPage() {
               Additional payment methods may be available in your client portal.{" "}
               <Link href="/company/contact" className="text-[#00CC44] hover:underline font-semibold">Contact support</Link> for the latest available options.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Secure funding visual — content section ──────────────── */}
+      <section className="py-16 bg-[#050C15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Crypto Funding Made Simple</div>
+              <h2 className="text-3xl font-extrabold text-white mb-5">Secure End-to-End Transaction Flow</h2>
+              <p className="text-white/45 text-[14px] leading-relaxed mb-6">
+                Every deposit and withdrawal is processed through your personal SSL-encrypted client portal. Your funds move directly from your wallet to your trading account via the blockchain — no intermediaries, no hidden steps.
+              </p>
+              <div className="space-y-3">
+                {[
+                  { label: "No Olla Trade Fees",           desc: "We charge zero fees on deposits or withdrawals. Network fees apply on the blockchain side only." },
+                  { label: "Multiple Crypto Methods",       desc: "USDT TRC20, USDT ERC20, Bitcoin, and Ethereum — with more methods available in the client portal." },
+                  { label: "Credited After Confirmations", desc: "Funds appear in your trading account automatically after the required blockchain confirmations." },
+                  { label: "Same-Method Withdrawals",      desc: "Withdrawals are returned to the same method used for deposit — a standard security requirement." },
+                ].map(({ label, desc }) => (
+                  <div key={label} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#00CC44]/15 border border-[#00CC44]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-[13px] font-semibold text-white/75 mb-0.5">{label}</div>
+                      <div className="text-[12px] text-white/35 leading-relaxed">{desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+              <FundingVisual />
+            </div>
           </div>
         </div>
       </section>

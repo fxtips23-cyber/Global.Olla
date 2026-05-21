@@ -93,18 +93,6 @@ export default function ExecutionInformationPage() {
         </div>
       </div>
 
-      {/* ── Visual: Execution flow diagram ──────────────────────────── */}
-      <section className="py-12 bg-[#050C15]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Architecture</div>
-          <h2 className="text-2xl font-extrabold text-white mb-6 text-center">Order Routing Flow</h2>
-          <ExecutionFlowVisual />
-          <p className="text-[11px] text-white/25 text-center mt-4 leading-relaxed">
-            Orders are transmitted from client terminal through Olla Trade's execution engine to liquidity providers. Best available price is selected and confirmed back to the client. Execution times and prices may vary under different market conditions.
-          </p>
-        </div>
-      </section>
-
       {/* ── 2. Introduction — white section ─────────────────────────── */}
       <section className="py-16 bg-white dark:bg-[#050A0F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,6 +123,44 @@ export default function ExecutionInformationPage() {
                   <div className="text-[12px] text-gray-500 dark:text-[#6B7280] leading-relaxed">{desc}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Execution flow visual — content section ──────────────────── */}
+      <section className="py-16 bg-[#050C15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Trading Infrastructure</div>
+              <h2 className="text-3xl font-extrabold text-white mb-5">Order Routing & Execution Flow</h2>
+              <p className="text-white/45 text-[14px] leading-relaxed mb-6">
+                When you submit an order in MetaTrader 4, it is transmitted to Olla Trade's execution infrastructure, validated against available margin and risk parameters, then routed to our liquidity pool. The best available price is selected and the fill confirmation is returned to your terminal — the entire process completing in milliseconds under normal conditions.
+              </p>
+              <div className="space-y-3">
+                {[
+                  { label: "STP Routing",                  desc: "Orders are routed straight-through to liquidity providers without manual dealer intervention under normal conditions." },
+                  { label: "Best Available Price",          desc: "Our pricing engine aggregates quotes from multiple liquidity providers to achieve the best available bid and ask at time of execution." },
+                  { label: "Execution Subject to Liquidity",desc: "Final execution price depends on available market liquidity and conditions at the moment the order is processed." },
+                  { label: "No Requotes",                   desc: "Market execution means all orders are accepted at the prevailing price — you will not be asked to confirm a different price." },
+                ].map(({ label, desc }) => (
+                  <div key={label} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#00CC44]/15 border border-[#00CC44]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-[13px] font-semibold text-white/75 mb-0.5">{label}</div>
+                      <div className="text-[12px] text-white/35 leading-relaxed">{desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+              <ExecutionFlowVisual />
             </div>
           </div>
         </div>
