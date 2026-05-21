@@ -275,7 +275,7 @@ export const promotionsFaqs: FAQ[] = [
 export const contactFaqs: FAQ[] = [
   {
     q: "How can I contact Olla Trade support?",
-    a: "You can reach our support team by email at info@ollatrade.com or cst@ollatrade.com, or by phone at +44 7418 641736 or +996 312 962732. Our team is available Monday to Friday, 24 hours a day (24/5). You can also use the contact form on this page for non-urgent enquiries.",
+    a: "You can reach our support team by email at info@ollatrade.com or cst@ollatrade.com, or by phone at +44 7418 641736. Our team is available Monday to Friday, 24 hours a day (24/5). You can also use the contact form on this page for non-urgent enquiries.",
   },
   {
     q: "Where can I get platform support?",

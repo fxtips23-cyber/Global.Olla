@@ -51,7 +51,6 @@ export default function TermsPage() {
                 <div className="text-[13px] text-gray-600 dark:text-[#9CA3AF] space-y-1">
                   <p>Olla Trade Ltd. · Incorporated in Anguilla · Registration No. A000001849</p>
                   <p>Registered Address: Grace Complex, The Valley, AI 2640, Anguilla</p>
-                  <p>Operating Office: Apartment 25, Building 40, Tabyshaliev Street, Bishkek, Kyrgyzstan</p>
                   <p>Contact: <a href="mailto:info@ollatrade.com" className="text-[#00CC44] hover:underline">info@ollatrade.com</a></p>
                 </div>
               </div>

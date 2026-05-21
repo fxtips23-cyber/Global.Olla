@@ -92,7 +92,7 @@ export default function HelpPage() {
           <div className="grid sm:grid-cols-2 gap-5 mb-6">
             {[
               { Icon: IconMail,  title: "Email",       detail: "info@ollatrade.com", sub: "cst@ollatrade.com", href: "mailto:info@ollatrade.com", cta: "Send Email" },
-              { Icon: IconPhone, title: "Phone (24/5)", detail: "+44 7418 641736",   sub: "+996 312 962732",   href: "tel:+447418641736",         cta: "Call Now" },
+              { Icon: IconPhone, title: "Phone (24/5)", detail: "+44 7418 641736",   sub: "Monday – Friday, 24/5",   href: "tel:+447418641736",         cta: "Call Now" },
             ].map(({ Icon, title, detail, sub, href, cta }) => (
               <div key={title} className="bg-white dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-2xl p-6">
                 <div className="w-9 h-9 rounded-xl border border-gray-200 dark:border-[#1F2937] bg-[#F5F7FA] dark:bg-[#0A1220] text-gray-500 dark:text-[#6B7280] flex items-center justify-center mb-3"><Icon className="w-4 h-4" /></div>

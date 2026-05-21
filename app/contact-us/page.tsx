@@ -71,19 +71,9 @@ const officeDetails = [
     barTo: "#009933",
   },
   {
-    Icon: IconMapPin,
-    label: "Operating Office",
-    lines: ["Apartment 25, Building 40", "Tabyshaliev Street", "Bishkek, Kyrgyzstan"],
-    accent: "#1E88E5",
-    accentBg: "rgba(30,136,229,0.13)",
-    accentBorder: "rgba(30,136,229,0.28)",
-    barFrom: "#1E88E5",
-    barTo: "#1565C0",
-  },
-  {
     Icon: IconPhone,
     label: "Phone (24/5)",
-    lines: ["+44 7418 641736", "+996 312 962732"],
+    lines: ["+44 7418 641736"],
     accent: "#00BFA5",
     accentBg: "rgba(0,191,165,0.13)",
     accentBorder: "rgba(0,191,165,0.28)",
@@ -405,11 +395,10 @@ export default function ContactUsPage() {
 
             {/* Address card */}
             <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-7">
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">Our Offices</div>
+              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">Our Address</div>
               <div className="space-y-5">
                 {[
                   { label: "Registered Address", Icon: IconMapPin, lines: ["Olla Trade Ltd.", "Grace Complex, The Valley", "AI 2640, Anguilla", "Registration No. A000001849"] },
-                  { label: "Operating Office",   Icon: IconMapPin, lines: ["Apartment 25, Building 40", "Tabyshaliev Street", "Bishkek, Kyrgyzstan"] },
                 ].map(({ label, Icon: Ic, lines }) => (
                   <div key={label} className="flex items-start gap-3">
                     <div className="w-9 h-9 rounded-xl border border-gray-200 bg-white text-gray-400 flex items-center justify-center flex-shrink-0">
@@ -444,8 +433,8 @@ export default function ContactUsPage() {
                       <IconMapPin className="w-6 h-6 text-[#00CC44]" />
                     </div>
                     <div className="bg-[#0D1520]/90 border border-white/10 rounded-xl px-4 py-2 text-center backdrop-blur-sm">
-                      <div className="text-[11px] font-bold text-white">Olla Trade — Operating Office</div>
-                      <div className="text-[10px] text-white/40 mt-0.5">Bishkek, Kyrgyzstan</div>
+                      <div className="text-[11px] font-bold text-white">Olla Trade Ltd.</div>
+                      <div className="text-[10px] text-white/40 mt-0.5">Grace Complex, The Valley, Anguilla</div>
                     </div>
                   </div>
                 </div>

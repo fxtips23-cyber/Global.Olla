@@ -90,7 +90,6 @@ export default function AboutPage() {
             <div className="space-y-2 text-[13px] text-gray-600 leading-relaxed">
               <p><strong className="text-[#111827]">Company:</strong> Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) as an International Business Company under Anguilla law.</p>
               <p><strong className="text-[#111827]">Registered Address:</strong> Grace Complex, The Valley, AI 2640, Anguilla.</p>
-              <p><strong className="text-[#111827]">Operating Office:</strong> Apartment 25, Building 40, Tabyshaliev Street, Bishkek, Kyrgyzstan.</p>
               <p><strong className="text-[#111827]">Execution Only:</strong> Olla Trade Ltd. operates solely as an execution-only service and does not provide investment advice or portfolio management.</p>
               <p><strong className="text-[#111827]">Restricted Countries:</strong> Services not available to residents of the USA, Russia, Myanmar, UAE, Canada, Israel, New Zealand, Iran, and North Korea.</p>
             </div>

@@ -70,16 +70,16 @@ const menus = {
       {
         heading: "Platform & Accounts",
         links: [
-          { key: "platform",   label: "MetaTrader 4",         sub: "Desktop, Web & Mobile",          href: "/trading/platform" },
-          { key: "accounts",   label: "Compare Accounts",     sub: "Standard · Pro · Elite",         href: "/trading/accounts" },
-          { key: "conditions", label: "Trading Conditions",   sub: "Spreads & leverage",             href: "/trading/conditions" },
-          { key: "execution",  label: "Execution Information",sub: "Order execution & pricing policy",href: "/execution-information" },
+          { key: "platform",   label: "MetaTrader 4",       sub: "Desktop, Web & Mobile",  href: "/trading/platform" },
+          { key: "accounts",   label: "Compare Accounts",   sub: "Standard · Pro · Elite", href: "/trading/accounts" },
+          { key: "conditions", label: "Trading Conditions", sub: "Spreads & leverage",     href: "/trading/conditions" },
         ],
       },
       {
-        heading: "Funding",
+        heading: "Funding & Execution",
         links: [
-          { key: "funding", label: "Funding & Withdrawals", sub: "Deposit, withdraw & payment methods", href: "/funding-and-withdrawals" },
+          { key: "execution", label: "Execution Information", sub: "Order execution & pricing policy",    href: "/execution-information" },
+          { key: "funding",   label: "Funding & Withdrawals", sub: "Deposit, withdraw & payment methods", href: "/funding-and-withdrawals" },
         ],
       },
     ],
@@ -88,13 +88,18 @@ const menus = {
   Tools: {
     sections: [
       {
-        heading: "Analysis & Tools",
+        heading: "Analysis & Research",
         links: [
           { key: "calendar",   label: "Economic Calendar", sub: "Market events",       href: "/tools/economic-calendar" },
           { key: "calculator", label: "Forex Calculator",  sub: "Pip, margin & P&L",   href: "/tools/forex-calculator" },
           { key: "alerts",     label: "Trading Alerts",    sub: "Price notifications", href: "/tools/alerts" },
-          { key: "vps",        label: "VPS Guide",         sub: "Run EAs 24/5",        href: "/tools/vps" },
-          { key: "news",       label: "Market News",       sub: "Analysis & insights", href: "/tools/news" },
+        ],
+      },
+      {
+        heading: "Infrastructure & News",
+        links: [
+          { key: "vps",  label: "VPS Guide",    sub: "Run EAs 24/5",        href: "/tools/vps" },
+          { key: "news", label: "Market News",  sub: "Analysis & insights", href: "/tools/news" },
         ],
       },
     ],

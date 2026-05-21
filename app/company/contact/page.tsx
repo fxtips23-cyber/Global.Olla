@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../../components/ui/PageHero";
-import { IconPhone, IconMail, IconMapPin, IconBuilding } from "../../components/ui/Icons";
+import { IconPhone, IconMail, IconMapPin } from "../../components/ui/Icons";
 
 export const metadata: Metadata = { title: "Contact Us", description: "Get in touch with Olla Trade support. Phone, email, and office address for all enquiries." };
 
@@ -13,10 +13,9 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="space-y-4">
               {[
-                { Icon: IconPhone,    title: "Phone Support (24/5)", items: ["+447418641736", "+996312962732"] },
-                { Icon: IconMail,     title: "Email",                items: ["info@ollatrade.com", "cst@ollatrade.com"] },
-                { Icon: IconMapPin,   title: "Registered Address",   items: ["Olla Trade Ltd.", "Grace Complex, The Valley", "AI 2640, Anguilla"] },
-                { Icon: IconBuilding, title: "Office Address",        items: ["Apartment 25, Building 40", "Tabyshaliev Street", "Bishkek, Kyrgyzstan"] },
+                { Icon: IconPhone,  title: "Phone Support (24/5)", items: ["+44 7418 641736"] },
+                { Icon: IconMail,   title: "Email",                items: ["info@ollatrade.com", "cst@ollatrade.com"] },
+                { Icon: IconMapPin, title: "Registered Address",   items: ["Olla Trade Ltd.", "Grace Complex, The Valley", "AI 2640, Anguilla", "Reg. No. A000001849"] },
               ].map((c) => (
                 <div key={c.title} className="bg-white rounded-xl border border-gray-100 p-5 flex items-start gap-4">
                   <div className="w-8 h-8 rounded-lg border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center flex-shrink-0 mt-0.5">

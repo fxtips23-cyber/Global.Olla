@@ -75,7 +75,7 @@ export default function Footer() {
               {
                 Icon: IconPhone,
                 label: "Support (24/5)",
-                value: "+44 7418 641736  ·  +996 312 962732",
+                value: "+44 7418 641736",
               },
               {
                 Icon: IconMail,
@@ -164,7 +164,7 @@ export default function Footer() {
             </p>
             <p>
               <span className="text-white/28 font-semibold">Registered: </span>
-              Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) as an International Business Company. Registered address: Grace Complex, The Valley, AI 2640, Anguilla. Operating office: Apartment 25, Building 40, Tabyshaliev Street, Bishkek, Kyrgyzstan.
+              Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) as an International Business Company. Registered address: Grace Complex, The Valley, AI 2640, Anguilla.
             </p>
           </div>
 
