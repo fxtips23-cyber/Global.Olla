@@ -4,6 +4,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import CTASection from "../../../components/CTASection";
 import { IconShield, IconActivity, IconRefresh, IconDroplet, IconServer, IconInfo, IconBarChart } from "../../../components/ui/Icons";
 import { riskFaqs } from "../../../data/extra-faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Risk Disclosures",
@@ -32,7 +33,13 @@ const sections = [
   { id: "crypto",     title: "Crypto CFD Risk" },
 ];
 
-export default function RiskDisclosuresPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function RiskDisclosuresPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="Important — Please Read" title="Risk Disclosures" subtitle="Trading financial instruments involves significant risk. Please read and understand the following risk disclosures in full before opening a live account with Olla Trade." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Risk Disclosures" }]} />

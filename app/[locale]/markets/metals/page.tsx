@@ -7,6 +7,7 @@ import TradingConditionsTable from "../../../components/ui/TradingConditionsTabl
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconShieldCheck, IconBuilding, IconTrendingUp, IconBarChart, IconBolt, IconRefresh } from "../../../components/ui/Icons";
 import { metalsFaqs } from "../../../data/faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Gold & Silver Trading — Precious Metals CFDs",
@@ -38,7 +39,13 @@ const priceDrivers = [
   { factor: "Investor Sentiment / ETF Flows",impact: "Medium", desc: "Large ETF inflows or outflows (e.g. SPDR Gold Trust) reflect institutional demand and can trigger meaningful price moves." },
 ];
 
-export default function MetalsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function MetalsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero

@@ -7,6 +7,7 @@ import TradingConditionsTable from "../../../components/ui/TradingConditionsTabl
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconBarChart, IconNewspaper, IconRefresh, IconDroplet, IconPercent, IconCalculator } from "../../../components/ui/Icons";
 import { indicesFaqs } from "../../../data/faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Stock Market Indices — CFD Trading",
@@ -49,7 +50,13 @@ const marketMovers = [
   { factor: "Commodity Prices",      desc: "Energy and materials prices significantly impact commodity-heavy indices like the FTSE100. Oil price moves affect energy sector weighting substantially." },
 ];
 
-export default function IndicesPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function IndicesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero

@@ -4,6 +4,7 @@ import Link from "next/link";
 import CTASection from "../../../components/CTASection";
 import FAQSection from "../../../components/ui/FAQSection";
 import { IconCheck } from "../../../components/ui/Icons";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Compare Trading Accounts",
@@ -74,7 +75,13 @@ const faqs = [
 ];
 
 /* ═══════════════════════════════════════════════════════════════════ */
-export default function AccountsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function AccountsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────── */}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "../../../lib/constants";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Order Execution Policy",
@@ -38,7 +39,13 @@ const sections = [
   "Contact Information",
 ];
 
-export default function ExecutionPolicyPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function ExecutionPolicyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────── */}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "../../../lib/constants";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Articles — Market Analysis & Trading Insights",
@@ -19,7 +20,13 @@ const placeholders = [
   { cat: "Education", readTime: "6 min read" },
 ];
 
-export default function ArticlesPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function ArticlesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       {/* ── 1. Hero ──────────────────────────────────────────────── */}

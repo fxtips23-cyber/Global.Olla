@@ -7,6 +7,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import TradingConditionsTable from "../../../components/ui/TradingConditionsTable";
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconBarChart, IconRefresh, IconPercent, IconGlobe, IconDollar, IconNewspaper } from "../../../components/ui/Icons";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Global Stock CFD Trading — 1,000+ Equities",
@@ -49,7 +50,13 @@ const sectors = [
   { sector: "Communication Svcs.", examples: "Meta, Alphabet, T-Mobile, Walt Disney, Comcast",         note: "Advertising revenue trends, streaming adoption, and platform regulatory risk." },
 ];
 
-export default function StocksPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function StocksPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero

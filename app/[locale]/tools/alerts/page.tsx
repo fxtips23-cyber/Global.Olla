@@ -5,6 +5,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import CTASection from "../../../components/CTASection";
 import { IconBell, IconMonitor, IconPhone, IconMail, IconShield, IconActivity, IconClock, IconSettings, IconInfo } from "../../../components/ui/Icons";
 import { alertsFaqs } from "../../../data/extra-faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Trading Alerts",
@@ -32,7 +33,13 @@ const useCases = [
   { step: "04", title: "Re-entry Setups", desc: "After missing an entry, set a price alert at your preferred entry level. When price returns, you receive a notification to reassess whether the setup is still valid." },
 ];
 
-export default function AlertsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function AlertsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="Free Tool" title="Trading Alerts" subtitle="Set custom price and indicator alerts in MetaTrader 4 and receive notifications on desktop, mobile, or email — so you never miss a key market move." breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "Trading Alerts" }]} stats={[{ value: "MT4", label: "Platform" }, { value: "Free", label: "All accounts" }, { value: "3", label: "Alert channels" }]} />

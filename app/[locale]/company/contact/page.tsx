@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import { IconPhone, IconMail, IconMapPin } from "../../../components/ui/Icons";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Contact Us", description: "Get in touch with Olla Trade support. Phone, email, and office address for all enquiries." };
 
-export default function ContactPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="Get in Touch" title="Contact Us" subtitle="Our support team is available 24/5 to assist you with any questions about your account, trading, or promotions." breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Contact Us" }]} />

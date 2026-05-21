@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SITE } from "../../../lib/constants";
 import FAQSection from "../../../components/ui/FAQSection";
 import { conditionsFaqs } from "../../../data/faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Trading Conditions",
@@ -35,7 +36,13 @@ function InfoCard({ title, body }: { title: string; body: string }) {
 }
 
 /* ─── Page ────────────────────────────────────────────────────────────── */
-export default function ConditionsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function ConditionsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       {/* ── 1. Hero ──────────────────────────────────────────────── */}

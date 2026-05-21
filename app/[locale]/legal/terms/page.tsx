@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Terms & Conditions", description: "Olla Trade Terms and Conditions — governing the use of our trading services, account registration, deposits, withdrawals, and client obligations." };
 
@@ -16,7 +17,13 @@ const sections = [
   { id:"governing",    title:"10. Governing Law",          content: "These Terms are governed by the laws of Anguilla. Any disputes shall be subject to the jurisdiction of the courts of Anguilla. The Company encourages clients to use our formal complaint process before initiating legal proceedings. Contact: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla." },
 ];
 
-export default function TermsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="Legal" title="Terms & Conditions" subtitle="Please read these Terms and Conditions carefully before using Olla Trade services. By registering an account, you confirm your acceptance of these Terms." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Terms & Conditions" }]} />

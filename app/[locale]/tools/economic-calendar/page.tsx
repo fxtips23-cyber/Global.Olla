@@ -5,6 +5,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import { IconInfo } from "../../../components/ui/Icons";
 import { econCalFaqs } from "../../../data/extra-faqs";
 import EconomicCalendarWidget from "./EconomicCalendarWidget";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Economic Calendar — Live Market Events",
@@ -96,7 +97,13 @@ const calendarColumns = [
   { col: "Previous", desc: "The prior period's released value. Provides trend context when comparing with the new actual figure." },
 ];
 
-export default function EconomicCalendarPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function EconomicCalendarPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero

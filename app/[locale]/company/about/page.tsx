@@ -6,6 +6,7 @@ import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { SITE } from "../../../lib/constants";
 import { IconTarget, IconShieldCheck, IconLock, IconBook, IconGlobe, IconUsers } from "../../../components/ui/Icons";
 import GlobalMarketsVisual from "../../../components/visuals/GlobalMarketsVisual";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = { title: "About Us", description: "Learn about Olla Trade — our mission, vision, platform, and commitment to providing professional online trading services worldwide." };
 
@@ -27,7 +28,13 @@ const offerings = [
   { Icon: IconUsers,       title: "24/5 Customer Support",   desc: "Dedicated support available Monday to Friday via phone and email." },
 ];
 
-export default function AboutPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="About Olla Trade" title="Your All-in-One Hub for Smarter Trading" subtitle="Olla Trade is a professional online trading platform built to empower traders of all levels to access global markets with confidence, using the tools professionals rely on." breadcrumbs={[{ label: "Company", href: "/company" }, { label: "About Us" }]} />

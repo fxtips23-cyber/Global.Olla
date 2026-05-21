@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../../components/ui/PageHero";
 import ForexCalculator from "./ForexCalculator";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Forex Calculator — Position Size, Pip Value, Margin & P&L",
@@ -58,7 +59,13 @@ const lotSizes = [
   { name: "Micro Lot",     size: "1,000 units",   pipValue: "$0.10 (EUR/USD)",   notes: "Smallest standard unit. Suitable for small accounts and learning." },
 ];
 
-export default function ForexCalculatorPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function ForexCalculatorPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero

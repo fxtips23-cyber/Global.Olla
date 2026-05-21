@@ -7,6 +7,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import TradingConditionsTable from "../../../components/ui/TradingConditionsTable";
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconBuilding, IconBarChart, IconGlobe, IconDollar, IconActivity, IconRefresh } from "../../../components/ui/Icons";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Oil & Energy CFD Trading — Brent & WTI Crude",
@@ -36,7 +37,13 @@ const oilCalendar = [
   { event: "US Non-Farm Payrolls",           frequency: "Monthly — first Friday",               impact: "Medium", note: "Strong jobs data suggests economic growth and higher energy demand; weak data implies lower demand." },
 ];
 
-export default function EnergiesPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function EnergiesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero

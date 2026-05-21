@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "../../../lib/constants";
 import FAQSection from "../../../components/ui/FAQSection";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Complaints",
@@ -35,7 +36,13 @@ const complaintFaqs = [
   },
 ];
 
-export default function ComplaintsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function ComplaintsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       {/* ── 1. Hero ──────────────────────────────────────────────── */}

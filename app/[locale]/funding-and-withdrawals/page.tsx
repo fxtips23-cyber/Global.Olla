@@ -20,6 +20,7 @@ import {
   IconDatabase,
 } from "../../components/ui/Icons";
 import type { ComponentType } from "react";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Funding and Withdrawals",
@@ -148,7 +149,13 @@ const faqs = [
 ];
 
 /* ═══════════════════════════════════════════════════════════════════ */
-export default function FundingAndWithdrawalsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function FundingAndWithdrawalsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       {/* ── 1. Hero ────────────────────────────────────────────── */}

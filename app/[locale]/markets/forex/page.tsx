@@ -7,6 +7,7 @@ import TradingConditionsTable from "../../../components/ui/TradingConditionsTabl
 import FeatureGrid from "../../../components/ui/FeatureGrid";
 import { IconDroplet, IconClock, IconPercent, IconRefresh, IconCode, IconLayers } from "../../../components/ui/Icons";
 import { forexFaqs } from "../../../data/faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Forex Trading — 70+ Currency Pairs",
@@ -47,7 +48,13 @@ const macroDrivers = [
   { label: "Trade Balance / Current Account", desc: "A country's export/import balance reflects demand for its currency. Persistent trade deficits often weigh on currency value over time." },
 ];
 
-export default function ForexPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function ForexPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero

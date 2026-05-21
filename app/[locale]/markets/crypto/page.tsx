@@ -5,6 +5,7 @@ import CTASection from "../../../components/CTASection";
 import FAQSection from "../../../components/ui/FAQSection";
 import TradingConditionsTable from "../../../components/ui/TradingConditionsTable";
 import { cryptoFaqs } from "../../../data/faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Cryptocurrency CFD Trading — Bitcoin, Ethereum & More",
@@ -54,7 +55,13 @@ const cryptoRisks = [
   { label: "Leverage Amplification",   desc: "Even conservative 1:10 leverage on a volatile 15% crypto move can result in a 150% loss on margin. Only risk capital you can afford to lose entirely." },
 ];
 
-export default function CryptoPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function CryptoPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero

@@ -1,97 +1,89 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { IconPhone, IconMail, IconMapPin, IconShieldCheck } from "./ui/Icons";
 
-const cols = [
-  {
-    title: "Markets",
-    links: [
-      ["Forex",        "/markets/forex"],
-      ["Metals",       "/markets/metals"],
-      ["Indices",      "/markets/indices"],
-      ["Energies",     "/markets/energies"],
-      ["Cryptocurrency","/markets/crypto"],
-      ["Stocks",       "/markets/stocks"],
-    ],
-  },
-  {
-    title: "Trading",
-    links: [
-      ["MetaTrader 4",            "/trading/platform"],
-      ["Compare Accounts",        "/trading/accounts"],
-      ["Trading Conditions",      "/trading/conditions"],
-      ["Funding & Withdrawals",   "/funding-and-withdrawals"],
-      ["Execution Information",   "/execution-information"],
-    ],
-  },
-  {
-    title: "Tools",
-    links: [
-      ["Economic Calendar",  "/tools/economic-calendar"],
-      ["Forex Calculator",   "/tools/forex-calculator"],
-      ["Trading Alerts",     "/tools/alerts"],
-      ["VPS Guide",          "/tools/vps"],
-      ["Articles",           "/tools/news"],
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      ["About Us",         "/company/about"],
-      ["Partner Program",  "/company/affiliate"],
-      ["Promotions",       "/company/promotions"],
-      ["Contact Us",       "/contact-us"],
-      ["Get Help",         "/company/help"],
-      ["Complaints",       "/company/complaints"],
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      ["Terms & Conditions",   "/legal/terms"],
-      ["Privacy Policy",       "/legal/privacy"],
-      ["Risk Disclosures",     "/legal/risk-disclosures"],
-      ["KYC / AML Policy",     "/legal/kyc-aml"],
-      ["Withdrawal Conditions","/legal/withdrawal-conditions"],
-      ["Order Execution",      "/legal/execution-policy"],
-    ],
-  },
+type ColKey = "markets" | "trading" | "tools" | "company" | "legal";
+
+const COL_KEYS: ColKey[] = ["markets", "trading", "tools", "company", "legal"];
+
+const COL_LINKS: Record<ColKey, [string, string][]> = {
+  markets: [
+    ["forex",    "/markets/forex"],
+    ["metals",   "/markets/metals"],
+    ["indices",  "/markets/indices"],
+    ["energies", "/markets/energies"],
+    ["crypto",   "/markets/crypto"],
+    ["stocks",   "/markets/stocks"],
+  ],
+  trading: [
+    ["platform",   "/trading/platform"],
+    ["accounts",   "/trading/accounts"],
+    ["conditions", "/trading/conditions"],
+    ["funding",    "/funding-and-withdrawals"],
+    ["execution",  "/execution-information"],
+  ],
+  tools: [
+    ["calendar",   "/tools/economic-calendar"],
+    ["calculator", "/tools/forex-calculator"],
+    ["alerts",     "/tools/alerts"],
+    ["vps",        "/tools/vps"],
+    ["articles",   "/tools/news"],
+  ],
+  company: [
+    ["about",      "/company/about"],
+    ["affiliate",  "/company/affiliate"],
+    ["promotions", "/company/promotions"],
+    ["contact",    "/contact-us"],
+    ["help",       "/company/help"],
+    ["complaints", "/company/complaints"],
+  ],
+  legal: [
+    ["terms",            "/legal/terms"],
+    ["privacy",          "/legal/privacy"],
+    ["risk",             "/legal/risk-disclosures"],
+    ["kyc",              "/legal/kyc-aml"],
+    ["withdrawal",       "/legal/withdrawal-conditions"],
+    ["executionPolicy",  "/legal/execution-policy"],
+  ],
+};
+
+const BOTTOM_LINKS: [string, string][] = [
+  ["terms",     "/legal/terms"],
+  ["privacy",   "/legal/privacy"],
+  ["risk",      "/legal/risk-disclosures"],
+  ["cookies",   "/legal/cookies"],
+  ["complaint", "/legal/complaint-management"],
 ];
 
 export default function Footer() {
+  const t   = useTranslations("footer");
+  const tf  = useTranslations("footer.links");
+  const tc  = useTranslations("footer.cols");
+  const ti  = useTranslations("footer.info");
+  const td  = useTranslations("footer.disclaimer");
+  const tbl = useTranslations("footer.bottomLinks");
+
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-[#050C15]">
 
-      {/* ── 1. Top institutional info bar ───────────────────────────── */}
+      {/* ── Top info bar ────────────────────────────────────────── */}
       <div className="border-b border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 lg:divide-x lg:divide-white/6">
             {[
-              {
-                Icon: IconMapPin,
-                label: "Registered Address",
-                value: "Grace Complex, The Valley, AI 2640, Anguilla · Reg. No. A000001849",
-              },
-              {
-                Icon: IconPhone,
-                label: "Support (24/5)",
-                value: "+44 7418 641736",
-              },
-              {
-                Icon: IconMail,
-                label: "Email",
-                value: "info@ollatrade.com",
-              },
-              {
-                Icon: IconShieldCheck,
-                label: "Entity",
-                value: "Olla Trade Ltd. · Execution-only service",
-              },
-            ].map(({ Icon, label, value }) => (
-              <div key={label} className="flex items-start gap-2.5 lg:px-5 lg:first:pl-0 lg:last:pr-0">
+              { Icon: IconMapPin,     labelKey: "address", value: "Grace Complex, The Valley, AI 2640, Anguilla · Reg. No. A000001849" },
+              { Icon: IconPhone,      labelKey: "support", value: "+44 7418 641736" },
+              { Icon: IconMail,       labelKey: "email",   value: "info@ollatrade.com" },
+              { Icon: IconShieldCheck,labelKey: "entity",  value: ti("entityVal") },
+            ].map(({ Icon, labelKey, value }) => (
+              <div key={labelKey} className="flex items-start gap-2.5 lg:px-5 lg:first:pl-0 lg:last:pr-0">
                 <Icon className="w-3.5 h-3.5 text-white/20 flex-shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-[9px] font-bold text-white/18 uppercase tracking-widest mb-0.5">{label}</div>
+                  <div className="text-[9px] font-bold text-white/18 uppercase tracking-widest mb-0.5">{ti(labelKey as "address"|"support"|"email"|"entity")}</div>
                   <div className="text-[11px] text-white/32 leading-relaxed">{value}</div>
                 </div>
               </div>
@@ -100,9 +92,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* CTA strip removed — footer starts directly with link grid */}
-
-      {/* ── 3. Main link grid ───────────────────────────────────────── */}
+      {/* ── Link grid ───────────────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-10">
 
@@ -111,12 +101,9 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-5">
               <Image src="https://ollatrade.com/wp-content/uploads/2025/06/logo.png" alt="Olla Trade" width={120} height={30} className="h-7 w-auto" />
             </Link>
-            <p className="text-[12px] text-white/25 leading-relaxed mb-6 max-w-[210px]">
-              Professional online trading platform. Access global markets with MT4, tight spreads, and professional conditions.
-            </p>
-            {/* Social */}
+            <p className="text-[12px] text-white/25 leading-relaxed mb-6 max-w-[210px]">{t("tagline")}</p>
             <div>
-              <div className="text-[9px] font-bold text-white/16 uppercase tracking-widest mb-2.5">Follow</div>
+              <div className="text-[9px] font-bold text-white/16 uppercase tracking-widest mb-2.5">{t("follow")}</div>
               <div className="flex gap-2">
                 {["FB", "IG", "X", "IN"].map((s) => (
                   <a key={s} href="https://ollatrade.com" aria-label={s}
@@ -129,14 +116,14 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          {cols.map((col) => (
-            <div key={col.title}>
-              <h4 className="text-[9px] font-bold text-white/25 uppercase tracking-[0.18em] mb-5">{col.title}</h4>
+          {COL_KEYS.map((colKey) => (
+            <div key={colKey}>
+              <h4 className="text-[9px] font-bold text-white/25 uppercase tracking-[0.18em] mb-5">{tc(colKey)}</h4>
               <ul className="space-y-2.5">
-                {col.links.map(([label, href]) => (
-                  <li key={label}>
+                {COL_LINKS[colKey].map(([linkKey, href]) => (
+                  <li key={linkKey}>
                     <Link href={href} className="text-[12px] text-white/22 hover:text-white/50 transition-colors block leading-snug">
-                      {label}
+                      {tf(linkKey)}
                     </Link>
                   </li>
                 ))}
@@ -146,33 +133,21 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── 4. Risk disclaimer ──────────────────────────────────────── */}
+      {/* ── Risk disclaimer ─────────────────────────────────────── */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-6 space-y-3 text-[11px] text-white/18 leading-relaxed">
-            <p>
-              <span className="text-white/28 font-semibold">Risk Warning: </span>
-              Engaging in Forex and CFD trading involves inherent risks that may result in the loss of your invested capital. We strongly advise trading only with funds you can afford to lose. Leveraged trading is high risk and may not be suitable for all investors. It is possible to lose more than your initial deposit. Please ensure you fully understand the risks involved before trading.
-            </p>
-            <p>
-              <span className="text-white/28 font-semibold">Execution Only: </span>
-              Olla Trade Ltd. operates solely as an execution-only service and does not provide investment advice, portfolio management, or advisory services. Information on this website is for general informational purposes only and does not constitute a recommendation to trade any financial instrument.
-            </p>
-            <p>
-              <span className="text-white/28 font-semibold">Restricted Jurisdictions: </span>
-              Olla Trade Ltd. does not offer services to residents of the United States, Russia, Myanmar, United Arab Emirates, Canada, Israel, New Zealand, Iran, and North Korea (DPRK). It is the client&apos;s responsibility to comply with local laws prior to using our services.
-            </p>
-            <p>
-              <span className="text-white/28 font-semibold">Registered: </span>
-              Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) as an International Business Company. Registered address: Grace Complex, The Valley, AI 2640, Anguilla.
-            </p>
+            <p><span className="text-white/28 font-semibold">{td("risk")} </span>{td("risk_text")}</p>
+            <p><span className="text-white/28 font-semibold">{td("exec")} </span>{td("exec_text")}</p>
+            <p><span className="text-white/28 font-semibold">{td("restricted")} </span>{td("restricted_text")}</p>
+            <p><span className="text-white/28 font-semibold">{td("registered")} </span>{td("registered_text")}</p>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-[10.5px] text-white/14">
-            <p>© {new Date().getFullYear()} Olla Trade Ltd. All rights reserved.</p>
+            <p>{td("copyright").replace("{year}", String(year))}</p>
             <div className="flex flex-wrap gap-4">
-              {[["Terms", "/legal/terms"], ["Privacy", "/legal/privacy"], ["Risk Disclosures", "/legal/risk-disclosures"], ["Cookies", "/legal/cookies"], ["Complaint Management", "/legal/complaint-management"]].map(([label, href]) => (
-                <Link key={label} href={href} className="hover:text-white/30 transition-colors">{label}</Link>
+              {BOTTOM_LINKS.map(([key, href]) => (
+                <Link key={key} href={href} className="hover:text-white/30 transition-colors">{tbl(key as "terms"|"privacy"|"risk"|"cookies"|"complaint")}</Link>
               ))}
             </div>
           </div>

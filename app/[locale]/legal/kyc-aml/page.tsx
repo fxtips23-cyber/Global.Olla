@@ -3,12 +3,19 @@ import PageHero from "../../../components/ui/PageHero";
 import FAQSection from "../../../components/ui/FAQSection";
 import { IconShieldCheck, IconUsers, IconLock, IconDatabase, IconCheck, IconActivity } from "../../../components/ui/Icons";
 import { kycAmlFaqs } from "../../../data/extra-faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = { title: "KYC / AML Policy", description: "Olla Trade's Know Your Customer and Anti-Money Laundering policy — identity verification requirements, document acceptance, and compliance procedures." };
 
 const sections = [{ id:"why", title:"Why KYC/AML?" },{ id:"identity", title:"Identity Verification" },{ id:"address", title:"Proof of Address" },{ id:"aml", title:"AML Compliance" },{ id:"source", title:"Source of Funds" },{ id:"monitoring", title:"Ongoing Monitoring" },{ id:"security", title:"Data Security" }];
 
-export default function KYCAMLPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function KYCAMLPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="Compliance" title="KYC / AML Policy" subtitle="Olla Trade is committed to preventing financial crime and complying with applicable Know Your Customer (KYC) and Anti-Money Laundering (AML) regulations." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "KYC/AML Policy" }]} />

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface FormState {
   fullName: string;
@@ -16,14 +17,14 @@ const INITIAL: FormState = {
   enquiryType: "", subject: "", message: "",
 };
 
-const ENQUIRY_TYPES = [
-  "General Enquiry",
-  "Account Support",
-  "Deposit / Withdrawal",
-  "Partnership / Affiliate",
-  "Complaint",
-  "Technical Support",
-];
+const ENQUIRY_TYPE_KEYS = [
+  "enquiry_general",
+  "enquiry_account",
+  "enquiry_deposit",
+  "enquiry_partner",
+  "enquiry_complaint",
+  "enquiry_tech",
+] as const;
 
 function FieldLabel({ label, required }: { label: string; required?: boolean }) {
   return (
@@ -37,11 +38,14 @@ const inputClass =
   "w-full border border-gray-200 rounded-xl px-4 py-3 text-[14px] text-[#111827] bg-white focus:outline-none focus:border-[#00CC44] focus:ring-2 focus:ring-[#00CC44]/10 transition-all placeholder-gray-300";
 
 export default function ContactForm() {
+  const t = useTranslations("forms.contact");
   const [form, setForm] = useState<FormState>(INITIAL);
-  const [errors, setErrors] = useState<Partial<FormState>>({});
+  const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [apiError, setApiError] = useState("");
+
+  const enquiryTypes = ENQUIRY_TYPE_KEYS.map(key => ({ key, label: t(key) }));
 
   const set = (field: keyof FormState) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -52,16 +56,16 @@ export default function ContactForm() {
   };
 
   const validate = (): boolean => {
-    const newErrors: Partial<FormState> = {};
-    if (!form.fullName.trim())    newErrors.fullName    = "Full name is required.";
-    if (!form.email.trim())       newErrors.email       = "Email address is required.";
+    const newErrors: Partial<Record<keyof FormState, string>> = {};
+    if (!form.fullName.trim())    newErrors.fullName    = t("error_name");
+    if (!form.email.trim())       newErrors.email       = t("error_email_required");
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-                                  newErrors.email       = "Please enter a valid email address.";
-    if (!form.enquiryType)        newErrors.enquiryType = "Please select an enquiry type.";
-    if (!form.subject.trim())     newErrors.subject     = "Subject is required.";
-    if (!form.message.trim())     newErrors.message     = "Please enter your message.";
+                                  newErrors.email       = t("error_email_invalid");
+    if (!form.enquiryType)        newErrors.enquiryType = t("error_enquiry");
+    if (!form.subject.trim())     newErrors.subject     = t("error_subject");
+    if (!form.message.trim())     newErrors.message     = t("error_message");
     else if (form.message.trim().length < 20)
-                                  newErrors.message     = "Message must be at least 20 characters.";
+                                  newErrors.message     = t("error_message_short");
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -82,12 +86,12 @@ export default function ContactForm() {
       const data = await res.json();
 
       if (!res.ok) {
-        setApiError(data.error || "Something went wrong. Please try again or email info@ollatrade.com.");
+        setApiError(data.error || t("error_api"));
       } else {
         setSubmitted(true);
       }
     } catch {
-      setApiError("Network error. Please check your connection or email info@ollatrade.com directly.");
+      setApiError(t("error_network"));
     } finally {
       setSubmitting(false);
     }
@@ -102,16 +106,15 @@ export default function ContactForm() {
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-[#111827] mb-2">Message Sent</h3>
+        <h3 className="text-xl font-bold text-[#111827] mb-2">{t("success_title")}</h3>
         <p className="text-[14px] text-gray-500 max-w-sm leading-relaxed mb-6">
-          Thank you for contacting Olla Trade. Our team will review your enquiry and respond to{" "}
-          <strong className="text-[#111827]">{form.email}</strong> within one business day.
+          {t("success_desc").replace("{email}", form.email)}
         </p>
         <button
           onClick={() => { setForm(INITIAL); setSubmitted(false); }}
           className="text-[13px] font-semibold text-[#00CC44] hover:text-[#00AA38] transition-colors underline underline-offset-4"
         >
-          Send another message
+          {t("success_link")}
         </button>
       </div>
     );
@@ -122,13 +125,13 @@ export default function ContactForm() {
       {/* Row 1: Name + Email */}
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <FieldLabel label="Full Name" required />
-          <input type="text" placeholder="Your full name" value={form.fullName} onChange={set("fullName")} className={inputClass} />
+          <FieldLabel label={t("fullName")} required />
+          <input type="text" placeholder={t("fullName_placeholder")} value={form.fullName} onChange={set("fullName")} className={inputClass} />
           {errors.fullName && <p className="text-[11px] text-red-500 mt-1">{errors.fullName}</p>}
         </div>
         <div>
-          <FieldLabel label="Email Address" required />
-          <input type="email" placeholder="your@email.com" value={form.email} onChange={set("email")} className={inputClass} />
+          <FieldLabel label={t("email")} required />
+          <input type="email" placeholder={t("email_placeholder")} value={form.email} onChange={set("email")} className={inputClass} />
           {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
         </div>
       </div>
@@ -136,44 +139,44 @@ export default function ContactForm() {
       {/* Row 2: Phone + Country */}
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <FieldLabel label="Phone Number" />
-          <input type="tel" placeholder="+1 234 567 8900" value={form.phone} onChange={set("phone")} className={inputClass} />
+          <FieldLabel label={t("phone")} />
+          <input type="tel" placeholder={t("phone_placeholder")} value={form.phone} onChange={set("phone")} className={inputClass} />
         </div>
         <div>
-          <FieldLabel label="Country" />
-          <input type="text" placeholder="Your country" value={form.country} onChange={set("country")} className={inputClass} />
+          <FieldLabel label={t("country")} />
+          <input type="text" placeholder={t("country_placeholder")} value={form.country} onChange={set("country")} className={inputClass} />
         </div>
       </div>
 
       {/* Enquiry type */}
       <div>
-        <FieldLabel label="Enquiry Type" required />
+        <FieldLabel label={t("enquiryType")} required />
         <select value={form.enquiryType} onChange={set("enquiryType")} className={inputClass + " appearance-none cursor-pointer"}>
-          <option value="">Select enquiry type…</option>
-          {ENQUIRY_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
+          <option value="">{t("enquiryType_placeholder")}</option>
+          {enquiryTypes.map(({ key, label }) => <option key={key} value={label}>{label}</option>)}
         </select>
         {errors.enquiryType && <p className="text-[11px] text-red-500 mt-1">{errors.enquiryType}</p>}
       </div>
 
       {/* Subject */}
       <div>
-        <FieldLabel label="Subject" required />
-        <input type="text" placeholder="Brief subject of your message" value={form.subject} onChange={set("subject")} className={inputClass} />
+        <FieldLabel label={t("subject")} required />
+        <input type="text" placeholder={t("subject_placeholder")} value={form.subject} onChange={set("subject")} className={inputClass} />
         {errors.subject && <p className="text-[11px] text-red-500 mt-1">{errors.subject}</p>}
       </div>
 
       {/* Message */}
       <div>
-        <FieldLabel label="Message" required />
+        <FieldLabel label={t("message")} required />
         <textarea
           rows={5}
-          placeholder="Please describe your enquiry in detail…"
+          placeholder={t("message_placeholder")}
           value={form.message}
           onChange={set("message")}
           className={inputClass + " resize-none"}
         />
         {errors.message && <p className="text-[11px] text-red-500 mt-1">{errors.message}</p>}
-        <p className="text-[11px] text-gray-400 mt-1">{form.message.length} characters (minimum 20)</p>
+        <p className="text-[11px] text-gray-400 mt-1">{t("chars_min").replace("{count}", String(form.message.length))}</p>
       </div>
 
       {/* API error */}
@@ -184,9 +187,7 @@ export default function ContactForm() {
       )}
 
       {/* Disclaimer */}
-      <p className="text-[11px] text-gray-400 leading-relaxed">
-        By submitting this form you confirm the information provided is accurate. Never share your password or PIN with anyone, including Olla Trade staff.
-      </p>
+      <p className="text-[11px] text-gray-400 leading-relaxed">{t("disclaimer")}</p>
 
       {/* Submit */}
       <button
@@ -201,10 +202,10 @@ export default function ContactForm() {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>
-            Sending…
+            {t("sending")}
           </>
         ) : (
-          "Send Message"
+          t("submit")
         )}
       </button>
     </form>

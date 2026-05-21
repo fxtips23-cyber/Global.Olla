@@ -4,6 +4,7 @@ import PageHero from "../../../components/ui/PageHero";
 import FAQSection from "../../../components/ui/FAQSection";
 import { IconCheck, IconShield, IconInfo, IconUsers, IconClock } from "../../../components/ui/Icons";
 import { promotionsFaqs } from "../../../data/faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Promotions",
@@ -46,7 +47,13 @@ const promos = [
   },
 ];
 
-export default function PromotionsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function PromotionsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="Special Offers" title="Promotions & Bonuses" subtitle="Boost your trading capital with Olla Trade's exclusive promotions. All bonuses are subject to eligibility criteria, terms and conditions, and are not guaranteed." breadcrumbs={[{ label: "Company", href: "/company" }, { label: "Promotions" }]} />

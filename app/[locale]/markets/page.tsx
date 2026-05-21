@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../components/ui/PageHero";
 import CTASection from "../../components/CTASection";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Markets", description: "Trade 500+ instruments across Forex, Metals, Indices, Energies, Crypto and Stocks with Olla Trade." };
 
@@ -14,7 +15,13 @@ const markets = [
   { icon: "🏢", label: "Stocks", sub: "1,000+ equities", instruments: "Apple, Tesla, Amazon, Google, Microsoft & more", pip: "Market spread", leverage: "Up to 1:10", href: "/markets/stocks" },
 ];
 
-export default function MarketsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function MarketsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="500+ Instruments" title="Global Markets at Your Fingertips" subtitle="Access six major asset classes from a single Olla Trade account. Professional conditions, competitive spreads, and the full power of MT4." breadcrumbs={[{ label: "Markets" }]} />

@@ -5,6 +5,7 @@ import FAQSection from "../../../components/ui/FAQSection";
 import CTASection from "../../../components/CTASection";
 import { IconServer, IconBolt, IconShield, IconGlobe, IconCode, IconClock, IconDatabase, IconSettings, IconCheck } from "../../../components/ui/Icons";
 import { vpsFaqs } from "../../../data/extra-faqs";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "VPS Guide",
@@ -41,7 +42,13 @@ const securityChecklist = [
   "Disconnect and lock the session when not actively working on the VPS",
 ];
 
-export default function VPSPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function VPSPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="Automated Trading" title="VPS Guide for MT4" subtitle="A Virtual Private Server (VPS) allows your Expert Advisors to run 24 hours a day, 5 days a week — without needing your computer to stay on." breadcrumbs={[{ label: "Tools", href: "/tools" }, { label: "VPS Guide" }]} stats={[{ value: "24/5", label: "Always-on operation" }, { value: "EA", label: "Expert Advisor support" }, { value: "RDP", label: "Remote access" }]} />

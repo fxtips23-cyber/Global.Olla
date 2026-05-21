@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Privacy Policy", description: "Olla Trade Privacy Policy — how we collect, use, store, and protect your personal data in compliance with applicable data protection laws." };
 
@@ -15,7 +16,13 @@ const sections = [
   { id:"contact",   title:"9. Contact",                  content: "For privacy-related enquiries, data access requests, or to exercise your data protection rights, contact: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla. We aim to respond to all privacy-related requests within 30 days." },
 ];
 
-export default function PrivacyPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHero badge="Privacy" title="Privacy Policy" subtitle="Your privacy is important to us. This policy explains how Olla Trade collects, uses, and protects your personal information." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Privacy Policy" }]} />

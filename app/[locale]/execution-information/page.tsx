@@ -11,6 +11,7 @@ import {
 } from "../../components/ui/Icons";
 import { executionFaqs } from "../../data/faqs";
 import type { ComponentType } from "react";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Execution Information",
@@ -51,7 +52,13 @@ function FeatureRow({
 }
 
 /* ══════════════════════════════════════════════════════════════════════ */
-export default function ExecutionInformationPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+}
+
+export default async function ExecutionInformationPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       {/* ── 1. Hero (always dark — same as every inner page) ─────────── */}
