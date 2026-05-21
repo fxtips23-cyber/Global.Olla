@@ -99,7 +99,7 @@ const menus = {
         heading: "Infrastructure & News",
         links: [
           { key: "vps",  label: "VPS Guide",    sub: "Run EAs 24/5",        href: "/tools/vps" },
-          { key: "news", label: "Market News",  sub: "Analysis & insights", href: "/tools/news" },
+          { key: "news", label: "Articles",      sub: "Analysis & insights", href: "/tools/news" },
         ],
       },
     ],

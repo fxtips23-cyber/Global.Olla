@@ -326,3 +326,35 @@ export const executionFaqs: FAQ[] = [
     a: "Pending orders are instructions to open a trade when the market reaches a specific price level, rather than immediately at the current market price. Types include Buy Limit (open a buy at a lower price), Sell Limit (open a sell at a higher price), Buy Stop (open a buy at a higher price), and Sell Stop (open a sell at a lower price). Pending orders are held on the server and execute automatically when the market reaches the specified price, subject to available liquidity. Execution of pending orders is not guaranteed at the exact specified price in fast-moving markets.",
   },
 ];
+
+/* ─── Trading Conditions ─────────────────────────────────────────────── */
+export const conditionsFaqs: FAQ[] = [
+  {
+    q: "What is the minimum deposit at Olla Trade?",
+    a: "The minimum deposit is $10 for the Standard account, $2,000 for the Pro account, and $20,000 for the Elite account. All deposits are subject to the funding terms and chosen payment method.",
+  },
+  {
+    q: "What leverage does Olla Trade offer?",
+    a: "Olla Trade offers leverage up to 1:500 on Forex pairs. Metals are available at up to 1:200, Indices and Energies at 1:100, and Crypto and Stocks at 1:10. Leverage increases both potential profit and potential loss and should be used with caution.",
+  },
+  {
+    q: "Are spreads fixed or variable?",
+    a: "All spreads at Olla Trade are variable. They reflect live market conditions and may widen during periods of high volatility, low liquidity, or major economic data releases. The spreads shown on the website represent indicative minimum spreads under favourable market conditions.",
+  },
+  {
+    q: "Does Olla Trade charge commissions?",
+    a: "No. Olla Trade does not charge per-trade commissions on any account type. The cost of trading is built into the spread. There are no hidden fees on standard trading activity.",
+  },
+  {
+    q: "What is the margin call and stop out level?",
+    a: "The margin call level is 50% — when account equity falls to 50% of required margin, you receive a warning notification. The stop out level is 20% — when equity falls to 20% of required margin, positions may begin to close automatically to protect remaining equity.",
+  },
+  {
+    q: "Is negative balance protection provided?",
+    a: "Yes. Olla Trade applies negative balance protection to all client accounts. Your account balance cannot fall below zero as a result of trading losses under normal market conditions.",
+  },
+  {
+    q: "Can I use Expert Advisors (EAs) on Olla Trade?",
+    a: "Yes. Expert Advisors, automated trading, scalping, hedging, and all standard MT4 trading approaches are permitted on all Olla Trade account types. There are no restrictions on trading strategy style.",
+  },
+];

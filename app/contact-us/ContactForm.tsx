@@ -41,12 +41,14 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Partial<FormState>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [apiError, setApiError] = useState("");
 
   const set = (field: keyof FormState) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: "" }));
+    if (apiError) setApiError("");
   };
 
   const validate = (): boolean => {
@@ -68,15 +70,32 @@ export default function ContactForm() {
     e.preventDefault();
     if (!validate()) return;
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitting(false);
-    setSubmitted(true);
+    setApiError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setApiError(data.error || "Something went wrong. Please try again or email info@ollatrade.com.");
+      } else {
+        setSubmitted(true);
+      }
+    } catch {
+      setApiError("Network error. Please check your connection or email info@ollatrade.com directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
     return (
       <div className="flex flex-col items-center justify-center text-center py-16 px-8">
-        {/* Success icon */}
         <div className="w-16 h-16 rounded-full flex items-center justify-center mb-5"
           style={{ background: "rgba(0,204,68,0.12)", border: "2px solid rgba(0,204,68,0.25)" }}>
           <svg className="w-8 h-8 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -85,7 +104,8 @@ export default function ContactForm() {
         </div>
         <h3 className="text-xl font-bold text-[#111827] mb-2">Message Sent</h3>
         <p className="text-[14px] text-gray-500 max-w-sm leading-relaxed mb-6">
-          Thank you for contacting Olla Trade. Our team will review your enquiry and respond to <strong className="text-[#111827]">{form.email}</strong> within one business day.
+          Thank you for contacting Olla Trade. Our team will review your enquiry and respond to{" "}
+          <strong className="text-[#111827]">{form.email}</strong> within one business day.
         </p>
         <button
           onClick={() => { setForm(INITIAL); setSubmitted(false); }}
@@ -156,9 +176,16 @@ export default function ContactForm() {
         <p className="text-[11px] text-gray-400 mt-1">{form.message.length} characters (minimum 20)</p>
       </div>
 
+      {/* API error */}
+      {apiError && (
+        <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-[13px] text-red-700">
+          {apiError}
+        </div>
+      )}
+
       {/* Disclaimer */}
       <p className="text-[11px] text-gray-400 leading-relaxed">
-        By submitting this form, you confirm that the information provided is accurate. For account security, never share your password or PIN with anyone, including Olla Trade staff.
+        By submitting this form you confirm the information provided is accurate. Never share your password or PIN with anyone, including Olla Trade staff.
       </p>
 
       {/* Submit */}

@@ -79,6 +79,19 @@ export default function ExecutionInformationPage() {
         </div>
       </PageHero>
 
+      {/* Cross-link to formal policy */}
+      <div className="bg-[#0A1220] border-b border-white/6 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-[12px] text-white/35">
+            Looking for the formal legal Order Execution Policy document?
+          </p>
+          <Link href="/legal/execution-policy"
+            className="text-[12px] font-semibold text-[#00CC44] hover:text-[#00DD4A] transition-colors flex items-center gap-1.5 flex-shrink-0">
+            View Order Execution Policy →
+          </Link>
+        </div>
+      </div>
+
       {/* ── 2. Introduction — white section ─────────────────────────── */}
       <section className="py-16 bg-white dark:bg-[#050A0F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

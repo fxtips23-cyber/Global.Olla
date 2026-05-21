@@ -31,7 +31,7 @@ const cols = [
       ["Forex Calculator",   "/tools/forex-calculator"],
       ["Trading Alerts",     "/tools/alerts"],
       ["VPS Guide",          "/tools/vps"],
-      ["Market News",        "/tools/news"],
+      ["Articles",           "/tools/news"],
     ],
   },
   {

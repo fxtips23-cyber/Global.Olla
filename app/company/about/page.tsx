@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "../../components/ui/PageHero";
 import CTASection from "../../components/CTASection";
 import FeatureGrid from "../../components/ui/FeatureGrid";
+import { SITE } from "../../lib/constants";
 import { IconTarget, IconShieldCheck, IconLock, IconBook, IconGlobe, IconUsers } from "../../components/ui/Icons";
 
 export const metadata: Metadata = { title: "About Us", description: "Learn about Olla Trade — our mission, vision, platform, and commitment to providing professional online trading services worldwide." };
@@ -13,7 +14,7 @@ const values = [
   { Icon: IconLock,        title: "Reliability",      desc: "Our infrastructure is built for stability and speed — consistent, dependable service across all market conditions." },
   { Icon: IconBook,        title: "Education",        desc: "We believe informed traders trade better. We invest in resources at every level — from beginner to professional." },
   { Icon: IconGlobe,       title: "Accessibility",    desc: "Minimum deposits from $10 mean professional trading tools are within reach for traders everywhere." },
-  { Icon: IconUsers,       title: "Client First",     desc: "Dedicated support, transparent policies, and a team that genuinely supports client growth as market participants." },
+  { Icon: IconUsers,       title: "Client Support",   desc: "Dedicated support, transparent policies, and a team that genuinely supports client growth as market participants." },
 ];
 
 const offerings = [
@@ -60,7 +61,7 @@ export default function AboutPage() {
       <section className="py-14 bg-[#050C15]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-            {[["1k+","Active Clients"],["500+","Tradable Instruments"],["24/5","Customer Support"],["$10","Min. Deposit"]].map(([v,l])=>(
+            {[[SITE.activeClients,"Active Clients"],[SITE.instruments,"Tradable Instruments"],["24/5","Customer Support"],[SITE.minDeposit,"Min. Deposit"]].map(([v,l])=>(
               <div key={l}><div className="text-4xl font-black text-[#00CC44] mb-2">{v}</div><div className="text-[12px] text-white/35">{l}</div></div>
             ))}
           </div>
