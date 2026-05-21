@@ -16,22 +16,15 @@ export const metadata: Metadata = {
   },
 };
 
-/* Anti-flash script — applies dark class before first paint */
-const antiFlashScript = `(function(){try{var s=localStorage.getItem('olla-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&p)){document.documentElement.classList.add('dark');}}catch(e){}})();`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html suppressHydrationWarning className={inter.variable}>
+    <html className={inter.variable}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: antiFlashScript }} />
         <link rel="icon"             href="/icon.svg" type="image/svg+xml" />
         <link rel="alternate icon"   href="/olla-logo.png" type="image/png" />
         <link rel="apple-touch-icon" href="/olla-logo.png" />
       </head>
-      <body
-        className="bg-white dark:bg-[#050A0F] text-gray-900 dark:text-[#F9FAFB] antialiased pt-16 w-full overflow-x-hidden transition-colors duration-200"
-        suppressHydrationWarning
-      >
+      <body className="bg-white text-gray-900 antialiased pt-16 w-full overflow-x-hidden">
         {children}
       </body>
     </html>
