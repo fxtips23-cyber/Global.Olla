@@ -109,6 +109,103 @@ export default function HelpPage() {
         </div>
       </section>
 
+      {/* Common issues guide */}
+      <section className="py-16 bg-[#050C15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Self-Service Guide</div>
+            <h2 className="text-3xl font-extrabold text-white mb-3">Common Issues & Solutions</h2>
+            <p className="text-white/40 text-[15px] max-w-xl mx-auto">Most issues can be resolved without contacting support. Find your issue below and follow the steps before reaching out.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                issue: "Cannot log in to MT4",
+                steps: ["Check your account number (not email) is used as the MT4 login","Verify you have selected the correct Olla Trade server","Confirm the password is the MT4 password (not portal password)","Reset MT4 password from your client portal if needed"],
+              },
+              {
+                issue: "Withdrawal not received",
+                steps: ["Check processing time: crypto 24–48h, bank 3–5 days","Confirm your withdrawal method matches your deposit method","Verify your wallet address or bank details are correct","Check your portal transaction history for status updates"],
+              },
+              {
+                issue: "KYC document rejected",
+                steps: ["Ensure the document is valid and not expired","Check the full name matches your registration exactly","Ensure document edges and all four corners are visible","Use a recent utility bill or bank statement (within 3 months)"],
+              },
+              {
+                issue: "EA (Expert Advisor) not running",
+                steps: ["Enable AutoTrading in the MT4 toolbar (Ctrl+E)","Check EA is attached to chart — look for EA icon on chart corner","Ensure 'Allow live trading' is checked in EA settings","Check the EA journal tab for error messages"],
+              },
+              {
+                issue: "Account not verified yet",
+                steps: ["Check email (including spam) for verification status update","Log in to your portal to see pending document status","Allow 1–2 business days after document submission","Contact support with your account number if beyond 2 days"],
+              },
+              {
+                issue: "Deposit not credited",
+                steps: ["Crypto: wait for blockchain confirmations (network dependent)","Check you sent to the correct wallet address/network","Confirm the deposit currency matches your account currency","Contact support with transaction ID/hash if not credited after 24h"],
+              },
+            ].map(({ issue, steps }) => (
+              <div key={issue} className="bg-white/4 border border-white/8 rounded-2xl p-5 hover:bg-white/6 transition-all">
+                <h4 className="text-[13px] font-bold text-white mb-4">{issue}</h4>
+                <ol className="space-y-2">
+                  {steps.map((s, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-[12px] text-white/45">
+                      <span className="text-[10px] font-bold text-[#00CC44] w-4 flex-shrink-0 mt-0.5">{i + 1}.</span>
+                      {s}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Response times table */}
+      <section className="py-14 bg-white dark:bg-[#050A0F]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Support Availability</div>
+          <h2 className="text-2xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-8 text-center">Response Times by Enquiry Type</h2>
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 dark:border-[#1F2937] shadow-sm">
+            <table className="w-full text-sm">
+              <thead className="bg-[#F5F7FA] dark:bg-[#0A1220] border-b border-gray-100 dark:border-[#1F2937]">
+                <tr>
+                  {["Enquiry Type","Contact Method","Expected Response","Priority"].map(h => (
+                    <th key={h} className="px-5 py-3.5 text-left text-[11px] font-bold text-gray-400 dark:text-[#6B7280] uppercase tracking-wider">{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-50 dark:divide-[#1F2937]">
+                {[
+                  ["Account Support",        "Email / Phone", "Same business day",  "High"],
+                  ["General Enquiry",        "Email / Form",  "1 business day",     "Standard"],
+                  ["Deposit / Withdrawal",   "Email",         "1 business day",     "High"],
+                  ["KYC / Verification",     "Email",         "1–2 business days",  "Standard"],
+                  ["Technical Platform",     "Email / Phone", "Same business day",  "High"],
+                  ["Partnership / Affiliate","Email",         "2–3 business days",  "Standard"],
+                  ["Formal Complaints",      "Email",         "2 business days (acknowledgement)", "Compliance"],
+                ].map(([type, method, response, priority]) => (
+                  <tr key={type} className="hover:bg-[#F9FAFB] dark:hover:bg-[#0F1720]">
+                    <td className="px-5 py-3 font-semibold text-[#111827] dark:text-[#F9FAFB] text-[13px]">{type}</td>
+                    <td className="px-5 py-3 text-gray-500 dark:text-[#9CA3AF] text-[13px]">{method}</td>
+                    <td className="px-5 py-3 text-[#00CC44] font-semibold text-[13px]">{response}</td>
+                    <td className="px-5 py-3 text-[12px]">
+                      <span className="px-2.5 py-0.5 rounded-full font-semibold"
+                        style={{
+                          background: priority === "High" ? "rgba(0,204,68,0.1)" : priority === "Compliance" ? "rgba(30,136,229,0.1)" : "rgba(107,114,128,0.1)",
+                          color: priority === "High" ? "#00AA38" : priority === "Compliance" ? "#1E88E5" : "#6B7280",
+                        }}>
+                        {priority}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[11px] text-gray-400 dark:text-[#6B7280] mt-3 text-center">Response times are targets during business hours (Monday–Friday). Weekend availability may be limited.</p>
+        </div>
+      </section>
+
       <FAQSection title="Help Centre FAQs" subtitle="Answers to the most common questions from Olla Trade clients." faqs={faqs} />
     </>
   );

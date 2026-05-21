@@ -78,6 +78,42 @@ export default function RiskDisclosuresPage() {
         </div>
       </section>
 
+      {/* Before you trade checklist — dark section */}
+      <section className="py-16 bg-[#050C15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Self-Assessment</div>
+            <h2 className="text-3xl font-extrabold text-white mb-3">Before You Start Trading</h2>
+            <p className="text-white/40 text-[15px] max-w-2xl mx-auto leading-relaxed">
+              CFD and Forex trading is not suitable for everyone. Before opening a live account, consider whether you can honestly answer yes to each of the following questions.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+            {[
+              { q: "Do you understand how CFDs and leverage work?",               warn: "If not: study our Trading Conditions and Execution Information pages before proceeding." },
+              { q: "Can you afford to lose all of the money you plan to trade?",  warn: "If no: do not trade. CFDs carry risk of total loss. Never trade with essential funds." },
+              { q: "Do you understand that past performance is not indicative of future results?", warn: "If not: no strategy, signal, or EA guarantees future profits." },
+              { q: "Do you have a written risk management plan (stop losses, position sizing)?", warn: "If not: develop one before live trading. Undisciplined trading accelerates losses." },
+              { q: "Are you trading with funds you can keep invested for the medium term?",      warn: "If no: short-term financial pressure leads to emotional, high-risk decisions." },
+              { q: "Do you understand the impact of overnight swap charges on open positions?",  warn: "If not: overnight positions carry daily financing costs that affect P&L." },
+            ].map(({ q, warn }) => (
+              <div key={q} className="bg-white/4 border border-white/8 rounded-2xl p-5">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-5 h-5 rounded border border-[#00CC44]/30 bg-[#00CC44]/10 flex-shrink-0 mt-0.5" />
+                  <p className="text-[13px] font-semibold text-white leading-relaxed">{q}</p>
+                </div>
+                <p className="text-[11px] text-white/35 leading-relaxed pl-8">{warn}</p>
+              </div>
+            ))}
+          </div>
+          <div className="bg-red-500/8 border border-red-500/20 rounded-2xl p-6 text-center max-w-3xl mx-auto">
+            <p className="text-[13px] text-red-300/80 leading-relaxed">
+              If you answered <strong className="text-red-300">No</strong> to any of the above questions, we strongly recommend seeking independent financial advice before trading. Opening an account does not obligate you to trade. You can also practise with a demo account first.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* General disclaimer */}
       <section className="py-14 bg-[#F5F7FA] dark:bg-[#081018]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

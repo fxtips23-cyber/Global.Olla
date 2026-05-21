@@ -137,6 +137,58 @@ export default function PromotionsPage() {
         </div>
       </section>
 
+      {/* How bonuses work */}
+      <section className="py-16 bg-[#050C15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Bonus Mechanics</div>
+            <h2 className="text-3xl font-extrabold text-white mb-3">How Trading Bonuses Work</h2>
+            <p className="text-white/40 text-[15px] max-w-2xl mx-auto leading-relaxed">Understanding how bonus credit works helps you trade responsibly and know exactly what to expect before claiming any promotion.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            {[
+              { title: "Bonus is Trading Credit",  desc: "All promotional bonuses are added as trading margin — they increase your available balance to open positions but are not cash in your account." },
+              { title: "Not Directly Withdrawable",desc: "Bonus credit cannot be withdrawn directly. Only profits generated through your own trading activity may be withdrawable, subject to the applicable promotion terms." },
+              { title: "Increases Margin Capacity", desc: "With more margin available, you can open more or larger positions. However, leverage and trading risk remain unchanged — position sizing discipline is essential." },
+              { title: "Subject to Volume Conditions",desc: "Some promotions require a minimum trading volume before profits become withdrawable. Always read the full terms before opting in to any promotion." },
+            ].map(({ title, desc }) => (
+              <div key={title} className="bg-white/4 border border-white/8 rounded-2xl p-5">
+                <div className="w-2 h-2 rounded-full bg-[#00CC44] mb-3" />
+                <h4 className="text-[13px] font-bold text-white mb-2">{title}</h4>
+                <p className="text-[12px] text-white/40 leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="overflow-x-auto rounded-2xl border border-white/8">
+            <table className="w-full text-sm min-w-[560px]">
+              <thead className="border-b border-white/8 bg-white/4">
+                <tr>
+                  {["Feature","Bonus Credit","Your Own Funds"].map(h => (
+                    <th key={h} className="px-5 py-3.5 text-left text-[10px] font-bold text-white/30 uppercase tracking-wider">{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/6">
+                {[
+                  ["Deposited by you",        "No — credited by Olla Trade",          "Yes — your capital"],
+                  ["Withdrawable directly",   "No",                                   "Yes, per withdrawal policy"],
+                  ["Used for margin",         "Yes — increases available margin",      "Yes — your primary margin"],
+                  ["Shown in account",        "Yes — as trading credit balance",       "Yes — as account balance"],
+                  ["At risk from trading",    "Can be reduced by trading losses",      "Can be reduced by trading losses"],
+                  ["Volume conditions",       "May apply (per promotion terms)",       "None"],
+                ].map(([feat, bonus, own]) => (
+                  <tr key={feat} className="hover:bg-white/3">
+                    <td className="px-5 py-3 text-[13px] font-semibold text-white/65">{feat}</td>
+                    <td className="px-5 py-3 text-[13px] text-white/40">{bonus}</td>
+                    <td className="px-5 py-3 text-[13px] text-[#00CC44] font-medium">{own}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* Disclaimer */}
       <section className="py-12 bg-[#F5F7FA] dark:bg-[#081018]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

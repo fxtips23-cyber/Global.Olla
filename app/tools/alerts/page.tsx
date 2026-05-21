@@ -147,6 +147,97 @@ export default function AlertsPage() {
         </div>
       </section>
 
+      {/* Alert configuration reference */}
+      <section className="py-16 bg-[#050C15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Configuration Guide</div>
+            <h2 className="text-3xl font-extrabold text-white mb-3">Real-World Alert Examples</h2>
+            <p className="text-white/40 text-[15px] max-w-xl mx-auto">Concrete examples of how traders configure alerts for common trading scenarios in MT4.</p>
+          </div>
+          <div className="overflow-x-auto rounded-2xl border border-white/8">
+            <table className="w-full text-sm min-w-[680px]">
+              <thead className="border-b border-white/8 bg-white/4">
+                <tr>
+                  {["Scenario","Instrument","Alert Type","Trigger Condition","Delivery Method","Purpose"].map(h => (
+                    <th key={h} className="px-4 py-3.5 text-left text-[10px] font-bold text-white/30 uppercase tracking-wider">{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/5">
+                {[
+                  ["Resistance breakout",     "EUR/USD",  "Price Level",   "Ask ≥ 1.09500",                    "Desktop + Mobile", "Entry trigger for breakout strategy"],
+                  ["Support level approach",  "GBP/USD",  "Price Level",   "Bid ≤ 1.26000",                    "Mobile Push",      "Watch for bounce from key support"],
+                  ["Before NFP release",      "USD/JPY",  "Time Alert",    "08:25 UTC on NFP Friday",          "Desktop Popup",    "Reminder to check positions before data"],
+                  ["Gold at key level",       "XAUUSD",   "Price Level",   "Bid ≥ 2,400",                      "Mobile + Email",   "Monitor key psychological resistance"],
+                  ["MA crossover",            "EURUSD H4","Indicator",     "EMA(50) crosses EMA(200)",         "Desktop Popup",    "Signal for trend change on H4 chart"],
+                  ["Margin level check",      "All",      "Margin Level",  "Margin level ≤ 150%",              "Mobile Push",      "Early warning before margin call"],
+                  ["Pre-market open",         "US30",     "Time Alert",    "09:25 EST (5 min before US open)", "Desktop + Sound",  "Alert to prepare for US session open"],
+                ].map(row => (
+                  <tr key={row[0]} className="hover:bg-white/3 transition-colors">
+                    {row.map((cell, i) => (
+                      <td key={i} className={`px-4 py-3 text-[12px] ${i === 0 ? "font-semibold text-white/75" : i === 3 ? "font-mono text-[#00CC44] text-[11px]" : "text-white/40"}`}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* MT4 alert settings reference */}
+      <section className="py-16 bg-white dark:bg-[#050A0F]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">MT4 Settings</div>
+              <h2 className="text-3xl font-extrabold text-[#111827] dark:text-[#F9FAFB] mb-5">Configuring Alerts in MT4</h2>
+              <p className="text-[14px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed mb-6">
+                MT4 provides several configuration options for how alerts behave. Access these settings from <strong className="text-[#111827] dark:text-[#E5E7EB]">Tools → Options → Events</strong> in the MT4 desktop terminal.
+              </p>
+              <div className="space-y-3">
+                {[
+                  { setting: "Alert sound file",          value: "Select custom .wav file", path: "Tools → Options → Events" },
+                  { setting: "Email notification",         value: "Configure SMTP server",   path: "Tools → Options → Email" },
+                  { setting: "Push notification",          value: "MetaQuotes ID required",  path: "Tools → Options → Notifications" },
+                  { setting: "Alert expiry",               value: "Unlimited / Once only",   path: "Alert configuration dialog" },
+                  { setting: "Alert type (Bid/Ask)",       value: "Select Bid or Ask price", path: "Alert condition dropdown" },
+                ].map(({ setting, value, path }) => (
+                  <div key={setting} className="flex items-start gap-3 bg-[#F5F7FA] dark:bg-[#0F1720] border border-gray-100 dark:border-[#1F2937] rounded-xl px-4 py-3">
+                    <div className="flex-1 min-w-0">
+                      <div className="text-[12px] font-bold text-[#111827] dark:text-[#F9FAFB]">{setting}</div>
+                      <div className="text-[11px] text-gray-400 dark:text-[#6B7280] font-mono mt-0.5">{path}</div>
+                    </div>
+                    <span className="text-[11px] text-[#00CC44] font-medium flex-shrink-0">{value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Push Notification Setup</div>
+              <h3 className="text-[20px] font-bold text-[#111827] dark:text-[#F9FAFB] mb-4">Enable Mobile Push Alerts</h3>
+              <p className="text-[14px] text-gray-600 dark:text-[#9CA3AF] leading-relaxed mb-5">To receive push notifications on your phone from MT4 desktop:</p>
+              <ol className="space-y-3">
+                {[
+                  "Install the MT4 mobile app on your iOS or Android device.",
+                  "Open the mobile app, go to Settings (gear icon) → Messages → Enable push notifications.",
+                  "Note your MetaQuotes ID — found in the mobile app under Settings → Messages.",
+                  "In MT4 Desktop, go to Tools → Options → Notifications.",
+                  "Enable 'Enable Push Notifications', enter your MetaQuotes ID, click Test to verify.",
+                  "Now any desktop alert set to 'Push Notification' will appear on your phone instantly.",
+                ].map((step, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[13px] text-gray-600 dark:text-[#9CA3AF]">
+                    <span className="w-6 h-6 rounded-full bg-[#00CC44] text-black text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Risk reminder */}
       <section className="py-12 bg-[#F5F7FA] dark:bg-[#081018]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
