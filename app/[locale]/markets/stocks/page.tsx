@@ -1,6 +1,4 @@
-import { stocksFaqs } from "../../../data/faqs";
 import type { Metadata } from "next";
-import Link from "next/link";
 import PageHero from "../../../components/ui/PageHero";
 import CTASection from "../../../components/CTASection";
 import FAQSection from "../../../components/ui/FAQSection";
@@ -14,6 +12,8 @@ export const metadata: Metadata = {
   description: "Trade 1,000+ global stock CFDs including Apple, Tesla, Amazon, Google and Microsoft with Olla Trade. Long or short, leverage up to 1:10.",
 };
 
+const WHY_ICONS = [IconBarChart, IconRefresh, IconPercent, IconGlobe, IconDollar, IconNewspaper];
+
 const popularStocks = [
   { Symbol: "AAPL",  Company: "Apple Inc.",        Sector: "Technology",      Exchange: "NASDAQ", Leverage: "1:10" },
   { Symbol: "TSLA",  Company: "Tesla Inc.",         Sector: "EV / Technology", Exchange: "NASDAQ", Leverage: "1:10" },
@@ -23,33 +23,6 @@ const popularStocks = [
   { Symbol: "META",  Company: "Meta Platforms",     Sector: "Social Media",    Exchange: "NASDAQ", Leverage: "1:10" },
 ];
 
-const whyFeatures = [
-  { Icon: IconBarChart,  title: "No Share Ownership Needed", desc: "Trade Apple, Tesla, Amazon and others on price movement — no share registry, no custodian, no settlement delay." },
-  { Icon: IconRefresh,   title: "Long or Short",              desc: "Go long when you anticipate price rises; go short when you expect declines — full two-directional trading flexibility." },
-  { Icon: IconPercent,   title: "Leverage on Equities",       desc: "Control larger stock positions with a fraction of the capital using leverage up to 1:10 on eligible stocks." },
-  { Icon: IconGlobe,     title: "Global Coverage",            desc: "1,000+ stocks across US, UK, European, and Asian markets from a single Olla Trade MT4 account." },
-  { Icon: IconDollar,    title: "No Commission Structure",    desc: "As CFDs, no traditional brokerage commission applies — the cost is embedded in the spread only." },
-  { Icon: IconNewspaper, title: "Earnings Season Trading",    desc: "Company results, product launches, and corporate announcements create significant short-term price opportunities." },
-];
-
-const howCFDWorks = [
-  { step: "01", title: "Choose a Stock",    desc: "Select from 1,000+ global stocks available in your MT4 instrument list. Search by company name or ticker symbol." },
-  { step: "02", title: "Select Direction",  desc: "Decide whether you expect the stock's price to rise (Buy/Long) or fall (Sell/Short). CFDs allow both directions equally." },
-  { step: "03", title: "Set Position Size", desc: "Choose your lot size (minimum 0.01 lots). Your required margin is automatically calculated based on leverage and position size." },
-  { step: "04", title: "Set Risk Controls", desc: "Apply a Stop Loss to cap your maximum loss and a Take Profit to lock in gains at a target price. Both are optional but recommended." },
-  { step: "05", title: "Monitor Position",  desc: "Track your open position in real-time via MT4. Floating P&L updates live as the stock price moves." },
-  { step: "06", title: "Close the Trade",   desc: "Close manually when your target is reached, or allow Stop Loss / Take Profit to close automatically at predefined levels." },
-];
-
-const sectors = [
-  { sector: "Technology",          examples: "Apple, Microsoft, Nvidia, AMD, Salesforce, Adobe",       note: "Highly sensitive to interest rates, Fed policy, and earnings growth expectations." },
-  { sector: "Consumer Discretionary", examples: "Amazon, Tesla, Nike, McDonald's, Starbucks, Netflix", note: "Driven by consumer spending data, economic growth, and disposable income trends." },
-  { sector: "Financial Services",  examples: "JPMorgan, Visa, Bank of America, Goldman Sachs",         note: "Sensitive to interest rate direction, credit conditions, and regulatory environment." },
-  { sector: "Healthcare",          examples: "Johnson & Johnson, UnitedHealth, Pfizer, Abbott",         note: "Driven by clinical trial results, drug approvals, and healthcare policy changes." },
-  { sector: "Energy",              examples: "ExxonMobil, Chevron, Shell, BP, TotalEnergies",          note: "Closely correlated with crude oil and natural gas prices." },
-  { sector: "Communication Svcs.", examples: "Meta, Alphabet, T-Mobile, Walt Disney, Comcast",         note: "Advertising revenue trends, streaming adoption, and platform regulatory risk." },
-];
-
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "pt" }];
 }
@@ -57,7 +30,23 @@ export function generateStaticParams() {
 export default async function StocksPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "markets.stocks" });
+  const t  = await getTranslations({ locale, namespace: "markets.stocks" });
+  const pc = await getTranslations({ locale, namespace: "page_content.stocks" });
+  const fq = await getTranslations({ locale, namespace: "faq" });
+
+  const howCFDWorks  = pc.raw("how_cfd_works")  as { step:string; title:string; desc:string }[];
+  const sectors      = pc.raw("sectors")        as { sector:string; examples:string; note:string }[];
+  const whyFeats     = pc.raw("why_features")   as { title:string; desc:string }[];
+  const faqs         = fq.raw("stocks") as { q:string; a:string }[];
+
+  const whyFeatures = whyFeats.map((f, i) => ({ Icon: WHY_ICONS[i], title: f.title, desc: f.desc }));
+
+  const regions = [
+    { region: pc("us_label"),   flag: "🇺🇸", exchanges: pc("us_exchanges"),   count: pc("us_count"),   examples: pc("us_examples"),   hours: pc("us_hours") },
+    { region: pc("eu_label"),   flag: "🇪🇺", exchanges: pc("eu_exchanges"),   count: pc("eu_count"),   examples: pc("eu_examples"),   hours: pc("eu_hours") },
+    { region: pc("asia_label"), flag: "🌏", exchanges: pc("asia_exchanges"), count: pc("asia_count"), examples: pc("asia_examples"), hours: pc("asia_hours") },
+  ];
+
   return (
     <>
       <PageHero
@@ -65,38 +54,43 @@ export default async function StocksPage({ params }: { params: Promise<{ locale:
         title={t("title")}
         subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Markets", href: "/markets" }, { label: "Stocks" }]}
-        cta={{ label: "Start Trading Stocks", href: "https://direct.ollatrade.com/auth/register" }}
-        stats={[{ value: "1,000+", label: "Global Stocks" }, { value: "1:10", label: "Max Leverage" }, { value: "3 Regions", label: "US / EU / Asia" }]}
+        cta={{ label: locale === "pt" ? "Começar a Operar Ações" : "Start Trading Stocks", href: "https://direct.ollatrade.com/auth/register" }}
+        stats={[
+          { value: "1,000+", label: locale === "pt" ? "Ações Globais" : "Global Stocks" },
+          { value: "1:10",   label: locale === "pt" ? "Alavancagem Máxima" : "Max Leverage" },
+          { value: "3",      label: locale === "pt" ? "Regiões (EUA/EU/Ásia)" : "Regions (US/EU/Asia)" },
+        ]}
       />
 
       {/* ── Regional coverage ─────────────────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Market Coverage</div>
-          <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">Global Stock Coverage</h2>
-          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">Access 1,000+ stocks from major exchanges across three regions — all from your single Olla Trade MT4 account.</p>
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">{t("coverage_label")}</div>
+          <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">{t("coverage_title")}</h2>
+          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">{pc("coverage_desc")}</p>
           <div className="grid md:grid-cols-3 gap-5 mb-10">
-            {[
-              { region: "United States",   flag: "🇺🇸", exchanges: "NYSE · NASDAQ", count: "700+", examples: "Apple, Tesla, Amazon, Google, Microsoft, Meta, Netflix, Nvidia, JPMorgan, Visa", hours: "14:30–21:00 UTC (Mon–Fri)" },
-              { region: "Europe",          flag: "🇪🇺", exchanges: "LSE · DAX · CAC · AEX", count: "200+", examples: "HSBC, BP, Shell, Volkswagen, Siemens, LVMH, Airbus, SAP, Unilever, ASML", hours: "08:00–16:30 UTC (Mon–Fri)" },
-              { region: "Asia & Other",    flag: "🌏", exchanges: "Hang Seng · ASX · Other", count: "100+", examples: "Alibaba, Tencent, Samsung, TSMC, Toyota, Sony, BHP, Commonwealth Bank", hours: "Varies by exchange" },
-            ].map((m) => (
-              <div key={m.region} className="bg-white rounded-2xl border border-gray-100 p-6">
+            {regions.map((r) => (
+              <div key={r.region} className="bg-white rounded-2xl border border-gray-100 p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">{m.flag}</span>
+                  <span className="text-xl">{r.flag}</span>
                   <div>
-                    <h3 className="text-[14px] font-bold text-[#111827]">{m.region}</h3>
-                    <div className="text-[11px] text-[#1E88E5] font-semibold">{m.exchanges}</div>
+                    <h3 className="text-[14px] font-bold text-[#111827]">{r.region}</h3>
+                    <div className="text-[11px] text-[#1E88E5] font-semibold">{r.exchanges}</div>
                   </div>
-                  <span className="ml-auto text-[13px] font-bold text-[#00CC44]">{m.count}</span>
+                  <span className="ml-auto text-[13px] font-bold text-[#00CC44]">{r.count}</span>
                 </div>
-                <p className="text-[12px] text-gray-500 leading-relaxed mb-3">{m.examples}</p>
-                <div className="text-[11px] text-gray-400">Hours: {m.hours}</div>
+                <p className="text-[12px] text-gray-500 leading-relaxed mb-3">{r.examples}</p>
+                <div className="text-[11px] text-gray-400">{locale === "pt" ? "Horário:" : "Hours:"} {r.hours}</div>
               </div>
             ))}
           </div>
-          <TradingConditionsTable title="Popular Stock CFDs (Indicative)" headers={["Symbol","Company","Sector","Exchange","Leverage"]} rows={popularStocks} highlightCol={4} />
-          <p className="text-[11px] text-gray-400 text-center mt-3">Full instrument list available in MT4. Stock CFD availability may vary. Trading follows underlying exchange hours.</p>
+          <TradingConditionsTable
+            title={locale === "pt" ? "CFDs de Ações Populares (Indicativo)" : "Popular Stock CFDs (Indicative)"}
+            headers={["Symbol","Company","Sector","Exchange","Leverage"]}
+            rows={popularStocks}
+            highlightCol={4}
+          />
+          <p className="text-[11px] text-gray-400 text-center mt-3">{pc("conditions_note")}</p>
         </div>
       </section>
 
@@ -104,11 +98,9 @@ export default async function StocksPage({ params }: { params: Promise<{ locale:
       <section className="py-16 bg-[#050C15]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Trading Guide</div>
-            <h2 className="text-3xl font-extrabold text-white mb-3">How Stock CFD Trading Works</h2>
-            <p className="text-white/40 text-[15px] max-w-2xl mx-auto leading-relaxed">
-              Stock CFDs track the underlying company's share price. You speculate on price movement without owning shares, registering with a stock exchange, or waiting for settlement.
-            </p>
+            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("workflow_label")}</div>
+            <h2 className="text-3xl font-extrabold text-white mb-3">{t("workflow_title")}</h2>
+            <p className="text-white/40 text-[15px] max-w-2xl mx-auto leading-relaxed">{pc("workflow_desc")}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {howCFDWorks.map(({ step, title, desc }) => (
@@ -125,9 +117,9 @@ export default async function StocksPage({ params }: { params: Promise<{ locale:
       {/* ── Sector breakdown ──────────────────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Market Sectors</div>
-          <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">Trading by Sector</h2>
-          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">Different sectors respond to different economic conditions. Understanding sector dynamics helps with stock selection and timing.</p>
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">{t("sectors_label")}</div>
+          <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">{t("sectors_title")}</h2>
+          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">{pc("sectors_desc")}</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
             {sectors.map(({ sector, examples, note }) => (
               <div key={sector} className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5 hover:bg-white hover:border-gray-200 hover:shadow-sm transition-all">
@@ -140,15 +132,15 @@ export default async function StocksPage({ params }: { params: Promise<{ locale:
 
           {/* Dividend adjustment explanation */}
           <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-7">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-3">Important: Dividend Adjustments</div>
+            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-3">{pc("dividend_label")}</div>
+            <h3 className="text-[17px] font-bold text-[#111827] mb-4">{pc("dividend_title")}</h3>
             <div className="grid md:grid-cols-2 gap-6 text-[13px] text-gray-600 leading-relaxed">
               <div>
-                <p className="mb-3">When a company pays a dividend, a corresponding adjustment is applied to open Stock CFD positions on the ex-dividend date. This reflects the dividend impact on the underlying share price.</p>
-                <p>If you hold a <strong className="text-[#111827]">long position</strong> on ex-dividend date, a dividend credit is applied to your account (equivalent to the dividend amount per share).</p>
+                <p className="mb-3">{pc("dividend_long")}</p>
+                <p>{pc("dividend_short")}</p>
               </div>
               <div>
-                <p className="mb-3">If you hold a <strong className="text-[#111827]">short position</strong>, a dividend debit is applied to your account — reflecting the obligation a short seller would have on the underlying shares.</p>
-                <p className="text-[12px] text-gray-400">Dividend adjustments are made at end-of-day on the ex-dividend date and appear in the account statement. The amount depends on your position size and the declared dividend.</p>
+                <p className="text-[12px] text-gray-400 leading-relaxed">{pc("dividend_note")}</p>
               </div>
             </div>
           </div>
@@ -158,8 +150,8 @@ export default async function StocksPage({ params }: { params: Promise<{ locale:
       {/* ── Why trade stocks ─────────────────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-[#111827] mb-3 text-center">Why Trade Stock CFDs?</h2>
-          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">Combine the price exposure of equity markets with the flexibility and efficiency of CFD trading.</p>
+          <h2 className="text-3xl font-extrabold text-[#111827] mb-3 text-center">{t("why_title")}</h2>
+          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">{pc("why_subtitle")}</p>
           <FeatureGrid features={whyFeatures} cols={3} />
         </div>
       </section>
@@ -168,18 +160,18 @@ export default async function StocksPage({ params }: { params: Promise<{ locale:
       <section className="py-8 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border border-amber-200 bg-amber-50 rounded-xl p-5">
-            <div className="text-[12px] font-bold text-amber-800 mb-2">Stock CFD Risk Warning</div>
-            <p className="text-[12px] text-amber-700 leading-relaxed">Individual stock prices can be highly volatile, especially around earnings announcements, corporate events, and macroeconomic releases. Stock CFD trading involves risk of substantial loss. Leverage amplifies both gains and losses. Trading follows underlying exchange hours — spreads may widen at open and close. Past performance is not indicative of future results.</p>
+            <div className="text-[12px] font-bold text-amber-800 mb-2">{t("risk_title")}</div>
+            <p className="text-[12px] text-amber-700 leading-relaxed">{t("risk_text")}</p>
           </div>
         </div>
       </section>
 
-      <FAQSection title={t("faq_title")} faqs={stocksFaqs} />
+      <FAQSection title={t("faq_title")} faqs={faqs} />
       <CTASection
         title={t("cta_title")}
         subtitle={t("cta_subtitle")}
-        primaryLabel="Open Account"
-        secondaryLabel="Compare Accounts"
+        primaryLabel={locale === "pt" ? "Abrir Conta" : "Open Account"}
+        secondaryLabel={locale === "pt" ? "Comparar Contas" : "Compare Accounts"}
         secondaryHref="/trading/accounts"
       />
     </>

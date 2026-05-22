@@ -1031,6 +1031,90 @@
         "q": "Posso sacar meu crédito de bônus?",
         "a": "O crédito de trading promocional não pode ser sacado diretamente. Apenas os lucros de trading gerados com o crédito de bônus podem ser sacáveis, sujeitos aos termos da promoção relevante."
       }
+    ],
+    "indices": [
+      {
+        "q": "O que são CFDs de índices?",
+        "a": "Os CFDs de índices (Contratos por Diferença) permitem especular sobre o movimento de preço de um índice de mercado de ações — como o Dow Jones (US30), S&P 500, NASDAQ ou DAX 40 — sem comprar as ações subjacentes. Você lucra ou perde com base na direção do índice negociada."
+      },
+      {
+        "q": "Quais índices globais estão disponíveis na Olla Trade?",
+        "a": "A Olla Trade oferece CFDs nos principais índices globais, incluindo US30 (Dow Jones), NASDAQ, SPX500 (S&P 500), DAX40, FTSE100 e NAS100. Índices adicionais podem estar disponíveis na plataforma MT4."
+      },
+      {
+        "q": "Posso negociar índices no MetaTrader 4?",
+        "a": "Sim. Todos os CFDs de índices estão disponíveis através de sua conta MT4 da Olla Trade em desktop, web, iOS e Android. Você pode aplicar indicadores técnicos, definir alertas, usar Expert Advisors e negociar diretamente nos gráficos."
+      },
+      {
+        "q": "O que afeta os preços dos índices?",
+        "a": "Os índices de mercado de ações são influenciados por resultados corporativos, dados econômicos (PIB, emprego, inflação), decisões dos bancos centrais, eventos geopolíticos e sentimento geral de risco dos investidores."
+      },
+      {
+        "q": "Os horários de negociação de índices variam por mercado?",
+        "a": "Sim. Os horários dos CFDs de índices geralmente seguem o cronograma da bolsa subjacente. Índices americanos como US30 e NASDAQ geralmente seguem os horários de Nova York, enquanto os índices europeus seguem as sessões de suas respectivas bolsas."
+      }
+    ],
+    "energies": [
+      {
+        "q": "Qual é a diferença entre Brent e WTI?",
+        "a": "O Petróleo Bruto Brent é extraído do Mar do Norte e serve como benchmark global. O WTI é o benchmark norte-americano — ligeiramente mais leve e doce, produzido nos EUA. O Brent geralmente negocia com um leve prêmio em relação ao WTI."
+      },
+      {
+        "q": "O que move os preços do petróleo bruto?",
+        "a": "Os preços do petróleo são impulsionados pelas decisões de produção da OPEP+, relatórios de estoques EIA dos EUA, eventos geopolíticos em regiões produtoras de petróleo, dados de crescimento global, força do USD e fatores sazonais de demanda."
+      },
+      {
+        "q": "Posso negociar petróleo sem entrega física?",
+        "a": "Sim. A Olla Trade oferece CFDs de petróleo — você especula sobre os movimentos de preço sem qualquer entrega física. Você simplesmente lucra ou perde com base na direção do preço."
+      },
+      {
+        "q": "Qual alavancagem está disponível nos CFDs de energia?",
+        "a": "A Olla Trade oferece alavancagem de até 1:100 nos instrumentos de energia. Isso amplifica tanto os ganhos quanto as perdas na proporção do tamanho da sua posição."
+      }
+    ],
+    "crypto": [
+      {
+        "q": "O que são CFDs de criptomoedas?",
+        "a": "Os CFDs de criptomoedas permitem especular sobre o preço de moedas digitais sem possuí-las. Sem carteira, sem conta em exchange — negocie diretamente pelo MT4 e lucre ou perca com base na direção do preço."
+      },
+      {
+        "q": "Quais criptomoedas estão disponíveis na Olla Trade?",
+        "a": "A Olla Trade oferece CFDs em BTC/USD (Bitcoin), ETH/USD (Ethereum), LTC/USD (Litecoin) e XRP/USD (Ripple). Instrumentos adicionais podem estar disponíveis no portal do cliente."
+      },
+      {
+        "q": "Posso negociar cripto sem carteira digital?",
+        "a": "Sim. Os CFDs de cripto da Olla Trade não requerem carteira digital, conta em exchange ou posse real de criptomoedas. Você simplesmente abre uma posição no MT4 com base na sua visão de direção do preço."
+      },
+      {
+        "q": "Quais são os horários de negociação para CFDs de cripto?",
+        "a": "Os CFDs de criptomoedas da Olla Trade estão disponíveis para negociação de segunda a sexta-feira. Os mercados de criptomoedas subjacentes operam 24/7, portanto gaps de preço significativos podem ocorrer quando os CFDs reabrem na segunda-feira após o fim de semana."
+      },
+      {
+        "q": "Qual alavancagem está disponível nas criptomoedas?",
+        "a": "A Olla Trade oferece alavancagem de até 1:10 em CFDs de criptomoedas. Dada a alta volatilidade inerente dos mercados de cripto, recomendamos fortemente o uso de ordens de stop-loss e gestão cuidadosa do risco."
+      }
+    ],
+    "stocks": [
+      {
+        "q": "O que é um CFD de ação?",
+        "a": "Um CFD de ação permite especular sobre o preço das ações de uma empresa sem possuir as ações subjacentes. Você lucra ou perde com base na direção do preço."
+      },
+      {
+        "q": "Recebo dividendos em CFDs de ações?",
+        "a": "Os traders de CFDs de ações podem receber ajustes de dividendos (creditados ou debitados) quando uma empresa paga dividendo, dependendo se você mantém uma posição comprada ou vendida na data ex-dividendo."
+      },
+      {
+        "q": "Qual alavancagem está disponível nos CFDs de ações?",
+        "a": "A Olla Trade oferece alavancagem de até 1:10 em CFDs de ações. Devido à volatilidade das ações individuais, o dimensionamento conservador de posição e ordens de stop-loss são fortemente recomendados."
+      },
+      {
+        "q": "Posso vender ações a descoberto com a Olla Trade?",
+        "a": "Sim. Com os CFDs de ações você pode ir a descoberto (short) se acreditar que o preço das ações de uma empresa vai cair — uma vantagem importante sobre a compra de ações físicas."
+      },
+      {
+        "q": "Em que horário posso negociar ações?",
+        "a": "O trading de CFDs de ações segue os horários da bolsa subjacente (NYSE/NASDAQ para ações americanas, LSE para ações do Reino Unido). Verifique as especificações do instrumento no MT4 para os horários atuais."
+      }
     ]
   },
   "page_content": {
@@ -1414,6 +1498,576 @@
       "standard": "Padrão",
       "compliance_type": "Conformidade",
       "response_note": "Os tempos de resposta são metas durante o horário comercial (segunda a sexta-feira). A disponibilidade nos fins de semana pode ser limitada."
+    },
+    "indices": {
+      "overview_label": "Visão Geral dos Índices",
+      "overview_title": "Principais Índices Globais",
+      "overview_desc": "Cada índice rastreia uma cesta específica de ações e reflete o desempenho de um mercado, economia ou setor. Negociar CFDs de índices oferece exposição sem a necessidade de comprar ações individuais.",
+      "composition_label": "Composição",
+      "sectors_label": "Setores Principais",
+      "hours_label": "Horário Principal",
+      "conditions_title": "Condições de Negociação — CFDs de Índices",
+      "conditions_note": "Os preços dos CFDs de índices são derivados da bolsa subjacente. Os horários de negociação seguem as sessões primárias das bolsas. Os spreads podem se ampliar na abertura/fechamento.",
+      "movers_label": "Análise de Mercado",
+      "movers_title": "O Que Move os Índices de Ações?",
+      "movers_desc": "Os preços dos índices são impulsionados por uma combinação de dados macroeconômicos, desempenho corporativo, política de bancos centrais e sentimento global de risco.",
+      "comparison_label": "CFD vs ETF",
+      "comparison_title": "CFDs de Índices vs ETFs — Principais Diferenças",
+      "comparison_desc": "Ambos os produtos rastreiam o desempenho de índices, mas com diferenças estruturais importantes para traders ativos.",
+      "why_title": "Por Que Negociar Índices?",
+      "why_subtitle": "Os CFDs de índices oferecem ampla exposição ao mercado com diversificação integrada e a capacidade de operar em ambas as direções.",
+      "risk_title": "Aviso de Risco — CFDs de Índices",
+      "risk_text": "O trading de CFDs de índices envolve risco de perda. A alavancagem amplifica tanto ganhos quanto perdas. Os mercados podem sofrer gaps na abertura, especialmente após fechamentos de fim de semana. A disponibilidade de índices segue os horários das bolsas e pode ser restrita durante feriados.",
+      "feature_col": "Característica",
+      "cfd_col": "CFD de Índice (Olla Trade)",
+      "etf_col": "ETF de Índice",
+      "cfd_vs_etf": [
+        [
+          "Propriedade",
+          "Sem propriedade — especulação de preço",
+          "Você possui cotas do ETF"
+        ],
+        [
+          "Venda a Descoberto",
+          "Suportada nativamente",
+          "Requer empréstimo de ações"
+        ],
+        [
+          "Alavancagem",
+          "Até 1:100",
+          "Normalmente nenhuma (exceto ETFs alavancados)"
+        ],
+        [
+          "Comissão",
+          "Baseada em spread, sem comissões",
+          "Corretagem aplicável"
+        ],
+        [
+          "Capital Mínimo",
+          "A partir de $10 (micro lotes)",
+          "Preço integral da cota"
+        ],
+        [
+          "Custo Overnight",
+          "Swap/rollover aplicável",
+          "Sem custo overnight"
+        ],
+        [
+          "Plataforma",
+          "MetaTrader 4",
+          "App de bolsa ou corretora"
+        ]
+      ],
+      "index_data": [
+        {
+          "name": "US30 — Dow Jones",
+          "region": "Estados Unidos",
+          "desc": "O índice americano mais antigo, rastreando 30 empresas blue-chip. Apesar da cesta menor, permanece um dos indicadores de mercado mais acompanhados do mundo.",
+          "composition": "30 empresas de grande capitalização dos EUA",
+          "sectors": "Finanças, Indústrias, Saúde, Consumo",
+          "hours": "14:30–21:00 UTC"
+        },
+        {
+          "name": "NAS100 — Nasdaq 100",
+          "region": "Estados Unidos",
+          "desc": "Índice com forte exposição a tecnologia, cobrindo empresas como Apple, Microsoft, Amazon, Nvidia e Meta. Altamente sensível às taxas de juros e ao desempenho do setor de tecnologia.",
+          "composition": "100 maiores ações não financeiras da Nasdaq",
+          "sectors": "Tecnologia, Consumo Discricionário, Saúde",
+          "hours": "14:30–21:00 UTC"
+        },
+        {
+          "name": "SPX500 — S&P 500",
+          "region": "Estados Unidos",
+          "desc": "O benchmark americano mais amplo — 500 empresas abrangendo todos os setores. Amplamente considerado o indicador definitivo do desempenho do mercado de ações dos EUA.",
+          "composition": "500 grandes empresas americanas de todos os setores",
+          "sectors": "Todos os setores principais, diversificado",
+          "hours": "14:30–21:00 UTC"
+        },
+        {
+          "name": "DAX40",
+          "region": "Alemanha",
+          "desc": "O principal índice da Alemanha. Indicador chave do mercado europeu. Sensível ao EUR/USD, condições globais de comércio e política do Banco Central Europeu.",
+          "composition": "40 maiores empresas listadas em Frankfurt",
+          "sectors": "Automotivo, Finanças, Química, Industrial",
+          "hours": "08:00–16:30 UTC"
+        },
+        {
+          "name": "FTSE100",
+          "region": "Reino Unido",
+          "desc": "O índice benchmark do Reino Unido. Com exposição internacional — muitos componentes obtêm receitas globalmente, tornando-o sensível à força da libra e aos preços das commodities.",
+          "composition": "100 maiores empresas listadas na LSE",
+          "sectors": "Finanças, Energia, Bens de Consumo, Mineração",
+          "hours": "08:00–16:30 UTC"
+        },
+        {
+          "name": "NASDAQ",
+          "region": "Estados Unidos",
+          "desc": "Mais amplo que o NAS100, cobrindo todas as listagens da Nasdaq. Reflete o desempenho de toda a bolsa Nasdaq — com forte peso em tecnologia, mas mais diversificado.",
+          "composition": "Composição de todas as ações listadas na Nasdaq",
+          "sectors": "Tecnologia, Biotech, Consumo",
+          "hours": "14:30–21:00 UTC"
+        }
+      ],
+      "market_movers": [
+        {
+          "factor": "Política de Bancos Centrais",
+          "desc": "As decisões de taxa de juros do Fed, BCE e BoE afetam diretamente as avaliações das ações. Cortes de juros são geralmente otimistas para os índices; altas de juros podem pressionar as ações."
+        },
+        {
+          "factor": "Resultados Corporativos",
+          "desc": "As temporadas de resultados trimestrais impulsionam movimentos significativos nos índices. Resultados acima ou abaixo das expectativas dos componentes principais podem causar movimentos direcionais bruscos."
+        },
+        {
+          "factor": "Divulgações de Dados Econômicos",
+          "desc": "Dados de crescimento do PIB, emprego e PMI de manufatura refletem a saúde econômica e influenciam diretamente o sentimento do mercado de ações."
+        },
+        {
+          "factor": "Eventos Geopolíticos",
+          "desc": "Guerras comerciais, conflitos militares e instabilidade política criam sentimento de aversão ao risco, pressionando os índices de ações para baixo."
+        },
+        {
+          "factor": "Movimentos Cambiais",
+          "desc": "Uma moeda doméstica mais fraca geralmente beneficia índices com forte exposição a exportações (DAX, FTSE). A força da moeda pode pesar nas empresas com exposição internacional."
+        },
+        {
+          "factor": "Preços das Commodities",
+          "desc": "Os preços de energia e materiais impactam significativamente índices com forte peso em commodities, como o FTSE100. As variações do petróleo afetam substancialmente o peso do setor de energia."
+        }
+      ],
+      "why_features": [
+        {
+          "title": "Ampla Exposição ao Mercado",
+          "desc": "Negocie o desempenho de economias inteiras ou setores com um único instrumento — sem necessidade de analisar ações individuais."
+        },
+        {
+          "title": "Movimentos por Eventos",
+          "desc": "Temporadas de resultados, decisões de bancos centrais e eventos geopolíticos criam volatilidade significativa e oportunidades de negociação."
+        },
+        {
+          "title": "Long ou Short",
+          "desc": "Compre se espera que os mercados subam, ou venda se antecipa uma queda — flexibilidade direcional total."
+        },
+        {
+          "title": "Boa Liquidez",
+          "desc": "Os principais índices estão entre os instrumentos mais líquidos durante suas sessões primárias — spreads competitivos e execuções rápidas."
+        },
+        {
+          "title": "Alavancagem Disponível",
+          "desc": "Acesse posições em índices com até 1:100 de alavancagem — controle posições maiores com uma fração do capital total."
+        },
+        {
+          "title": "Precificação Transparente",
+          "desc": "Os preços dos índices são derivados da cesta ponderada de ações subjacentes — totalmente transparentes e rastreáveis."
+        }
+      ]
+    },
+    "energies": {
+      "instruments_label": "Benchmarks de Petróleo",
+      "instruments_title": "Petróleo Bruto Brent e WTI",
+      "instruments_desc": "O Brent e o WTI são os dois principais benchmarks globais de petróleo bruto. Ambos são cotados em USD por barril e acessíveis como CFDs — especule nas variações de preço sem entrega física.",
+      "badge_brent": "Benchmark Global",
+      "badge_wti": "Benchmark Americano",
+      "brent_desc": "O Petróleo Bruto Brent é extraído do Mar do Norte e serve como benchmark global de preços do petróleo. Representa mais de dois terços dos contratos de petróleo bruto negociados internacionalmente.",
+      "wti_desc": "O West Texas Intermediate (WTI) é o principal benchmark norte-americano de petróleo bruto, negociado na NYMEX. É mais leve e doce que o Brent, extraído das bacias americanas de xisto betuminoso.",
+      "spread_label": "Spread",
+      "leverage_label": "Alavancagem",
+      "quote_label": "Cotação",
+      "origin_label": "Origem",
+      "lot_label": "Lote Padrão",
+      "session_label": "Sessão",
+      "comparison_label": "Comparativo de Benchmarks",
+      "comparison_title": "Brent vs WTI: Principais Diferenças",
+      "comparison_desc": "Ambos os benchmarks rastreiam os preços do petróleo bruto, mas com diferenças estruturais importantes. Conhecer as diferenças ajuda na seleção do instrumento.",
+      "brent_col": "Petróleo Brent",
+      "wti_col": "Petróleo WTI",
+      "comparison_rows": [
+        [
+          "Origem",
+          "Mar do Norte (Reino Unido, Noruega)",
+          "Bacia do Permiano, EUA"
+        ],
+        [
+          "Uso Global",
+          "~65% do petróleo mundial precificado no Brent",
+          "Referência principalmente norte-americana"
+        ],
+        [
+          "Qualidade do Petróleo",
+          "Petróleo leve e doce",
+          "Petróleo leve e muito doce (ligeiramente mais leve)"
+        ],
+        [
+          "Gravidade API",
+          "~38°",
+          "~39,6°"
+        ],
+        [
+          "Teor de Enxofre",
+          "~0,37% (doce)",
+          "~0,24% (muito doce)"
+        ],
+        [
+          "Prêmio/Desconto Típico",
+          "Geralmente negocia com prêmio sobre WTI",
+          "Geralmente com leve desconto em relação ao Brent"
+        ],
+        [
+          "Sensibilidade Principal",
+          "Geopolítica do Oriente Médio, decisões da OPEP",
+          "Contagem de plataformas dos EUA, estoques EIA, USD"
+        ],
+        [
+          "Bolsa",
+          "ICE Futures Europe",
+          "CME / NYMEX"
+        ]
+      ],
+      "drivers_title": "O Que Move os Preços do Petróleo?",
+      "calendar_label": "Calendário de Mercado",
+      "calendar_title": "Principais Eventos do Mercado de Petróleo",
+      "calendar_desc": "Esses eventos recorrentes regularmente criam volatilidade significativa nos preços do petróleo. Os traders os utilizam como âncoras para planejar posições e gerenciar riscos.",
+      "high_impact": "Alto Impacto",
+      "medium_impact": "Médio Impacto",
+      "low_impact": "Baixo Impacto",
+      "risk_title": "Aviso de Risco — CFDs de Energia",
+      "risk_text": "Os preços das commodities de energia são altamente voláteis e sensíveis a eventos geopolíticos, decisões da OPEP+ e dados macroeconômicos. Os preços podem mover-se de forma rápida e acentuada, especialmente em torno das divulgações de dados programadas. A alavancagem amplifica tanto ganhos quanto perdas proporcionalmente.",
+      "drivers": [
+        {
+          "title": "Cotas de Produção OPEP+",
+          "desc": "Os países membros da OPEP+ gerenciam coletivamente o fornecimento global. As decisões de corte ou aumento de produção têm impacto imediato e direto nos preços do petróleo bruto."
+        },
+        {
+          "title": "Relatórios de Estoques EIA dos EUA",
+          "desc": "Os dados semanais de estoques de petróleo bruto dos EUA (publicados todas as quartas-feiras) são um dos catalisadores de preço de curto prazo mais acompanhados para WTI e Brent."
+        },
+        {
+          "title": "Risco Geopolítico",
+          "desc": "Conflitos, sanções e instabilidade política nas principais regiões produtoras de petróleo (Oriente Médio, Rússia) criam preocupações com interrupção de oferta e picos de preço."
+        },
+        {
+          "title": "Correlação com USD",
+          "desc": "O petróleo é precificado globalmente em dólares americanos. Um USD mais forte reduz o poder de compra para compradores não americanos, criando pressão de baixa nos preços do petróleo."
+        },
+        {
+          "title": "Perspectivas de Demanda Global",
+          "desc": "Dados de crescimento econômico da China (maior importadora de petróleo do mundo) e dos EUA influenciam diretamente as projeções de demanda de energia e a direção dos preços."
+        },
+        {
+          "title": "Ciclos Sazonais de Demanda",
+          "desc": "A temporada de viagens de carro (verão americano), a demanda por óleo de aquecimento (inverno) e os ciclos de manutenção de refinarias criam padrões sazonais previsíveis nos mercados de energia."
+        }
+      ],
+      "oil_calendar": [
+        {
+          "event": "Relatório de Estoques de Petróleo Bruto EIA",
+          "frequency": "Semanal — toda quarta-feira ~15:30 UTC",
+          "impact": "Alto",
+          "note": "Dados de oferta de petróleo dos EUA mais acompanhados. Grandes aumento nos estoques geralmente pesam nos preços do WTI."
+        },
+        {
+          "event": "Reunião OPEP+",
+          "frequency": "Programada — tipicamente semestral",
+          "impact": "Alto",
+          "note": "Decisões de cotas de produção. Cortes surpresa são geralmente otimistas; aumentos, pessimistas para o petróleo."
+        },
+        {
+          "event": "Variação de Estoque API",
+          "frequency": "Semanal — toda terça-feira ~20:30 UTC",
+          "impact": "Médio",
+          "note": "Estimativa do setor privado, divulgada na noite anterior ao EIA. Fornece sinal direcional antecipado."
+        },
+        {
+          "event": "Contagem de Plataformas Baker Hughes",
+          "frequency": "Semanal — toda sexta-feira ~17:00 UTC",
+          "impact": "Baixo",
+          "note": "Indicador de atividade de produção nos EUA. Contagem crescente pode sinalizar aumento futuro da oferta."
+        },
+        {
+          "event": "Dados de Comércio da China",
+          "frequency": "Mensal",
+          "impact": "Médio",
+          "note": "Os volumes de importação de petróleo bruto da China refletem as tendências de demanda do maior importador mundial."
+        },
+        {
+          "event": "Payrolls Não Agrícolas dos EUA",
+          "frequency": "Mensal — primeira sexta-feira",
+          "impact": "Médio",
+          "note": "Dados fortes de empregos sugerem crescimento econômico e maior demanda de energia; dados fracos implicam menor demanda."
+        }
+      ]
+    },
+    "crypto": {
+      "risk_title": "Aviso de Alto Risco — CFDs de Criptomoedas",
+      "risk_text": "O trading de CFDs de criptomoedas carrega um risco significativamente maior do que a maioria dos outros instrumentos financeiros. Os preços podem mover 10–30% ou mais em uma única sessão de trading. É possível perder todo o capital depositado.",
+      "how_label": "Como Funciona",
+      "how_title": "O Que São CFDs de Criptomoedas?",
+      "how_desc": "Especule nos movimentos de preço das criptomoedas sem possuir as moedas subjacentes. Sem carteira digital, sem conta em exchange — negocie diretamente pelo MT4.",
+      "comparison_col_feature": "Característica",
+      "comparison_col_cfd": "CFD de Cripto (Olla Trade)",
+      "comparison_col_physical": "Cripto Físico",
+      "cfd_vs_physical": [
+        [
+          "Propriedade de Moedas",
+          "Não — apenas especulação de preço",
+          "Sim — você possui as moedas"
+        ],
+        [
+          "Carteira Necessária",
+          "Não necessária",
+          "Necessária (carteira digital ou física)"
+        ],
+        [
+          "Venda a Descoberto",
+          "Suportada — lucre com preços em queda",
+          "Complexo / dependente da exchange"
+        ],
+        [
+          "Alavancagem",
+          "Até 1:10",
+          "Tipicamente indisponível"
+        ],
+        [
+          "Risco de Segurança",
+          "Sem risco de hack de carteira",
+          "Risco de chave privada / hack de exchange"
+        ],
+        [
+          "Plataforma",
+          "MetaTrader 4",
+          "Exchange de cripto (Binance, Coinbase)"
+        ],
+        [
+          "Tratamento Fiscal",
+          "Regulamentação de CFD aplicável",
+          "Regras fiscais de criptomoedas aplicáveis"
+        ],
+        [
+          "Liquidação",
+          "Não há liquidação física",
+          "Liquidação T+1 ou instantânea"
+        ]
+      ],
+      "instruments_label": "Instrumentos Disponíveis",
+      "instruments_title": "Detalhes dos CFDs de Criptomoedas",
+      "instruments_desc": "Cada criptomoeda tem características distintas, casos de uso e fatores de preço. Entender o que move cada ativo ajuda na seleção de estratégia.",
+      "largest_cap": "Maior capitalização de mercado",
+      "second_cap": "2ª maior capitalização de mercado",
+      "mid_cap": "Capitalização de médio porte",
+      "top10_cap": "Top 10 por capitalização de mercado",
+      "key_drivers_label": "Principais Fatores de Preço",
+      "conditions_note": "Os mercados de cripto são altamente voláteis. Os spreads podem se ampliar significativamente durante períodos de baixa liquidez ou alta volatilidade. Os CFDs de cripto negociam de seg. a sex. apenas. Gaps de preço no fim de semana podem ocorrer.",
+      "risks_label": "Consciência de Risco",
+      "risks_title": "Riscos Específicos de Criptomoedas",
+      "risks_desc": "Os CFDs de cripto carregam riscos além do trading padrão de CFD. Entender esses riscos antes de negociar é essencial.",
+      "read_full_risk": "Para negociação responsável de cripto, leia nossas",
+      "risk_disclosures": "Divulgações de Risco",
+      "before_trading": "antes de operar.",
+      "cryptos": [
+        {
+          "sym": "BTC/USD",
+          "name": "Bitcoin",
+          "color": "#F59E0B",
+          "marketCap": "Maior capitalização",
+          "desc": "O Bitcoin é a primeira e mais reconhecida criptomoeda do mundo. Criado em 2009, opera com um modelo deflacionário com fornecimento limitado a 21 milhões de moedas. O preço do Bitcoin é impulsionado pela adoção institucional, ciclos de halving (redução da oferta a cada ~4 anos), sentimento macroeconômico e desenvolvimentos regulatórios.",
+          "keyDrivers": [
+            "Ciclos de halving do Bitcoin",
+            "Adoção institucional (ETFs, tesourarias corporativas)",
+            "Sentimento macro de risco ativo/aversão a risco",
+            "Notícias regulatórias e atividade de exchanges"
+          ]
+        },
+        {
+          "sym": "ETH/USD",
+          "name": "Ethereum",
+          "color": "#6366F1",
+          "marketCap": "2ª maior capitalização",
+          "desc": "O Ethereum é a principal plataforma de contratos inteligentes, possibilitando aplicativos descentralizados (dApps), protocolos DeFi e infraestrutura NFT. O preço do ETH é influenciado pela atividade de rede, adoção de desenvolvedores, atualizações de protocolo e sua transição de prova de trabalho para prova de participação (\"The Merge\").",
+          "keyDrivers": [
+            "Atividade DeFi e dApp",
+            "Atualizações de rede e mudanças de protocolo",
+            "Staking de ETH e dinâmicas de oferta",
+            "Adoção da Camada 2"
+          ]
+        },
+        {
+          "sym": "LTC/USD",
+          "name": "Litecoin",
+          "color": "#9CA3AF",
+          "marketCap": "Capitalização de médio porte",
+          "desc": "O Litecoin foi uma das primeiras criptomoedas alternativas ao Bitcoin. Oferece processamento de transações mais rápido (blocos de 2,5 min vs 10 min do Bitcoin) e usa um algoritmo de hash diferente. Frequentemente segue a trajetória de preço do Bitcoin com características de maior volatilidade.",
+          "keyDrivers": [
+            "Direção do preço do Bitcoin",
+            "Velocidade de transação e competição de taxas",
+            "Adoção de rede e casos de uso de pagamento",
+            "Ciclos de sentimento de mercado"
+          ]
+        },
+        {
+          "sym": "XRP/USD",
+          "name": "Ripple",
+          "color": "#00BFA5",
+          "marketCap": "Top 10 por capitalização",
+          "desc": "O XRP foi projetado para pagamentos internacionais rápidos e de baixo custo e liquidação entre instituições financeiras. Seu preço foi historicamente muito influenciado por desenvolvimentos regulatórios — particularmente os processos jurídicos da Ripple Labs — bem como pela adoção institucional do XRP Ledger para trilhos de pagamento transfronteiriço.",
+          "keyDrivers": [
+            "Desenvolvimentos regulatórios (histórico de litígio com SEC)",
+            "Adoção de rede de pagamentos institucional",
+            "Tendências de remessas transfronteiriças",
+            "Anúncios de parceria com bancos/fintechs"
+          ]
+        }
+      ],
+      "crypto_risks": [
+        {
+          "label": "Volatilidade Extrema",
+          "desc": "Os preços das criptomoedas podem mover 10–30% em um único dia. O dimensionamento de posição e as ordens de stop-loss são ferramentas críticas de gestão de risco."
+        },
+        {
+          "label": "Mercado Subjacente 24/7",
+          "desc": "Enquanto os CFDs de cripto da Olla Trade negociam de seg. a sex., os mercados subjacentes de cripto operam 24/7. Gaps de preço significativos no fim de semana podem ocorrer quando os mercados reabrem na segunda-feira."
+        },
+        {
+          "label": "Incerteza Regulatória",
+          "desc": "A regulamentação de criptomoedas varia significativamente por jurisdição e continua a evoluir. Anúncios regulatórios podem desencadear movimentos bruscos de preço."
+        },
+        {
+          "label": "Variação de Liquidez",
+          "desc": "A liquidez de cripto pode variar significativamente entre altcoins. Durante estresse de mercado, os spreads podem se ampliar substancialmente mesmo em pares principais."
+        },
+        {
+          "label": "Sem Propriedade Física",
+          "desc": "Os CFDs de cripto não envolvem propriedade de criptomoeda real. Você não pode transferir, armazenar ou usar posições de CFD de cripto como moedas reais."
+        },
+        {
+          "label": "Amplificação por Alavancagem",
+          "desc": "Mesmo uma alavancagem conservadora de 1:10 em um movimento volátil de 15% em cripto pode resultar em uma perda de 150% na margem. Arrisque apenas capital que pode se dar ao luxo de perder inteiramente."
+        }
+      ]
+    },
+    "stocks": {
+      "coverage_label": "Cobertura de Mercado",
+      "coverage_title": "Cobertura Global de Ações",
+      "coverage_desc": "Acesse mais de 1.000 ações das principais bolsas em três regiões — tudo a partir de sua conta única Olla Trade MT4.",
+      "us_label": "Estados Unidos",
+      "eu_label": "Europa",
+      "asia_label": "Ásia e Outros",
+      "us_exchanges": "NYSE · NASDAQ",
+      "eu_exchanges": "LSE · DAX · CAC · AEX",
+      "asia_exchanges": "Hang Seng · ASX · Outros",
+      "us_count": "700+",
+      "eu_count": "200+",
+      "asia_count": "100+",
+      "us_examples": "Apple, Tesla, Amazon, Google, Microsoft, Meta, Netflix, Nvidia, JPMorgan, Visa",
+      "eu_examples": "HSBC, BP, Shell, Volkswagen, Siemens, LVMH, Airbus, SAP, Unilever, ASML",
+      "asia_examples": "Alibaba, Tencent, Samsung, TSMC, Toyota, Sony, BHP, Commonwealth Bank",
+      "us_hours": "14:30–21:00 UTC (Seg–Sex)",
+      "eu_hours": "08:00–16:30 UTC (Seg–Sex)",
+      "asia_hours": "Varia por bolsa",
+      "conditions_note": "Lista completa de instrumentos disponível no MT4. A disponibilidade de CFDs de ações pode variar. O trading segue os horários da bolsa subjacente.",
+      "workflow_label": "Guia de Trading",
+      "workflow_title": "Como Funciona o Trading de CFDs de Ações",
+      "workflow_desc": "Os CFDs de ações rastreiam o preço das ações da empresa subjacente. Você especula sobre o movimento do preço sem possuir ações, registrar-se em uma bolsa ou aguardar liquidação.",
+      "how_cfd_works": [
+        {
+          "step": "01",
+          "title": "Escolha uma Ação",
+          "desc": "Selecione entre mais de 1.000 ações globais disponíveis na lista de instrumentos do seu MT4. Pesquise pelo nome da empresa ou símbolo do ticker."
+        },
+        {
+          "step": "02",
+          "title": "Selecione a Direção",
+          "desc": "Decida se você espera que o preço da ação suba (Comprar/Long) ou caia (Vender/Short). Os CFDs permitem ambas as direções igualmente."
+        },
+        {
+          "step": "03",
+          "title": "Defina o Tamanho da Posição",
+          "desc": "Escolha o tamanho do lote (mínimo 0,01 lote). Sua margem exigida é calculada automaticamente com base na alavancagem e no tamanho da posição."
+        },
+        {
+          "step": "04",
+          "title": "Defina Controles de Risco",
+          "desc": "Aplique um Stop Loss para limitar sua perda máxima e um Take Profit para garantir ganhos em um preço-alvo. Ambos são opcionais, mas recomendados."
+        },
+        {
+          "step": "05",
+          "title": "Monitore a Posição",
+          "desc": "Acompanhe sua posição aberta em tempo real via MT4. O P&L flutuante é atualizado ao vivo conforme o preço da ação se move."
+        },
+        {
+          "step": "06",
+          "title": "Feche a Negociação",
+          "desc": "Feche manualmente quando seu alvo for atingido, ou permita que o Stop Loss / Take Profit fechem automaticamente nos níveis predefinidos."
+        }
+      ],
+      "sectors_label": "Setores do Mercado",
+      "sectors_title": "Trading por Setor",
+      "sectors_desc": "Diferentes setores respondem a diferentes condições econômicas. Entender a dinâmica dos setores ajuda na seleção de ações e no timing.",
+      "sectors": [
+        {
+          "sector": "Tecnologia",
+          "examples": "Apple, Microsoft, Nvidia, AMD, Salesforce, Adobe",
+          "note": "Altamente sensível às taxas de juros, política do Fed e expectativas de crescimento de lucros."
+        },
+        {
+          "sector": "Consumo Discricionário",
+          "examples": "Amazon, Tesla, Nike, McDonald's, Starbucks, Netflix",
+          "note": "Impulsionado por dados de gastos do consumidor, crescimento econômico e tendências de renda disponível."
+        },
+        {
+          "sector": "Serviços Financeiros",
+          "examples": "JPMorgan, Visa, Bank of America, Goldman Sachs",
+          "note": "Sensível à direção das taxas de juros, condições de crédito e ambiente regulatório."
+        },
+        {
+          "sector": "Saúde",
+          "examples": "Johnson & Johnson, UnitedHealth, Pfizer, Abbott",
+          "note": "Impulsionado por resultados de ensaios clínicos, aprovações de medicamentos e mudanças nas políticas de saúde."
+        },
+        {
+          "sector": "Energia",
+          "examples": "ExxonMobil, Chevron, Shell, BP, TotalEnergies",
+          "note": "Fortemente correlacionado com os preços do petróleo bruto e gás natural."
+        },
+        {
+          "sector": "Serviços de Comunicação",
+          "examples": "Meta, Alphabet, T-Mobile, Walt Disney, Comcast",
+          "note": "Tendências de receita de publicidade, adoção de streaming e risco regulatório de plataformas."
+        }
+      ],
+      "dividend_label": "Ajustes de Dividendos",
+      "dividend_title": "Como os Dividendos São Tratados",
+      "dividend_long": "Se você mantiver uma posição comprada (long) na data ex-dividendo, um crédito de ajuste de dividendo é aplicado à sua conta.",
+      "dividend_short": "Se você mantiver uma posição vendida (short), um débito de ajuste de dividendo é aplicado — refletindo a obrigação que um vendedor a descoberto teria.",
+      "dividend_note": "Os ajustes de dividendos são feitos no final do dia na data ex-dividendo e aparecem no extrato da conta. O valor depende do tamanho da sua posição e do dividendo declarado.",
+      "why_title": "Por Que Negociar CFDs de Ações?",
+      "why_subtitle": "Combine a exposição de preço dos mercados de ações com a flexibilidade e eficiência do trading de CFDs.",
+      "risk_title": "Aviso de Risco — CFDs de Ações",
+      "risk_text": "Ações individuais podem ser altamente voláteis, especialmente em torno de anúncios de resultados corporativos e eventos macroeconômicos. A alavancagem amplifica tanto ganhos quanto perdas. O trading segue os horários da bolsa subjacente — os spreads podem se ampliar na abertura e no fechamento.",
+      "why_features": [
+        {
+          "title": "Sem Necessidade de Propriedade de Ações",
+          "desc": "Negocie Apple, Tesla, Amazon e outras ações no movimento de preço — sem registro de ações, sem custodiante, sem delay de liquidação."
+        },
+        {
+          "title": "Long ou Short",
+          "desc": "Compre quando antecipa alta de preços; venda quando espera quedas — flexibilidade bidirecional total de trading."
+        },
+        {
+          "title": "Alavancagem em Ações",
+          "desc": "Controle posições maiores em ações com uma fração do capital usando alavancagem de até 1:10 em ações elegíveis."
+        },
+        {
+          "title": "Cobertura Global",
+          "desc": "Mais de 1.000 ações dos EUA, UK, Europa e mercados asiáticos a partir de uma única conta Olla Trade MT4."
+        },
+        {
+          "title": "Sem Estrutura de Comissão",
+          "desc": "Como CFDs, nenhuma comissão de corretagem tradicional se aplica — o custo está incorporado apenas no spread."
+        },
+        {
+          "title": "Trading na Temporada de Resultados",
+          "desc": "Resultados de empresas, lançamentos de produtos e anúncios corporativos criam significativas oportunidades de preço de curto prazo."
+        }
+      ]
     }
   },
   "risk_disclaimer": {

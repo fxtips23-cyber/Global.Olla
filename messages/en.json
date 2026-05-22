@@ -977,6 +977,549 @@
           "def": "Difference between expected and actual execution price. Common during news events."
         }
       ]
+    },
+    "indices": {
+      "overview_label": "Index Overview",
+      "overview_title": "Major Global Indices",
+      "overview_desc": "Each index tracks a specific basket of stocks and reflects the performance of a market, economy, or sector. Trading index CFDs gives you exposure without purchasing individual shares.",
+      "composition_label": "Composition",
+      "sectors_label": "Key Sectors",
+      "hours_label": "Primary Hours",
+      "conditions_title": "Index CFD Trading Conditions",
+      "conditions_note": "Index CFD prices are derived from the underlying exchange. Trading hours follow primary exchange sessions. Spreads may widen at open/close.",
+      "movers_label": "Market Analysis",
+      "movers_title": "What Moves Stock Indices?",
+      "movers_desc": "Index prices are driven by a combination of macroeconomic data, corporate performance, central bank policy, and global risk sentiment.",
+      "comparison_label": "CFD vs ETF",
+      "comparison_title": "Index CFDs vs ETFs — Key Differences",
+      "comparison_desc": "Both products track index performance, but with important structural differences for active traders.",
+      "why_title": "Why Trade Indices?",
+      "why_subtitle": "Index CFDs offer broad market exposure with built-in diversification and the ability to trade in both directions.",
+      "risk_title": "Index CFD Risk Warning",
+      "risk_text": "Index CFD trading involves risk of loss. Leverage amplifies both gains and losses. Markets may gap on open, particularly after weekend closures or major overnight events.",
+      "feature_col": "Feature",
+      "cfd_col": "Index CFD (Olla Trade)",
+      "etf_col": "Index ETF",
+      "cfd_vs_etf": [
+        [
+          "Ownership",
+          "No ownership — price speculation",
+          "You own ETF units"
+        ],
+        [
+          "Short Selling",
+          "Supported natively",
+          "Requires borrowing shares"
+        ],
+        [
+          "Leverage",
+          "Up to 1:100",
+          "Typically none (unless leveraged ETF)"
+        ],
+        [
+          "Commission",
+          "Spread-based, no commissions",
+          "Brokerage commission applies"
+        ],
+        [
+          "Minimum Capital",
+          "From $10 (micro lots)",
+          "Full share price"
+        ],
+        [
+          "Overnight Cost",
+          "Swap/rollover applies",
+          "No overnight cost"
+        ],
+        [
+          "Platform",
+          "MetaTrader 4",
+          "Exchange or stock broker app"
+        ]
+      ],
+      "index_data": [
+        {
+          "name": "US30 — Dow Jones",
+          "region": "United States",
+          "desc": "The oldest US index, tracking 30 blue-chip companies. Despite its smaller basket, it remains one of the world's most widely followed market indicators.",
+          "composition": "30 large-cap US companies",
+          "sectors": "Finance, Industrials, Healthcare, Consumer",
+          "hours": "14:30–21:00 UTC"
+        },
+        {
+          "name": "NAS100 — Nasdaq 100",
+          "region": "United States",
+          "desc": "Technology-heavy index covering companies like Apple, Microsoft, Amazon, Nvidia, and Meta. Highly sensitive to interest rates and tech sector performance.",
+          "composition": "100 largest non-financial Nasdaq stocks",
+          "sectors": "Technology, Consumer Discretionary, Healthcare",
+          "hours": "14:30–21:00 UTC"
+        },
+        {
+          "name": "SPX500 — S&P 500",
+          "region": "United States",
+          "desc": "The broadest US benchmark — 500 companies spanning all sectors. Widely regarded as the definitive gauge of US equity market performance.",
+          "composition": "500 large US companies across all sectors",
+          "sectors": "All major sectors, diversified",
+          "hours": "14:30–21:00 UTC"
+        },
+        {
+          "name": "DAX40",
+          "region": "Germany",
+          "desc": "Germany's flagship index. Key European market indicator. Sensitive to EUR/USD, global trade conditions, and European Central Bank policy.",
+          "composition": "40 largest Frankfurt-listed companies",
+          "sectors": "Automotive, Finance, Chemicals, Industrial",
+          "hours": "08:00–16:30 UTC"
+        },
+        {
+          "name": "FTSE100",
+          "region": "United Kingdom",
+          "desc": "The UK's benchmark index. Internationally exposed — many components earn revenues globally, making it sensitive to GBP strength and commodity prices.",
+          "composition": "100 largest LSE-listed companies",
+          "sectors": "Finance, Energy, Consumer Goods, Mining",
+          "hours": "08:00–16:30 UTC"
+        },
+        {
+          "name": "NASDAQ",
+          "region": "United States",
+          "desc": "Broader than NAS100, covering all Nasdaq listings. Reflects the performance of the entire Nasdaq exchange — tech-heavy but more diversified.",
+          "composition": "Composite of all Nasdaq-listed stocks",
+          "sectors": "Technology, Biotech, Consumer",
+          "hours": "14:30–21:00 UTC"
+        }
+      ],
+      "market_movers": [
+        {
+          "factor": "Central Bank Policy",
+          "desc": "Interest rate decisions from the Fed, ECB, and BoE directly affect equity valuations. Rate cuts are generally bullish for indices; rate hikes can weigh on equities."
+        },
+        {
+          "factor": "Corporate Earnings",
+          "desc": "Quarterly earnings seasons drive significant index moves. Beats vs expectations from major index components can cause sharp directional moves."
+        },
+        {
+          "factor": "Economic Data Releases",
+          "desc": "GDP growth, employment figures, and manufacturing PMI data reflect economic health and directly influence equity market sentiment."
+        },
+        {
+          "factor": "Geopolitical Events",
+          "desc": "Trade wars, military conflicts, and political instability create risk-off sentiment, typically pressuring equity indices lower."
+        },
+        {
+          "factor": "Currency Movements",
+          "desc": "A weaker domestic currency often benefits export-heavy indices (DAX, FTSE). Currency strength can weigh on internationally-exposed companies."
+        },
+        {
+          "factor": "Commodity Prices",
+          "desc": "Energy and materials prices significantly impact commodity-heavy indices like the FTSE100. Oil price moves affect energy sector weighting substantially."
+        }
+      ],
+      "why_features": [
+        {
+          "title": "Broad Market Exposure",
+          "desc": "Trade the performance of entire economies or sectors with a single instrument — no need to analyse individual stocks."
+        },
+        {
+          "title": "Event-Driven Moves",
+          "desc": "Earnings seasons, central bank decisions, and geopolitical events create significant index volatility and trading opportunity."
+        },
+        {
+          "title": "Long or Short",
+          "desc": "Go long if you expect markets to rise, or short if you anticipate a market downturn — full directional flexibility."
+        },
+        {
+          "title": "Good Liquidity",
+          "desc": "Major indices are among the most liquid instruments during their primary sessions — tight spreads and fast fills."
+        },
+        {
+          "title": "Leverage Available",
+          "desc": "Access index positions with up to 1:100 leverage — control larger positions with a fraction of full capital."
+        },
+        {
+          "title": "Transparent Pricing",
+          "desc": "Index prices are derived from the weighted basket of underlying stocks — fully transparent and trackable."
+        }
+      ]
+    },
+    "energies": {
+      "instruments_desc": "Brent and WTI are the world's two primary crude oil benchmarks. Both are quoted in USD per barrel and accessible as CFDs — speculate on price movements without physical delivery.",
+      "badge_brent": "Global Benchmark",
+      "badge_wti": "US Benchmark",
+      "brent_desc": "Brent Crude is extracted from the North Sea and serves as the global oil pricing benchmark. It represents over two-thirds of internationally traded crude oil contracts. Brent is the reference price for oil produced in Europe, Africa, and the Middle East.",
+      "wti_desc": "West Texas Intermediate (WTI) is the primary North American crude oil benchmark, traded on the NYMEX. It is lighter and sweeter than Brent, extracted from US shale basins.",
+      "spread_label": "Spread",
+      "leverage_label": "Leverage",
+      "quote_label": "Quote",
+      "origin_label": "Origin",
+      "lot_label": "Standard lot",
+      "session_label": "Session",
+      "comparison_label": "Benchmark Comparison",
+      "comparison_title": "Brent vs WTI: Key Differences",
+      "brent_col": "Brent Crude",
+      "wti_col": "WTI Crude",
+      "comparison_rows": [
+        [
+          "Origin",
+          "North Sea (UK, Norway)",
+          "Texas, Permian Basin, USA"
+        ],
+        [
+          "Global Usage",
+          "~65% of world oil priced on Brent",
+          "Primarily North American reference"
+        ],
+        [
+          "Oil Grade",
+          "Light sweet crude",
+          "Light sweet crude (slightly lighter)"
+        ],
+        [
+          "API Gravity",
+          "~38°",
+          "~39.6°"
+        ],
+        [
+          "Sulfur Content",
+          "~0.37% (sweet)",
+          "~0.24% (very sweet)"
+        ],
+        [
+          "Typical Premium/Discount",
+          "Usually trades at premium to WTI",
+          "Usually at slight discount to Brent"
+        ],
+        [
+          "Key Sensitivity",
+          "Middle East geopolitics, OPEC decisions",
+          "US rig count, EIA inventories, USD"
+        ],
+        [
+          "Exchange",
+          "ICE Futures Europe",
+          "CME / NYMEX"
+        ]
+      ],
+      "calendar_desc": "These recurring events regularly create significant volatility in oil prices. Traders use them as anchors for scheduling positions and managing risk around data releases.",
+      "high_impact": "High Impact",
+      "medium_impact": "Medium Impact",
+      "low_impact": "Low Impact",
+      "drivers": [
+        {
+          "title": "OPEC+ Production Quotas",
+          "desc": "OPEC+ member countries collectively manage global supply. Production cut or increase decisions have immediate and direct impact on crude oil prices."
+        },
+        {
+          "title": "US EIA Inventory Reports",
+          "desc": "Weekly US crude oil inventory data (published every Wednesday) is one of the most closely watched short-term price catalysts for WTI and Brent."
+        },
+        {
+          "title": "Geopolitical Risk",
+          "desc": "Conflicts, sanctions, and political instability in major oil-producing regions (Middle East, Russia) create supply disruption concerns and price spikes."
+        },
+        {
+          "title": "USD Correlation",
+          "desc": "Oil is priced in US Dollars globally. A stronger USD reduces purchasing power for non-USD buyers, typically creating downward pressure on oil prices."
+        },
+        {
+          "title": "Global Demand Outlook",
+          "desc": "Economic growth data from China (world's largest oil importer) and the US directly influences energy demand projections and price direction."
+        },
+        {
+          "title": "Seasonal Demand Cycles",
+          "desc": "Driving season (US summer), heating oil demand (winter), and refinery maintenance cycles create predictable seasonal patterns in energy markets."
+        }
+      ],
+      "oil_calendar": [
+        {
+          "event": "EIA Crude Oil Inventory Report",
+          "frequency": "Weekly — every Wednesday ~15:30 UTC",
+          "impact": "High",
+          "note": "Most closely watched US oil supply data. Large inventory builds typically weigh on WTI prices."
+        },
+        {
+          "event": "OPEC+ Meeting",
+          "frequency": "Scheduled — typically bi-annually",
+          "impact": "High",
+          "note": "Production quota decisions. Surprise cuts are generally bullish; increases bearish for oil."
+        },
+        {
+          "event": "API Crude Oil Stock Change",
+          "frequency": "Weekly — every Tuesday ~20:30 UTC",
+          "impact": "Medium",
+          "note": "Private sector estimate, released night before EIA. Provides early directional signal."
+        },
+        {
+          "event": "US Rig Count (Baker Hughes)",
+          "frequency": "Weekly — every Friday ~17:00 UTC",
+          "impact": "Low",
+          "note": "Indicator of US production activity. Rising rig count may signal future supply increases."
+        },
+        {
+          "event": "China Trade Data",
+          "frequency": "Monthly",
+          "impact": "Medium",
+          "note": "Crude oil import volumes from China reflect demand trends from the world's largest importer."
+        },
+        {
+          "event": "US Non-Farm Payrolls",
+          "frequency": "Monthly — first Friday",
+          "impact": "Medium",
+          "note": "Strong jobs data suggests economic growth and higher energy demand; weak data implies lower demand."
+        }
+      ]
+    },
+    "crypto": {
+      "how_desc": "Speculate on the price movements of cryptocurrencies without owning the underlying coins. No wallet, no exchange account — trade directly from MT4.",
+      "comparison_col_feature": "Feature",
+      "comparison_col_cfd": "Crypto CFD (Olla Trade)",
+      "comparison_col_physical": "Physical Crypto",
+      "cfd_vs_physical": [
+        [
+          "Coin Ownership",
+          "No — price speculation only",
+          "Yes — you own coins"
+        ],
+        [
+          "Wallet Required",
+          "Not required",
+          "Required (hot or cold wallet)"
+        ],
+        [
+          "Short Selling",
+          "Supported — profit from falling prices",
+          "Complex / exchange-dependent"
+        ],
+        [
+          "Leverage",
+          "Up to 1:10",
+          "Typically not available"
+        ],
+        [
+          "Security Risk",
+          "No wallet hack risk",
+          "Private key / exchange hack risk"
+        ],
+        [
+          "Platform",
+          "MetaTrader 4",
+          "Crypto exchange (Binance, Coinbase)"
+        ],
+        [
+          "Tax Treatment",
+          "CFD regulations apply",
+          "Cryptocurrency tax rules apply"
+        ],
+        [
+          "Settlement",
+          "No physical settlement",
+          "T+1 or instant"
+        ]
+      ],
+      "instruments_desc": "Each cryptocurrency has distinct characteristics, use cases, and price drivers. Understanding what moves each asset helps with strategy selection.",
+      "key_drivers_label": "Key Price Drivers",
+      "conditions_note": "Crypto markets are highly volatile. Spreads may widen significantly during low-liquidity or high-volatility periods. Crypto CFDs trade Mon–Fri only. Weekend price gaps may occur.",
+      "risks_label": "Risk Awareness",
+      "risks_title": "Cryptocurrency-Specific Risks",
+      "risks_desc": "Crypto CFDs carry risks beyond standard CFD trading. Understanding these risks before trading is essential.",
+      "read_full_risk": "For responsible crypto trading, read our",
+      "risk_disclosures": "Risk Disclosures",
+      "before_trading": "before trading.",
+      "cryptos": [
+        {
+          "sym": "BTC/USD",
+          "name": "Bitcoin",
+          "color": "#F59E0B",
+          "marketCap": "Largest by market cap",
+          "desc": "Bitcoin is the world's first and most recognised cryptocurrency. Created in 2009, it operates on a deflationary model with a capped supply of 21 million coins. Bitcoin's price is driven by institutional adoption, halving cycles, macroeconomic sentiment, and regulatory developments.",
+          "keyDrivers": [
+            "Bitcoin halving cycles",
+            "Institutional adoption (ETFs, corporate treasuries)",
+            "Macro risk-on/off sentiment",
+            "Regulatory news and exchange activity"
+          ]
+        },
+        {
+          "sym": "ETH/USD",
+          "name": "Ethereum",
+          "color": "#6366F1",
+          "marketCap": "2nd largest by market cap",
+          "desc": "Ethereum is the leading smart contract platform, enabling decentralised applications (dApps), DeFi protocols, and NFT infrastructure. ETH's price is influenced by network activity, developer adoption, protocol upgrades, and its transition to proof-of-stake.",
+          "keyDrivers": [
+            "DeFi and dApp activity",
+            "Network upgrades and protocol changes",
+            "ETH staking and supply dynamics",
+            "Layer 2 adoption"
+          ]
+        },
+        {
+          "sym": "LTC/USD",
+          "name": "Litecoin",
+          "color": "#9CA3AF",
+          "marketCap": "Mid-tier by market cap",
+          "desc": "Litecoin was one of the first alternative cryptocurrencies to Bitcoin. It offers faster transaction processing and uses a different hashing algorithm. It often follows Bitcoin's price trajectory with higher volatility.",
+          "keyDrivers": [
+            "Bitcoin price direction",
+            "Transaction speed and fee competition",
+            "Network adoption and payment use cases",
+            "Market sentiment cycles"
+          ]
+        },
+        {
+          "sym": "XRP/USD",
+          "name": "Ripple",
+          "color": "#00BFA5",
+          "marketCap": "Top 10 by market cap",
+          "desc": "XRP is designed for fast, low-cost international payments and settlement. Its price has historically been influenced by regulatory developments and institutional adoption of the XRP Ledger for cross-border payment rails.",
+          "keyDrivers": [
+            "Regulatory developments (SEC litigation history)",
+            "Institutional payment network adoption",
+            "Cross-border remittance trends",
+            "Partnership announcements with banks/fintechs"
+          ]
+        }
+      ],
+      "crypto_risks": [
+        {
+          "label": "Extreme Volatility",
+          "desc": "Crypto prices can move 10–30% in a single day. Position sizing and stop-loss orders are critical risk management tools."
+        },
+        {
+          "label": "24/7 Underlying Market",
+          "desc": "While Olla Trade crypto CFDs trade Mon–Fri, the underlying crypto markets trade 24/7. Significant weekend price gaps may occur when markets reopen Monday."
+        },
+        {
+          "label": "Regulatory Uncertainty",
+          "desc": "Cryptocurrency regulation varies significantly by jurisdiction and continues to evolve. Regulatory announcements can trigger sharp price movements."
+        },
+        {
+          "label": "Liquidity Variation",
+          "desc": "Crypto liquidity can vary significantly between altcoins. During market stress, spreads may widen substantially even on major pairs."
+        },
+        {
+          "label": "No Physical Ownership",
+          "desc": "Crypto CFDs do not involve ownership of actual cryptocurrency. You cannot transfer, store, or use crypto CFD positions as real coins."
+        },
+        {
+          "label": "Leverage Amplification",
+          "desc": "Even conservative 1:10 leverage on a volatile 15% crypto move can result in a 150% loss on margin. Only risk capital you can afford to lose entirely."
+        }
+      ]
+    },
+    "stocks": {
+      "coverage_desc": "Access 1,000+ stocks from major exchanges across three regions — all from your single Olla Trade MT4 account.",
+      "us_label": "United States",
+      "eu_label": "Europe",
+      "asia_label": "Asia & Other",
+      "us_exchanges": "NYSE · NASDAQ",
+      "eu_exchanges": "LSE · DAX · CAC · AEX",
+      "asia_exchanges": "Hang Seng · ASX · Other",
+      "us_count": "700+",
+      "eu_count": "200+",
+      "asia_count": "100+",
+      "us_examples": "Apple, Tesla, Amazon, Google, Microsoft, Meta, Netflix, Nvidia, JPMorgan, Visa",
+      "eu_examples": "HSBC, BP, Shell, Volkswagen, Siemens, LVMH, Airbus, SAP, Unilever, ASML",
+      "asia_examples": "Alibaba, Tencent, Samsung, TSMC, Toyota, Sony, BHP, Commonwealth Bank",
+      "us_hours": "14:30–21:00 UTC (Mon–Fri)",
+      "eu_hours": "08:00–16:30 UTC (Mon–Fri)",
+      "asia_hours": "Varies by exchange",
+      "conditions_note": "Full instrument list available in MT4. Stock CFD availability may vary. Trading follows underlying exchange hours.",
+      "workflow_desc": "Stock CFDs track the underlying company's share price. You speculate on price movement without owning shares, registering with a stock exchange, or waiting for settlement.",
+      "how_cfd_works": [
+        {
+          "step": "01",
+          "title": "Choose a Stock",
+          "desc": "Select from 1,000+ global stocks available in your MT4 instrument list. Search by company name or ticker symbol."
+        },
+        {
+          "step": "02",
+          "title": "Select Direction",
+          "desc": "Decide whether you expect the stock's price to rise (Buy/Long) or fall (Sell/Short). CFDs allow both directions equally."
+        },
+        {
+          "step": "03",
+          "title": "Set Position Size",
+          "desc": "Choose your lot size (minimum 0.01 lots). Your required margin is automatically calculated based on leverage and position size."
+        },
+        {
+          "step": "04",
+          "title": "Set Risk Controls",
+          "desc": "Apply a Stop Loss to cap your maximum loss and a Take Profit to lock in gains at a target price. Both are optional but recommended."
+        },
+        {
+          "step": "05",
+          "title": "Monitor Position",
+          "desc": "Track your open position in real-time via MT4. Floating P&L updates live as the stock price moves."
+        },
+        {
+          "step": "06",
+          "title": "Close the Trade",
+          "desc": "Close manually when your target is reached, or allow Stop Loss / Take Profit to close automatically at predefined levels."
+        }
+      ],
+      "sectors_desc": "Different sectors respond to different economic conditions. Understanding sector dynamics helps with stock selection and timing.",
+      "sectors": [
+        {
+          "sector": "Technology",
+          "examples": "Apple, Microsoft, Nvidia, AMD, Salesforce, Adobe",
+          "note": "Highly sensitive to interest rates, Fed policy, and earnings growth expectations."
+        },
+        {
+          "sector": "Consumer Discretionary",
+          "examples": "Amazon, Tesla, Nike, McDonald's, Starbucks, Netflix",
+          "note": "Driven by consumer spending data, economic growth, and disposable income trends."
+        },
+        {
+          "sector": "Financial Services",
+          "examples": "JPMorgan, Visa, Bank of America, Goldman Sachs",
+          "note": "Sensitive to interest rate direction, credit conditions, and regulatory environment."
+        },
+        {
+          "sector": "Healthcare",
+          "examples": "Johnson & Johnson, UnitedHealth, Pfizer, Abbott",
+          "note": "Driven by clinical trial results, drug approvals, and healthcare policy changes."
+        },
+        {
+          "sector": "Energy",
+          "examples": "ExxonMobil, Chevron, Shell, BP, TotalEnergies",
+          "note": "Closely correlated with crude oil and natural gas prices."
+        },
+        {
+          "sector": "Communication Svcs.",
+          "examples": "Meta, Alphabet, T-Mobile, Walt Disney, Comcast",
+          "note": "Advertising revenue trends, streaming adoption, and platform regulatory risk."
+        }
+      ],
+      "dividend_label": "Important: Dividend Adjustments",
+      "dividend_title": "How Dividends Are Handled",
+      "dividend_long": "If you hold a long position at the ex-dividend date, a dividend adjustment credit is applied to your account (equivalent to the dividend amount per share).",
+      "dividend_short": "If you hold a short position, a dividend debit is applied to your account — reflecting the obligation a short seller would have on the underlying shares.",
+      "dividend_note": "Dividend adjustments are made at end-of-day on the ex-dividend date and appear in the account statement. The amount depends on your position size and the declared dividend.",
+      "why_subtitle": "Combine the price exposure of equity markets with the flexibility and efficiency of CFD trading.",
+      "why_features": [
+        {
+          "title": "No Share Ownership Needed",
+          "desc": "Trade Apple, Tesla, Amazon and others on price movement — no share registry, no custodian, no settlement delay."
+        },
+        {
+          "title": "Long or Short",
+          "desc": "Go long when you anticipate price rises; go short when you expect declines — full two-directional trading flexibility."
+        },
+        {
+          "title": "Leverage on Equities",
+          "desc": "Control larger stock positions with a fraction of the capital using leverage up to 1:10 on eligible stocks."
+        },
+        {
+          "title": "Global Coverage",
+          "desc": "1,000+ stocks across US, UK, European, and Asian markets from a single Olla Trade MT4 account."
+        },
+        {
+          "title": "No Commission Structure",
+          "desc": "As CFDs, no traditional brokerage commission applies — the cost is embedded in the spread only."
+        },
+        {
+          "title": "Earnings Season Trading",
+          "desc": "Company results, product launches, and corporate announcements create significant short-term price opportunities."
+        }
+      ]
     }
   },
   "faq": {
@@ -1128,6 +1671,90 @@
       {
         "q": "Do alerts automatically execute trades?",
         "a": "No. Alerts in MT4 are informational only - they do not execute trades automatically. For automated trading, you would need an Expert Advisor (EA)."
+      }
+    ],
+    "indices": [
+      {
+        "q": "What are index CFDs?",
+        "a": "Index CFDs allow you to speculate on the price movement of a stock market index — such as the Dow Jones (US30), S&P 500, NASDAQ, or DAX 40 — without purchasing the underlying shares."
+      },
+      {
+        "q": "Which global indices are available on Olla Trade?",
+        "a": "Olla Trade offers CFDs on major global indices including US30, NASDAQ, SPX500 (S&P 500), DAX40, FTSE100, and NAS100. Additional indices may be available in the MT4 platform."
+      },
+      {
+        "q": "Can I trade indices on MetaTrader 4?",
+        "a": "Yes. All index CFDs are available through your Olla Trade MT4 account on desktop, web, iOS, and Android."
+      },
+      {
+        "q": "What affects index prices?",
+        "a": "Stock market indices are influenced by corporate earnings, economic data (GDP, employment, inflation), central bank decisions, geopolitical events, and overall investor risk sentiment."
+      },
+      {
+        "q": "Are index trading hours different by market?",
+        "a": "Yes. Index CFD trading hours generally follow the underlying exchange schedule. US indices follow New York market hours, while European indices follow their respective exchange sessions."
+      }
+    ],
+    "energies": [
+      {
+        "q": "What is the difference between Brent and WTI?",
+        "a": "Brent Crude is extracted from the North Sea and serves as the global benchmark. WTI is the North American benchmark — slightly lighter and sweeter. Brent typically trades at a slight premium to WTI."
+      },
+      {
+        "q": "What moves crude oil prices?",
+        "a": "Oil prices are driven by OPEC+ production decisions, US EIA inventory reports, geopolitical events in oil-producing regions, global growth data, USD strength, and seasonal demand factors."
+      },
+      {
+        "q": "Can I trade oil without physical delivery?",
+        "a": "Yes. Olla Trade offers oil CFDs — you speculate on price movements without any physical delivery. You simply profit or lose based on price direction."
+      },
+      {
+        "q": "What leverage is available on energy CFDs?",
+        "a": "Olla Trade offers leverage up to 1:100 on energy instruments. This amplifies both gains and losses in proportion to your position size."
+      }
+    ],
+    "crypto": [
+      {
+        "q": "What are cryptocurrency CFDs?",
+        "a": "Cryptocurrency CFDs allow you to speculate on the price of digital currencies without owning them. No wallet, no exchange account — trade directly from MT4."
+      },
+      {
+        "q": "Which cryptocurrencies are available on Olla Trade?",
+        "a": "Olla Trade offers CFDs on BTC/USD (Bitcoin), ETH/USD (Ethereum), LTC/USD (Litecoin), and XRP/USD (Ripple)."
+      },
+      {
+        "q": "Can I trade crypto without a digital wallet?",
+        "a": "Yes. Olla Trade crypto CFDs do not require a digital wallet, exchange account, or actual cryptocurrency ownership."
+      },
+      {
+        "q": "What are the trading hours for crypto CFDs?",
+        "a": "Olla Trade cryptocurrency CFDs are available Monday to Friday. Underlying crypto markets operate 24/7, so significant weekend price gaps may occur when CFDs reopen Monday."
+      },
+      {
+        "q": "What leverage is available on cryptocurrencies?",
+        "a": "Olla Trade offers leverage up to 1:10 on cryptocurrency CFDs. Given high crypto volatility, strong risk management is essential."
+      }
+    ],
+    "stocks": [
+      {
+        "q": "What is a stock CFD?",
+        "a": "A stock CFD allows you to speculate on the price of a company's share without owning the underlying stock."
+      },
+      {
+        "q": "Do I receive dividends on stock CFDs?",
+        "a": "Stock CFD traders may receive dividend adjustments (credited or debited) when a company pays a dividend, depending on long or short position at the ex-dividend date."
+      },
+      {
+        "q": "What leverage is available on stock CFDs?",
+        "a": "Olla Trade offers leverage up to 1:10 on stock CFDs. Conservative position sizing and stop-loss orders are strongly recommended."
+      },
+      {
+        "q": "Can I short a stock with Olla Trade?",
+        "a": "Yes. With stock CFDs you can go short if you believe a company's share price will fall."
+      },
+      {
+        "q": "What hours can I trade stocks?",
+        "a": "Stock CFD trading follows the hours of the underlying exchange (NYSE/NASDAQ for US stocks, LSE for UK stocks). Check your MT4 instrument specifications for current hours."
       }
     ]
   }
