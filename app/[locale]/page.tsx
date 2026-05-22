@@ -12,8 +12,6 @@ import ToolsSection from "../components/home/ToolsSection";
 import Testimonials from "../components/home/Testimonials";
 import CTASection from "../components/CTASection";
 import RiskDisclaimer from "../components/RiskDisclaimer";
-import MarketStatus from "../components/widgets/MarketStatus";
-import SessionClock from "../components/widgets/SessionClock";
 import { routing } from "../../i18n/routing";
 
 export function generateStaticParams() {
@@ -132,20 +130,6 @@ function Hero() {
   );
 }
 
-/* ─── Market status bar below hero ──────────────────────────── */
-function MarketDataBar() {
-  return (
-    <section className="bg-[#081018] border-b border-white/6 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 max-w-2xl mx-auto">
-          <MarketStatus />
-          <SessionClock />
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ─── Translated homepage CTA ────────────────────────────────── */
 function HomeCTA() {
   const t = useTranslations("home.cta");
@@ -169,7 +153,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <RiskDisclaimer />
       <Hero />
-      <MarketDataBar />
       <MarketsSection />
       <WhyOllaTrade />
       <PlatformSection />
