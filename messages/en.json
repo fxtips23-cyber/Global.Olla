@@ -688,7 +688,120 @@
       "risk_label": "Risk Management",
       "risk_title": "Core Risk Management Rules",
       "cta_title": "Ready to put your calculations into action?",
-      "cta_subtitle": "Open a live or demo account and trade with the conditions you calculated."
+      "cta_subtitle": "Open a live or demo account and trade with the conditions you calculated.",
+      "guide_desc": "Each calculator serves a specific purpose in the trade planning process. Use them together for a complete picture of any trade before opening it.",
+      "calc_guide": [
+        {
+          "title": "Position Size Calculator",
+          "inputs": [
+            "Account balance",
+            "Risk percentage (e.g. 1% or 2%)",
+            "Stop loss in pips",
+            "Instrument (EUR/USD, XAUUSD, etc.)"
+          ],
+          "output": "The correct lot size that limits your loss to your chosen percentage if the stop loss is hit.",
+          "example": "Account: $5,000 · Risk: 1% ($50) · Stop Loss: 20 pips on EUR/USD → Result: 0.25 lots",
+          "why": "Oversizing is one of the most common reasons traders lose accounts quickly. A position size calculator enforces discipline by making risk consistent across all trades."
+        },
+        {
+          "title": "Pip Value Calculator",
+          "inputs": [
+            "Instrument (currency pair or CFD)",
+            "Lot size (e.g. 0.1, 1.0)",
+            "Account currency (USD)"
+          ],
+          "output": "The exact USD value of 1 pip movement for your chosen instrument and lot size.",
+          "example": "EUR/USD · 1.0 lot → 1 pip = $10.00 | EUR/USD · 0.1 lot → 1 pip = $1.00",
+          "why": "Pip value varies by instrument and lot size. Knowing it precisely lets you calculate stop loss distances and take profit targets in dollar terms before entering a trade."
+        },
+        {
+          "title": "Margin Calculator",
+          "inputs": [
+            "Instrument",
+            "Lot size",
+            "Leverage (e.g. 1:100, 1:500)",
+            "Account currency"
+          ],
+          "output": "The amount of margin (collateral) required to open and maintain the position.",
+          "example": "1 lot EUR/USD · Leverage 1:100 → Required margin: $1,084 (at 1.08400 price)",
+          "why": "Trading without knowing your margin requirement can result in unexpected margin calls. This calculator prevents overcommitting available margin across multiple open trades."
+        },
+        {
+          "title": "Profit / Loss Calculator",
+          "inputs": [
+            "Instrument",
+            "Entry price",
+            "Exit price",
+            "Lot size",
+            "Position direction (Buy/Sell)"
+          ],
+          "output": "Estimated profit or loss in USD for the trade, based on price movement.",
+          "example": "Buy 1 lot EUR/USD at 1.08400, close at 1.08700 → Profit: $300 (30 pips × $10/pip)",
+          "why": "Visualising the profit/loss before entering a trade helps you decide whether the risk-to-reward ratio justifies the position — a core step in any trade planning process."
+        }
+      ],
+      "guide_inputs_label": "Inputs Required",
+      "guide_output_label": "Output",
+      "guide_example_label": "Example",
+      "guide_why_label": "Why It Matters",
+      "lots_desc": "Lot size determines how many units of a currency or commodity you are buying or selling. Olla Trade supports micro lots from 0.01 — allowing precise position sizing for any account size.",
+      "lots_note": "Pip values are approximate and vary by instrument and current exchange rate. Use the calculator above for precise values.",
+      "lots_headers": [
+        "Lot Type",
+        "Units per Lot",
+        "Pip Value (EUR/USD)",
+        "Notes"
+      ],
+      "lot_sizes": [
+        {
+          "name": "Standard Lot",
+          "size": "100,000 units",
+          "pipValue": "$10.00 (EUR/USD)",
+          "notes": "Full-size position. Suitable for larger accounts."
+        },
+        {
+          "name": "Mini Lot",
+          "size": "10,000 units",
+          "pipValue": "$1.00 (EUR/USD)",
+          "notes": "One-tenth of a standard lot. Good for medium accounts."
+        },
+        {
+          "name": "Micro Lot",
+          "size": "1,000 units",
+          "pipValue": "$0.10 (EUR/USD)",
+          "notes": "Smallest standard unit. Suitable for small accounts and learning."
+        }
+      ],
+      "risk_desc": "The calculator is only one part of disciplined trading. These risk management principles help protect your capital across all market conditions.",
+      "risk_disclaimer": "Trading calculators provide estimates based on inputs. Actual results may vary due to spreads, slippage, swap charges, and execution conditions. All trading involves risk of loss. Past performance is not indicative of future results.",
+      "risk_rules": [
+        {
+          "rule": "1–2% Risk Per Trade",
+          "desc": "Most professional traders risk between 1% and 2% of account balance on any single trade. This allows 50–100 consecutive losses before depleting an account — providing time to recover."
+        },
+        {
+          "rule": "Minimum 1:2 R:R Ratio",
+          "desc": "For every $1 risked, target at least $2 in potential profit. A 1:2 risk-to-reward ratio means you only need to be right 34% of the time to break even over a series of trades."
+        },
+        {
+          "rule": "Set Stop Loss Before Entry",
+          "desc": "Determine your stop loss price before opening any trade. This prevents emotional decision-making after the position is open and price moves against you."
+        },
+        {
+          "rule": "Don't Move Stop Against You",
+          "desc": "Moving a stop loss further away from entry to avoid being stopped out increases your risk exposure. Only widen stops if your strategy explicitly calls for it."
+        },
+        {
+          "rule": "Consider Correlation",
+          "desc": "Opening multiple positions in strongly correlated instruments (e.g. EUR/USD + GBP/USD) effectively multiplies your exposure. Account for this when calculating total risk."
+        },
+        {
+          "rule": "Use the Calculator Every Time",
+          "desc": "Consistent application of position sizing calculators removes guesswork from trade sizing. Even experienced traders use them to maintain disciplined risk management."
+        }
+      ],
+      "cta_label_open": "Open Account",
+      "cta_label_conditions": "View Conditions"
     },
     "calendar": {
       "badge": "Free Tool",
@@ -704,7 +817,170 @@
       "events_label": "Event Guide",
       "events_title": "Major Economic Event Types",
       "warning_title": "Volatility & Risk Warning",
-      "faq_title": "Economic Calendar FAQs"
+      "faq_title": "Economic Calendar FAQs",
+      "how_desc": "Each row in the economic calendar represents a scheduled data release or event. Understanding what each column means helps you interpret the information and assess its relevance to your trades.",
+      "how_cols": [
+        {
+          "col": "Time",
+          "desc": "Scheduled release time in server time (GMT+2 or GMT+3 depending on DST). Actual release may vary by a few minutes."
+        },
+        {
+          "col": "Currency",
+          "desc": "The currency most directly affected by the event (e.g. USD for US data, EUR for ECB events)."
+        },
+        {
+          "col": "Impact",
+          "desc": "Expected market impact: High (red), Medium (yellow), Low (grey). Based on historical volatility and market significance."
+        },
+        {
+          "col": "Event",
+          "desc": "Name of the economic release or event. Click for detailed description in the calendar."
+        },
+        {
+          "col": "Actual",
+          "desc": "The released figure — shown after the event fires. Green = beat forecast, red = missed forecast."
+        },
+        {
+          "col": "Forecast",
+          "desc": "Consensus estimate from economists. The deviation between Actual and Forecast typically drives the market reaction."
+        },
+        {
+          "col": "Previous",
+          "desc": "The prior period's released value. Provides trend context when comparing with the new actual figure."
+        }
+      ],
+      "tips_label": "Trader Tips",
+      "tips": [
+        {
+          "t": "Focus on the deviation, not just the number",
+          "d": "Markets react to how the actual figure differs from the forecast — not from the previous release. A CPI that is 0.3% above forecast moves markets more than one that is 0.3% above prior."
+        },
+        {
+          "t": "Check the calendar every morning",
+          "d": "Review the day's high-impact events before your session opens. Know which pairs and instruments could see volatility and at what time."
+        },
+        {
+          "t": "Factor in correlated markets",
+          "d": "US data affects not just USD pairs — it moves Gold (XAUUSD), US indices (US30, NAS100), and all major pairs simultaneously."
+        },
+        {
+          "t": "Spreads widen around key events",
+          "d": "During and immediately after high-impact releases, spreads may widen significantly. Factor this into stop loss placement and trade sizing."
+        },
+        {
+          "t": "Use the previous value for trend context",
+          "d": "A series of improving GDP or CPI readings can confirm a trend, giving greater weight to the current release and its market impact."
+        }
+      ],
+      "impact_desc": "Each event is rated by its expected market impact. Use these ratings to prioritise which events to monitor and plan for.",
+      "impact_levels": [
+        {
+          "level": "High Impact",
+          "desc": "Events very likely to cause significant and rapid price movements. Requires active risk management.",
+          "examples": [
+            "FOMC Rate Decision",
+            "Non-Farm Payrolls (US)",
+            "ECB Rate Decision",
+            "US CPI / Core CPI",
+            "UK Budget / BoE Decision"
+          ]
+        },
+        {
+          "level": "Medium Impact",
+          "desc": "Events that may cause moderate market movement, particularly for directly affected currency pairs.",
+          "examples": [
+            "Retail Sales",
+            "PMI (Manufacturing/Services)",
+            "Trade Balance",
+            "Consumer Confidence",
+            "JOLTS Job Openings"
+          ]
+        },
+        {
+          "level": "Low Impact",
+          "desc": "Minor data releases unlikely to cause significant moves on their own, but worth noting in context.",
+          "examples": [
+            "Housing Starts",
+            "Building Permits",
+            "Wholesale Inventories",
+            "Regional Manufacturing",
+            "Minor Speeches"
+          ]
+        }
+      ],
+      "impact_key_label": "Key Examples",
+      "events_desc": "Understanding the purpose and market impact of key economic releases is essential for trading around news events effectively. Here are the most closely watched events.",
+      "major_events": [
+        {
+          "name": "Non-Farm Payrolls (NFP)",
+          "currency": "USD",
+          "freq": "Monthly — First Friday",
+          "impact": "High",
+          "desc": "The most market-moving US labour report. Measures net job creation outside the farming sector. A significant beat vs forecast typically strengthens USD; a miss weakens it.",
+          "tip": "Stand aside or reduce exposure 30 min before release. Major slippage and gap risk."
+        },
+        {
+          "name": "Consumer Price Index (CPI)",
+          "currency": "USD / EUR / GBP",
+          "freq": "Monthly",
+          "impact": "High",
+          "desc": "Primary inflation measure used by central banks to guide interest rate decisions. A hotter-than-expected CPI typically supports the base currency; a weak print may trigger selling.",
+          "tip": "Watch the month-on-month figure — it captures the current trend better than year-on-year."
+        },
+        {
+          "name": "Interest Rate Decision",
+          "currency": "USD / EUR / GBP / JPY",
+          "freq": "6–8 times per year (per central bank)",
+          "impact": "High",
+          "desc": "The most significant scheduled event for each currency. The Fed, ECB, BoE, and BoJ set overnight lending rates. Rate changes or guidance create large, sustained directional moves.",
+          "tip": "The press conference and statement wording often moves markets more than the rate decision itself."
+        },
+        {
+          "name": "Gross Domestic Product (GDP)",
+          "currency": "USD / EUR / GBP",
+          "freq": "Quarterly (preliminary, revised, final)",
+          "impact": "High",
+          "desc": "Measures total economic output. Stronger growth supports the currency; contraction weighs on it. GDP preliminary readings move markets most — revisions tend to have smaller impact.",
+          "tip": "GDP data is backward-looking. Forward guidance and PMI data often signal GDP trends in advance."
+        },
+        {
+          "name": "Purchasing Managers' Index (PMI)",
+          "currency": "USD / EUR / GBP",
+          "freq": "Monthly (flash and final)",
+          "impact": "Medium",
+          "desc": "Forward-looking survey of business conditions. A reading above 50 signals expansion; below 50 signals contraction. Often used as a leading indicator for GDP and employment trends.",
+          "tip": "Services PMI matters more than manufacturing PMI in most developed economies."
+        },
+        {
+          "name": "Retail Sales",
+          "currency": "USD / GBP / EU",
+          "freq": "Monthly",
+          "impact": "Medium",
+          "desc": "Measures consumer spending, which drives ~70% of US GDP. A strong print signals healthy consumer demand and supports the base currency. Weak prints may signal economic slowdown.",
+          "tip": "Core retail sales (excluding autos) is watched more closely than the headline figure."
+        },
+        {
+          "name": "Central Bank Speeches",
+          "currency": "All major currencies",
+          "freq": "Multiple times per month",
+          "impact": "Medium–High",
+          "desc": "Speeches from Federal Reserve governors, ECB officials, and other central bank members can shift market expectations. Hawkish comments support the currency; dovish comments weaken it.",
+          "tip": "Speeches from Fed Chair and ECB President carry the most weight."
+        },
+        {
+          "name": "Unemployment Rate",
+          "currency": "USD / EUR / GBP",
+          "freq": "Monthly",
+          "impact": "Medium",
+          "desc": "A key labour market indicator alongside NFP. Rising unemployment signals economic weakness; falling unemployment supports rate hike expectations.",
+          "tip": "The participation rate provides important context — falling unemployment with falling participation can be misleading."
+        }
+      ],
+      "impact_high": "High",
+      "impact_medium": "Medium",
+      "impact_badge": "Impact",
+      "warning_text": "During high-impact economic events, market prices can move rapidly and significantly within seconds of a data release. Spreads may widen substantially, slippage may occur, and stop-loss orders may be executed at prices different from those requested. Always ensure adequate risk management is in place before trading around major news releases. Economic calendar data is for informational purposes only and does not constitute investment advice.",
+      "faq_subtitle": "Common questions about using the economic calendar for trading."
     },
     "alerts": {
       "badge": "Free Tool",
@@ -724,7 +1000,108 @@
       "risk_text": "Trading alerts are a tool to help you monitor markets — they do not remove trading risk. Always apply appropriate risk management.",
       "faq_title": "Trading Alerts FAQs",
       "cta_title": "Start Using Trading Alerts",
-      "cta_subtitle": "Open an account and access the full MT4 alert system at no extra cost."
+      "cta_subtitle": "Open an account and access the full MT4 alert system at no extra cost.",
+      "overview_p1": "Trading alerts are automated notifications that fire when a pre-set condition is met — such as a price reaching a specific level, a technical indicator crossing a threshold, or a time condition being triggered.",
+      "overview_p2": "In MetaTrader 4, alerts are a built-in feature available on all platforms: desktop, WebTrader, iOS, and Android. They allow you to step away from your screens while staying informed about critical market levels.",
+      "overview_p3": "Alerts are purely informational — they do not automatically execute trades. For automated trade execution, you would use an Expert Advisor (EA).",
+      "overview_cards": [
+        {
+          "t": "Price Alerts",
+          "d": "Set notifications at any price level"
+        },
+        {
+          "t": "Indicator Alerts",
+          "d": "Trigger on MA crosses, RSI levels"
+        },
+        {
+          "t": "Time Alerts",
+          "d": "Remind yourself of scheduled events"
+        },
+        {
+          "t": "Margin Alerts",
+          "d": "Monitor your account risk level"
+        }
+      ],
+      "types_desc": "MetaTrader 4 supports several types of alert conditions to suit different monitoring needs.",
+      "alert_types": [
+        {
+          "title": "Price Level Alerts",
+          "desc": "Trigger a notification when an instrument's price reaches a specific bid or ask level. Ideal for monitoring key support, resistance, and breakout levels."
+        },
+        {
+          "title": "Indicator Alerts",
+          "desc": "Set alerts based on technical indicator conditions — for example, when an MA crosses, RSI reaches a threshold, or Bollinger Bands are breached."
+        },
+        {
+          "title": "Time-Based Alerts",
+          "desc": "Configure alerts to fire at a specific time — useful for reminding you of upcoming economic events or scheduled trading sessions."
+        },
+        {
+          "title": "Margin Level Alerts",
+          "desc": "MT4 can alert you when your account's margin level falls to a specified percentage, helping you manage risk before automatic stop-out occurs."
+        }
+      ],
+      "delivery_channels": [
+        {
+          "title": "MT4 Desktop Popup",
+          "desc": "An on-screen popup appears in your MT4 desktop terminal when the alert condition is met. Available whenever MT4 is open and running."
+        },
+        {
+          "title": "Mobile Push Notification",
+          "desc": "Receive a push notification on your iPhone or Android device via the MT4 mobile app — even when your computer is off."
+        },
+        {
+          "title": "Email Notification",
+          "desc": "MT4 can send an email when an alert fires. Configure your email address in MT4 → Tools → Options → Email."
+        },
+        {
+          "title": "Platform Sound Alert",
+          "desc": "Play a custom sound in MT4 when an alert triggers — useful for traders who are actively at their computer but monitoring other work."
+        }
+      ],
+      "setup_desktop": {
+        "platform": "Desktop (Windows)",
+        "steps": [
+          "Open MetaTrader 4 on your computer.",
+          "Right-click any price level on a chart — select 'Set Alert'.",
+          "Configure the alert condition, type, and notification method.",
+          "Click 'Add' to activate the alert.",
+          "Manage all alerts via View → Terminal → Alerts tab."
+        ]
+      },
+      "setup_mobile": {
+        "platform": "Mobile (iOS/Android)",
+        "steps": [
+          "Open the MT4 mobile app and navigate to a chart.",
+          "Tap and hold on the price level where you want an alert.",
+          "Select 'Set Alert' from the context menu.",
+          "Choose the alert condition and enable push notifications.",
+          "Ensure push notifications are enabled in your device settings for MT4."
+        ]
+      },
+      "use_cases": [
+        {
+          "step": "01",
+          "title": "Breakout Monitoring",
+          "desc": "Set price alerts at key support and resistance levels. When price approaches or breaks through a level, receive an alert to assess whether to enter, exit, or adjust a position."
+        },
+        {
+          "step": "02",
+          "title": "News Event Preparation",
+          "desc": "Set a time alert before a major economic release to remind yourself to review your open positions, adjust stop losses, or stand aside during high-volatility periods."
+        },
+        {
+          "step": "03",
+          "title": "Risk Management Monitoring",
+          "desc": "Configure margin level alerts to notify you before your account reaches the margin call level, giving you time to add funds or reduce position size."
+        },
+        {
+          "step": "04",
+          "title": "Re-entry Setups",
+          "desc": "After missing an entry, set a price alert at your preferred entry level. When price returns, you receive a notification to reassess whether the setup is still valid."
+        }
+      ],
+      "faq_subtitle": "Common questions about setting up and using trading alerts in MetaTrader 4."
     },
     "vps": {
       "badge": "Automated Trading",
@@ -744,7 +1121,158 @@
       "infra_title": "Global Datacenter Infrastructure",
       "faq_title": "VPS Guide FAQs",
       "cta_title": "Start Automating Your Trading",
-      "cta_subtitle": "Open an MT4 account and deploy your Expert Advisors on a VPS for uninterrupted operation."
+      "cta_subtitle": "Open an MT4 account and deploy your Expert Advisors on a VPS for uninterrupted operation.",
+      "what_p1": "A Virtual Private Server (VPS) is a remote computing environment hosted in a datacenter. It runs 24 hours a day, 7 days a week, independently of your personal computer. For forex traders, it provides a stable, always-on environment to run MetaTrader 4 and Expert Advisors.",
+      "what_p2": "Unlike your home computer, a VPS is unaffected by power cuts, internet outages, system restarts, or accidental shutdowns. Once you install MT4 on a VPS and configure your EAs, they will continue to execute without interruption.",
+      "what_p3": "You access and manage your VPS remotely from any device via Remote Desktop Protocol (RDP) — just as if you were sitting in front of a remote computer.",
+      "vps_vs_pc_title": "VPS vs Home Computer",
+      "vps_vs_pc_rows": [
+        [
+          "Runs 24/5 non-stop",
+          "Stops when you shut down"
+        ],
+        [
+          "Unaffected by power cuts",
+          "Stops during outages"
+        ],
+        [
+          "Hosted in datacenter",
+          "On your desk/laptop"
+        ],
+        [
+          "Low latency to servers",
+          "Depends on your location"
+        ],
+        [
+          "Remote access from anywhere",
+          "Tied to one location"
+        ]
+      ],
+      "vps_col": "VPS",
+      "pc_col": "Home PC",
+      "benefits": [
+        {
+          "title": "24/5 Uninterrupted Operation",
+          "desc": "Your EAs run continuously around the clock, even when your computer is off, ensuring no missed signals or execution gaps."
+        },
+        {
+          "title": "Low Latency Execution",
+          "desc": "A VPS located close to trading servers can reduce order transmission time, which is important for time-sensitive strategies."
+        },
+        {
+          "title": "No Power / Internet Issues",
+          "desc": "A hosted VPS is unaffected by your local power cuts, internet outages, or computer hardware failures."
+        },
+        {
+          "title": "Dedicated Resources",
+          "desc": "VPS resources are dedicated to your use, unlike shared hosting, providing consistent performance for MT4 and your EAs."
+        },
+        {
+          "title": "Remote Access from Anywhere",
+          "desc": "Connect to your VPS from any device with internet access. Manage your MT4 installation and EAs from your phone, tablet, or laptop."
+        },
+        {
+          "title": "Multiple Instances",
+          "desc": "Run multiple MT4 installations with different accounts or strategies on a single VPS, subject to its resource capacity."
+        }
+      ],
+      "infra_desc": "A VPS hosted close to your broker's servers reduces the physical distance your orders must travel. The result is consistently lower latency — critical for time-sensitive trading strategies and Expert Advisor execution.",
+      "infra_items": [
+        {
+          "label": "24/5 Uninterrupted MT4",
+          "desc": "Your EAs run continuously even when your computer is off, in sleep mode, or your internet is down."
+        },
+        {
+          "label": "Close to Trading Servers",
+          "desc": "Choose a datacenter in the same region as your broker's infrastructure to minimise order transmission time."
+        },
+        {
+          "label": "Remote Desktop Access",
+          "desc": "Manage your MT4 installation and EAs from any device via RDP — laptop, tablet, or smartphone."
+        },
+        {
+          "label": "Multiple MT4 Instances",
+          "desc": "Run multiple MT4 accounts or strategies on a single VPS, subject to available server resources."
+        }
+      ],
+      "infra_disclaimer": "Olla Trade does not provide VPS services directly. The illustration above represents a typical VPS-to-server infrastructure concept. Clients are responsible for selecting and configuring their own VPS provider.",
+      "specs_desc": "The following specifications are recommended for running MetaTrader 4 with Expert Advisors. Requirements increase with the number of simultaneously running EAs and chart windows.",
+      "specs_note": "Olla Trade does not provide VPS services. These are general recommendations. Always verify VPS provider capabilities and suitability for your specific requirements.",
+      "specs": [
+        {
+          "label": "Operating System",
+          "value": "Windows Server 2012/2016/2019 or Windows 10/11"
+        },
+        {
+          "label": "RAM",
+          "value": "Minimum 1GB · Recommended 2GB+ for multiple EAs"
+        },
+        {
+          "label": "CPU",
+          "value": "Minimum 1 core · Recommended 2+ cores"
+        },
+        {
+          "label": "Storage",
+          "value": "Minimum 20GB SSD"
+        },
+        {
+          "label": "Internet Speed",
+          "value": "Stable connection, 10 Mbps+ recommended"
+        },
+        {
+          "label": "Location",
+          "value": "Choose a datacenter close to your broker's servers"
+        },
+        {
+          "label": "Connection",
+          "value": "RDP (Remote Desktop Protocol) access"
+        }
+      ],
+      "setup_steps": [
+        {
+          "n": "01",
+          "t": "Choose a VPS Provider",
+          "d": "Select a Windows-based VPS provider with a datacenter location close to your preferred trading region. Compare pricing, RAM, CPU, and included bandwidth."
+        },
+        {
+          "n": "02",
+          "t": "Connect via RDP",
+          "d": "Use Remote Desktop Connection (Windows) or Microsoft Remote Desktop (Mac/iOS) to connect to your VPS using the IP address, username, and password provided."
+        },
+        {
+          "n": "03",
+          "t": "Download and Install MT4",
+          "d": "Open a browser on the VPS and download MetaTrader 4 from the official MetaQuotes website or your broker's download page. Install MT4 as you would on any Windows computer."
+        },
+        {
+          "n": "04",
+          "t": "Log In to Your Account",
+          "d": "Open MT4 on the VPS, go to File → Login to Trade Account, and enter your Olla Trade account number, password, and select the correct server. Your account details were emailed to you upon registration."
+        },
+        {
+          "n": "05",
+          "t": "Install and Attach Your EAs",
+          "d": "Copy your EA files (.ex4 or .mq4) to the MT4 Experts folder (File → Open Data Folder → MQL4 → Experts). Restart MT4, then drag and attach each EA to the desired chart."
+        },
+        {
+          "n": "06",
+          "t": "Enable AutoTrading",
+          "d": "Click the AutoTrading button in MT4's toolbar (or press Ctrl+E) to allow EAs to trade. Verify the EA is running by checking the EA tab in the Terminal panel — it should show active."
+        }
+      ],
+      "security_items": [
+        "Use a strong, unique password for your VPS and change it from the default",
+        "Enable Windows Firewall and keep it active",
+        "Keep Windows and all software up to date with security patches",
+        "Change the default RDP port (3389) to a non-standard port to reduce brute-force attacks",
+        "Consider enabling two-factor authentication if your VPS provider supports it",
+        "Do not install unnecessary software or browser extensions on your trading VPS",
+        "Take regular backups of your MT4 data folder (containing EAs, templates, and settings)",
+        "Disconnect and lock the session when not actively working on the VPS"
+      ],
+      "faq_subtitle": "Common questions about using a VPS for MetaTrader 4 and Expert Advisors.",
+      "cta_label_open": "Open Account",
+      "cta_label_platform": "View MT4 Platform"
     },
     "articles": {
       "badge": "Market Analysis & Insights",
@@ -759,7 +1287,8 @@
       "readMore": "Read More",
       "cta_btn": "View All Articles on Olla Trade",
       "disclaimer_title": "Disclaimer:",
-      "disclaimer_text": "Articles and market analysis published by Olla Trade are for informational and educational purposes only. They do not constitute investment advice, a solicitation to trade, or a recommendation to buy or sell any financial instrument."
+      "disclaimer_text": "Articles and market analysis published by Olla Trade are for informational and educational purposes only. They do not constitute investment advice, a solicitation to trade, or a recommendation to buy or sell any financial instrument.",
+      "full_blog_btn": "Full blog →"
     }
   },
   "company": {
@@ -1635,42 +2164,46 @@
     ],
     "vps": [
       {
-        "q": "What is a VPS for trading?",
-        "a": "A Virtual Private Server (VPS) is a remote computing environment that runs 24/7. For Forex traders, it provides a stable always-on environment to run MT4 and Expert Advisors without interruption."
+        "q": "Do I need a VPS to trade?",
+        "a": "A VPS is not required to trade. However, if you use automated trading strategies (Expert Advisors), a VPS allows EAs to run continuously without keeping your computer on. It is particularly useful for traders who need uninterrupted 24/5 operation or who have unstable internet connections."
       },
       {
-        "q": "Why do I need a VPS for automated trading?",
-        "a": "A VPS ensures your Expert Advisors run continuously, even when your computer is off, without internet, or during power outages."
+        "q": "What are the minimum recommended VPS specs for MT4?",
+        "a": "Minimum: 1GB RAM, 1 CPU core, 20GB SSD, Windows Server OS. For running multiple EAs: 2GB+ RAM, 2 CPU cores. The VPS should ideally be located geographically close to trading servers to minimise latency."
       },
       {
-        "q": "Is VPS provided by Olla Trade?",
-        "a": "Olla Trade does not provide VPS services directly. This page provides guidance on setting up your own VPS with a third-party provider."
+        "q": "Can I run multiple Expert Advisors on one VPS?",
+        "a": "Yes, provided the VPS has sufficient resources. Each MT4 instance running an EA consumes memory and CPU. Monitor resource usage to ensure your VPS is not overloaded, which could affect EA performance."
       },
       {
-        "q": "What VPS specification should I use for MT4?",
-        "a": "For MT4 with a few EAs: minimum 1GB RAM (recommended 2GB+), 1 CPU core (recommended 2+), 20GB SSD, and stable 10Mbps+ connection."
+        "q": "Does Olla Trade provide VPS services?",
+        "a": "Olla Trade does not provide VPS services directly and does not endorse specific providers. There are many commercial providers available. The choice of provider is your responsibility."
       },
       {
-        "q": "How do I access my VPS remotely?",
-        "a": "Use Remote Desktop Protocol (RDP) on Windows, or Microsoft Remote Desktop on Mac/iOS with the IP address from your VPS provider."
+        "q": "How do I connect to my VPS?",
+        "a": "Most Windows VPS providers use Remote Desktop Protocol (RDP). On Windows, use the built-in Remote Desktop Connection. On Mac, use Microsoft Remote Desktop. You will need the VPS IP address, username, and password from your provider."
       }
     ],
     "alerts": [
       {
         "q": "What are trading alerts?",
-        "a": "Trading alerts are automated notifications that fire when a pre-set condition is met - such as a price reaching a level, an indicator crossing a threshold, or a time condition triggering."
+        "a": "Trading alerts are automated notifications that trigger when a financial instrument reaches a specified price level or when a technical indicator condition is met. In MetaTrader 4, alerts can be configured to notify you via on-screen pop-ups, email, or mobile push notifications."
       },
       {
-        "q": "How do I set up alerts in MetaTrader 4?",
-        "a": "On MT4 desktop: right-click any price level on a chart and select Set Alert. On MT4 mobile: tap and hold on the chart and select Set Alert."
+        "q": "How do I set up alerts in MT4?",
+        "a": "In MT4 Desktop: right-click any price level on a chart and select 'Set Alert', or go to View → Terminal → Alerts tab. On MT4 Mobile: tap and hold a price level and select 'Set Alert'. Alerts can be configured for price levels, indicator values, or time conditions."
       },
       {
-        "q": "How do I receive push notifications on my phone?",
-        "a": "Install the MT4 mobile app, note your MetaQuotes ID in the app settings, then in MT4 desktop go to Tools > Options > Notifications and enter your MetaQuotes ID."
+        "q": "Can I receive alerts on my mobile device?",
+        "a": "Yes. MT4 mobile apps for iOS and Android support push notifications for trading alerts. Ensure push notifications are enabled in your MT4 app settings. You can also configure alerts to send emails when conditions are met."
       },
       {
-        "q": "Do alerts automatically execute trades?",
-        "a": "No. Alerts in MT4 are informational only - they do not execute trades automatically. For automated trading, you would need an Expert Advisor (EA)."
+        "q": "Do trading alerts guarantee execution?",
+        "a": "No. Trading alerts are notifications only — they do not automatically open, close, or modify any position. An alert notifies you that a condition has been met; you must take manual action to execute a trade."
+      },
+      {
+        "q": "Are trading alerts free?",
+        "a": "Yes. Trading alerts in MetaTrader 4 are a built-in feature available at no additional cost to all Olla Trade account holders."
       }
     ],
     "indices": [
@@ -1803,6 +2336,28 @@
       {
         "q": "Where can I download MetaTrader 4?",
         "a": "MT4 Desktop for Windows is available for download from the Olla Trade website and from the official MetaQuotes website. The iOS app is on the Apple App Store and the Android version is on Google Play. WebTrader requires no download."
+      }
+    ],
+    "calendar": [
+      {
+        "q": "What is an economic calendar?",
+        "a": "An economic calendar lists scheduled macroeconomic data releases, central bank announcements, and other market-moving events. Each entry shows the scheduled date and time, the country/region, the expected impact level (low, medium, high), and often forecast versus previous values."
+      },
+      {
+        "q": "How does high-impact news affect forex prices?",
+        "a": "High-impact events — such as central bank rate decisions, Non-Farm Payrolls, CPI, and GDP releases — can cause significant rapid price movements. Markets often begin pricing in expectations before an event, then react sharply when actual data differs from forecasts."
+      },
+      {
+        "q": "Should I trade during major news events?",
+        "a": "Trading around major news events carries elevated risk. Spreads may widen significantly, slippage can increase, and prices can move rapidly. If you trade around news, ensure you have appropriate risk management in place."
+      },
+      {
+        "q": "How are economic events classified by impact?",
+        "a": "Events are classified as: Low Impact (unlikely to cause significant movement), Medium Impact (may cause some volatility for the affected currency), or High Impact (likely to cause significant and potentially rapid price movement)."
+      },
+      {
+        "q": "Where can I find the economic calendar in MT4?",
+        "a": "MetaTrader 4 does not include a built-in economic calendar. Access it through the Olla Trade website, through mql5.com/en/economic-calendar, or through third-party financial data providers. Many traders monitor the calendar in a separate browser tab while trading."
       }
     ]
   },

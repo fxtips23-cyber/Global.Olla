@@ -25,13 +25,13 @@ interface ApiResponse {
   lastSync:   string | null;
 }
 
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-GB", {
+function formatDate(iso: string, locale = "en"): string {
+  return new Date(iso).toLocaleDateString(locale === "pt" ? "pt-BR" : "en-GB", {
     day: "numeric", month: "short", year: "numeric",
   });
 }
 
-function ArticleCard({ a, featured = false }: { a: Article; featured?: boolean }) {
+function ArticleCard({ a, featured = false, locale = "en" }: { a: Article; featured?: boolean; locale?: string }) {
   return (
     <a
       href={a.link}
@@ -70,9 +70,9 @@ function ArticleCard({ a, featured = false }: { a: Article; featured?: boolean }
       {/* Content */}
       <div className={`p-5 flex flex-col ${featured ? "flex-1" : ""}`}>
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-[11px] text-gray-400">{formatDate(a.date)}</span>
+          <span className="text-[11px] text-gray-400">{formatDate(a.date, locale)}</span>
           <span className="text-gray-200">·</span>
-          <span className="text-[11px] text-gray-400">{a.readTime} min read</span>
+          <span className="text-[11px] text-gray-400">{a.readTime} {locale === "pt" ? "min" : "min read"}</span>
         </div>
         <h3 className={`font-bold text-[#111827] mb-2 group-hover:text-[#00AA38] transition-colors leading-snug ${featured ? "text-[18px]" : "text-[14px]"}`}>
           {a.title}
@@ -81,7 +81,7 @@ function ArticleCard({ a, featured = false }: { a: Article; featured?: boolean }
         <div className="mt-4 flex items-center justify-between">
           <span className="text-[11px] text-gray-400">{a.author}</span>
           <span className="text-[11px] font-semibold text-[#00CC44] group-hover:text-[#00AA38] transition-colors flex items-center gap-1">
-            Read article
+            {locale === "pt" ? "Ler artigo" : "Read article"}
             <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
@@ -92,7 +92,7 @@ function ArticleCard({ a, featured = false }: { a: Article; featured?: boolean }
   );
 }
 
-export default function ArticlesClient() {
+export default function ArticlesClient({ locale = "en" }: { locale?: string }) {
   const [data,      setData]      = useState<ApiResponse | null>(null);
   const [loading,   setLoading]   = useState(true);
   const [search,    setSearch]    = useState("");
@@ -149,7 +149,7 @@ export default function ArticlesClient() {
               </svg>
               <input
                 type="text"
-                placeholder="Search articles…"
+                placeholder={locale === "pt" ? "Buscar artigos…" : "Search articles…"}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 className="w-full pl-10 pr-4 py-2.5 bg-white/6 border border-white/10 rounded-xl text-[13px] text-white/80 placeholder-white/25 focus:outline-none focus:border-[#00CC44]/40 transition-colors"
@@ -168,7 +168,7 @@ export default function ArticlesClient() {
                       : "text-white/45 border border-white/10 hover:border-white/25 hover:text-white/65"
                   }`}
                 >
-                  {cat === "all" ? "All" : cat}
+                  {cat === "all" ? (locale === "pt" ? "Todos" : "All") : cat}
                 </button>
               ))}
             </div>
@@ -176,7 +176,7 @@ export default function ArticlesClient() {
             {/* Sync timestamp */}
             {data?.lastSync && (
               <div className="text-[9px] text-white/20 flex-shrink-0">
-                Updated {formatDate(data.lastSync)}
+                {locale === "pt" ? "Atualizado" : "Updated"} {formatDate(data.lastSync, locale)}
               </div>
             )}
           </div>
@@ -230,22 +230,24 @@ export default function ArticlesClient() {
             {/* Featured article (first result, page 1 only) */}
             {page === 1 && !debouncedSearch && category === "all" && featured && (
               <div className="mb-8">
-                <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Featured Article</div>
-                <ArticleCard a={featured} featured />
+                <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{locale === "pt" ? "Artigo em Destaque" : "Featured Article"}</div>
+                <ArticleCard a={featured} featured locale={locale} />
               </div>
             )}
 
             {/* Grid */}
             <div className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-5 ${loading ? "opacity-60 pointer-events-none" : ""} transition-opacity`}>
               {(page === 1 && !debouncedSearch && category === "all" ? rest : articles).map(a => (
-                <ArticleCard key={a.id} a={a} />
+                <ArticleCard key={a.id} a={a} locale={locale} />
               ))}
             </div>
 
             {/* Results count + pagination */}
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-[12px] text-gray-400">
-                Showing {Math.min((page - 1) * 12 + 1, data?.total ?? 0)}–{Math.min(page * 12, data?.total ?? 0)} of {data?.total ?? 0} articles
+                {locale === "pt"
+                  ? `Exibindo ${Math.min((page - 1) * 12 + 1, data?.total ?? 0)}–${Math.min(page * 12, data?.total ?? 0)} de ${data?.total ?? 0} artigos`
+                  : `Showing ${Math.min((page - 1) * 12 + 1, data?.total ?? 0)}–${Math.min(page * 12, data?.total ?? 0)} of ${data?.total ?? 0} articles`}
               </p>
               {(data?.totalPages ?? 1) > 1 && (
                 <div className="flex gap-2">
@@ -254,7 +256,7 @@ export default function ArticlesClient() {
                     disabled={page === 1}
                     className="px-4 py-2 border border-gray-200 rounded-xl text-[12px] font-medium text-[#111827] disabled:opacity-30 hover:border-gray-300 transition-colors"
                   >
-                    ← Previous
+                    ← {locale === "pt" ? "Anterior" : "Previous"}
                   </button>
                   <span className="px-4 py-2 text-[12px] text-gray-500">
                     {page} / {data?.totalPages}
@@ -264,7 +266,7 @@ export default function ArticlesClient() {
                     disabled={page >= (data?.totalPages ?? 1)}
                     className="px-4 py-2 border border-gray-200 rounded-xl text-[12px] font-medium text-[#111827] disabled:opacity-30 hover:border-gray-300 transition-colors"
                   >
-                    Next →
+                    {locale === "pt" ? "Próximo" : "Next"} →
                   </button>
                 </div>
               )}
@@ -275,7 +277,9 @@ export default function ArticlesClient() {
         {/* View all on WordPress CTA */}
         <div className="mt-12 text-center border-t border-gray-100 pt-10">
           <p className="text-[13px] text-gray-500 mb-4">
-            All articles are published on the Olla Trade blog. Click any article to read the full content.
+            {locale === "pt"
+              ? "Todos os artigos são publicados no blog da Olla Trade. Clique em qualquer artigo para ler o conteúdo completo."
+              : "All articles are published on the Olla Trade blog. Click any article to read the full content."}
           </p>
           <a
             href="https://ollatrade.com/articles/"
@@ -284,7 +288,7 @@ export default function ArticlesClient() {
             className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
             style={{ background: "#00CC44", color: "#000" }}
           >
-            View All on Olla Trade
+            {locale === "pt" ? "Ver Todos na Olla Trade" : "View All on Olla Trade"}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
@@ -293,7 +297,9 @@ export default function ArticlesClient() {
 
         {/* Disclaimer */}
         <p className="text-[10px] text-gray-400 text-center mt-6 leading-relaxed max-w-2xl mx-auto">
-          Articles and market analysis published by Olla Trade are for informational and educational purposes only. They do not constitute investment advice or a recommendation to buy or sell any financial instrument. Trading involves risk.
+          {locale === "pt"
+            ? "Artigos e análises de mercado publicados pela Olla Trade são apenas para fins informativos e educacionais. Eles não constituem aconselhamento de investimento ou recomendação de compra ou venda de qualquer instrumento financeiro. O trading envolve risco."
+            : "Articles and market analysis published by Olla Trade are for informational and educational purposes only. They do not constitute investment advice or a recommendation to buy or sell any financial instrument. Trading involves risk."}
         </p>
       </div>
     </div>

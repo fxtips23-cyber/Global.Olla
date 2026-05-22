@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import ArticlesClient from "../../../components/articles/ArticlesClient";
 
 export const metadata: Metadata = {
@@ -19,6 +19,7 @@ export default async function ArticlesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "tools.articles" });
 
   return (
     <>
@@ -42,22 +43,22 @@ export default async function ArticlesPage({
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
           <nav className="flex items-center gap-2 text-[11px] text-white/22 mb-6">
-            <Link href="/" className="hover:text-white/45 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white/45 transition-colors">{locale === "pt" ? "Início" : "Home"}</Link>
             <span className="text-white/10">/</span>
-            <Link href="/tools" className="hover:text-white/45 transition-colors">Tools</Link>
+            <Link href="/tools" className="hover:text-white/45 transition-colors">{locale === "pt" ? "Ferramentas" : "Tools"}</Link>
             <span className="text-white/10">/</span>
-            <span className="text-white/40">Articles</span>
+            <span className="text-white/40">{t("title")}</span>
           </nav>
           <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">
-            Market Analysis &amp; Insights
+            {t("badge")}
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
               <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-3 leading-tight">
-                Articles
+                {t("title")}
               </h1>
               <p className="text-white/40 max-w-xl text-[15px] leading-relaxed">
-                Market analysis, trading education, and insights from the Olla Trade team. Synced daily from our blog.
+                {t("subtitle")}
               </p>
             </div>
             <a
@@ -66,14 +67,14 @@ export default async function ArticlesPage({
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center gap-2 text-[12px] font-semibold text-[#00CC44] border border-[#00CC44]/25 hover:border-[#00CC44]/50 px-5 py-2.5 rounded-xl transition-colors"
             >
-              Full blog →
+              {t("full_blog_btn")}
             </a>
           </div>
         </div>
       </section>
 
       {/* ── Articles client (search, filter, grid) ─────────────── */}
-      <ArticlesClient />
+      <ArticlesClient locale={locale} />
     </>
   );
 }
