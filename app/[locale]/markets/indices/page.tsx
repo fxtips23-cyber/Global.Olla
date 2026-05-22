@@ -51,7 +51,7 @@ const marketMovers = [
 ];
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default async function IndicesPage({ params }: { params: Promise<{ locale: string }> }) {

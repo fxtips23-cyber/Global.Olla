@@ -6,7 +6,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 export const metadata: Metadata = { title: "Contact Us", description: "Get in touch with Olla Trade support. Phone, email, and office address for all enquiries." };
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {

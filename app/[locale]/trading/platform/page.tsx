@@ -539,7 +539,7 @@ function AndroidIcon({ className = "w-5 h-5" }: { className?: string }) {
 }
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default function PlatformPage() {

@@ -37,7 +37,7 @@ function InfoCard({ title, body }: { title: string; body: string }) {
 
 /* ─── Page ────────────────────────────────────────────────────────────── */
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default async function ConditionsPage({ params }: { params: Promise<{ locale: string }> }) {

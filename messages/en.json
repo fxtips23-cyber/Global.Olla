@@ -877,5 +877,258 @@
       "badge": "Legal Document",
       "title": "Order Execution Policy"
     }
+  },
+  "page_content": {
+    "forex": {
+      "pair_categories_desc": "Olla Trade offers access to all three Forex pair categories.",
+      "major_desc": "The most traded currency pairs globally, all including the USD. Deepest liquidity, tightest spreads.",
+      "minor_desc": "Cross-currency pairs that exclude USD. Well-traded during regional sessions with good liquidity.",
+      "exotic_desc": "A major currency paired with an emerging market currency. Higher spreads and volatility.",
+      "conditions_note": "Spreads are variable. Figures shown are indicative under normal market conditions.",
+      "spread_col": "Spread",
+      "leverage_col": "Leverage",
+      "margin_col": "Margin %",
+      "most_active": "Most active",
+      "peak_liquidity": "Peak liquidity",
+      "peak_liquidity_desc": "occurs during the London-New York overlap (15:00-19:00 GMT+2). EUR/USD, GBP/USD, and USD/JPY typically see the tightest spreads and largest volumes.",
+      "pip_definition": "A pip (percentage in point) is the smallest standard price movement in Forex. For most pairs, 1 pip = 0.0001. For JPY pairs, 1 pip = 0.01.",
+      "spread_definition": "The spread is the difference between the bid (sell) price and the ask (buy) price. Variable spreads reflect live market conditions.",
+      "example": "Example:",
+      "pip_example": "EUR/USD Bid: 1.08420 | Ask: 1.08425 = 0.5 pip spread. If you buy 1 lot (100,000 units), 1 pip = $10 profit or loss.",
+      "drivers": [
+        {
+          "label": "Interest Rate Decisions",
+          "desc": "Central bank rate changes are the single biggest mover of currency pairs. Higher rates attract capital inflows."
+        },
+        {
+          "label": "Inflation Data (CPI/PPI)",
+          "desc": "Inflation prints directly influence central bank expectations. A hotter-than-expected CPI often boosts the base currency."
+        },
+        {
+          "label": "Employment Reports",
+          "desc": "Non-Farm Payrolls (US), unemployment rate, and jobs data reflect economic health and drive USD pairs significantly."
+        },
+        {
+          "label": "GDP Growth",
+          "desc": "Stronger economic output supports a currency's value. GDP beats vs expectations can trigger sharp moves in major pairs."
+        },
+        {
+          "label": "Political & Geopolitical",
+          "desc": "Elections, sanctions, and geopolitical conflicts create uncertainty that can sharply move safe-haven currencies."
+        },
+        {
+          "label": "Trade Balance",
+          "desc": "A country's export/import balance reflects demand for its currency. Persistent deficits often weigh on currency value."
+        }
+      ],
+      "why_features": [
+        {
+          "title": "Deepest Liquidity",
+          "desc": "Over $6 trillion traded daily - enter and exit positions at any time with minimal price impact."
+        },
+        {
+          "title": "24/5 Market Access",
+          "desc": "Trade from Monday's Asian open through Friday's New York close across all four major sessions."
+        },
+        {
+          "title": "Tight Spreads",
+          "desc": "Major pairs like EUR/USD from 0.0 pips - one of the most cost-efficient markets for retail traders."
+        },
+        {
+          "title": "Go Long or Short",
+          "desc": "CFD structure lets you profit from both rising and falling currency prices."
+        },
+        {
+          "title": "EA-Friendly",
+          "desc": "Deep liquidity and tight spreads make Forex ideal for automated Expert Advisor strategies on MT4."
+        },
+        {
+          "title": "70+ Pairs",
+          "desc": "Trade majors, minors, and exotic pairs - each with different volatility, spread, and session characteristics."
+        }
+      ],
+      "glossary_terms": [
+        {
+          "term": "Pip",
+          "def": "Smallest price movement. 0.0001 for most pairs (0.01 for JPY pairs)."
+        },
+        {
+          "term": "Pipette",
+          "def": "1/10th of a pip. Many brokers quote prices to 5 decimal places."
+        },
+        {
+          "term": "Spread",
+          "def": "Difference between bid and ask price. Represents the cost of opening a trade."
+        },
+        {
+          "term": "Lot Size",
+          "def": "Standard lot = 100,000 units. Mini lot = 10,000. Micro lot = 1,000."
+        },
+        {
+          "term": "Margin",
+          "def": "Collateral required to open a leveraged position. Expressed as a percentage of position size."
+        },
+        {
+          "term": "Swap / Rollover",
+          "def": "Overnight financing cost or credit applied to positions held past market close."
+        },
+        {
+          "term": "Slippage",
+          "def": "Difference between expected and actual execution price. Common during news events."
+        }
+      ]
+    }
+  },
+  "faq": {
+    "forex": [
+      {
+        "q": "What is forex trading?",
+        "a": "Forex (foreign exchange) trading involves buying one currency while simultaneously selling another. Currencies are traded in pairs such as EUR/USD. With Olla Trade, you can trade 70+ currency pairs as CFDs on MetaTrader 4."
+      },
+      {
+        "q": "Which forex pairs are available on Olla Trade?",
+        "a": "Olla Trade offers more than 70 currency pairs across major, minor, and exotic categories. Major pairs include EUR/USD, GBP/USD, USD/JPY, AUD/USD, and USD/CHF."
+      },
+      {
+        "q": "What are the spreads on forex pairs?",
+        "a": "Spreads on major forex pairs start from 0.0 pips on the Elite account and from 1.4 pips on the Standard account. Spreads are variable and may widen during periods of high volatility or low liquidity."
+      },
+      {
+        "q": "Can I trade forex on MetaTrader 4?",
+        "a": "Yes. All Olla Trade accounts include full access to the MetaTrader 4 platform across desktop, WebTrader, iOS, and Android."
+      },
+      {
+        "q": "What affects forex market prices?",
+        "a": "Forex prices are influenced by central bank rate decisions, GDP, CPI, employment data, geopolitical events, trade balances, and overall market risk sentiment."
+      }
+    ],
+    "metals": [
+      {
+        "q": "What metals can I trade with Olla Trade?",
+        "a": "Olla Trade offers trading on Gold (XAUUSD) and Silver (XAGUSD) as CFDs on the MetaTrader 4 platform."
+      },
+      {
+        "q": "Can I trade gold and silver on MetaTrader 4?",
+        "a": "Yes. Gold (XAUUSD) and Silver (XAGUSD) are fully supported on the MT4 platform through your Olla Trade account."
+      },
+      {
+        "q": "What affects gold and silver prices?",
+        "a": "Precious metals prices are influenced by USD strength, Federal Reserve policy, geopolitical uncertainty, central bank reserve purchases, inflation data, and global risk sentiment."
+      },
+      {
+        "q": "Are metals traded with leverage?",
+        "a": "Yes. Gold (XAUUSD) can be traded with leverage of up to 1:200, and Silver (XAGUSD) with leverage of up to 1:100."
+      },
+      {
+        "q": "What are the trading hours for metals?",
+        "a": "Gold and Silver are available 24 hours a day, Monday to Friday. The market is closed on weekends."
+      }
+    ],
+    "conditions": [
+      {
+        "q": "What is the minimum deposit at Olla Trade?",
+        "a": "The minimum deposit is $10 for the Standard account, $2,000 for the Pro account, and $20,000 for the Elite account."
+      },
+      {
+        "q": "What leverage does Olla Trade offer?",
+        "a": "Olla Trade offers leverage up to 1:500 on Forex pairs. Metals at up to 1:200, Indices and Energies at 1:100, and Crypto and Stocks at 1:10."
+      },
+      {
+        "q": "Are spreads fixed or variable?",
+        "a": "All spreads at Olla Trade are variable. They reflect live market conditions and may widen during periods of high volatility or low liquidity."
+      },
+      {
+        "q": "Does Olla Trade charge commissions?",
+        "a": "Standard and Pro accounts have no per-lot commission. The Elite account charges $3.5 per lot per side in exchange for raw spreads from 0.0 pips."
+      },
+      {
+        "q": "What is the margin call and stop out level?",
+        "a": "The margin call level is 80%. When equity falls to 20% of required margin (stop out level), positions may begin to close automatically."
+      },
+      {
+        "q": "Is negative balance protection provided?",
+        "a": "Yes. Olla Trade applies negative balance protection to all client accounts."
+      },
+      {
+        "q": "Can I use Expert Advisors (EAs) on Olla Trade?",
+        "a": "Yes. Expert Advisors, automated trading, scalping, hedging, and all standard MT4 approaches are permitted on all account types."
+      }
+    ],
+    "contact": [
+      {
+        "q": "How can I contact Olla Trade support?",
+        "a": "Email cst@ollatrade.com or info@ollatrade.com. Our team is available Monday to Friday, 24 hours a day (24/5)."
+      },
+      {
+        "q": "How do I request a withdrawal?",
+        "a": "Log in to your client portal, go to Funding and Withdrawals, select Withdraw, choose your method and submit. Processing takes 24-48 business hours."
+      },
+      {
+        "q": "How do I become an Olla Trade partner?",
+        "a": "Email info@ollatrade.com or visit our Partner Programme page."
+      }
+    ],
+    "funding": [
+      {
+        "q": "How do I deposit funds?",
+        "a": "Log in to your client portal, navigate to Funding, select your preferred crypto method, and follow the on-screen instructions to generate a deposit address."
+      },
+      {
+        "q": "How do I request a withdrawal?",
+        "a": "Log in to your portal, go to Funding and Withdrawals, select Withdraw, choose your method, enter the amount, and submit your request."
+      },
+      {
+        "q": "Which crypto methods are supported?",
+        "a": "Olla Trade supports USDT (TRC20 and ERC20), Bitcoin (BTC), and Ethereum (ETH)."
+      },
+      {
+        "q": "Why is account verification required?",
+        "a": "KYC verification is a legal requirement. It protects you from fraudulent withdrawal attempts."
+      },
+      {
+        "q": "Can I withdraw my bonus credit?",
+        "a": "Bonus trading credit cannot be withdrawn directly. Only trading profits may be withdrawable, subject to the relevant promotion terms."
+      }
+    ],
+    "vps": [
+      {
+        "q": "What is a VPS for trading?",
+        "a": "A Virtual Private Server (VPS) is a remote computing environment that runs 24/7. For Forex traders, it provides a stable always-on environment to run MT4 and Expert Advisors without interruption."
+      },
+      {
+        "q": "Why do I need a VPS for automated trading?",
+        "a": "A VPS ensures your Expert Advisors run continuously, even when your computer is off, without internet, or during power outages."
+      },
+      {
+        "q": "Is VPS provided by Olla Trade?",
+        "a": "Olla Trade does not provide VPS services directly. This page provides guidance on setting up your own VPS with a third-party provider."
+      },
+      {
+        "q": "What VPS specification should I use for MT4?",
+        "a": "For MT4 with a few EAs: minimum 1GB RAM (recommended 2GB+), 1 CPU core (recommended 2+), 20GB SSD, and stable 10Mbps+ connection."
+      },
+      {
+        "q": "How do I access my VPS remotely?",
+        "a": "Use Remote Desktop Protocol (RDP) on Windows, or Microsoft Remote Desktop on Mac/iOS with the IP address from your VPS provider."
+      }
+    ],
+    "alerts": [
+      {
+        "q": "What are trading alerts?",
+        "a": "Trading alerts are automated notifications that fire when a pre-set condition is met - such as a price reaching a level, an indicator crossing a threshold, or a time condition triggering."
+      },
+      {
+        "q": "How do I set up alerts in MetaTrader 4?",
+        "a": "On MT4 desktop: right-click any price level on a chart and select Set Alert. On MT4 mobile: tap and hold on the chart and select Set Alert."
+      },
+      {
+        "q": "How do I receive push notifications on my phone?",
+        "a": "Install the MT4 mobile app, note your MetaQuotes ID in the app settings, then in MT4 desktop go to Tools > Options > Notifications and enter your MetaQuotes ID."
+      },
+      {
+        "q": "Do alerts automatically execute trades?",
+        "a": "No. Alerts in MT4 are informational only - they do not execute trades automatically. For automated trading, you would need an Expert Advisor (EA)."
+      }
+    ]
   }
 }

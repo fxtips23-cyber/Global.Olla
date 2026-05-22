@@ -5,7 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 export const metadata: Metadata = { title: "Complaint Management", description: "Olla Trade formal complaint management policy and procedures for client disputes." };
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default function ComplaintManagementPage() {

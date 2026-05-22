@@ -10,7 +10,7 @@ export const metadata: Metadata = { title: "Withdrawal Conditions", description:
 const sections = [{ id:"requirements", title:"Requirements" },{ id:"process", title:"Withdrawal Process" },{ id:"timeframes", title:"Processing Times" },{ id:"crypto", title:"Crypto Withdrawals" },{ id:"fees", title:"Fees & Costs" },{ id:"security", title:"Security Review" },{ id:"bonus", title:"Bonus Restrictions" }];
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default async function WithdrawalConditionsPage({ params }: { params: Promise<{ locale: string }> }) {

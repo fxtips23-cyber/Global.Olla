@@ -18,7 +18,7 @@ const sections = [
 ];
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {

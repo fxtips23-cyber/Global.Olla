@@ -10,7 +10,7 @@ export const metadata: Metadata = { title: "KYC / AML Policy", description: "Oll
 const sections = [{ id:"why", title:"Why KYC/AML?" },{ id:"identity", title:"Identity Verification" },{ id:"address", title:"Proof of Address" },{ id:"aml", title:"AML Compliance" },{ id:"source", title:"Source of Funds" },{ id:"monitoring", title:"Ongoing Monitoring" },{ id:"security", title:"Data Security" }];
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default async function KYCAMLPage({ params }: { params: Promise<{ locale: string }> }) {

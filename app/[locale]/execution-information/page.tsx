@@ -53,7 +53,7 @@ function FeatureRow({
 
 /* ══════════════════════════════════════════════════════════════════════ */
 export function generateStaticParams() {
- return [{ locale: "en" }, { locale: "pt" }, { locale: "es" }, { locale: "zh" }];
+ return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default async function ExecutionInformationPage({ params }: { params: Promise<{ locale: string }> }) {

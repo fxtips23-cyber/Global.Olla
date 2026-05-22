@@ -872,5 +872,561 @@
       "badge": "Documento Legal",
       "title": "Política de Execução de Ordens"
     }
+  },
+  "faq": {
+    "forex": [
+      {
+        "q": "O que é o trading de Forex?",
+        "a": "O Forex (câmbio de moeda estrangeira) envolve a compra de uma moeda e a venda simultânea de outra. As moedas são negociadas em pares — como EUR/USD — e a taxa de câmbio indica quanto da moeda cotada é necessário para comprar uma unidade da moeda base. Com a Olla Trade, você pode negociar mais de 70 pares de moedas como CFDs na plataforma MetaTrader 4."
+      },
+      {
+        "q": "Quais pares de moedas estão disponíveis na Olla Trade?",
+        "a": "A Olla Trade oferece mais de 70 pares de moedas nas categorias principais, secundários e exóticos. Os pares principais incluem EUR/USD, GBP/USD, USD/JPY, AUD/USD e USD/CHF. Os pares secundários incluem EUR/GBP e GBP/JPY. A lista completa de instrumentos disponíveis está visível na plataforma MT4 em Observação do Mercado."
+      },
+      {
+        "q": "Quais são os spreads dos pares de moedas?",
+        "a": "Os spreads nos pares de moedas principais começam a partir de 0,0 pips na conta Elite e de 1,4 pips na conta Standard. Os spreads são variáveis e podem se ampliar durante períodos de alta volatilidade, divulgações de notícias econômicas relevantes ou condições de baixa liquidez fora do horário de negociação habitual."
+      },
+      {
+        "q": "Posso negociar Forex no MetaTrader 4?",
+        "a": "Sim. Todas as contas da Olla Trade incluem acesso completo ao MetaTrader 4 em desktop (Windows), WebTrader (navegador), iOS e Android. O Forex é um dos instrumentos mais ativamente negociados no MT4, com suporte completo para gráficos, indicadores, negociação com um clique e Expert Advisors."
+      },
+      {
+        "q": "O que influencia os preços do mercado Forex?",
+        "a": "Os preços do Forex são influenciados por fatores macroeconômicos como decisões de taxa de juros dos bancos centrais, divulgações de dados econômicos (PIB, CPI, emprego), eventos geopolíticos, balanças comerciais e o sentimento geral de risco do mercado."
+      }
+    ],
+    "metals": [
+      {
+        "q": "Quais metais posso negociar na Olla Trade?",
+        "a": "A Olla Trade oferece negociação de Ouro (XAUUSD) e Prata (XAGUSD) como CFDs na plataforma MetaTrader 4. Ambos os instrumentos estão disponíveis 24 horas por dia, de segunda a sexta-feira."
+      },
+      {
+        "q": "Posso negociar ouro e prata no MetaTrader 4?",
+        "a": "Sim. Ouro (XAUUSD) e Prata (XAGUSD) são totalmente suportados na plataforma MT4 através de sua conta Olla Trade. Você pode acessar cotações em tempo real, usar todos os indicadores técnicos integrados, definir alertas de preço e implementar Expert Advisors."
+      },
+      {
+        "q": "O que afeta os preços do ouro e da prata?",
+        "a": "Os preços dos metais preciosos são influenciados pela força do Dólar americano, pela política monetária do Federal Reserve, pela incerteza geopolítica, pelas compras de reservas dos bancos centrais, pelos dados de inflação e pelo sentimento global de risco. O ouro é amplamente considerado um ativo de refúgio seguro."
+      },
+      {
+        "q": "Os metais são negociados com alavancagem?",
+        "a": "Sim. O Ouro (XAUUSD) pode ser negociado com alavancagem de até 1:200, e a Prata (XAGUSD) com alavancagem de até 1:100 em contas elegíveis. A alavancagem amplifica tanto os lucros potenciais quanto as perdas potenciais."
+      },
+      {
+        "q": "Quais são os horários de negociação para metais?",
+        "a": "O Ouro e a Prata estão disponíveis para negociação 24 horas por dia, de segunda a sexta-feira. O mercado fica fechado nos finais de semana. Os spreads e as condições de liquidez podem variar ao longo do dia."
+      }
+    ],
+    "conditions": [
+      {
+        "q": "Qual é o depósito mínimo na Olla Trade?",
+        "a": "O depósito mínimo é de $10 para a conta Standard, $2.000 para a conta Pro e $20.000 para a conta Elite. Todos os depósitos estão sujeitos aos termos de financiamento e ao método de pagamento escolhido."
+      },
+      {
+        "q": "Qual alavancagem a Olla Trade oferece?",
+        "a": "A Olla Trade oferece alavancagem de até 1:500 em pares de Forex. Os Metais estão disponíveis com até 1:200, Índices e Energias com 1:100, e Cripto e Ações com 1:10. A alavancagem aumenta tanto o lucro potencial quanto a perda potencial."
+      },
+      {
+        "q": "Os spreads são fixos ou variáveis?",
+        "a": "Todos os spreads na Olla Trade são variáveis. Eles refletem as condições de mercado em tempo real e podem se ampliar durante períodos de alta volatilidade, baixa liquidez ou divulgações de dados econômicos relevantes."
+      },
+      {
+        "q": "A Olla Trade cobra comissões?",
+        "a": "As contas Standard e Pro não têm comissão por lote — o custo de negociação está embutido no spread. A conta Elite cobra $3,50 por lote por lado em troca de spreads brutos a partir de 0,0 pips."
+      },
+      {
+        "q": "Qual é o nível de chamada de margem e stop out?",
+        "a": "O nível de chamada de margem é de 80% — quando o patrimônio da conta cai para 80% da margem exigida, você receberá uma notificação. O nível de stop out é de 20% — quando o patrimônio cai para 20% da margem exigida, as posições podem começar a ser encerradas automaticamente."
+      },
+      {
+        "q": "A proteção contra saldo negativo é fornecida?",
+        "a": "Sim. A Olla Trade aplica proteção contra saldo negativo a todas as contas de clientes. Na maioria das condições de mercado, suas perdas não excederão seu saldo depositado."
+      },
+      {
+        "q": "Posso usar Expert Advisors (EAs) na Olla Trade?",
+        "a": "Sim. Expert Advisors, negociação automatizada, scalping, hedging e todas as abordagens de negociação padrão do MT4 são permitidos em todos os tipos de conta da Olla Trade."
+      }
+    ],
+    "contact": [
+      {
+        "q": "Como posso contatar o suporte da Olla Trade?",
+        "a": "Você pode entrar em contato com nossa equipe de suporte por e-mail em cst@ollatrade.com ou info@ollatrade.com. Nossa equipe está disponível de segunda a sexta-feira, 24 horas por dia (24/5). Por favor, inclua o número da sua conta e uma descrição clara da sua solicitação."
+      },
+      {
+        "q": "Como solicito um saque?",
+        "a": "Faça login no seu portal do cliente da Olla Trade em direct.ollatrade.com, navegue até a seção de Depósito e Saque, selecione Sacar, escolha seu método, insira o valor e envie sua solicitação. O processamento geralmente leva de 24 a 48 horas úteis."
+      },
+      {
+        "q": "Onde posso encontrar os detalhes da minha conta?",
+        "a": "Os detalhes da sua conta — incluindo número da conta, endereço do servidor e saldo — estão disponíveis em seu portal do cliente da Olla Trade após o login."
+      },
+      {
+        "q": "Como me torno um parceiro da Olla Trade?",
+        "a": "Para saber mais sobre nosso programa de afiliados e parceiros, envie um e-mail para info@ollatrade.com ou visite nossa página do Programa de Parceiros."
+      },
+      {
+        "q": "Como faço uma reclamação formal?",
+        "a": "Para fazer uma reclamação formal, envie um e-mail para nossa equipe de conformidade em info@ollatrade.com com seu nome completo, número da conta, descrição do problema e qualquer documentação de suporte. Reconhecemos as reclamações em até 2 dias úteis."
+      }
+    ],
+    "vps": [
+      {
+        "q": "O que é um VPS para negociação?",
+        "a": "Um Servidor Privado Virtual (VPS) é um ambiente de computação remoto hospedado em um data center. Ele funciona 24 horas por dia, 7 dias por semana, independentemente do seu computador pessoal. Para traders de Forex, ele fornece um ambiente estável e sempre ativo para executar o MetaTrader 4 e os Expert Advisors sem interrupção."
+      },
+      {
+        "q": "Por que preciso de um VPS para negociação automatizada?",
+        "a": "Um VPS garante que seus Expert Advisors funcionem continuamente, mesmo quando seu computador estiver desligado, sem internet ou durante cortes de energia. Ele também pode reduzir a latência de execução quando localizado próximo aos servidores do broker."
+      },
+      {
+        "q": "O VPS é fornecido pela Olla Trade?",
+        "a": "A Olla Trade não fornece serviços de VPS diretamente. Esta página fornece orientações gerais sobre como configurar seu próprio VPS com um provedor terceirizado para executar o MetaTrader 4 com suas credenciais da Olla Trade."
+      },
+      {
+        "q": "Qual especificação de VPS devo usar para MT4?",
+        "a": "Para o MetaTrader 4 com alguns EAs: mínimo de 1 GB de RAM (recomendado 2 GB+), 1 núcleo de CPU (recomendado 2+), 20 GB de SSD e conexão estável de pelo menos 10 Mbps. Escolha um provedor com um data center próximo aos servidores da Olla Trade para mínima latência."
+      },
+      {
+        "q": "Como acesso meu VPS remotamente?",
+        "a": "Use o Protocolo de Área de Trabalho Remota (RDP) no Windows, ou o Microsoft Remote Desktop no Mac/iOS. Você precisará do endereço IP, nome de usuário e senha fornecidos pelo seu provedor de VPS."
+      }
+    ],
+    "alerts": [
+      {
+        "q": "O que são alertas de negociação?",
+        "a": "Os alertas de negociação são notificações automatizadas que disparam quando uma condição predefinida é atendida — como um preço atingindo um determinado nível, um indicador técnico cruzando um limite ou uma condição de tempo sendo acionada."
+      },
+      {
+        "q": "Como configuro alertas no MetaTrader 4?",
+        "a": "No MT4 para desktop: clique com o botão direito em qualquer nível de preço no gráfico e selecione 'Definir Alerta'. Configure a condição do alerta, o tipo e o método de notificação. No MT4 mobile: toque e segure no gráfico e selecione 'Definir Alerta'."
+      },
+      {
+        "q": "Como recebo notificações push no meu telefone?",
+        "a": "Para receber notificações push do MT4 desktop para o seu telefone: instale o app MT4 mobile, anote seu MetaQuotes ID nas configurações do app, e então no MT4 desktop vá em Ferramentas → Opções → Notificações e insira seu MetaQuotes ID."
+      },
+      {
+        "q": "Os alertas executam negociações automaticamente?",
+        "a": "Não. Os alertas no MT4 são apenas informativos — eles não executam negociações automaticamente. Para negociação automatizada, você precisaria de um Expert Advisor (EA). Os alertas simplesmente notificam quando uma condição é atendida."
+      }
+    ],
+    "funding": [
+      {
+        "q": "Como deposito fundos?",
+        "a": "Faça login no seu portal do cliente da Olla Trade, navegue até a seção de Financiamento, selecione seu método cripto preferido e siga as instruções na tela para gerar um endereço de depósito. Envie o valor exato de cripto para o endereço fornecido. Sua conta será creditada após as confirmações de rede exigidas."
+      },
+      {
+        "q": "Como solicito um saque?",
+        "a": "Faça login no seu portal, vá para Depósito e Saque, selecione Sacar, escolha seu método de saque, insira o valor e envie sua solicitação. Nossa equipe processa os saques em até 24 a 48 horas úteis após a aprovação. A verificação da conta deve ser concluída antes que os saques sejam aceitos."
+      },
+      {
+        "q": "Quais métodos de cripto são suportados?",
+        "a": "A Olla Trade atualmente suporta USDT (TRC20 e ERC20), Bitcoin (BTC) e Ethereum (ETH). Métodos de financiamento adicionais podem estar disponíveis em seu portal do cliente."
+      },
+      {
+        "q": "Por que a verificação de conta é necessária?",
+        "a": "A verificação de conta (KYC) é um requisito legal e regulatório. Ela protege você de tentativas fraudulentas de saque e garante conformidade com os regulamentos aplicáveis de combate à lavagem de dinheiro."
+      },
+      {
+        "q": "Posso sacar meu crédito de bônus?",
+        "a": "O crédito de trading promocional não pode ser sacado diretamente. Apenas os lucros de trading gerados com o crédito de bônus podem ser sacáveis, sujeitos aos termos da promoção relevante."
+      }
+    ]
+  },
+  "page_content": {
+    "forex": {
+      "stats_section_label": "Visão Geral do Mercado",
+      "daily_volume": "Volume diário de negociação global",
+      "pairs_available": "Pares de moedas disponíveis",
+      "min_spread": "Spread mínimo (conta Elite)",
+      "market_hours": "Horários de abertura do mercado",
+      "pair_categories_label": "Categorias de Pares",
+      "pair_categories_title": "Pares Principais, Secundários e Exóticos",
+      "pair_categories_desc": "A Olla Trade oferece acesso a todas as três categorias de pares Forex — cada uma com perfis distintos de liquidez, spread e volatilidade.",
+      "major_pairs": "Pares Principais",
+      "major_badge": "Spreads Mais Competitivos",
+      "major_desc": "Os pares de moedas mais negociados globalmente, todos incluindo o USD como moeda base ou de cotação. Maior liquidez, spreads mais competitivos e mais ativos durante as sessões dos EUA e de Londres.",
+      "minor_pairs": "Pares Secundários",
+      "minor_badge": "Moedas Cruzadas",
+      "minor_desc": "Pares de moedas cruzadas que excluem o USD. Bem negociados durante suas sessões regionais com boa liquidez e spreads moderados.",
+      "exotic_pairs": "Pares Exóticos",
+      "exotic_badge": "Maior Volatilidade",
+      "exotic_desc": "Uma moeda principal emparelhada com uma moeda de mercado emergente. Caracterizados por spreads mais amplos, maior volatilidade e menos horas de negociação ativas.",
+      "conditions_title": "Condições de Negociação — Pares Principais",
+      "conditions_note": "Os spreads podem se ampliar durante períodos de alta volatilidade, grandes eventos de notícias ou fora das sessões de mercado primárias.",
+      "sessions_label": "Horários de Mercado",
+      "sessions_title": "Quatro Sessões de Negociação Globais",
+      "sessions_desc": "O Forex opera 24 horas por dia, 5 dias por semana. Cada sessão tem diferentes níveis de liquidez e pares mais ativos.",
+      "most_active": "Mais ativos",
+      "peak_liquidity": "A maior liquidez",
+      "peak_liquidity_desc": "ocorre durante a sobreposição Londres–Nova York (15h00–19h00 GMT+2). Nesta janela, EUR/USD, GBP/USD e USD/JPY geralmente apresentam os spreads mais competitivos e os maiores volumes.",
+      "drivers_label": "Análise de Mercado",
+      "drivers_title": "O Que Move os Preços das Moedas?",
+      "drivers_desc": "Os preços do Forex são impulsionados por fundamentos macroeconômicos, política de bancos centrais e fluxos de capital globais. Entender essas forças é fundamental para desenvolver uma abordagem de negociação consistente.",
+      "pips_label": "Fundamentos do Forex",
+      "pips_title": "Entendendo Pips e Spreads",
+      "pip_definition": "Um pip (percentual em ponto) é o menor movimento padrão de preço no Forex. Para a maioria dos pares, 1 pip = 0,0001. Para pares com JPY, 1 pip = 0,01.",
+      "spread_definition": "O spread é a diferença entre o preço de compra (ask) e o preço de venda (bid) — representa o custo de abrir uma negociação. Os spreads variáveis refletem as condições de mercado em tempo real.",
+      "example": "Exemplo:",
+      "pip_example": "EUR/USD Venda: 1.08420 | Compra: 1.08425 = spread de 0,5 pip. Se você comprar 1 lote (100.000 unidades), 1 pip = $10 de lucro ou prejuízo.",
+      "why_title": "Por Que Negociar Forex?",
+      "why_subtitle": "O maior e mais líquido mercado financeiro do mundo — acesso, flexibilidade e oportunidade incomparáveis.",
+      "risk_title": "Aviso de Risco — Negociação de Forex",
+      "risk_text": "A negociação de Forex envolve risco substancial de perda. A alavancagem amplifica tanto os lucros potenciais quanto as perdas potenciais. É possível perder mais do que seu depósito inicial. Negocie apenas com recursos que você pode se dar ao luxo de perder.",
+      "spread_col": "Spread",
+      "leverage_col": "Alavancagem",
+      "margin_col": "Margem %",
+      "drivers": [
+        {
+          "label": "Decisões de Taxa de Juros",
+          "desc": "As mudanças de taxa dos bancos centrais são o maior motor dos pares de moedas. Taxas mais altas atraem influxos de capital e geralmente fortalecem uma moeda."
+        },
+        {
+          "label": "Dados de Inflação (CPI/PPI)",
+          "desc": "Os dados de inflação influenciam diretamente as expectativas dos bancos centrais e a força das moedas. Um CPI acima do esperado geralmente impulsiona a moeda base."
+        },
+        {
+          "label": "Relatórios de Emprego",
+          "desc": "Os Payrolls Não Agrícolas (EUA), a taxa de desemprego e os dados de empregos refletem a saúde econômica e impulsionam significativamente os pares de USD."
+        },
+        {
+          "label": "Crescimento do PIB",
+          "desc": "Uma produção econômica mais forte sustenta o valor de uma moeda. Surpresas positivas no PIB podem desencadear movimentos bruscos nos pares principais."
+        },
+        {
+          "label": "Geopolítica e Política",
+          "desc": "Eleições, sanções, políticas comerciais e conflitos geopolíticos criam incerteza que pode mover bruscamente as moedas de refúgio seguro como USD, JPY e CHF."
+        },
+        {
+          "label": "Balança Comercial",
+          "desc": "O equilíbrio de exportações/importações de um país reflete a demanda por sua moeda. Déficits comerciais persistentes geralmente pesam sobre o valor da moeda ao longo do tempo."
+        }
+      ],
+      "why_features": [
+        {
+          "title": "Maior Liquidez",
+          "desc": "Mais de $6 trilhões negociados diariamente — entre e saia de posições a qualquer momento com mínimo impacto no preço em pares principais."
+        },
+        {
+          "title": "Acesso ao Mercado 24/5",
+          "desc": "Negocie da abertura asiática de segunda-feira até o fechamento de Nova York na sexta-feira, em todas as quatro sessões principais."
+        },
+        {
+          "title": "Spreads Competitivos",
+          "desc": "Pares principais como EUR/USD a partir de 0,0 pips — um dos mercados mais eficientes em custos disponíveis para traders de varejo."
+        },
+        {
+          "title": "Long ou Short",
+          "desc": "A estrutura de CFD permite lucrar com preços de moedas tanto em alta quanto em queda — sem restrição de direção."
+        },
+        {
+          "title": "Compatível com EAs",
+          "desc": "A profunda liquidez e os spreads competitivos tornam o Forex ideal para estratégias de Expert Advisor automatizadas no MT4."
+        },
+        {
+          "title": "70+ Pares",
+          "desc": "Negocie pares principais, secundários e exóticos — cada um com diferentes características de volatilidade, spread e sessão."
+        }
+      ],
+      "glossary_terms": [
+        {
+          "term": "Pip",
+          "def": "Menor movimento de preço. 0,0001 para a maioria dos pares (0,01 para pares com JPY)."
+        },
+        {
+          "term": "Pipette",
+          "def": "1/10 de um pip. Muitos brokers cotam preços com 5 casas decimais."
+        },
+        {
+          "term": "Spread",
+          "def": "Diferença entre os preços de compra e venda. Representa o custo de abrir uma negociação."
+        },
+        {
+          "term": "Tamanho do Lote",
+          "def": "Lote padrão = 100.000 unidades. Mini lote = 10.000. Micro lote = 1.000."
+        },
+        {
+          "term": "Margem",
+          "def": "Garantia exigida para abrir uma posição alavancada. Expressa como porcentagem do tamanho da posição."
+        },
+        {
+          "term": "Swap / Rollover",
+          "def": "Custo ou crédito de financiamento overnight aplicado a posições mantidas além do fechamento do mercado."
+        },
+        {
+          "term": "Derrapagem",
+          "def": "Diferença entre o preço esperado e o preço real de execução. Comum durante eventos de notícias."
+        }
+      ]
+    },
+    "accounts": {
+      "features": {
+        "std_feat1": "500+ instrumentos",
+        "std_feat2": "MT4 Desktop, Web e Mobile",
+        "std_feat3": "Expert Advisors suportados",
+        "std_feat4": "Suporte ao cliente 24/5",
+        "std_feat5": "Sem taxas de depósito ou saque",
+        "std_feat6": "Proteção contra saldo negativo",
+        "pro_feat1": "500+ instrumentos",
+        "pro_feat2": "MT4 Desktop, Web e Mobile",
+        "pro_feat3": "Expert Advisors suportados",
+        "pro_feat4": "Suporte prioritário 24/5",
+        "pro_feat5": "Sem taxas de depósito ou saque",
+        "pro_feat6": "Proteção contra saldo negativo",
+        "eli_feat1": "500+ instrumentos incl. CFDs de Futuros",
+        "eli_feat2": "MT4 Desktop, Web e Mobile",
+        "eli_feat3": "Expert Advisors suportados",
+        "eli_feat4": "Linha de suporte VIP 24/5",
+        "eli_feat5": "Sem taxas de depósito ou saque",
+        "eli_feat6": "Proteção contra saldo negativo"
+      },
+      "table_rows": {
+        "min_deposit": "Depósito Mínimo",
+        "spread_type": "Tipo de Spread",
+        "avg_spread": "Spread Médio (EUR/USD)",
+        "commission": "Comissão",
+        "max_leverage": "Alavancagem Máxima",
+        "margin_call": "Nível de Chamada de Margem",
+        "stop_out": "Nível de Stop Out",
+        "instruments": "Instrumentos",
+        "order_exec": "Execução de Ordens",
+        "expert_advisors": "Expert Advisors",
+        "nbp": "Proteção Saldo Negativo",
+        "support": "Suporte 24/5",
+        "fees": "Taxas de Dep./Saque",
+        "demo": "Conta Demo",
+        "variable": "Variável",
+        "raw_variable": "Bruto (variável)",
+        "market": "Mercado",
+        "supported": "Suportado",
+        "standard": "Padrão",
+        "priority": "Prioritário",
+        "vip": "VIP",
+        "none": "Nenhuma",
+        "allowed": "Permitido"
+      },
+      "account_faqs": [
+        {
+          "q": "Qual conta é melhor para iniciantes?",
+          "a": "A conta Standard é ideal para iniciantes — depósito mínimo de $10, sem comissão, acesso completo ao MT4 e mais de 500 instrumentos."
+        },
+        {
+          "q": "Posso fazer upgrade do meu tipo de conta?",
+          "a": "Sim. Você pode fazer upgrade de Standard para Pro ou Elite depositando o mínimo exigido. Entre em contato com o suporte para realizar seu upgrade."
+        },
+        {
+          "q": "Uma conta demo está disponível?",
+          "a": "Sim. Uma conta demo está disponível para todos os tipos de conta, para que você possa praticar com fundos virtuais antes de operar ao vivo."
+        },
+        {
+          "q": "Qual é a diferença entre spreads variáveis e brutos?",
+          "a": "Os spreads variáveis flutuam com as condições de mercado. Os spreads brutos na conta Elite são a taxa interbancária direta mais uma comissão fixa por lote — geralmente menores em condições de mercado líquidas."
+        },
+        {
+          "q": "Em quanto tempo posso abrir uma conta?",
+          "a": "O registro leva cerca de 2 minutos. A verificação KYC geralmente leva de 1 a 2 dias úteis. Você pode começar a negociar após a aprovação."
+        }
+      ]
+    },
+    "about": {
+      "who_we_are_p1": "A Olla Trade é uma plataforma profissional de negociação online que oferece acesso aos mercados financeiros globais em Forex, Metais, Índices, Energias, Criptomoedas e Ações — tudo através da plataforma padrão da indústria, o MetaTrader 4.",
+      "who_we_are_p2": "Fomos construídos com uma crença: que ferramentas de negociação profissionais, condições de mercado competitivas e atendimento transparente devem estar disponíveis para todos os traders — independentemente do tamanho da conta ou nível de experiência.",
+      "who_we_are_p3": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. No. A000001849) e opera como uma Empresa de Negócios Internacional sob a lei de Anguilla, oferecendo serviços de negociação através do MetaTrader 4.",
+      "vision_body": "Construir um mundo onde a liberdade financeira seja acessível a todos — onde qualquer pessoa, em qualquer lugar, possa acessar os mercados globais com ferramentas profissionais e condições justas.",
+      "mission_body": "Fornecer uma plataforma de negociação segura, intuitiva e confiável que permita que pessoas em todo o mundo negociem os mercados globais com confiança.",
+      "commitment_body": "Transparência nos preços, honestidade na comunicação de riscos, confiabilidade na execução e uma abordagem focada no cliente em cada decisão que tomamos.",
+      "offerings": [
+        {
+          "title": "Negociação Multi-Ativos",
+          "desc": "Acesse Forex, Metais, Índices, Energias, Criptomoedas e Ações — mais de 500 instrumentos em uma única conta."
+        },
+        {
+          "title": "MetaTrader 4",
+          "desc": "Plataforma MT4 padrão da indústria em desktop, WebTrader, iOS e Android."
+        },
+        {
+          "title": "Três Tipos de Conta",
+          "desc": "Contas Standard, Pro e Elite com depósitos mínimos a partir de $10 — para todos os níveis de traders."
+        },
+        {
+          "title": "Múltiplos Métodos de Pagamento",
+          "desc": "Depósitos e saques rápidos via cripto, sem taxas da Olla Trade."
+        },
+        {
+          "title": "Recursos Educacionais",
+          "desc": "Glossário de Forex, calendário econômico, calculadoras e artigos de análise de mercado."
+        },
+        {
+          "title": "Suporte ao Cliente 24/5",
+          "desc": "Suporte dedicado disponível de segunda a sexta-feira via telefone e e-mail."
+        }
+      ],
+      "values": [
+        {
+          "title": "Cliente em Primeiro Lugar",
+          "desc": "Cada decisão começa com uma pergunta: isso melhora a experiência de negociação do cliente?"
+        },
+        {
+          "title": "Transparência",
+          "desc": "Preços claros, sem taxas ocultas, comunicação honesta de riscos e informações abertas de conta — sempre."
+        },
+        {
+          "title": "Confiabilidade",
+          "desc": "Nossa infraestrutura é construída para estabilidade e velocidade — serviço consistente e confiável em todas as condições de mercado."
+        },
+        {
+          "title": "Educação",
+          "desc": "Acreditamos que traders informados operam melhor. Investimos em recursos educacionais em todos os níveis."
+        },
+        {
+          "title": "Acessibilidade",
+          "desc": "Depósitos mínimos a partir de $10 colocam ferramentas de negociação profissionais ao alcance de traders em qualquer lugar."
+        },
+        {
+          "title": "Suporte ao Cliente",
+          "desc": "Suporte dedicado, políticas transparentes e uma equipe que genuinamente apoia o crescimento dos clientes como participantes do mercado."
+        }
+      ],
+      "legal_section": {
+        "company": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. No. A000001849) como uma Empresa de Negócios Internacional sob a lei de Anguilla.",
+        "address": "Endereço registrado: Grace Complex, The Valley, AI 2640, Anguilla.",
+        "execution_only": "A Olla Trade Ltd. opera exclusivamente como um serviço de execução de ordens e não fornece aconselhamento de investimentos ou gestão de portfólio.",
+        "restricted": "Serviços não disponíveis para residentes dos EUA, Rússia, Myanmar, Emirados Árabes Unidos, Canadá, Israel, Nova Zelândia, Irã e Coreia do Norte."
+      }
+    },
+    "contact_page": {
+      "get_in_touch": "Entre em Contato",
+      "contact_title": "Contate a Olla Trade",
+      "contact_subtitle": "Entre em contato com nossa equipe de suporte para assistência com conta, consultas sobre financiamento, suporte à plataforma de negociação e consultas gerais. Estamos disponíveis de segunda a sexta-feira, 24 horas por dia.",
+      "get_support": "Obter Suporte",
+      "open_account": "Abrir Conta",
+      "general_enquiries": "Consultas Gerais",
+      "general_desc": "Para informações gerais sobre os serviços, contas e promoções da Olla Trade.",
+      "send_email": "Enviar E-mail",
+      "client_support": "Suporte ao Cliente",
+      "client_desc": "Para assistência com sua conta de negociação ao vivo, financiamento e problemas técnicos.",
+      "contact_support": "Contatar Suporte",
+      "partnership": "Parceria / Afiliado",
+      "partnership_desc": "Para saber mais sobre nosso programa de afiliados e parceiros ou discutir uma parceria comercial.",
+      "partner_with_us": "Seja Nosso Parceiro",
+      "compliance": "Conformidade e Reclamações",
+      "compliance_desc": "Para enviar uma reclamação formal ou consultar sobre assuntos regulatórios e de conformidade.",
+      "complaint_process": "Processo de Reclamações",
+      "company_info": "Informações da Empresa",
+      "registered_address": "Endereço Registrado",
+      "phone_247": "Telefone (24/5)",
+      "email_label": "E-mail",
+      "response_times": "Tempos de Resposta",
+      "general_enquiries_time": "Consultas gerais",
+      "account_support_time": "Suporte de conta",
+      "partnerships_time": "Parcerias",
+      "complaints_time": "Reclamações",
+      "one_business_day": "1 dia útil",
+      "same_day": "Mesmo dia útil",
+      "two_three_days": "2-3 dias úteis",
+      "two_days": "2 dias úteis",
+      "support_availability": "Disponibilidade de Suporte",
+      "hours": "Horas",
+      "days": "Dias",
+      "weekends": "Fins de Semana",
+      "monday_friday": "Segunda – Sexta",
+      "limited": "Disponibilidade limitada",
+      "send_message_title": "Envie uma Mensagem",
+      "how_can_we_help": "Como Podemos Ajudar?",
+      "fill_form_desc": "Preencha o formulário e nossa equipe responderá dentro de um dia útil. Para assuntos urgentes de conta, envie um e-mail diretamente para",
+      "contact_channels": "Canais de Contato",
+      "email_support": "Suporte por E-mail",
+      "phone_label": "Telefone",
+      "our_address": "Nosso Endereço",
+      "security_notice": "A equipe da Olla Trade nunca solicitará sua senha de conta ou PIN por e-mail, telefone ou chat.",
+      "follow_us": "Siga a Olla Trade",
+      "available_247": "Estamos Disponíveis 24/5",
+      "support_hours_desc": "Nossa equipe de suporte ao cliente está disponível de segunda a sexta-feira, 24 horas por dia.",
+      "email_us": "Enviar E-mail",
+      "view_faqs": "Ver FAQs",
+      "available": "Disponível",
+      "may_vary": "Pode Variar",
+      "quick_help": "Autoatendimento",
+      "quick_help_title": "Ajuda Rápida",
+      "quick_help_subtitle": "Encontre respostas e gerencie sua conta diretamente — sem esperar por uma resposta.",
+      "account_registration": "Abertura de Conta",
+      "account_reg_desc": "Abra uma conta Standard, Pro ou Elite ao vivo em menos de 5 minutos.",
+      "funding_withdrawals": "Depósito e Saque",
+      "funding_desc": "Deposite e saque fundos com segurança através do seu portal do cliente.",
+      "platform_support": "Suporte à Plataforma",
+      "platform_desc": "Configuração do MetaTrader 4, configuração de EA e orientação técnica.",
+      "partner_program": "Programa de Parceiros",
+      "partner_desc": "Junte-se ao programa de afiliados da Olla Trade e ganhe comissões.",
+      "important": "Importante:",
+      "security_text": "A equipe da Olla Trade nunca solicitará sua senha de conta ou PIN por e-mail, telefone ou chat. Se você receber tal solicitação, não cumpra e relate imediatamente.",
+      "compliance_note": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. No. A000001849) e opera como um serviço exclusivo de execução de ordens."
+    },
+    "help": {
+      "common_issues": "Problemas Comuns e Soluções",
+      "cannot_login": "Não consigo fazer login no MT4",
+      "login_steps": [
+        "Verifique se está usando o número da conta (não o e-mail) como login do MT4",
+        "Verifique se selecionou o servidor correto da Olla Trade",
+        "Confirme que a senha é a senha do MT4 (não a senha do portal)",
+        "Redefina a senha do MT4 no seu portal do cliente se necessário"
+      ],
+      "withdrawal_not_received": "Saque não recebido",
+      "withdrawal_steps": [
+        "Verifique o tempo de processamento: cripto 24-48h, banco 3-5 dias",
+        "Confirme que seu método de saque corresponde ao método de depósito",
+        "Verifique se seu endereço de carteira ou dados bancários estão corretos",
+        "Verifique o histórico de transações do portal para atualizações de status"
+      ],
+      "kyc_rejected": "Documento KYC rejeitado",
+      "kyc_steps": [
+        "Certifique-se de que o documento é válido e não expirado",
+        "Verifique se o nome completo corresponde exatamente ao cadastro",
+        "Certifique-se de que as bordas do documento e os quatro cantos estão visíveis",
+        "Use uma conta de luz ou extrato bancário recente (últimos 3 meses)"
+      ],
+      "ea_not_running": "EA (Expert Advisor) não está funcionando",
+      "ea_steps": [
+        "Ative a AutoNegociação na barra de ferramentas do MT4 (Ctrl+E)",
+        "Verifique se o EA está anexado ao gráfico — procure o ícone do EA no canto do gráfico",
+        "Certifique-se de que 'Permitir trading ao vivo' está marcado nas configurações do EA",
+        "Verifique a aba do diário do EA para mensagens de erro"
+      ],
+      "account_not_verified": "Conta ainda não verificada",
+      "verification_steps": [
+        "Verifique seu e-mail (incluindo spam) para atualização do status de verificação",
+        "Faça login no seu portal para ver o status pendente do documento",
+        "Aguarde 1-2 dias úteis após o envio do documento",
+        "Entre em contato com o suporte com o número da sua conta se passar de 2 dias"
+      ],
+      "deposit_not_credited": "Depósito não creditado",
+      "deposit_steps": [
+        "Cripto: aguarde as confirmações do blockchain (dependente da rede)",
+        "Verifique se enviou para o endereço/rede de carteira correto",
+        "Confirme que a moeda de depósito corresponde à moeda da sua conta",
+        "Entre em contato com o suporte com o ID/hash da transação se não creditado após 24h"
+      ],
+      "response_times_title": "Tempos de Resposta por Tipo de Solicitação",
+      "enquiry_type": "Tipo de Solicitação",
+      "contact_method": "Método de Contato",
+      "expected_response": "Resposta Esperada",
+      "priority": "Prioridade",
+      "high": "Alta",
+      "standard": "Padrão",
+      "compliance_type": "Conformidade",
+      "response_note": "Os tempos de resposta são metas durante o horário comercial (segunda a sexta-feira). A disponibilidade nos fins de semana pode ser limitada."
+    }
+  },
+  "risk_disclaimer": {
+    "text": "Trading de Forex e CFDs envolve risco significativo de perda. Negocie apenas com recursos que você pode se dar ao luxo de perder.",
+    "link": "Divulgações de Risco"
+  },
+  "platform_section": {
+    "mobile_header": "+ Cotações",
+    "symbol_col": "Símbolo",
+    "spread_label": "Spread:",
+    "bid": "Venda",
+    "ask": "Compra",
+    "available_on": "MetaTrader 4 — Disponível em",
+    "download_platform": "Explorar Plataforma MT4"
   }
 }
