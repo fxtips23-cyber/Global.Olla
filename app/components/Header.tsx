@@ -207,7 +207,7 @@ export default function Header() {
               ))}
 
               {/* Promotions — direct link, no dropdown */}
-              <Link href="https://ollatrade.com/promotions/" className="px-3.5 py-2 text-[13px] font-medium text-white/55 hover:text-white hover:bg-white/5 rounded-lg transition-all">
+              <Link href="/company/promotions" className="px-3.5 py-2 text-[13px] font-medium text-white/55 hover:text-white hover:bg-white/5 rounded-lg transition-all">
                 Promotions
               </Link>
             </nav>
@@ -259,7 +259,7 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <Link href="https://ollatrade.com/promotions/" className="block px-4 py-3 text-[13px] font-medium text-white/55" onClick={() => setMobileOpen(false)}>Promotions</Link>
+            <Link href="/company/promotions" className="block px-4 py-3 text-[13px] font-medium text-white/55" onClick={() => setMobileOpen(false)}>Promotions</Link>
             <div className="grid grid-cols-2 gap-2 pt-3 pb-2 border-t border-white/6 mt-2">
               <Link href="https://direct.ollatrade.com/auth/login" className="text-center text-[13px] font-medium border border-white/15 text-white/60 py-3 rounded-xl" onClick={() => setMobileOpen(false)}>Login</Link>
               <Link href="https://direct.ollatrade.com/auth/register" className="text-center text-[13px] font-bold bg-[#00CC44] text-black py-3 rounded-xl" onClick={() => setMobileOpen(false)}>Open Account</Link>

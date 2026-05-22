@@ -338,9 +338,9 @@
       "popular_badge": "Popular"
     },
     "testimonials": {
-      "badge": "Client Reviews",
-      "title": "Trusted by Traders Worldwide",
-      "subtitle": "Real reviews from real clients. Read what traders say about their experience with Olla Trade - rated on Trustpilot.",
+      "badge": "Trader Experiences",
+      "title": "Client Feedback",
+      "subtitle": "Read what our clients say about trading with Olla Trade. Reviews verified through Trustpilot.",
       "rated": "Rated on Trustpilot",
       "reviews_note": "Client reviews on Trustpilot",
       "loading_note": "Reviews are loading from Trustpilot. View all verified client reviews directly on Trustpilot.",

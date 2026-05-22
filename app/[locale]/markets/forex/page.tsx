@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import SpreadTable from "../../../components/widgets/SpreadTable";
-import SessionClock from "../../../components/widgets/SessionClock";
 import PageHero from "../../../components/ui/PageHero";
 import CTASection from "../../../components/CTASection";
 import FAQSection from "../../../components/ui/FAQSection";
@@ -115,25 +113,12 @@ export default async function ForexPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      {/* ── Live spreads + session clock ─────────────────────────── */}
+      {/* ── Major pairs conditions table ──────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Indicative Conditions</div>
-          <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">Spreads & Market Sessions</h2>
-          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">Spreads are variable and depend on market conditions, liquidity, and time of day.</p>
-          <div className="grid lg:grid-cols-[1fr_320px] gap-6 mb-8">
-            <SpreadTable />
-            <SessionClock />
-          </div>
-          <p className="text-[11px] text-gray-400 text-center">Figures shown are indicative minimum spreads under normal market conditions. Actual spreads may be wider during high-volatility periods or major news events.</p>
-        </div>
-      </section>
-
-      {/* ── Major pairs conditions table ──────────────────────────── */}
-      <section className="py-12 bg-[#F5F7FA]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Detailed Specifications</div>
-          <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">Major Pairs — Account Conditions</h2>
+          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">Live Conditions</div>
+          <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">Major Pairs — Trading Conditions</h2>
+          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">Spreads are variable. Figures shown are indicative under normal market conditions.</p>
           <TradingConditionsTable headers={["Symbol","Description","Spread","Leverage","Margin %"]} rows={majors} highlightCol={2} />
           <p className="text-[11px] text-gray-400 text-center mt-3">Spreads may widen during high-volatility periods, major news events, or outside primary market sessions.</p>
         </div>

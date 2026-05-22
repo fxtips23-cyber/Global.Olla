@@ -17,7 +17,7 @@ export default function Testimonials() {
             <h2 className="text-4xl font-extrabold text-[#111827] mb-3">
               {t("title")}
             </h2>
-            <p className="text-gray-500 text-[15px] leading-relaxed">
+            <p className="text-gray-500 text-[15px] leading-relaxed max-w-md">
               {t("subtitle")}
             </p>
           </div>

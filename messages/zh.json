@@ -338,9 +338,9 @@
       "popular_badge": "热门"
     },
     "testimonials": {
-      "badge": "客户评价",
-      "title": "全球交易者的信赖之选",
-      "subtitle": "来自真实客户的真实评价。了解交易者对 Olla Trade 体验的看法——在 Trustpilot 上评分。",
+      "badge": "交易者体验",
+      "title": "客户评价",
+      "subtitle": "阅读我们的客户对在 Olla Trade 交易的看法。通过 Trustpilot 验证的评价。",
       "rated": "Trustpilot评分",
       "reviews_note": "Trustpilot上的客户评价",
       "loading_note": "评价正从 Trustpilot 加载中。在 Trustpilot 上直接查看所有经过验证的客户评价。",

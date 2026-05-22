@@ -383,6 +383,24 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
                     </div>
                   ))}
                 </div>
+                <div className="mt-3 pt-3 border-t border-white/6">
+                  <div className="text-[10px] text-white/25 mb-2">Follow Olla Trade</div>
+                  <div className="flex gap-2">
+                    {[
+                      { label: "Facebook",  href: "https://www.facebook.com/ollatrade",             icon: "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" },
+                      { label: "Instagram", href: "https://www.instagram.com/ollatrad/",             icon: "M16 4H8a4 4 0 00-4 4v8a4 4 0 004 4h8a4 4 0 004-4V8a4 4 0 00-4-4zM12 15.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7zm4-8a1 1 0 110-2 1 1 0 010 2z" },
+                      { label: "X",         href: "https://x.com/OllaTrade",                        icon: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" },
+                      { label: "LinkedIn",  href: "https://www.linkedin.com/company/olla-trade/",   icon: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M2 4a2 2 0 114 0 2 2 0 01-4 0z" },
+                    ].map(({ label, href, icon }) => (
+                      <a key={label} href={href} aria-label={label} target="_blank" rel="noopener noreferrer"
+                        className="w-7 h-7 rounded-md bg-white/6 border border-white/8 flex items-center justify-center text-white/25 hover:text-white/55 hover:border-white/20 transition-all">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                          <path d={icon} />
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
