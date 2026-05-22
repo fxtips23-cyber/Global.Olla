@@ -1297,14 +1297,88 @@
       "commitment_title": "Nosso Compromisso",
       "offering_title": "O Que Oferecemos",
       "values_title": "Nossos Valores Fundamentais",
-      "legal_title": "Informações Legais & Regulatórias",
+      "legal_title": "Informações Legais e Regulatórias",
       "cta_title": "Comece sua Jornada de Trading",
-      "cta_subtitle": "Abra uma conta em minutos e junte-se a milhares de traders na Olla Trade."
+      "cta_subtitle": "Abra uma conta em minutos e junte-se a milhares de traders na Olla Trade.",
+      "who_p1": "A Olla Trade é uma plataforma de trading online profissional que oferece acesso aos mercados financeiros globais em Forex, Metais, Índices, Energias, Criptomoedas e Ações — tudo através da plataforma padrão do setor, MetaTrader 4.",
+      "who_p2": "Fomos criados com uma convicção: que ferramentas de trading profissionais, condições de mercado competitivas e um serviço transparente devem estar disponíveis para todos os traders — independentemente do tamanho da conta ou nível de experiência.",
+      "who_p3": "A Olla Trade Ltd. está incorporada em Anguilla (Registo Nº A000001849) e opera como uma Empresa Internacional sob a lei de Anguilla, oferecendo serviços de trading através do MetaTrader 4.",
+      "vision_body": "Construir um mundo onde a liberdade financeira seja acessível a todos — onde qualquer pessoa, em qualquer lugar, possa acessar os mercados globais com ferramentas profissionais e condições justas.",
+      "mission_body": "Fornecer uma plataforma de trading segura, intuitiva e confiável que permita a indivíduos de todo o mundo operar nos mercados globais com confiança.",
+      "commitment_body": "Transparência nos preços, honestidade na comunicação de riscos, confiabilidade na execução e uma abordagem centrada no cliente em cada decisão que tomamos.",
+      "global_label": "Alcance Global",
+      "global_title": "Conectado aos Mercados Financeiros Globais",
+      "global_note": "A Olla Trade oferece acesso aos mercados financeiros em múltiplas classes de ativos e bolsas globais a partir de uma única conta.",
+      "stat_clients": "Clientes Ativos",
+      "stat_instruments": "Instrumentos Negociáveis",
+      "stat_support": "Suporte ao Cliente",
+      "stat_deposit": "Depósito Mínimo",
+      "offer_title": "O Que Oferecemos",
+      "offer_subtitle": "Tudo o que você precisa para operar nos mercados globais — em uma conta, em uma plataforma.",
+      "values_subtitle": "Os princípios que guiam cada decisão de produto, cada interação com clientes e cada linha da nossa plataforma.",
+      "offerings": [
+        {
+          "title": "Trading Multi-Ativo",
+          "desc": "Acesse Forex, Metais, Índices, Energias, Criptomoedas e Ações — mais de 500 instrumentos em uma conta."
+        },
+        {
+          "title": "MetaTrader 4",
+          "desc": "Plataforma MT4 padrão do setor em desktop, WebTrader, iOS e Android."
+        },
+        {
+          "title": "Três Tipos de Conta",
+          "desc": "Contas Standard, Pro e Elite com depósitos mínimos a partir de $10 — para todo nível de trader."
+        },
+        {
+          "title": "Múltiplos Métodos de Pagamento",
+          "desc": "Depósitos e saques rápidos via cripto — sem taxas da Olla Trade."
+        },
+        {
+          "title": "Recursos Educacionais",
+          "desc": "Aprendizado estruturado do básico ao nível profissional, mais glossário Forex, calendário e notícias de mercado."
+        },
+        {
+          "title": "Suporte ao Cliente 24/5",
+          "desc": "Suporte dedicado disponível de segunda a sexta, 24 horas por dia, via telefone e e-mail."
+        }
+      ],
+      "values": [
+        {
+          "title": "Cliente em Primeiro Lugar",
+          "desc": "Cada decisão começa com uma pergunta: isso melhora a experiência de trading do cliente?"
+        },
+        {
+          "title": "Transparência",
+          "desc": "Preços claros, sem taxas ocultas, comunicação honesta de riscos e informações abertas sobre a conta — sempre."
+        },
+        {
+          "title": "Confiabilidade",
+          "desc": "Nossa infraestrutura é construída para estabilidade e velocidade — serviço consistente e confiável em todas as condições de mercado."
+        },
+        {
+          "title": "Educação",
+          "desc": "Acreditamos que traders informados operam melhor. Investimos em recursos em todos os níveis — do iniciante ao profissional."
+        },
+        {
+          "title": "Acessibilidade",
+          "desc": "Depósitos mínimos a partir de $10 significam que ferramentas de trading profissionais estão ao alcance de traders em todo o mundo."
+        },
+        {
+          "title": "Suporte ao Cliente",
+          "desc": "Suporte dedicado, políticas transparentes e uma equipe que genuinamente apoia o crescimento dos clientes como participantes do mercado."
+        }
+      ],
+      "legal_company": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. Nº A000001849) como uma Empresa Internacional sob a lei de Anguilla.",
+      "legal_address": "Grace Complex, The Valley, AI 2640, Anguilla.",
+      "legal_execution": "A Olla Trade Ltd. opera exclusivamente como um serviço de execução e não fornece aconselhamento de investimento ou gestão de carteiras.",
+      "legal_restricted": "Serviços não disponíveis para residentes dos EUA, Rússia, Myanmar, Emirados Árabes Unidos, Canadá, Israel, Nova Zelândia, Irã e Coreia do Norte.",
+      "cta_label_open": "Abrir Conta",
+      "cta_label_contact": "Fale Conosco"
     },
     "contact": {
-      "badge": "Entre em Contato",
-      "title": "Contate a Olla Trade",
-      "subtitle": "Entre em contato com nossa equipe de suporte para assistência com conta, dúvidas sobre financiamento, suporte à plataforma de trading e consultas gerais.",
+      "badge": "Fale Conosco",
+      "title": "Entre em Contato",
+      "subtitle": "Nossa equipe de suporte está disponível de segunda a sexta-feira, 24 horas por dia. Entre em contato por qualquer um dos canais abaixo.",
       "cards_title": "Como Podemos Ajudar?",
       "office_label": "Informações da Empresa",
       "form_label": "Enviar uma Mensagem",
@@ -1315,91 +1389,1345 @@
       "channels_title": "Canais de Contato",
       "map_title": "Nosso Endereço",
       "security_title": "Importante:",
-      "security_text": "Funcionários da Olla Trade nunca solicitarão sua senha de conta ou PIN por e-mail, telefone ou chat."
+      "security_text": "Funcionários da Olla Trade nunca solicitarão sua senha de conta ou PIN por e-mail, telefone ou chat.",
+      "phone_label": "Suporte por Telefone (24/5)",
+      "email_label": "E-mail",
+      "address_label": "Endereço Registrado",
+      "form_title_text": "Envie-nos uma Mensagem",
+      "form_fields": [
+        "Nome Completo",
+        "Endereço de E-mail",
+        "Assunto"
+      ],
+      "message_label": "Mensagem",
+      "message_placeholder": "Como podemos ajudá-lo?",
+      "send_btn": "Enviar Mensagem",
+      "response_note": "Geralmente respondemos em até 24 horas úteis."
     },
     "help": {
-      "badge": "Central de Suporte",
+      "badge": "Central de Ajuda",
       "title": "Como Podemos Ajudar?",
-      "subtitle": "Encontre respostas para perguntas comuns sobre contas, trading, depósitos, verificação e mais. Nossa equipe está disponível 24/5.",
+      "subtitle": "Encontre respostas para perguntas comuns sobre contas, depósitos, saques, plataforma MT4, verificação e muito mais.",
       "categories_label": "Navegar por Tópico",
       "categories_title": "Categorias de Suporte",
       "process_label": "Processo",
-      "process_title": "Resolvendo seu Problema",
+      "process_title": "Resolvendo Seu Problema",
       "contact_label": "Contato Direto",
       "contact_title": "Ainda Precisa de Ajuda?",
       "issues_label": "Guia de Autoatendimento",
-      "issues_title": "Problemas Comuns & Soluções",
+      "issues_title": "Problemas Comuns e Soluções",
       "times_label": "Disponibilidade de Suporte",
-      "times_title": "Tempos de Resposta por Tipo de Solicitação",
-      "faq_title": "Perguntas Frequentes — Central de Ajuda"
+      "times_title": "Tempos de Resposta por Tipo de Consulta",
+      "faq_title": "Perguntas Frequentes",
+      "categories": [
+        {
+          "title": "Suporte de Conta",
+          "desc": "Abertura de conta, problemas de login, upgrades e atualizações de perfil.",
+          "links": [
+            [
+              "Abrir uma conta",
+              "https://direct.ollatrade.com/auth/register"
+            ],
+            [
+              "Ajuda de login",
+              "/contact-us"
+            ],
+            [
+              "Tipos de conta",
+              "/trading/accounts"
+            ]
+          ]
+        },
+        {
+          "title": "Depósitos e Saques",
+          "desc": "Financiamento da conta, solicitações de saque, métodos de pagamento e prazos de processamento.",
+          "links": [
+            [
+              "Depositar fundos",
+              "/funding-and-withdrawals"
+            ],
+            [
+              "Solicitar saque",
+              "/funding-and-withdrawals"
+            ],
+            [
+              "Métodos de pagamento",
+              "/funding-and-withdrawals"
+            ]
+          ]
+        },
+        {
+          "title": "Plataforma de Trading",
+          "desc": "Instalação do MetaTrader 4, login, configuração de EA, problemas técnicos e downloads.",
+          "links": [
+            [
+              "Baixar MT4",
+              "/trading/platform"
+            ],
+            [
+              "Configurar MT4",
+              "/trading/platform"
+            ],
+            [
+              "Guia VPS",
+              "/tools/vps"
+            ]
+          ]
+        },
+        {
+          "title": "Verificação / KYC",
+          "desc": "Requisitos de verificação de identidade, envio de documentos e consultas KYC/AML.",
+          "links": [
+            [
+              "Requisitos KYC",
+              "/legal/kyc-aml"
+            ],
+            [
+              "Enviar documentos",
+              "https://direct.ollatrade.com/auth/login"
+            ],
+            [
+              "Status de verificação",
+              "https://direct.ollatrade.com/auth/login"
+            ]
+          ]
+        },
+        {
+          "title": "Programa de Parceiros",
+          "desc": "Candidaturas de afiliados, modelos de comissão, links de rastreamento e portal de parceiro.",
+          "links": [
+            [
+              "Candidatar-se como parceiro",
+              "/company/affiliate"
+            ],
+            [
+              "Modelos de comissão",
+              "/company/affiliate"
+            ],
+            [
+              "Portal de parceiro",
+              "https://direct.ollatrade.com/auth/login"
+            ]
+          ]
+        },
+        {
+          "title": "Suporte Técnico",
+          "desc": "Conectividade da plataforma, perguntas sobre execução de ordens e solução de problemas com EA.",
+          "links": [
+            [
+              "Info de execução",
+              "/execution-information"
+            ],
+            [
+              "Plataforma MT4",
+              "/trading/platform"
+            ],
+            [
+              "Contatar suporte",
+              "/contact-us"
+            ]
+          ]
+        },
+        {
+          "title": "Reclamações",
+          "desc": "Envie uma reclamação formal e veja nosso processo de tratamento de reclamações.",
+          "links": [
+            [
+              "Enviar reclamação",
+              "/company/complaints"
+            ],
+            [
+              "Processo de reclamação",
+              "/company/complaints"
+            ],
+            [
+              "Docs legais",
+              "/company/legal"
+            ]
+          ]
+        }
+      ],
+      "process_steps": [
+        [
+          "01",
+          "Consulte as Perguntas Frequentes",
+          "As perguntas mais comuns são respondidas nas FAQs desta página e em todo o site."
+        ],
+        [
+          "02",
+          "Contate o Suporte",
+          "Envie um e-mail ou ligue para nossa equipe com seu número de conta e uma descrição clara da sua consulta."
+        ],
+        [
+          "03",
+          "Respondemos",
+          "Nossa equipe busca responder dentro de um dia útil pelo método de contato que você utilizou."
+        ],
+        [
+          "04",
+          "Problema Resolvido",
+          "Nossa equipe trabalhará com você para resolver sua consulta e confirmar o resultado por escrito."
+        ]
+      ],
+      "contact_desc": "Nossa equipe de suporte está disponível de segunda a sexta-feira, 24 horas por dia.",
+      "contact_email_label": "E-mail",
+      "contact_phone_label": "Telefone (24/5)",
+      "contact_email_sub": "cst@ollatrade.com",
+      "contact_phone_sub": "Segunda – Sexta, 24/5",
+      "contact_send_email": "Enviar E-mail",
+      "contact_call_now": "Ligar Agora",
+      "contact_full_link": "Visite nossa página completa de Contato →",
+      "issues": [
+        {
+          "issue": "Não consigo fazer login no MT4",
+          "steps": [
+            "Verifique se está usando o número da conta (não o e-mail) como login no MT4",
+            "Confirme que selecionou o servidor correto da Olla Trade",
+            "Confirme que a senha é a senha do MT4 (não a senha do portal)",
+            "Redefina a senha do MT4 no seu portal de cliente se necessário"
+          ]
+        },
+        {
+          "issue": "Saque não recebido",
+          "steps": [
+            "Verifique o prazo de processamento: cripto 24–48h, banco 3–5 dias",
+            "Confirme que o método de saque corresponde ao método de depósito",
+            "Verifique se o endereço da carteira ou dados bancários estão corretos",
+            "Verifique o histórico de transações no portal para atualizações de status"
+          ]
+        },
+        {
+          "issue": "Documento KYC rejeitado",
+          "steps": [
+            "Certifique-se de que o documento é válido e não está expirado",
+            "Verifique se o nome completo corresponde exatamente ao cadastro",
+            "Certifique-se de que as bordas e todos os quatro cantos do documento estão visíveis",
+            "Use uma conta de serviço público ou extrato bancário recente (últimos 3 meses)"
+          ]
+        },
+        {
+          "issue": "EA (Expert Advisor) não está rodando",
+          "steps": [
+            "Habilite o AutoTrading na barra de ferramentas do MT4 (Ctrl+E)",
+            "Verifique se o EA está anexado ao gráfico — procure o ícone do EA no canto do gráfico",
+            "Certifique-se de que 'Permitir trading ao vivo' está marcado nas configurações do EA",
+            "Verifique as mensagens de erro na aba de journal do EA"
+          ]
+        },
+        {
+          "issue": "Conta ainda não verificada",
+          "steps": [
+            "Verifique o e-mail (inclusive spam) para atualização do status de verificação",
+            "Faça login no portal para ver o status pendente dos documentos",
+            "Aguarde 1 a 2 dias úteis após o envio dos documentos",
+            "Contate o suporte com o número da sua conta se passar de 2 dias"
+          ]
+        },
+        {
+          "issue": "Depósito não creditado",
+          "steps": [
+            "Cripto: aguarde as confirmações da blockchain (dependente da rede)",
+            "Verifique se enviou para o endereço de carteira/rede correto",
+            "Confirme que a moeda do depósito corresponde à moeda da conta",
+            "Contate o suporte com o ID/hash da transação se não creditado após 24h"
+          ]
+        }
+      ],
+      "table_headers": [
+        "Tipo de Consulta",
+        "Método de Contato",
+        "Resposta Esperada",
+        "Prioridade"
+      ],
+      "response_rows": [
+        [
+          "Suporte de Conta",
+          "E-mail / Telefone",
+          "Mesmo dia útil",
+          "Alta"
+        ],
+        [
+          "Consulta Geral",
+          "E-mail / Formulário",
+          "1 dia útil",
+          "Padrão"
+        ],
+        [
+          "Depósito / Saque",
+          "E-mail",
+          "1 dia útil",
+          "Alta"
+        ],
+        [
+          "KYC / Verificação",
+          "E-mail",
+          "1–2 dias úteis",
+          "Padrão"
+        ],
+        [
+          "Plataforma Técnica",
+          "E-mail / Telefone",
+          "Mesmo dia útil",
+          "Alta"
+        ],
+        [
+          "Parceria / Afiliado",
+          "E-mail",
+          "2–3 dias úteis",
+          "Padrão"
+        ],
+        [
+          "Reclamações Formais",
+          "E-mail",
+          "2 dias úteis (confirmação)",
+          "Conformidade"
+        ]
+      ],
+      "response_note": "Os tempos de resposta são metas durante o horário comercial (segunda–sexta). A disponibilidade nos fins de semana pode ser limitada.",
+      "faqs": [
+        {
+          "q": "Como abro uma conta ao vivo?",
+          "a": "Clique em 'Abrir Conta', complete o formulário de cadastro (aproximadamente 2 minutos), envie os documentos KYC e deposite fundos. Sua conta é ativada após a aprovação da verificação — normalmente em 1 a 2 dias úteis."
+        },
+        {
+          "q": "Qual é o depósito mínimo?",
+          "a": "Standard: $10 · Pro: $2.000 · Elite: $20.000. Esses são os valores mínimos necessários para ativar cada tipo de conta e começar a operar."
+        },
+        {
+          "q": "Quanto tempo leva um saque?",
+          "a": "As solicitações de saque são processadas em 24 a 48 horas úteis após aprovação. Os saques em cripto também estão sujeitos aos tempos de confirmação da rede blockchain. Os prazos podem variar com base no status de verificação."
+        },
+        {
+          "q": "Como instalo o MetaTrader 4?",
+          "a": "Baixe o MT4 do site da Olla Trade ou da MetaQuotes. Instale no Windows (ou use o WebTrader). Faça login com seu número de conta, senha e o endereço do servidor da Olla Trade do seu e-mail de boas-vindas."
+        },
+        {
+          "q": "Por que minha verificação está demorando mais do que o esperado?",
+          "a": "A verificação geralmente leva 1 a 2 dias úteis. Atrasos podem ocorrer se os documentos estiverem ilegíveis ou se o endereço não corresponder aos dados de cadastro. Nossa equipe entrará em contato se precisar de mais informações."
+        },
+        {
+          "q": "Como contato o suporte da Olla Trade?",
+          "a": "E-mail info@ollatrade.com ou cst@ollatrade.com, ou ligue para +44 7418 641736. Nossa equipe está disponível 24/5, de segunda a sexta-feira."
+        },
+        {
+          "q": "Onde posso ver meu histórico de transações?",
+          "a": "Faça login no seu portal de cliente da Olla Trade e vá para a seção de Histórico de Transações. Filtre por período, tipo ou status para ver todos os depósitos, saques e atividades da conta."
+        },
+        {
+          "q": "Como me torno um afiliado?",
+          "a": "Visite a página do Programa de Parceiros ou envie um e-mail para info@ollatrade.com com seus dados e fonte de tráfego. Nossa equipe responderá em 2 a 3 dias úteis."
+        }
+      ]
     },
     "promotions": {
-      "badge": "Ofertas Especiais",
-      "title": "Promoções & Bônus",
-      "subtitle": "Aumente seu capital de trading com as promoções exclusivas da Olla Trade. Todos os bônus estão sujeitos a critérios de elegibilidade e termos e condições.",
+      "badge": "Ofertas por Tempo Limitado",
+      "title": "Ofertas Promocionais",
+      "subtitle": "A Olla Trade disponibiliza periodicamente crédito de trading promocional para clientes elegíveis. Todas as ofertas estão sujeitas a critérios de elegibilidade, requisitos de verificação e termos e condições completos.",
       "current_label": "Ofertas Atuais",
       "current_title": "Promoções Disponíveis",
-      "current_subtitle": "Todas as promoções estão sujeitas à elegibilidade e aos termos da Olla Trade. Leia todos os termos antes de participar.",
-      "eligibility_label": "Elegibilidade",
-      "eligibility_title": "Quem Pode Reivindicar Promoções?",
+      "current_subtitle": "Sujeito à elegibilidade. Leia todos os termos e condições antes de participar. O crédito de trading promocional é aplicado apenas ao seu saldo de margem.",
+      "eligibility_label": "Requisitos de Elegibilidade",
+      "eligibility_title": "Quem Pode Participar?",
       "how_label": "Como Resgatar",
       "bonus_label": "Mecânica de Bônus",
       "bonus_title": "Como Funcionam os Bônus de Trading",
       "disclaimer_title": "Aviso Importante sobre Promoções",
-      "faq_title": "Perguntas Frequentes — Promoções"
+      "faq_title": "Perguntas Frequentes — Promoções",
+      "important_text": "O crédito de trading promocional não é dinheiro e não pode ser sacado diretamente. A participação em qualquer promoção é inteiramente voluntária e sujeita à conclusão da verificação de conta (KYC). O trading envolve risco — as promoções não reduzem nem eliminam o risco de trading. Todas as ofertas promocionais são por tempo limitado e sujeitas a alterações ou retirada sem aviso prévio.",
+      "offer1_badge": "Ativa",
+      "offer1_featured": "★ Oferta em Destaque",
+      "offer1_amount": "20%",
+      "offer1_title": "Oferta de Bônus de Depósito",
+      "offer1_type": "Crédito de Trading Promocional",
+      "offer1_desc": "Clientes elegíveis podem receber crédito de trading promocional equivalente a 20% de um depósito qualificado. O crédito é aplicado ao seu saldo de margem para apoiar a atividade de trading e está sujeito aos termos abaixo.",
+      "offer1_points": [
+        "Crédito promocional aplicado apenas ao saldo de margem",
+        "Limite mínimo de depósito qualificado se aplica",
+        "Verificação KYC da conta necessária",
+        "O crédito não é sacável",
+        "Condições de atividade de trading se aplicam",
+        "Sujeito a termos e condições completos"
+      ],
+      "offer1_cta": "Cadastrar para Participar",
+      "offer2_badge": "Em Breve",
+      "offer2_amount": "$250",
+      "offer2_title": "Oferta de Crédito de Boas-Vindas",
+      "offer2_type": "Crédito Promocional Sem Depósito",
+      "offer2_desc": "Uma oferta de crédito promocional sem depósito está planejada para novos clientes elegíveis. Não é necessário depósito inicial para se candidatar. Sujeito a verificação de elegibilidade e condições de volume de trading. Os termos completos serão publicados quando disponíveis.",
+      "offer2_points": [
+        "Verificação completa da conta necessária",
+        "Volume mínimo de trading se aplica",
+        "O crédito não é sacável",
+        "Elegibilidade a critério da Olla Trade",
+        "Termos serão publicados no lançamento"
+      ],
+      "offer2_cta": "Registrar Interesse",
+      "offer3_badge": "Verificar Disponibilidade",
+      "offer3_amount": "$1.000",
+      "offer3_title": "Crédito para Primeiro Depósito",
+      "offer3_type": "Crédito Promocional em Níveis",
+      "offer3_desc": "Uma oferta de crédito promocional em níveis com base no tamanho do primeiro depósito pode estar disponível para clientes elegíveis. Entre em contato com nossa equipe para verificar a disponibilidade atual e os termos aplicáveis ao seu tipo de conta.",
+      "offer3_points": [
+        "Apenas para o primeiro depósito qualificado",
+        "Limite mínimo de depósito se aplica",
+        "Crédito promocional adicionado à margem",
+        "Elegibilidade da conta a critério da Olla Trade",
+        "Termos e condições completos se aplicam"
+      ],
+      "offer3_cta": "Consultar Agora",
+      "eligibility_items": [
+        {
+          "title": "Apenas contas verificadas",
+          "desc": "Toda a documentação KYC/AML deve ser enviada e aprovada antes que qualquer crédito promocional seja aplicado."
+        },
+        {
+          "title": "Tipos de conta elegíveis",
+          "desc": "Algumas ofertas são restritas a tipos específicos de conta ou apenas para novos clientes. Consulte os termos individuais da promoção."
+        },
+        {
+          "title": "Uma promoção ativa por vez",
+          "desc": "As ofertas promocionais geralmente não podem ser combinadas, salvo se explicitamente declarado nos termos individuais."
+        },
+        {
+          "title": "Restrições jurisdicionais",
+          "desc": "As promoções não estão disponíveis em todas as jurisdições. A Olla Trade reserva-se o direito de restringir a elegibilidade."
+        }
+      ],
+      "participation_label": "Como Participar",
+      "participation_title": "Passo a Passo",
+      "participation_steps": [
+        {
+          "n": "01",
+          "title": "Abra ou faça login na sua conta",
+          "desc": "Sua conta deve estar em boa situação e totalmente verificada antes de reivindicar qualquer oferta promocional."
+        },
+        {
+          "n": "02",
+          "title": "Localize a oferta no seu portal",
+          "desc": "Faça login no seu portal de cliente da Olla Trade e navegue até a seção de Promoções para ver as ofertas disponíveis."
+        },
+        {
+          "n": "03",
+          "title": "Leia os termos completos",
+          "desc": "Leia, compreenda e aceite os termos e condições completos da promoção específica antes de aderir."
+        },
+        {
+          "n": "04",
+          "title": "Complete as condições qualificantes",
+          "desc": "Faça o depósito qualificado necessário ou cumpra outras condições especificadas nos termos da promoção."
+        },
+        {
+          "n": "05",
+          "title": "Crédito aplicado à margem",
+          "desc": "Após verificação, o crédito de trading promocional será aplicado ao seu saldo de margem. Não é dinheiro sacável."
+        }
+      ],
+      "credit_label": "Entendendo o Crédito Promocional",
+      "credit_title": "Como Funciona o Crédito de Trading Promocional",
+      "credit_desc": "Antes de participar de qualquer promoção, certifique-se de entender como o crédito promocional funciona. Não é o mesmo que fundos depositados.",
+      "credit_cards": [
+        {
+          "title": "Aplicado como Margem de Trading",
+          "desc": "O crédito promocional é adicionado à sua margem de trading disponível. Permite abrir posições maiores, mas não é dinheiro na sua conta."
+        },
+        {
+          "title": "Crédito Não Sacável",
+          "desc": "O crédito em si não pode ser sacado em nenhum momento. Apenas os lucros líquidos gerados pela sua própria atividade de trading podem ser sacáveis, sujeitos aos termos da promoção."
+        },
+        {
+          "title": "Aumenta a Capacidade de Posições",
+          "desc": "Com margem adicional disponível, você pode suportar posições abertas maiores ou mais. Seu risco de trading, alavancagem e responsabilidade permanecem inalterados."
+        },
+        {
+          "title": "Sujeito a Condições de Volume",
+          "desc": "Algumas promoções exigem um volume mínimo de trading antes que os lucros se tornem elegíveis para saque. Sempre verifique as condições aplicáveis."
+        }
+      ],
+      "table_headers": [
+        "Característica",
+        "Crédito Promocional",
+        "Seus Fundos Depositados"
+      ],
+      "table_rows": [
+        [
+          "Depositado por você",
+          "Não — creditado pela Olla Trade",
+          "Sim — seu próprio capital"
+        ],
+        [
+          "Diretamente sacável",
+          "Não",
+          "Sim, conforme política de saque"
+        ],
+        [
+          "Usado para margem",
+          "Sim — aumenta a capacidade de margem",
+          "Sim — fonte primária de margem"
+        ],
+        [
+          "Exibido na conta",
+          "Sim — como saldo de bônus/crédito",
+          "Sim — como saldo da conta"
+        ],
+        [
+          "Condições de volume",
+          "Podem se aplicar (ver termos)",
+          "Nenhuma"
+        ],
+        [
+          "Em risco pelo trading",
+          "Pode ser reduzido por perdas",
+          "Pode ser reduzido por perdas"
+        ]
+      ],
+      "disclaimer_p1": "Todos os bônus e promoções oferecidos pela Olla Trade são apenas crédito de trading promocional. Estão sujeitos a critérios de elegibilidade e aos termos e condições completos da Olla Trade. O crédito promocional não pode ser sacado diretamente em nenhuma circunstância. Os lucros gerados pela atividade de trading podem ser sacáveis sujeitos à política de saque da Olla Trade e aos termos específicos da promoção.",
+      "disclaimer_p2": "As promoções não podem ser combinadas salvo se explicitamente declarado. A Olla Trade reserva-se o direito de modificar, suspender ou retirar qualquer promoção a seu critério sem aviso prévio. O trading envolve risco. O crédito promocional não reduz nem elimina o risco de trading. Opere apenas com capital que você pode perder.",
+      "disclaimer_p3": "Não abra uma conta ou faça um depósito apenas por causa de uma oferta promocional. Certifique-se de compreender os riscos envolvidos no trading de CFDs e instrumentos alavancados antes de participar.",
+      "faq_subtitle": "Perguntas comuns sobre nossas ofertas promocionais e crédito de trading.",
+      "faqs": [
+        {
+          "q": "Posso sacar o crédito promocional?",
+          "a": "Não. O crédito de trading promocional não pode ser sacado diretamente em nenhuma circunstância. É aplicado apenas como margem de trading. Os lucros líquidos gerados pela sua própria atividade de trading podem ser sacáveis, sujeitos aos termos específicos da promoção e à política de saque da Olla Trade."
+        },
+        {
+          "q": "Aceitar um bônus afeta meus saques?",
+          "a": "Os termos promocionais podem incluir requisitos de volume de trading antes que os lucros gerados usando o crédito se tornem elegíveis para saque. Leia sempre os termos completos de qualquer promoção antes de participar."
+        },
+        {
+          "q": "Posso cancelar a participação em uma promoção?",
+          "a": "Sim. A participação em todas as promoções da Olla Trade é inteiramente voluntária. Se você deseja cancelar a participação em uma promoção ativa, entre em contato com nossa equipe de suporte."
+        },
+        {
+          "q": "As promoções estão disponíveis para todos os clientes?",
+          "a": "Não. Os requisitos de elegibilidade variam por promoção. Geralmente, a verificação KYC/AML completa é necessária. Algumas promoções são limitadas a novos clientes, tipos específicos de conta ou jurisdições elegíveis."
+        },
+        {
+          "q": "O que acontece com meu crédito se eu fechar minha conta?",
+          "a": "O crédito de trading promocional é perdido ao fechar a conta. Não tem valor em dinheiro e não pode ser transferido ou sacado."
+        }
+      ]
     },
     "complaints": {
       "badge": "Serviços ao Cliente",
       "title": "Gestão de Reclamações",
-      "subtitle": "A Olla Trade leva todas as reclamações dos clientes a sério. Esta página explica como apresentar uma reclamação e o que esperar do nosso processo de análise.",
-      "process_label": "Processo de Reclamação",
-      "process_title": "Como Apresentar uma Reclamação",
+      "subtitle": "A Olla Trade leva todas as reclamações de clientes a sério. Se você estiver insatisfeito com qualquer aspecto do nosso serviço, esta página explica como enviar uma reclamação e o que esperar do nosso processo de revisão.",
+      "process_label": "Processo",
+      "process_title": "Como Enviar uma Reclamação",
       "info_label": "Informações Necessárias",
-      "info_title": "O Que Incluir na sua Reclamação",
+      "info_title": "O Que Incluir na Sua Reclamação",
       "categories_label": "Categorias de Reclamação",
       "review_label": "Processo de Análise",
-      "review_title": "Como Analisamos sua Reclamação",
-      "timeline_label": "Prazos de Resposta",
-      "escalation_label": "Escalada",
+      "review_title": "Como Analisamos Sua Reclamação",
+      "timeline_label": "Cronograma",
+      "escalation_label": "Escalonamento",
       "escalation_title": "Não Satisfeito com o Resultado?",
-      "submit_title": "Pronto para Apresentar uma Reclamação?",
-      "faq_title": "Perguntas Frequentes — Reclamações"
+      "submit_title": "Pronto para Enviar uma Reclamação?",
+      "faq_title": "Perguntas Frequentes — Reclamações",
+      "hero_badge": "Serviços ao Cliente",
+      "hero_title": "Gestão de Reclamações",
+      "hero_desc": "A Olla Trade leva todas as reclamações de clientes a sério. Se você estiver insatisfeito com qualquer aspecto do nosso serviço, esta página explica como enviar uma reclamação e o que esperar do nosso processo de revisão.",
+      "hero_cta_primary": "Enviar uma Reclamação",
+      "hero_cta_secondary": "Contatar o Suporte Primeiro",
+      "process_desc": "Siga estas etapas para garantir que sua reclamação seja tratada de forma rápida e completa.",
+      "process_steps": [
+        {
+          "step": "01",
+          "title": "Contate o Suporte Primeiro",
+          "desc": "Muitos problemas podem ser resolvidos rapidamente pela nossa equipe de suporte. Envie um e-mail para cst@ollatrade.com ou ligue para +44 7418 641736 antes de enviar uma reclamação formal."
+        },
+        {
+          "step": "02",
+          "title": "Envie a Reclamação Formal",
+          "desc": "Se não for resolvido, envie uma reclamação por escrito para complaints@ollatrade.com. Inclua seu nome completo, número de conta, data do incidente, descrição detalhada e documentos de suporte."
+        },
+        {
+          "step": "03",
+          "title": "Confirmação de Recebimento",
+          "desc": "Confirmaremos sua reclamação por escrito dentro de 2 dias úteis, fornecendo um número de referência e o nome da pessoa responsável pelo seu caso."
+        },
+        {
+          "step": "04",
+          "title": "Resolução",
+          "desc": "Buscamos fornecer uma resposta final por escrito dentro de 10 dias úteis. Casos complexos podem levar até 30 dias úteis. Manteremos você informado durante todo o processo."
+        }
+      ],
+      "info_desc": "Para garantir que sua reclamação seja processada sem demora, inclua as seguintes informações no seu e-mail de reclamação inicial. Envios incompletos podem exigir informações adicionais, prolongando o prazo de análise.",
+      "info_items": [
+        "Seu nome completo registrado",
+        "Endereço de e-mail registrado",
+        "Número de conta",
+        "Data e hora do incidente",
+        "Descrição clara da reclamação",
+        "Resolução ou resultado desejado",
+        "Documentos de suporte (capturas de tela, extratos, e-mails)"
+      ],
+      "categories_title_text": "Tipos de Reclamações que Tratamos",
+      "complaint_cats": [
+        {
+          "title": "Execução de Ordens",
+          "desc": "Preocupações sobre como uma ordem foi executada, incluindo preços inesperados, atrasos ou ordens rejeitadas."
+        },
+        {
+          "title": "Depósito e Saque",
+          "desc": "Problemas com financiamento ou saque da sua conta, incluindo atrasos, transações com falha ou discrepâncias."
+        },
+        {
+          "title": "Gestão de Conta",
+          "desc": "Preocupações sobre verificação de conta (KYC), restrições de acesso ou encerramento de conta."
+        },
+        {
+          "title": "Problemas Técnicos",
+          "desc": "Erros de plataforma, problemas de conectividade ou falhas técnicas que afetaram seu trading."
+        },
+        {
+          "title": "Comunicação",
+          "desc": "Preocupações sobre a qualidade, precisão ou conduta nas comunicações com nossa equipe."
+        },
+        {
+          "title": "Taxas e Cobranças",
+          "desc": "Disputas sobre taxas, cobranças ou deduções aplicadas à sua conta."
+        }
+      ],
+      "review_items": [
+        {
+          "title": "Análise Independente",
+          "desc": "Todas as reclamações são analisadas pela nossa equipe de conformidade, independente do departamento envolvido. Isso garante uma avaliação imparcial das suas preocupações."
+        },
+        {
+          "title": "Investigação Completa",
+          "desc": "Investigamos todos os aspectos da sua reclamação, incluindo análise de registros de conta, histórico de trades, comunicações e qualquer documentação que você forneça."
+        },
+        {
+          "title": "Resposta por Escrito",
+          "desc": "Você receberá uma resposta por escrito descrevendo nossas conclusões, a decisão tomada e qualquer ação corretiva. Todas as decisões são comunicadas em linguagem clara."
+        },
+        {
+          "title": "Informações Adicionais",
+          "desc": "Podemos entrar em contato para obter mais informações durante a investigação. Responda prontamente para evitar atrasos no processo de resolução."
+        },
+        {
+          "title": "Manutenção de Registros",
+          "desc": "Todos os registros de reclamações são retidos por no mínimo 5 anos. Os dados de reclamações são usados para melhorar nossos serviços e identificar padrões ou problemas sistêmicos."
+        },
+        {
+          "title": "Confidencialidade",
+          "desc": "Sua reclamação e toda a correspondência relacionada são tratadas com estrita confidencialidade e de acordo com nossa Política de Privacidade."
+        }
+      ],
+      "timeline_title": "O Que Esperar e Quando",
+      "timeline_headers": [
+        "Etapa",
+        "Ação",
+        "Prazo"
+      ],
+      "timeline_rows": [
+        [
+          "Recebimento",
+          "Reclamação recebida e registrada",
+          "Imediato"
+        ],
+        [
+          "Confirmação",
+          "Confirmação por escrito e número de referência",
+          "Em até 2 dias úteis"
+        ],
+        [
+          "Investigação",
+          "Investigação completa de todos os aspectos da reclamação",
+          "Em até 10 dias úteis"
+        ],
+        [
+          "Casos Complexos",
+          "Análise estendida para reclamações complexas",
+          "Até 30 dias úteis"
+        ],
+        [
+          "Resposta Final",
+          "Decisão por escrito com conclusões e remédios",
+          "Ao fim da análise"
+        ]
+      ],
+      "escalation_p1": "Se você não estiver satisfeito com nossa resposta final por escrito, tem o direito de escalonar sua reclamação para um organismo externo adequado ou buscar aconselhamento jurídico independente. A Olla Trade cooperará totalmente com qualquer processo de revisão externo.",
+      "escalation_p2": "Observe que os organismos externos de resolução de disputas podem ter seus próprios critérios de elegibilidade e processos. Nossa Política Completa de Gestão de Reclamações está disponível na seção de Documentos Legais.",
+      "escalation_cta_policy": "Política de Gestão de Reclamações",
+      "escalation_cta_email": "Enviar E-mail para Equipe de Reclamações",
+      "contact_items": [
+        {
+          "title": "E-mail de Reclamações",
+          "value": "complaints@ollatrade.com",
+          "sub": "Para reclamações formais por escrito"
+        },
+        {
+          "title": "Suporte Geral",
+          "value": "info@ollatrade.com",
+          "sub": "Para assistência geral"
+        },
+        {
+          "title": "Telefone",
+          "value": "+44 7418 641736",
+          "sub": "Segunda – Sexta, 24/5"
+        },
+        {
+          "title": "Endereço Registrado",
+          "value": "Grace Complex, The Valley, AI 2640, Anguilla",
+          "sub": "Olla Trade Ltd. · Reg. Nº A000001849"
+        }
+      ],
+      "submit_desc": "Envie um e-mail diretamente para nossa equipe de reclamações em complaints@ollatrade.com. Inclua o número da sua conta e uma descrição clara das suas preocupações. Como alternativa, contate nossa equipe de suporte primeiro — muitos problemas podem ser resolvidos sem uma reclamação formal.",
+      "submit_cta_email": "complaints@ollatrade.com",
+      "submit_cta_support": "Contatar Suporte",
+      "faq_subtitle": "Perguntas comuns sobre nosso processo de tratamento de reclamações e prazos.",
+      "faqs": [
+        {
+          "q": "Quanto tempo leva para resolver uma reclamação?",
+          "a": "Confirmamos todas as reclamações dentro de 2 dias úteis do recebimento. Buscamos fornecer uma resposta completa por escrito dentro de 10 dias úteis. Para assuntos complexos, a resolução pode levar até 30 dias úteis. Manteremos você informado sobre o progresso."
+        },
+        {
+          "q": "Que informações preciso incluir na minha reclamação?",
+          "a": "Inclua: seu nome completo, endereço de e-mail registrado, número de conta, data do evento, uma descrição clara do problema e cópias de qualquer documentação de suporte relevante, como capturas de tela ou histórico de trades."
+        },
+        {
+          "q": "Posso enviar uma reclamação por telefone?",
+          "a": "Recomendamos enviar reclamações formais por escrito para complaints@ollatrade.com. Você também pode contatar nossa equipe de suporte por telefone em +44 7418 641736 para discutir o assunto informalmente antes de enviar uma reclamação formal."
+        },
+        {
+          "q": "E se eu não estiver satisfeito com o resultado?",
+          "a": "Se não estiver satisfeito com nossa resposta final, você pode buscar aconselhamento jurídico independente ou escalonar o assunto para um organismo externo adequado de resolução de disputas. Os detalhes das opções de escalonamento estão na nossa Política de Gestão de Reclamações."
+        },
+        {
+          "q": "O envio de uma reclamação afetará minha conta?",
+          "a": "Não. O envio de uma reclamação não afetará o status da sua conta, privilégios de trading ou quaisquer transações pendentes. Todas as reclamações são revisadas independentemente e de forma imparcial pela nossa equipe de conformidade."
+        }
+      ],
+      "legal_note": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. Nº A000001849) e opera como um serviço de execução exclusiva. Todas as reclamações são tratadas de acordo com nossa Política Interna de Gestão de Reclamações. Os registros de reclamações são retidos por no mínimo 5 anos."
     },
     "affiliate": {
       "badge": "Programa de Parceiros",
       "title": "Cresça com a Olla Trade",
-      "subtitle": "Junte-se ao nosso Programa de Parceiros e ganhe comissões competitivas ao apresentar traders à Olla Trade."
+      "subtitle": "Junte-se ao nosso Programa de Parceiros e ganhe comissões competitivas ao apresentar traders à Olla Trade.",
+      "why_title": "Por Que Ser Parceiro da Olla Trade?",
+      "why_subtitle": "Construímos nosso programa de afiliados para ser transparente, justo e genuinamente recompensador para parceiros que enviam tráfego de qualidade.",
+      "why_partner": [
+        {
+          "title": "Ganhe Comissões",
+          "desc": "Receba comissões pela atividade de trading de clientes elegíveis que você indicar através do seu link exclusivo."
+        },
+        {
+          "title": "Painel em Tempo Real",
+          "desc": "Acesse seu portal de parceiro para acompanhar indicações, conversões, comissões ganhas e métricas de desempenho."
+        },
+        {
+          "title": "Materiais de Marketing",
+          "desc": "Acesse uma biblioteca de banners, landing pages e materiais promocionais projetados profissionalmente."
+        },
+        {
+          "title": "Suporte Dedicado",
+          "desc": "Um gerente de parceiro dedicado da Olla Trade é atribuído à sua conta para ajudá-lo a otimizar o desempenho."
+        },
+        {
+          "title": "Links de Rastreamento",
+          "desc": "Gere links de rastreamento exclusivos para cada campanha ou canal. Monitore cliques, cadastros e depósitos separadamente."
+        },
+        {
+          "title": "Processamento Rápido",
+          "desc": "As comissões são calculadas e processadas de forma transparente em um ciclo regular. Sem deduções ocultas."
+        }
+      ],
+      "commission_title": "Modelos de Comissão",
+      "commission_subtitle": "Selecione a estrutura de comissão que melhor se adapta à sua fonte de tráfego. As taxas específicas são acordadas durante o onboarding.",
+      "commission_recommended": "Recomendado",
+      "commission_best_for": "Melhor para:",
+      "commission_enquire": "Consultar Sobre",
+      "commission_models": [
+        {
+          "name": "CPA",
+          "full": "Custo por Aquisição",
+          "best": "Fontes de tráfego de alto volume",
+          "desc": "Ganhe uma comissão fixa por cada cliente elegível que você indicar que concluir o cadastro e fizer seu primeiro depósito qualificado.",
+          "points": [
+            "Taxa fixa por indicação qualificada",
+            "Pago após o primeiro depósito do cliente",
+            "Critérios de elegibilidade claros"
+          ],
+          "featured": false
+        },
+        {
+          "name": "RevShare",
+          "full": "Participação nas Receitas",
+          "best": "Parcerias de longo prazo",
+          "desc": "Ganhe um percentual contínuo com base na atividade de trading gerada por clientes que você indicar. A renda pode continuar enquanto os clientes indicados estiverem ativos.",
+          "points": [
+            "Comissão contínua de traders ativos",
+            "Percentual dos spreads elegíveis",
+            "Melhor para indicações de clientes de qualidade"
+          ],
+          "featured": true
+        },
+        {
+          "name": "Híbrido",
+          "full": "CPA + RevShare",
+          "best": "Afiliados estabelecidos",
+          "desc": "Combine CPA e participação nas receitas. Receba um pagamento inicial por indicações qualificadas mais participação contínua nas receitas.",
+          "points": [
+            "CPA + participação nas receitas combinados",
+            "Disponível para parceiros de alto desempenho",
+            "Termos personalizados por negociação"
+          ],
+          "featured": false
+        }
+      ],
+      "commission_disclaimer": "A Olla Trade não garante ganhos. Os valores das comissões dependem da atividade elegível dos clientes indicados. As taxas específicas são acordadas durante o onboarding.",
+      "how_title": "Como Funciona",
+      "steps": [
+        {
+          "n": "01",
+          "t": "Candidatar-se Online",
+          "d": "Complete o formulário de candidatura de afiliado com seus dados, fonte de tráfego e informações sobre o mercado-alvo."
+        },
+        {
+          "n": "02",
+          "t": "Análise da Candidatura",
+          "d": "Nossa equipe de afiliados analisa sua candidatura em 2 a 3 dias úteis e entra em contato com os próximos passos."
+        },
+        {
+          "n": "03",
+          "t": "Receber Link de Rastreamento",
+          "d": "Após aprovação, você recebe um link exclusivo de afiliado e acesso ao portal de parceiro e materiais de marketing."
+        },
+        {
+          "n": "04",
+          "t": "Promover a Olla Trade",
+          "d": "Use seu link de rastreamento, banners e landing pages em seu site, redes sociais, e-mail ou publicidade paga."
+        },
+        {
+          "n": "05",
+          "t": "Acompanhar Desempenho",
+          "d": "Monitore cliques, cadastros, primeiros depósitos e traders ativos em tempo real pelo seu painel de afiliado."
+        },
+        {
+          "n": "06",
+          "t": "Ganhar Comissões",
+          "d": "As comissões de clientes indicados elegíveis são calculadas de forma transparente e processadas em um ciclo regular de pagamento."
+        }
+      ],
+      "materials_title": "Materiais de Marketing",
+      "materials_subtitle": "Uma biblioteca completa de materiais profissionais e em conformidade — pré-aprovados para uso imediato.",
+      "materials": [
+        {
+          "title": "Banners de Display",
+          "desc": "Banners padrão IAB em mais de 10 tamanhos, incluindo leaderboard, retângulo, skyscraper e formatos mobile."
+        },
+        {
+          "title": "Landing Pages",
+          "desc": "Landing pages pré-construídas e otimizadas para conversão, vinculadas diretamente ao seu ID de rastreamento."
+        },
+        {
+          "title": "Templates de E-mail",
+          "desc": "Templates de e-mail HTML para campanhas promocionais, bônus de depósito e mensagens baseadas em eventos."
+        },
+        {
+          "title": "Criativos para Redes Sociais",
+          "desc": "Gráficos prontos para uso no Facebook, Instagram, LinkedIn e outras plataformas."
+        },
+        {
+          "title": "Ativos de Marca",
+          "desc": "Arquivos oficiais de logotipo da Olla Trade, códigos de cores, diretrizes tipográficas e documentação de uso."
+        },
+        {
+          "title": "Textos Aprovados",
+          "desc": "Cópia publicitária pré-aprovada, em conformidade com os padrões da Olla Trade e diretrizes do setor."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quem pode participar do programa de afiliados da Olla Trade?",
+          "a": "O programa está aberto a pessoas físicas, empresas e profissionais de marketing digital que possam enviar tráfego de qualidade. Você deve ser capaz de indicar clientes elegíveis para abrir uma conta na Olla Trade (não provenientes de países restritos)."
+        },
+        {
+          "q": "Há algum custo para participar?",
+          "a": "Não. Participar do programa de afiliados da Olla Trade é completamente gratuito. Não há taxas de configuração ou cobranças mensais."
+        },
+        {
+          "q": "Como as comissões são calculadas?",
+          "a": "Os cálculos de comissão dependem do modelo acordado (CPA, Revenue Share ou Híbrido). As taxas específicas são confirmadas durante o processo de aprovação do afiliado e documentadas no seu contrato."
+        },
+        {
+          "q": "Há restrições sobre como posso promover a Olla Trade?",
+          "a": "Sim. Todas as promoções devem estar em conformidade com as diretrizes de marketing da Olla Trade e regulamentações publicitárias aplicáveis. Você não pode fazer afirmações falsas, garantir lucros ou usar práticas enganosas."
+        },
+        {
+          "q": "Posso direcionar clientes em qualquer país?",
+          "a": "Não. Você não pode direcionar residentes de países restritos (EUA, Rússia, Myanmar, Emirados Árabes Unidos, Canadá, Israel, Nova Zelândia, Irã, Coreia do Norte). Direcionar jurisdições restritas pode resultar no encerramento da conta de afiliado."
+        }
+      ],
+      "cta_title": "Comece a Ganhar com a Olla Trade",
+      "cta_subtitle": "Candidate-se ao nosso programa de afiliados e comece a ganhar comissões de clientes indicados elegíveis.",
+      "cta_label_apply": "Candidatar-se como Parceiro",
+      "cta_label_contact": "Contatar Equipe de Afiliados",
+      "compliance_text": "Os afiliados não devem alegar ganhos garantidos, retornos garantidos ou trading sem risco. Todo o marketing deve incluir avisos de risco adequados. Os afiliados não podem direcionar residentes de países restritos."
     }
   },
   "legal": {
     "terms": {
-      "badge": "Legal",
-      "title": "Termos & Condições"
+      "badge": "Termos e Condições",
+      "title": "Termos e Condições",
+      "subtitle": "Leia estes Termos e Condições cuidadosamente antes de usar os serviços da Olla Trade. Ao registrar uma conta, você confirma sua aceitação destes Termos.",
+      "notice": "Ao abrir uma conta na Olla Trade, você confirma que leu, compreendeu e concordou com estes Termos e Condições. Última revisão: 2025.",
+      "toc_label": "Seções",
+      "company_details_title": "Dados da Empresa",
+      "company_details": [
+        "Olla Trade Ltd. · Incorporada em Anguilla · Registo Nº A000001849",
+        "Endereço Registrado: Grace Complex, The Valley, AI 2640, Anguilla"
+      ],
+      "sections": [
+        {
+          "id": "intro",
+          "title": "1. Introdução",
+          "content": "Estes Termos e Condições ('Termos') regem a relação entre a Olla Trade Ltd. ('a Empresa', 'nós') e o cliente ('você', 'o Cliente') e fazem parte integrante do Contrato do Cliente. Ao registrar uma conta na Olla Trade, você confirma que leu, compreendeu e concordou em ficar vinculado por estes Termos. A Olla Trade Ltd. está incorporada em Anguilla (Registo Nº A000001849) como uma Empresa Internacional, fornecendo serviços de trading de Forex e CFDs através da plataforma MetaTrader 4."
+        },
+        {
+          "id": "eligibility",
+          "title": "2. Elegibilidade",
+          "content": "Você deve ter pelo menos 18 anos de idade e ter plena capacidade legal para celebrar acordos vinculativos. Você confirma que não é residente de uma jurisdição onde o trading de Forex ou CFDs é proibido, incluindo, mas não se limitando a: Estados Unidos, Rússia, Myanmar, Emirados Árabes Unidos, Canadá, Israel, Nova Zelândia, Irã e Coreia do Norte (RPDC). A Empresa reserva-se o direito de recusar candidaturas de clientes em qualquer jurisdição a seu critério."
+        },
+        {
+          "id": "account",
+          "title": "3. Registro de Conta",
+          "content": "Você deve fornecer informações pessoais completas, precisas e atualizadas durante o registro. É necessário concluir a verificação de identidade (KYC/AML) antes que sua conta possa ser totalmente ativada. Você é responsável pela manutenção da confidencialidade das suas credenciais de conta. Você deve nos notificar imediatamente sobre qualquer acesso não autorizado à sua conta em info@ollatrade.com. Você não deve abrir mais de uma conta ao vivo por pessoa sem o consentimento prévio por escrito da Empresa."
+        },
+        {
+          "id": "services",
+          "title": "4. Serviços",
+          "content": "A Olla Trade fornece serviços de trading de execução exclusiva em Forex, Metais, Índices, Energias, Criptomoedas e Ações através da plataforma MetaTrader 4. Também fornecemos informações de mercado, processamento de depósitos e saques e acesso à plataforma. A Olla Trade não fornece aconselhamento de investimento, gestão de carteiras ou recomendações financeiras personalizadas. Nada no nosso site constitui uma solicitação para operar."
+        },
+        {
+          "id": "risk",
+          "title": "5. Aviso de Risco",
+          "content": "O trading de Forex e CFDs é altamente especulativo e envolve um nível significativo de risco. É possível perder todo ou uma parte substancial do seu capital investido. Você deve operar apenas com fundos que pode perder. A Empresa não garante lucros ou a preservação do capital. Leia nossas Divulgações de Risco na íntegra antes de operar."
+        },
+        {
+          "id": "deposits",
+          "title": "6. Depósitos e Saques",
+          "content": "Os depósitos são processados de acordo com nossa política de Financiamento e Saques. Os saques estão sujeitos à verificação KYC concluída, situação da conta e revisão de conformidade. A Olla Trade não cobra suas próprias taxas em depósitos ou saques; no entanto, taxas de rede de terceiros podem ser aplicadas para transações em cripto. Os prazos de processamento são estimativas e não podem ser garantidos. Consulte nossas Condições de Saque para detalhes completos."
+        },
+        {
+          "id": "prohibited",
+          "title": "7. Atividades Proibidas",
+          "content": "As seguintes atividades são estritamente proibidas: lavagem de dinheiro ou financiamento do terrorismo; fraude ou deturpação; manipulação de mercado ou estratégias de trading abusivas; fornecimento de documentação falsa ou enganosa; abertura de contas em nome de terceiros sem divulgação; uso de estratégias automatizadas que exploram imperfeições de latência ou preços; e qualquer atividade que viole leis ou regulamentos aplicáveis."
+        },
+        {
+          "id": "termination",
+          "title": "8. Encerramento de Conta",
+          "content": "A Olla Trade reserva-se o direito de suspender ou encerrar contas de clientes a qualquer momento e sem aviso prévio em circunstâncias incluindo: violação destes Termos; atividade suspeita ou fraude; falha em completar ou manter os requisitos KYC; não conformidade com regulamentos aplicáveis; ou qualquer outra razão a critério exclusivo da Empresa. No encerramento, qualquer solicitação de saque pendente será processada de acordo com as políticas aplicáveis."
+        },
+        {
+          "id": "liability",
+          "title": "9. Limitação de Responsabilidade",
+          "content": "A Olla Trade não será responsável por quaisquer perdas decorrentes de: eventos de força maior; falhas de serviços de terceiros fora do nosso controle; volatilidade ou lacunas de mercado; erros do cliente na colocação de ordens; ou perdas resultantes de problemas técnicos com conectividade à internet ou dispositivos do cliente. A responsabilidade total da Empresa perante qualquer cliente não excederá os fundos mantidos na conta desse cliente no momento em que a responsabilidade surgiu."
+        },
+        {
+          "id": "governing",
+          "title": "10. Lei Aplicável",
+          "content": "Estes Termos são regidos pelas leis de Anguilla. Quaisquer disputas estarão sujeitas à jurisdição dos tribunais de Anguilla. A Empresa incentiva os clientes a usar nosso processo formal de reclamações antes de iniciar procedimentos legais. Contato: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla."
+        }
+      ]
     },
     "privacy": {
-      "badge": "Legal",
-      "title": "Política de Privacidade"
+      "badge": "Privacidade",
+      "title": "Política de Privacidade",
+      "subtitle": "Sua privacidade é importante para nós. Esta política explica como a Olla Trade coleta, usa e protege suas informações pessoais.",
+      "toc_label": "Conteúdo",
+      "sections": [
+        {
+          "id": "intro",
+          "title": "1. Introdução",
+          "content": "A Olla Trade Ltd. ('nós', 'Empresa') está comprometida em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e compartilhamos suas informações pessoais quando você usa nossos serviços. Esta política aplica-se a todos os clientes, visitantes e usuários dos serviços da Olla Trade. Ao usar nossos serviços, você consente com as práticas de dados descritas nesta política."
+        },
+        {
+          "id": "collect",
+          "title": "2. Informações que Coletamos",
+          "content": "Coletamos informações pessoais incluindo: nome completo e data de nascimento; dados de contato (endereço de e-mail, número de telefone, endereço residencial); documentos de identidade emitidos pelo governo e comprovante de endereço para fins KYC/AML; informações financeiras incluindo atividade de conta e histórico de transações; dados de trading e preferências de conta; informações de dispositivo e navegador quando você acessa nossas plataformas; e quaisquer comunicações que você nos envie."
+        },
+        {
+          "id": "use",
+          "title": "3. Como Usamos Suas Informações",
+          "content": "Usamos suas informações pessoais para: verificar sua identidade e cumprir obrigações regulatórias KYC/AML; criar e gerenciar sua conta de trading; processar depósitos, saques e transações de conta; fornecer suporte ao cliente e responder a consultas; enviar comunicações relacionadas à conta; cumprir requisitos legais e regulatórios; detectar e prevenir fraudes, lavagem de dinheiro e outros crimes financeiros; e melhorar nossos serviços e plataforma."
+        },
+        {
+          "id": "sharing",
+          "title": "4. Compartilhamento de Informações",
+          "content": "Não vendemos seus dados pessoais a terceiros. Podemos compartilhar suas informações com: provedores de serviços de verificação de identidade para conformidade KYC/AML; processadores de pagamento para lidar com transações de depósito e saque; autoridades regulatórias e aplicação da lei quando exigido pela lei aplicável; consultores jurídicos e profissionais conforme necessário; e provedores de tecnologia que auxiliam na operação da nossa plataforma (sujeitos a obrigações estritas de confidencialidade)."
+        },
+        {
+          "id": "security",
+          "title": "5. Segurança de Dados",
+          "content": "Implementamos medidas de segurança padrão do setor para proteger suas informações pessoais, incluindo: criptografia SSL/TLS para transmissão de dados; armazenamento de dados seguro e com controle de acesso; controles de acesso baseados em função limitando o acesso a dados apenas ao pessoal autorizado; avaliações de segurança regulares e auditorias; e procedimentos de resposta a incidentes. Apesar dessas medidas, nenhum método de transmissão ou armazenamento de dados é 100% seguro."
+        },
+        {
+          "id": "retention",
+          "title": "6. Retenção de Dados",
+          "content": "Retemos seus dados pessoais enquanto sua conta estiver ativa e por um mínimo de 5 anos após o encerramento da conta, conforme exigido pelas regulamentações aplicáveis de combate à lavagem de dinheiro. Os registros de transações são retidos conforme exigido pelas regulamentações financeiras. Você pode solicitar a exclusão de certos dados sujeitos aos requisitos legais de retenção."
+        },
+        {
+          "id": "rights",
+          "title": "7. Seus Direitos",
+          "content": "Dependendo da sua jurisdição, você pode ter os seguintes direitos: o direito de acessar os dados pessoais que mantemos sobre você; o direito de corrigir dados imprecisos ou incompletos; o direito de solicitar a exclusão dos seus dados (sujeito a obrigações legais); o direito de se opor a certas atividades de processamento; e o direito à portabilidade de dados. Para exercer esses direitos, entre em contato conosco em info@ollatrade.com."
+        },
+        {
+          "id": "cookies",
+          "title": "8. Cookies",
+          "content": "Nosso site usa cookies e tecnologias de rastreamento similares para melhorar sua experiência de navegação, analisar o tráfego do site e personalizar o conteúdo. Cookies essenciais são necessários para o funcionamento do site. Cookies de análise e preferência podem ser desativados através das configurações do navegador. Ao continuar usando nosso site, você consente com o uso de cookies conforme descrito na nossa Política de Cookies."
+        },
+        {
+          "id": "contact",
+          "title": "9. Contato",
+          "content": "Para consultas relacionadas à privacidade, solicitações de acesso a dados ou para exercer seus direitos de proteção de dados, entre em contato: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla. Buscamos responder a todas as solicitações relacionadas à privacidade dentro de 30 dias."
+        }
+      ]
     },
     "risk": {
-      "badge": "Importante — Leia com Atenção",
+      "badge": "Divulgações de Risco",
       "title": "Divulgações de Risco",
-      "subtitle": "O trading de instrumentos financeiros envolve riscos significativos. Leia e compreenda as seguintes divulgações de risco na íntegra antes de abrir uma conta ao vivo.",
+      "subtitle": "Informações importantes sobre os riscos de trading de Forex, CFDs e outros instrumentos financeiros alavancados. Por favor, leia com atenção.",
       "warning": "AVISO DE INVESTIMENTO DE ALTO RISCO",
-      "warning_text": "O trading de CFD e Forex envolve um alto grau de risco. É possível perder todo o seu capital investido. Você só deve operar com dinheiro que pode se dar ao luxo de perder.",
-      "checklist_label": "Autoavaliação",
-      "checklist_title": "Antes de Começar a Operar"
+      "warning_text": "O trading de Forex, CFDs e outros instrumentos financeiros alavancados carrega um alto nível de risco e pode não ser adequado para todos os investidores. É possível perder todo o seu capital investido. Você não deve investir dinheiro que não pode perder. Certifique-se de compreender totalmente os riscos envolvidos e busque aconselhamento independente se necessário. O desempenho passado não é indicativo de resultados futuros.",
+      "checklist_label": "Lista de Gestão de Risco",
+      "checklist_title": "Princípios Essenciais de Gestão de Risco",
+      "toc_label": "Categorias de Risco",
+      "risk_categories": [
+        {
+          "id": "general",
+          "title": "Risco Geral de Trading",
+          "color": "border-red-200 bg-red-50",
+          "tc": "text-red-800",
+          "desc": "O trading de instrumentos financeiros, incluindo Forex, CFDs, metais, índices e criptomoedas, envolve um alto nível de risco e pode não ser adequado para todos os investidores. É possível perder todo o seu capital investido, ou mais do que seu depósito inicial em alguns casos. Você deve operar apenas com fundos que pode perder completamente. O desempenho passado de qualquer instrumento financeiro não é indicativo de resultados futuros."
+        },
+        {
+          "id": "leverage",
+          "title": "Risco de Alavancagem e Margem",
+          "color": "border-orange-200 bg-orange-50",
+          "tc": "text-orange-800",
+          "desc": "O uso de alavancagem magnifica tanto os ganhos potenciais quanto as perdas potenciais. O trading alavancado significa que um movimento relativamente pequeno no ativo subjacente pode resultar em um impacto desproporcionalmente grande no saldo da sua conta. Em níveis mais altos de alavancagem, um pequeno movimento adverso de preço pode eliminar toda a sua margem para uma posição."
+        },
+        {
+          "id": "volatility",
+          "title": "Risco de Volatilidade de Mercado",
+          "color": "border-amber-200 bg-amber-50",
+          "tc": "text-amber-800",
+          "desc": "Os mercados financeiros podem experimentar movimentos de preços repentinos, rápidos e significativos devido a divulgações de dados econômicos, eventos geopolíticos, decisões de bancos centrais e outros fatores. Durante esses períodos voláteis, as perdas podem se acumular rápida e significativamente. A alta volatilidade também pode dificultar a saída de uma posição pelo preço desejado."
+        },
+        {
+          "id": "slippage",
+          "title": "Risco de Derrapagem e Execução",
+          "color": "border-amber-200 bg-amber-50",
+          "tc": "text-amber-800",
+          "desc": "A derrapagem ocorre quando uma ordem é executada a um preço diferente do preço solicitado. Isso pode acontecer durante períodos de alta volatilidade, em torno de grandes eventos de notícias, ou quando a liquidez do mercado é baixa. As ordens de stop-loss não garantem execução ao preço especificado — em mercados de movimento rápido, a execução pode ocorrer a um preço significativamente diferente."
+        },
+        {
+          "id": "liquidity",
+          "title": "Risco de Liquidez",
+          "color": "border-yellow-200 bg-yellow-50",
+          "tc": "text-yellow-800",
+          "desc": "Alguns instrumentos podem ter liquidez limitada em determinados momentos — especialmente fora do horário regular de mercado, em torno de feriados, ou durante eventos de estresse de mercado. A baixa liquidez pode resultar em spreads mais amplos, dificuldade em entrar ou sair de posições pelos preços desejados e maior risco de derrapagem."
+        },
+        {
+          "id": "gap",
+          "title": "Risco de Gap de Mercado",
+          "color": "border-yellow-200 bg-yellow-50",
+          "tc": "text-yellow-800",
+          "desc": "Os mercados podem ter 'gaps' — ou seja, os preços saltam de um nível para outro sem negociar pelos preços intermediários. Isso tipicamente ocorre quando os mercados reabrem após fechamentos (fins de semana, feriados) para refletir notícias ou eventos ocorridos durante o fechamento. As ordens de stop-loss podem ser executadas a preços significativamente diferentes dos especificados durante um evento de gap."
+        },
+        {
+          "id": "technical",
+          "title": "Risco Técnico e da Plataforma",
+          "color": "border-blue-200 bg-blue-50",
+          "tc": "text-blue-800",
+          "desc": "O trading é realizado por meio de plataformas eletrônicas e conectividade à internet. Falhas técnicas, incluindo quedas de internet, tempo de inatividade da plataforma, falhas de hardware e problemas de software, podem impedir que você acesse sua conta, monitore posições ou execute ordens. A Olla Trade não pode garantir disponibilidade contínua da plataforma."
+        },
+        {
+          "id": "crypto",
+          "title": "Risco de CFD em Criptomoedas",
+          "color": "border-purple-200 bg-purple-50",
+          "tc": "text-purple-800",
+          "desc": "Os mercados de criptomoedas são particularmente voláteis, amplamente não regulamentados e podem experimentar movimentos de preços extremos em períodos muito curtos. O valor das criptomoedas pode ser altamente sensível a notícias regulatórias, desenvolvimentos tecnológicos, sentimento de mercado e condições de liquidez. O trading de CFDs em cripto é especulativo e não é adequado para a maioria dos investidores de varejo."
+        }
+      ],
+      "checklist_items": [
+        "Opere apenas com fundos que você pode perder na totalidade",
+        "Compreenda a alavancagem e como ela amplifica tanto lucros quanto perdas",
+        "Use ordens de stop-loss em todas as posições — e certifique-se de entender suas limitações",
+        "Revise o nível de margem da sua conta regularmente e aja antes que ocorram chamadas de margem",
+        "Não opere em torno de grandes eventos de notícias sem compreender o risco de volatilidade",
+        "Diversifique entre instrumentos em vez de concentrar o risco em posições únicas",
+        "Nunca opere com base em dicas, rumores ou afirmações não verificadas de redes sociais",
+        "Mantenha registros de todas as suas operações para revisão de desempenho e fins fiscais"
+      ],
+      "faq_title": "Perguntas Frequentes — Riscos",
+      "faq_subtitle": "Perguntas comuns sobre riscos de trading e gestão de risco.",
+      "cta_title": "Compreenda os Riscos Antes de Operar",
+      "cta_subtitle": "Leia nossas Divulgações de Risco completas e opere apenas com fundos que você pode perder."
     },
     "kyc": {
-      "badge": "Conformidade",
-      "title": "Política KYC / AML"
+      "badge": "KYC / AML",
+      "title": "Política KYC / AML",
+      "subtitle": "A Olla Trade está comprometida em prevenir crimes financeiros e cumprir as regulamentações aplicáveis de Conheça Seu Cliente (KYC) e Combate à Lavagem de Dinheiro (AML).",
+      "toc_label": "Conteúdo",
+      "faq_title": "Perguntas Frequentes — KYC/AML",
+      "sections_nav": [
+        {
+          "id": "why",
+          "title": "Por Que KYC/AML?"
+        },
+        {
+          "id": "identity",
+          "title": "Verificação de Identidade"
+        },
+        {
+          "id": "address",
+          "title": "Comprovante de Endereço"
+        },
+        {
+          "id": "aml",
+          "title": "Conformidade AML"
+        },
+        {
+          "id": "source",
+          "title": "Origem dos Fundos"
+        },
+        {
+          "id": "monitoring",
+          "title": "Monitoramento Contínuo"
+        },
+        {
+          "id": "security",
+          "title": "Segurança de Dados"
+        }
+      ],
+      "why_title": "Por Que a Conformidade KYC e AML É Necessária",
+      "why_p1": "O Know Your Customer (KYC) e o Combate à Lavagem de Dinheiro (AML) são requisitos legais e regulatórios para todas as empresas de serviços financeiros. A Olla Trade está comprometida em impedir que seus serviços sejam usados para crimes financeiros, lavagem de dinheiro, financiamento do terrorismo ou fraude.",
+      "why_p2": "Os procedimentos KYC nos permitem verificar as identidades dos clientes e garantir que apenas clientes legítimos possam acessar nossos serviços. Os procedimentos AML nos permitem monitorar atividades incomuns que possam indicar crimes financeiros. Esses processos protegem nossos clientes, nosso negócio e a integridade do sistema financeiro.",
+      "identity_title": "Processo de Verificação de Identidade",
+      "identity_intro": "Todos os clientes são obrigados a concluir a verificação de identidade antes que uma conta ao vivo possa ser ativada ou saques processados. Os seguintes documentos são aceitos:",
+      "identity_docs": [
+        [
+          "Passaporte Válido",
+          "Passaporte emitido pelo governo, deve estar dentro da validade"
+        ],
+        [
+          "Carteira de Identidade",
+          "Carteira de identidade nacional emitida pelo governo, ambos os lados necessários"
+        ],
+        [
+          "Carteira de Motorista",
+          "Carteira de motorista emitida pelo governo com foto, ambos os lados necessários"
+        ]
+      ],
+      "identity_note": "Os documentos devem ser claros, totalmente visíveis e dentro da validade. Documentos expirados não serão aceitos. Todos os quatro cantos do documento devem estar visíveis na imagem.",
+      "address_title": "Requisitos de Comprovante de Endereço",
+      "address_intro": "Além da verificação de identidade, os clientes devem fornecer comprovante de seu endereço residencial. Os documentos aceitos incluem:",
+      "address_docs": [
+        [
+          "Conta de Serviços",
+          "Conta de gás, eletricidade, água ou internet — emitida nos últimos 3 meses"
+        ],
+        [
+          "Extrato Bancário",
+          "Extrato oficial de banco ou instituição financeira — emitido em até 3 meses"
+        ],
+        [
+          "Carta Governamental",
+          "Correspondência oficial de um órgão governamental, autoridade fiscal ou similar — em até 3 meses"
+        ],
+        [
+          "Contrato de Aluguel",
+          "Contrato de aluguel oficialmente registrado mostrando seu endereço residencial"
+        ]
+      ],
+      "aml_title": "Visão Geral do Combate à Lavagem de Dinheiro (AML)",
+      "aml_intro": "A Olla Trade mantém um programa de conformidade AML projetado para detectar e prevenir lavagem de dinheiro e outros crimes financeiros. Nossas medidas AML incluem:",
+      "aml_items": [
+        "Devida Diligência do Cliente (DDC) para todos os novos clientes",
+        "Devida Diligência Aprimorada (DDA) para clientes ou transações de maior risco",
+        "Monitoramento de transações para padrões incomuns",
+        "Reporte de atividades suspeitas às autoridades relevantes quando exigido por lei",
+        "Treinamento contínuo da equipe sobre obrigações AML e sinais de alerta"
+      ],
+      "source_title": "Origem dos Fundos",
+      "source_p": "Para depósitos maiores ou onde nossa equipe de conformidade considerar adequado, a Olla Trade pode solicitar informações sobre a origem dos fundos sendo depositados. Os clientes podem ser solicitados a fornecer documentação demonstrando a origem legítima dos fundos (ex.: contracheques, contas empresariais, extratos de investimento). Esta é uma prática padrão em serviços financeiros regulamentados e foi projetada para prevenir lavagem de dinheiro. A não apresentação da documentação solicitada sobre a origem dos fundos pode resultar em restrições na conta.",
+      "monitoring_title": "Monitoramento Contínuo e Conformidade",
+      "monitoring_p": "A conformidade KYC e AML não é um processo único. A Olla Trade monitora contas e transações de forma contínua. Se atividade incomum for detectada, ou se nossa avaliação de risco mudar, podemos solicitar documentação adicional, restringir atividades da conta ou, em casos graves, encerrar uma conta e reportar às autoridades relevantes. Os clientes têm a obrigação de manter suas informações de conta atualizadas e nos notificar sobre quaisquer mudanças materiais em suas circunstâncias.",
+      "security_title": "Segurança de Dados e Privacidade",
+      "security_p1": "Todos os documentos e informações pessoais enviados para fins KYC são tratados de acordo com a Política de Privacidade da Olla Trade e as leis de proteção de dados aplicáveis. Os documentos são armazenados com segurança e acesso limitado ao pessoal de conformidade autorizado. Não compartilhamos suas informações pessoais com terceiros, exceto quando exigido por lei, regulamento ou para cumprir obrigações legais.",
+      "security_contact": "Para consultas relacionadas à privacidade, entre em contato conosco em"
     },
     "withdrawal": {
-      "badge": "Legal",
-      "title": "Condições de Retirada"
+      "badge": "Política",
+      "title": "Condições de Saque",
+      "subtitle": "Todos os termos e condições que regem as solicitações de saque da sua conta Olla Trade. Por favor, leia antes de enviar um saque.",
+      "toc_label": "Conteúdo",
+      "faq_title": "Perguntas Frequentes — Saques",
+      "sections_nav": [
+        {
+          "id": "requirements",
+          "title": "Requisitos"
+        },
+        {
+          "id": "process",
+          "title": "Processo de Saque"
+        },
+        {
+          "id": "timeframes",
+          "title": "Prazos de Processamento"
+        },
+        {
+          "id": "crypto",
+          "title": "Saques em Cripto"
+        },
+        {
+          "id": "fees",
+          "title": "Taxas e Custos"
+        },
+        {
+          "id": "security",
+          "title": "Revisão de Segurança"
+        },
+        {
+          "id": "bonus",
+          "title": "Restrições de Bônus"
+        }
+      ],
+      "req_title": "Requisitos de Saque",
+      "req_intro": "Os seguintes requisitos devem ser atendidos antes que uma solicitação de saque possa ser processada:",
+      "req_items": [
+        "Verificação completa de conta KYC/AML deve ser concluída (identidade + comprovante de endereço)",
+        "A conta deve estar em boa situação, sem problemas de conformidade pendentes",
+        "O método de saque deve corresponder a um método aprovado na sua conta",
+        "O valor do saque deve atender aos limites mínimos de saque aplicáveis",
+        "Posições abertas devem ser revisadas antes de solicitar um saque grande que possa afetar seu nível de margem"
+      ],
+      "process_title": "Processo de Saque",
+      "process_steps": [
+        [
+          "01",
+          "Faça login no portal do cliente",
+          "Acesse o portal de cliente da Olla Trade em direct.ollatrade.com usando suas credenciais."
+        ],
+        [
+          "02",
+          "Navegue até Saques",
+          "Vá para a seção de Financiamento e Saques e selecione 'Sacar'."
+        ],
+        [
+          "03",
+          "Selecione o método e insira o valor",
+          "Escolha o método de saque, insira o valor e forneça o endereço de carteira ou dados bancários necessários."
+        ],
+        [
+          "04",
+          "Envie sua solicitação",
+          "Revise todos os detalhes cuidadosamente e envie sua solicitação de saque. Você deve receber uma notificação de confirmação."
+        ],
+        [
+          "05",
+          "Processamento e pagamento",
+          "Nossa equipe revisará e processará sua solicitação em 24 a 48 horas úteis. O prazo de processamento do pagamento depende do método utilizado."
+        ]
+      ],
+      "times_title": "Prazos de Processamento",
+      "times_note": "Os prazos de processamento são apenas estimativas e podem variar. Os prazos de processamento não podem ser garantidos.",
+      "times_headers": [
+        "Método",
+        "Processamento Olla Trade",
+        "Tempo de Rede/Banco",
+        "Observações"
+      ],
+      "times_rows": [
+        [
+          "USDT TRC20",
+          "24–48 horas úteis",
+          "~1–5 min",
+          "Sujeito à confirmação da rede"
+        ],
+        [
+          "USDT ERC20",
+          "24–48 horas úteis",
+          "~5–30 min",
+          "Sujeito à rede ETH"
+        ],
+        [
+          "Bitcoin (BTC)",
+          "24–48 horas úteis",
+          "~20–60 min",
+          "Sujeito à rede BTC"
+        ],
+        [
+          "Ethereum (ETH)",
+          "24–48 horas úteis",
+          "~5–30 min",
+          "Sujeito à rede ETH"
+        ]
+      ],
+      "crypto_title": "Informações sobre Saque em Criptomoeda",
+      "crypto_intro": "Os saques em criptomoeda são processados para o endereço de carteira fornecido. Por favor, certifique-se de:",
+      "crypto_items": [
+        "Sempre verifique o endereço da carteira antes de enviar — transações em cripto são irreversíveis uma vez transmitidas à rede",
+        "Certifique-se de fornecer a rede correta (ex.: TRC20 para USDT TRC20 — enviar para a rede errada pode resultar em perda permanente de fundos)",
+        "A Olla Trade não é responsável por fundos enviados para endereços incorretos ou redes erradas",
+        "Os tempos de confirmação da rede blockchain estão fora do controle da Olla Trade e podem variar significativamente com base no congestionamento da rede",
+        "Valores mínimos de saque podem se aplicar — verifique seu portal de cliente para os limites atuais"
+      ],
+      "fees_title": "Taxas e Custos",
+      "fees_intro": "A Olla Trade não cobra suas próprias taxas de saque. No entanto, os seguintes custos externos podem se aplicar:",
+      "fees_items": [
+        {
+          "title": "Taxas de Rede Blockchain",
+          "desc": "Os saques em cripto estão sujeitos a taxas de rede (taxas de gas, taxas de minerador) cobradas pela rede blockchain. Essas taxas podem ser deduzidas do seu valor de saque. As taxas variam por rede e pelo congestionamento atual."
+        },
+        {
+          "title": "Taxas de Provedores Terceiros",
+          "desc": "Onde aplicável, provedores de pagamento terceiros podem cobrar suas próprias taxas de processamento. Estas estão fora do controle da Olla Trade. Verifique seu portal de cliente para quaisquer taxas aplicáveis antes de enviar."
+        },
+        {
+          "title": "Conversão de Moeda",
+          "desc": "Se for necessária uma conversão de moeda (ex.: a moeda da conta difere da moeda de saque), pode ser aplicada uma taxa de câmbio. Você será informado sobre quaisquer taxas de conversão aplicáveis no seu portal de cliente."
+        }
+      ],
+      "security_title": "Revisão de Segurança",
+      "security_p": "A Olla Trade conduz verificações de segurança em todas as solicitações de saque. Para sua proteção, podemos solicitar verificação adicional para saques maiores ou saques para novos endereços de carteira. Todas as verificações de segurança são realizadas dentro do período de processamento padrão. Se forem necessárias informações adicionais, nossa equipe de conformidade entrará em contato diretamente com você.",
+      "bonus_title": "Saques com Bônus Ativo",
+      "bonus_p": "Se você recebeu crédito de trading promocional (bônus), termos adicionais se aplicam às suas solicitações de saque. O crédito de trading promocional não pode ser sacado diretamente em nenhuma circunstância. Os lucros gerados pela atividade de trading podem ser sacáveis, sujeitos aos termos e condições específicos da promoção. Certifique-se de ler os termos completos de qualquer promoção antes de participar. Entre em contato com o suporte em info@ollatrade.com se tiver dúvidas sobre como um bônus ativo afeta sua elegibilidade para saque."
     },
     "execution": {
-      "badge": "Documento Legal",
-      "title": "Política de Execução de Ordens"
+      "badge": "Política de Execução",
+      "title": "Política de Execução de Ordens",
+      "subtitle": "Esta política descreve como a Olla Trade Ltd. executa ordens de clientes, os fatores considerados e as obrigações tanto da Empresa quanto do cliente.",
+      "effective_label": "Vigência:",
+      "reviewed_label": "Última Revisão:",
+      "crosslink_text": "Para um guia prático sobre execução, consulte a página de Informações de Execução.",
+      "crosslink_link": "Ver Informações de Execução →",
+      "toc_label": "Seções",
+      "sections_list": [
+        "Finalidade",
+        "Âmbito",
+        "Abordagem de Execução de Ordens",
+        "Fatores de Execução",
+        "Preços e Spreads",
+        "Liquidez e Condições de Mercado",
+        "Derrapagem",
+        "Requotes",
+        "Tipos de Ordem Suportados",
+        "Instruções Específicas do Cliente",
+        "Perturbação do Mercado",
+        "Conflitos de Interesse",
+        "Responsabilidade do Cliente",
+        "Monitoramento e Revisão",
+        "Divulgação de Risco",
+        "Informações de Contato"
+      ],
+      "home_crumb": "Início",
+      "legal_crumb": "Legal",
+      "hero_badge": "Documento Legal",
+      "hero_title": "Política de Execução de Ordens"
     }
   },
   "faq": {

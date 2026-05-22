@@ -5,140 +5,170 @@ import CTASection from "../../../components/CTASection";
 import { IconShield, IconActivity, IconRefresh, IconDroplet, IconServer, IconInfo, IconBarChart } from "../../../components/ui/Icons";
 import { riskFaqs } from "../../../data/extra-faqs";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { ComponentType } from "react";
 
 export const metadata: Metadata = {
- title: "Risk Disclosures",
- description: "Important risk disclosures for trading Forex, CFDs, and other financial instruments with Olla Trade. Please read carefully before opening a live account.",
+  title: "Risk Disclosures",
+  description: "Important risk disclosures for trading Forex, CFDs, and other financial instruments with Olla Trade. Please read carefully before opening a live account.",
 };
 
-const riskCategories = [
- { Icon: IconInfo, id:"general", title: "General Trading Risk", color:"border-red-200 bg-red-50", tc:"text-red-800", desc:"Trading financial instruments including Forex, CFDs, metals, indices, and cryptocurrencies involves a high level of risk and may not be suitable for all investors. It is possible to lose all of your invested capital, or more than your initial deposit in some cases. You should only trade with funds you can afford to lose entirely. Past performance of any financial instrument is not indicative of future results and no forecasts of future performance should be relied upon." },
- { Icon: IconBarChart, id:"leverage", title: "Leverage and Margin Risk", color:"border-orange-200 bg-orange-50", tc:"text-orange-800", desc:"The use of leverage magnifies both potential gains and potential losses. Leveraged trading means a relatively small movement in the underlying asset can result in a disproportionately large impact on your account balance. At higher leverage levels, a small adverse price movement can eliminate your entire margin for a position. You must understand how leverage works and manage your exposure carefully." },
- { Icon: IconActivity, id:"volatility", title: "Market Volatility Risk", color:"border-amber-200 bg-amber-50", tc:"text-amber-800", desc:"Financial markets can experience sudden, rapid, and significant price movements due to economic data releases, geopolitical events, central bank decisions, and other factors. During these volatile periods, losses can accumulate quickly and significantly. High volatility may also make it difficult to exit a position at your desired price." },
- { Icon: IconRefresh, id:"slippage", title: "Slippage and Execution Risk", color:"border-amber-200 bg-amber-50", tc:"text-amber-800", desc:"Slippage occurs when an order is executed at a price different from the price requested. This can happen during periods of high volatility, around major news events, or when market liquidity is low. Stop-loss orders do not guarantee execution at the specified price — in fast-moving markets, execution may occur at a significantly different price." },
- { Icon: IconDroplet, id:"liquidity", title: "Liquidity Risk", color:"border-yellow-200 bg-yellow-50", tc:"text-yellow-800", desc:"Some instruments may have limited liquidity at certain times — particularly outside regular market hours, around public holidays, or during market stress events. Low liquidity can result in wider spreads, difficulty entering or exiting positions at desired prices, and increased slippage. This risk is heightened for less commonly traded instruments." },
- { Icon: IconBarChart, id:"gap", title: "Market Gap Risk", color:"border-yellow-200 bg-yellow-50", tc:"text-yellow-800", desc:"Markets can 'gap' — meaning prices jump from one level to another without trading through intermediate prices. This typically occurs when markets reopen after closures (weekends, public holidays) to reflect news or events that occurred during the closure. Stop-loss orders may be executed at significantly different prices than specified during a gap event." },
- { Icon: IconServer, id:"technical", title: "Technical and Platform Risk", color:"border-blue-200 bg-blue-50", tc:"text-blue-800", desc:"Trading is conducted via electronic platforms and internet connectivity. Technical failures including internet outages, platform downtime, hardware failures, and software issues can prevent you from accessing your account, monitoring positions, or executing orders. Olla Trade cannot guarantee continuous platform availability and is not responsible for losses resulting from technical issues outside our control." },
- { Icon: IconActivity, id:"crypto", title: "Cryptocurrency CFD Risk", color:"border-purple-200 bg-purple-50", tc:"text-purple-800", desc:"Cryptocurrency markets are particularly volatile, largely unregulated, and can experience extreme price movements within very short periods. The value of cryptocurrencies can be highly sensitive to regulatory news, technological developments, market sentiment, and liquidity conditions. Crypto CFD trading is speculative and not appropriate for most retail investors. Only trade crypto CFDs with funds you can fully afford to lose." },
-];
-
-const sections = [
- { id: "general", title: "General Risk" },
- { id: "leverage", title: "Leverage Risk" },
- { id: "volatility", title: "Volatility Risk" },
- { id: "slippage", title: "Execution Risk" },
- { id: "liquidity", title: "Liquidity Risk" },
- { id: "gap", title: "Market Gap Risk" },
- { id: "technical", title: "Technical Risk" },
- { id: "crypto", title: "Crypto CFD Risk" },
-];
+const RISK_ICONS: Record<string, ComponentType<{ className?: string }>> = {
+  general: IconInfo, leverage: IconBarChart, volatility: IconActivity,
+  slippage: IconRefresh, liquidity: IconDroplet, gap: IconBarChart,
+  technical: IconServer, crypto: IconActivity,
+};
 
 export function generateStaticParams() {
- return [{ locale: "en" }, { locale: "pt" }];
+  return [{ locale: "en" }, { locale: "pt" }];
 }
 
 export default async function RiskDisclosuresPage({ params }: { params: Promise<{ locale: string }> }) {
- const { locale } = await params;
- setRequestLocale(locale);
- const t = await getTranslations({ locale, namespace: "legal.risk" });
- return (
- <>
- <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")} breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Risk Disclosures" }]} />
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "legal.risk" });
 
- {/* High-risk banner */}
- <section className="py-8 bg-[#F5F7FA]">
- <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="border-2 border-red-400 bg-red-50 rounded-2xl p-6 text-center">
- <div className="text-[15px] font-extrabold text-red-800 mb-2">HIGH RISK INVESTMENT WARNING</div>
- <p className="text-[13px] text-red-700 leading-relaxed max-w-2xl mx-auto">CFD and Forex trading involves a high degree of risk. <strong>It is possible to lose all of your invested capital.</strong> You should only trade with money you can afford to lose. Ensure you fully understand the risks involved and seek independent financial advice if necessary.</p>
- </div>
- </div>
- </section>
+  const riskCategories = t.raw("risk_categories") as { id: string; title: string; color: string; tc: string; desc: string }[];
+  const checklistItems = t.raw("checklist_items") as string[];
 
- {/* Risk categories with TOC */}
- <section className="py-16 bg-white">
- <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="grid lg:grid-cols-[240px_1fr] gap-12 items-start">
- {/* Sticky TOC */}
- <div className="hidden lg:block sticky top-24">
- <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5">
- <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Risk Categories</div>
- <nav className="space-y-0.5">
- {sections.map(s => (
- <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-white transition-colors">{s.title}</a>
- ))}
- </nav>
- </div>
- </div>
- {/* Content */}
- <div className="space-y-5">
- {riskCategories.map(({ Icon, id, title, color, tc, desc }) => (
- <div key={id} id={id} className={`border rounded-2xl p-6 ${color}`}>
- <div className="flex items-center gap-3 mb-3">
- <Icon className={`w-5 h-5 flex-shrink-0 ${tc}`} />
- <h3 className={`text-[15px] font-bold ${tc}`}>{title}</h3>
- </div>
- <p className={`text-[13px] leading-relaxed ${tc.replace("800","700").replace("300","200/70")}`}>{desc}</p>
- </div>
- ))}
- </div>
- </div>
- </div>
- </section>
+  const selfCheckQA = locale === "pt" ? [
+    { q: "Você entende como os CFDs e a alavancagem funcionam?",         warn: "Se não: estude nossas páginas de Condições de Trading e Informações de Execução antes de prosseguir." },
+    { q: "Você pode perder todo o dinheiro que planeja investir?",        warn: "Se não: não opere. CFDs carregam risco de perda total. Nunca opere com fundos essenciais." },
+    { q: "Você entende que desempenho passado não indica resultados futuros?", warn: "Se não: nenhuma estratégia, sinal ou EA garante lucros futuros." },
+    { q: "Você tem um plano de gestão de risco escrito (stop losses, dimensionamento)?", warn: "Se não: desenvolva um antes de operar ao vivo. Trading indisciplinado acelera perdas." },
+    { q: "Você está operando com fundos que pode manter investidos a médio prazo?", warn: "Se não: pressão financeira de curto prazo leva a decisões emocionais e de alto risco." },
+    { q: "Você entende o impacto das taxas de swap overnight em posições abertas?", warn: "Se não: posições overnight carregam custos de financiamento diários que afetam o P&L." },
+  ] : [
+    { q: "Do you understand how CFDs and leverage work?",                warn: "If not: study our Trading Conditions and Execution Information pages before proceeding." },
+    { q: "Can you afford to lose all of the money you plan to trade?",  warn: "If no: do not trade. CFDs carry risk of total loss. Never trade with essential funds." },
+    { q: "Do you understand that past performance is not indicative of future results?", warn: "If not: no strategy, signal, or EA guarantees future profits." },
+    { q: "Do you have a written risk management plan (stop losses, position sizing)?", warn: "If not: develop one before live trading. Undisciplined trading accelerates losses." },
+    { q: "Are you trading with funds you can keep invested for the medium term?", warn: "If no: short-term financial pressure leads to emotional, high-risk decisions." },
+    { q: "Do you understand the impact of overnight swap charges on open positions?", warn: "If not: overnight positions carry daily financing costs that affect P&L." },
+  ];
 
- {/* Before you trade checklist — dark section */}
- <section className="py-16 bg-[#050C15]">
- <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="text-center mb-12">
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Self-Assessment</div>
- <h2 className="text-3xl font-extrabold text-white mb-3">Before You Start Trading</h2>
- <p className="text-white/40 text-[15px] max-w-2xl mx-auto leading-relaxed">
- CFD and Forex trading is not suitable for everyone. Before opening a live account, consider whether you can honestly answer yes to each of the following questions.
- </p>
- </div>
- <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
- {[
- { q: "Do you understand how CFDs and leverage work?", warn: "If not: study our Trading Conditions and Execution Information pages before proceeding." },
- { q: "Can you afford to lose all of the money you plan to trade?", warn: "If no: do not trade. CFDs carry risk of total loss. Never trade with essential funds." },
- { q: "Do you understand that past performance is not indicative of future results?", warn: "If not: no strategy, signal, or EA guarantees future profits." },
- { q: "Do you have a written risk management plan (stop losses, position sizing)?", warn: "If not: develop one before live trading. Undisciplined trading accelerates losses." },
- { q: "Are you trading with funds you can keep invested for the medium term?", warn: "If no: short-term financial pressure leads to emotional, high-risk decisions." },
- { q: "Do you understand the impact of overnight swap charges on open positions?", warn: "If not: overnight positions carry daily financing costs that affect P&L." },
- ].map(({ q, warn }) => (
- <div key={q} className="bg-white/4 border border-white/8 rounded-2xl p-5">
- <div className="flex items-start gap-3 mb-3">
- <div className="w-5 h-5 rounded border border-[#00CC44]/30 bg-[#00CC44]/10 flex-shrink-0 mt-0.5" />
- <p className="text-[13px] font-semibold text-white leading-relaxed">{q}</p>
- </div>
- <p className="text-[11px] text-white/35 leading-relaxed pl-8">{warn}</p>
- </div>
- ))}
- </div>
- <div className="bg-red-500/8 border border-red-500/20 rounded-2xl p-6 text-center max-w-3xl mx-auto">
- <p className="text-[13px] text-red-300/80 leading-relaxed">
- If you answered <strong className="text-red-300">No</strong> to any of the above questions, we strongly recommend seeking independent financial advice before trading. Opening an account does not obligate you to trade. You can also practise with a demo account first.
- </p>
- </div>
- </div>
- </section>
+  return (
+    <>
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")}
+        breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: t("title") }]} />
 
- {/* General disclaimer */}
- <section className="py-14 bg-[#F5F7FA]">
- <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="bg-white border border-gray-100 rounded-2xl p-7">
- <h3 className="text-[15px] font-bold text-[#111827] mb-4">General Disclaimer</h3>
- <div className="space-y-3 text-[13px] text-gray-600 leading-relaxed">
- <p>Olla Trade Ltd. operates as an execution-only service and does not provide investment advice, portfolio management, or any personalised financial recommendations. Nothing on this website constitutes investment advice or a solicitation to trade.</p>
- <p>Trading involves risk. The value of your investments may go up or down. You may lose all or more than your initial investment. CFD trading with leverage carries a high level of risk and is not suitable for all investors.</p>
- <p>These risk disclosures do not constitute a complete description of all risks associated with trading. You should seek independent financial advice from a qualified professional before making any trading decisions.</p>
- <p><strong className="text-[#111827]">Olla Trade Ltd.</strong> is incorporated in Anguilla (Reg. No. A000001849). Registered address: Grace Complex, The Valley, AI 2640, Anguilla.</p>
- </div>
- </div>
- </div>
- </section>
+      <section className="py-8 bg-[#F5F7FA]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-2 border-red-400 bg-red-50 rounded-2xl p-6 text-center">
+            <div className="text-[15px] font-extrabold text-red-800 mb-2">{t("warning")}</div>
+            <p className="text-[13px] text-red-700 leading-relaxed max-w-2xl mx-auto">{t("warning_text")}</p>
+          </div>
+        </div>
+      </section>
 
- <FAQSection title="Risk Disclosure FAQs" faqs={riskFaqs} />
- <CTASection title="Understand the Risks Before You Trade" subtitle="If you are comfortable with the risks and have read all disclosures, open an account to begin trading." primaryLabel="Open Account" secondaryLabel="Contact Support" secondaryHref="/contact-us" />
- </>
- );
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[240px_1fr] gap-12 items-start">
+            <div className="hidden lg:block sticky top-24">
+              <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5">
+                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">{t("toc_label")}</div>
+                <nav className="space-y-0.5">
+                  {riskCategories.map(s => (
+                    <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-white transition-colors">{s.title}</a>
+                  ))}
+                </nav>
+              </div>
+            </div>
+            <div className="space-y-5">
+              {riskCategories.map(({ id, title, color, tc, desc }) => {
+                const Icon = RISK_ICONS[id] || IconInfo;
+                return (
+                  <div key={id} id={id} className={`border rounded-2xl p-6 ${color}`}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <Icon className={`w-5 h-5 flex-shrink-0 ${tc}`} />
+                      <h3 className={`text-[15px] font-bold ${tc}`}>{title}</h3>
+                    </div>
+                    <p className={`text-[13px] leading-relaxed ${tc}`}>{desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-[#050C15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("checklist_label")}</div>
+            <h2 className="text-3xl font-extrabold text-white mb-3">{t("checklist_title")}</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            {checklistItems.map((item, i) => (
+              <div key={i} className="bg-white/4 border border-white/8 rounded-2xl p-5 flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-[#00CC44]/15 border border-[#00CC44]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-3 h-3 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p className="text-[12px] text-white/55 leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-[#F5F7FA]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">
+              {locale === "pt" ? "Avaliação Pessoal" : "Self-Assessment"}
+            </div>
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-3">
+              {locale === "pt" ? "Antes de Começar a Operar" : "Before You Start Trading"}
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {selfCheckQA.map(({ q, warn }) => (
+              <div key={q} className="bg-white border border-gray-100 rounded-2xl p-5">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-5 h-5 rounded border border-[#00CC44]/30 bg-[#00CC44]/10 flex-shrink-0 mt-0.5" />
+                  <p className="text-[13px] font-semibold text-[#111827] leading-relaxed">{q}</p>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed pl-8">{warn}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-7">
+            <h3 className="text-[15px] font-bold text-[#111827] mb-4">
+              {locale === "pt" ? "Aviso Geral" : "General Disclaimer"}
+            </h3>
+            <div className="space-y-3 text-[13px] text-gray-600 leading-relaxed">
+              {locale === "pt" ? <>
+                <p>A Olla Trade Ltd. opera como um serviço de execução exclusiva e não fornece aconselhamento de investimento, gestão de carteiras ou quaisquer recomendações financeiras personalizadas. Nada neste site constitui aconselhamento de investimento ou uma solicitação para operar.</p>
+                <p>O trading envolve risco. O valor dos seus investimentos pode subir ou descer. Você pode perder todo ou mais do que seu investimento inicial. O trading de CFDs com alavancagem carrega um alto nível de risco e não é adequado para todos os investidores.</p>
+                <p>Estas divulgações de risco não constituem uma descrição completa de todos os riscos associados ao trading. Você deve buscar aconselhamento financeiro independente de um profissional qualificado antes de tomar qualquer decisão de trading.</p>
+                <p><strong className="text-[#111827]">Olla Trade Ltd.</strong> está incorporada em Anguilla (Reg. Nº A000001849). Endereço registrado: Grace Complex, The Valley, AI 2640, Anguilla.</p>
+              </> : <>
+                <p>Olla Trade Ltd. operates as an execution-only service and does not provide investment advice, portfolio management, or any personalised financial recommendations. Nothing on this website constitutes investment advice or a solicitation to trade.</p>
+                <p>Trading involves risk. The value of your investments may go up or down. You may lose all or more than your initial investment. CFD trading with leverage carries a high level of risk and is not suitable for all investors.</p>
+                <p>These risk disclosures do not constitute a complete description of all risks associated with trading. You should seek independent financial advice from a qualified professional before making any trading decisions.</p>
+                <p><strong className="text-[#111827]">Olla Trade Ltd.</strong> is incorporated in Anguilla (Reg. No. A000001849). Registered address: Grace Complex, The Valley, AI 2640, Anguilla.</p>
+              </>}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FAQSection
+        title={t("faq_title")}
+        subtitle={t("faq_subtitle")}
+        faqs={riskFaqs}
+      />
+      <CTASection
+        title={t("cta_title")}
+        subtitle={t("cta_subtitle")}
+        primaryLabel={locale === "pt" ? "Abrir Conta" : "Open Account"}
+        secondaryLabel={locale === "pt" ? "Contatar Suporte" : "Contact Support"}
+        secondaryHref="/contact-us"
+      />
+    </>
+  );
 }

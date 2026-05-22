@@ -4,19 +4,6 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Terms & Conditions", description: "Olla Trade Terms and Conditions — governing the use of our trading services, account registration, deposits, withdrawals, and client obligations." };
 
-const sections = [
-  { id:"intro",        title:"1. Introduction",           content: "These Terms and Conditions ('Terms') govern the relationship between Olla Trade Ltd. ('the Company', 'we', 'us') and the client ('you', 'the Client') and form an integral part of the Client Agreement. By registering an account with Olla Trade, you confirm that you have read, understood, and agreed to be bound by these Terms. Olla Trade Ltd. is incorporated in Anguilla (Registration No. A000001849) as an International Business Company, providing Forex and CFD trading services through the MetaTrader 4 platform." },
-  { id:"eligibility",  title:"2. Eligibility",             content: "You must be at least 18 years of age and have the full legal capacity to enter into binding agreements. You confirm that you are not a resident of a jurisdiction where Forex or CFD trading is prohibited, including but not limited to: the United States, Russia, Myanmar, UAE, Canada, Israel, New Zealand, Iran, and North Korea (DPRK). The Company reserves the right to decline applications from clients in any jurisdiction at its discretion." },
-  { id:"account",      title:"3. Account Registration",    content: "You must provide complete, accurate, and up-to-date personal information during registration. You are required to complete identity verification (KYC/AML) before your account can be fully activated. You are responsible for maintaining the confidentiality of your account credentials. You must notify us immediately of any unauthorised access to your account at info@ollatrade.com. You must not open more than one live account per person without prior written consent from the Company." },
-  { id:"services",     title:"4. Services",                content: "Olla Trade provides execution-only trading services across Forex, Metals, Indices, Energies, Cryptocurrencies, and Stocks through the MetaTrader 4 platform. We also provide market information, deposit and withdrawal processing, and platform access. Olla Trade does not provide investment advice, portfolio management, or personalised financial recommendations. Nothing on our website constitutes a solicitation to trade." },
-  { id:"risk",         title:"5. Risk Warning",            content: "Forex and CFD trading is highly speculative and involves a significant level of risk. It is possible to lose all or a substantial amount of your invested capital. You should only trade with funds you can afford to lose. The Company does not guarantee profits or the preservation of capital. Please read our Risk Disclosures in full before trading." },
-  { id:"deposits",     title:"6. Deposits and Withdrawals", content: "Deposits are processed in accordance with our Funding and Withdrawals policy. Withdrawals are subject to completed KYC verification, account standing, and compliance review. Olla Trade does not charge its own fees on deposits or withdrawals; however, third-party network fees may apply for crypto transactions. Processing times are estimates and cannot be guaranteed. See our Withdrawal Conditions for full details." },
-  { id:"prohibited",   title:"7. Prohibited Activities",  content: "The following activities are strictly prohibited: money laundering or terrorist financing; fraud or misrepresentation; market manipulation or abusive trading strategies; providing false or misleading documentation; opening accounts on behalf of third parties without disclosure; using automated strategies that abuse latency or pricing imperfections; and any activity that violates applicable laws or regulations." },
-  { id:"termination",  title:"8. Account Termination",    content: "Olla Trade reserves the right to suspend or terminate client accounts at any time and without prior notice in circumstances including: breach of these Terms; suspicious activity or fraud; failure to complete or maintain KYC requirements; non-compliance with applicable regulations; or any other reason at the Company's sole discretion. On termination, any pending withdrawal requests will be processed in accordance with applicable policies." },
-  { id:"liability",    title:"9. Limitation of Liability", content: "Olla Trade shall not be liable for any losses arising from: force majeure events; third-party service failures outside our control; market volatility or gapping; client errors in order placement; or losses resulting from technical issues with internet connectivity or client devices. The Company's total liability to any client shall not exceed the funds held in that client's account at the time the liability arose." },
-  { id:"governing",    title:"10. Governing Law",          content: "These Terms are governed by the laws of Anguilla. Any disputes shall be subject to the jurisdiction of the courts of Anguilla. The Company encourages clients to use our formal complaint process before initiating legal proceedings. Contact: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla." },
-];
-
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "pt" }];
 }
@@ -25,15 +12,18 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "legal.terms" });
+  const sections = t.raw("sections") as { id: string; title: string; content: string }[];
+  const companyDetails = t.raw("company_details") as string[];
+
   return (
     <>
-      <PageHero badge={t("badge")} title={t("title")} subtitle="Please read these Terms and Conditions carefully before using Olla Trade services. By registering an account, you confirm your acceptance of these Terms." breadcrumbs={[{ label: "Legal", href: "/company/legal" }, { label: "Terms & Conditions" }]} />
+      <PageHero badge={t("badge")} title={t("title")} subtitle={t("subtitle")}
+        breadcrumbs={[{ label: locale === "pt" ? "Legal" : "Legal", href: "/company/legal" }, { label: t("title") }]} />
 
-      {/* Important notice */}
       <section className="py-8 bg-[#F5F7FA]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border border-blue-200 bg-blue-50 rounded-xl p-5 text-center">
-            <p className="text-[13px] text-blue-800">By opening an account with Olla Trade, you confirm you have read, understood, and agreed to these Terms and Conditions. Last reviewed: 2025.</p>
+            <p className="text-[13px] text-blue-800">{t("notice")}</p>
           </div>
         </div>
       </section>
@@ -43,8 +33,10 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
           <div className="grid lg:grid-cols-[240px_1fr] gap-12 items-start">
             <div className="hidden lg:block sticky top-24">
               <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5">
-                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Sections</div>
-                <nav className="space-y-0.5">{sections.map(s=><a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}</nav>
+                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">{t("toc_label")}</div>
+                <nav className="space-y-0.5">
+                  {sections.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
+                </nav>
               </div>
             </div>
             <div className="space-y-8">
@@ -55,11 +47,10 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
                 </div>
               ))}
               <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-6">
-                <h3 className="text-[14px] font-bold text-[#111827] mb-2">Company Details</h3>
+                <h3 className="text-[14px] font-bold text-[#111827] mb-2">{t("company_details_title")}</h3>
                 <div className="text-[13px] text-gray-600 space-y-1">
-                  <p>Olla Trade Ltd. · Incorporated in Anguilla · Registration No. A000001849</p>
-                  <p>Registered Address: Grace Complex, The Valley, AI 2640, Anguilla</p>
-                  <p>Contact: <a href="mailto:info@ollatrade.com" className="text-[#00CC44] hover:underline">info@ollatrade.com</a></p>
+                  {companyDetails.map((line, i) => <p key={i}>{line}</p>)}
+                  <p>{locale === "pt" ? "Contato:" : "Contact:"} <a href="mailto:info@ollatrade.com" className="text-[#00CC44] hover:underline">info@ollatrade.com</a></p>
                 </div>
               </div>
             </div>
