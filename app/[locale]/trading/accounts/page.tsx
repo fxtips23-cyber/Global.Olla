@@ -1,4 +1,3 @@
-import { accountFaqs } from '../../../data/faqs';
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "../../../components/CTASection";
@@ -65,14 +64,7 @@ function AccBtn({ acc, full = false }: { acc: typeof accounts[number]; full?: bo
   );
 }
 
-/* ─── FAQs ─────────────────────────────────────────────────────────── */
-const faqs = [
-  { q: "Which account is best for beginners?",     a: "The Standard account is ideal for beginners — $10 minimum deposit, no commission, full MT4 access, and 500+ instruments." },
-  { q: "Can I upgrade my account type later?",     a: "Yes. You can upgrade from Standard to Pro or Elite by depositing the required minimum. Contact support to arrange your upgrade." },
-  { q: "Is a demo account available?",             a: "Yes. A demo account is available for all account types so you can practise with virtual funds before going live." },
-  { q: "What is the difference between variable and raw spreads?", a: "Variable spreads fluctuate with market conditions. Raw spreads on the Elite account are the direct interbank rate plus a fixed commission per lot — typically lower in liquid market conditions." },
-  { q: "How quickly can I open an account?",       a: "Registration takes about 2 minutes. KYC verification typically takes 1–2 business days. You can trade once approved." },
-];
+// FAQs loaded from translations in page function
 
 /* ═══════════════════════════════════════════════════════════════════ */
 export function generateStaticParams() {
@@ -82,7 +74,52 @@ export function generateStaticParams() {
 export default async function AccountsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "trading.accounts" });
+  const t  = await getTranslations({ locale, namespace: "trading.accounts" });
+  const tp = await getTranslations({ locale, namespace: "trading_pages.accounts" });
+  const fq = await getTranslations({ locale, namespace: "trading_pages.accounts" });
+
+  const tpFaqs = tp.raw("faqs") as { q:string; a:string }[];
+
+  // Translated tier labels
+  const tierLabels = {
+    standard: tp("entry_level"),
+    pro:      tp("most_popular"),
+    elite:    tp("professional"),
+  };
+  const ctaLabels = {
+    standard: tp("open_std"),
+    pro:      tp("open_pro"),
+    elite:    tp("open_elite"),
+  };
+
+  // Translated row feature labels
+  const rowFeatures = [
+    tp("row_deposit"), tp("row_type"), tp("row_spread"), tp("row_commission"),
+    tp("row_leverage"), tp("row_mc"), tp("row_so"), tp("row_instruments"),
+    tp("row_exec"), tp("row_ea"), tp("row_nbp"), tp("row_support"),
+    tp("row_fees"), tp("row_demo"),
+  ];
+  const rowValues: [string,string,string][] = [
+    ["$10",                  "$2,000",             "$20,000"],
+    [tp("val_variable"),     tp("val_variable"),   tp("val_raw")],
+    ["From 1.4 pips",        "From 1.0 pips",      "From 0.0 pips"],
+    [tp("val_none"),         tp("val_none"),        "$3.5 per lot per side"],
+    ["1:400",                "1:400",               "1:200"],
+    ["80%",                  "80%",                 "80%"],
+    ["20%",                  "20%",                 "20%"],
+    ["500+",                 "500+",                "500+ (incl. Futures)"],
+    [tp("val_market"),       tp("val_market"),      tp("val_market")],
+    [tp("val_supported"),    tp("val_supported"),   tp("val_supported")],
+    [tp("val_yes"),          tp("val_yes"),         tp("val_yes")],
+    [tp("val_std_support"),  tp("val_pro_support"), tp("val_eli_support")],
+    [tp("val_none"),         tp("val_none"),        tp("val_none")],
+    [tp("val_yes"),          tp("val_yes"),         tp("val_yes")],
+  ];
+  const rowVariants: ("text"|"green"|"check")[] = [
+    "text","text","text","text","text","text","text","text","text",
+    "check","check","check","green","check",
+  ];
+
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────── */}
@@ -93,14 +130,10 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
           style={{ background: "radial-gradient(ellipse at 80% 20%, rgba(0,204,68,0.05) 0%, transparent 60%)" }} />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-[#00CC44]/10 border border-[#00CC44]/20 text-[#00CC44] text-[11px] font-bold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-widest">
-            Account Types
+            {tp("badge")}
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-5 leading-tight">
-            Choose the Right<br className="hidden sm:block" /> Trading Account
-          </h1>
-          <p className="text-[17px] text-white/45 max-w-xl mx-auto leading-relaxed">
-            Compare trading conditions, spreads, execution, and features across all Olla Trade account types.
-          </p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-5 leading-tight">{tp("hero_title")}</h1>
+          <p className="text-[17px] text-white/45 max-w-xl mx-auto leading-relaxed">{tp("hero_subtitle")}</p>
         </div>
       </section>
 
@@ -117,16 +150,22 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
                 }`}>
                 {acc.featured && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
-                    <span className="bg-[#00CC44] text-black text-[11px] font-extrabold px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">★ Most Popular</span>
+                    <span className="bg-[#00CC44] text-black text-[11px] font-extrabold px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">★ {tp("popular_pill")}</span>
                   </div>
                 )}
                 <div className="p-6 lg:p-7 flex-1">
-                  <div className={`text-[10px] font-bold uppercase tracking-widest mb-2 ${acc.featured ? "text-[#00CC44]" : "text-gray-400"}`}>{acc.tier}</div>
+                  <div className={`text-[10px] font-bold uppercase tracking-widest mb-2 ${acc.featured ? "text-[#00CC44]" : "text-gray-400"}`}>
+                    {tierLabels[acc.id as keyof typeof tierLabels]}
+                  </div>
                   <h2 className="text-2xl font-extrabold text-[#111827] mb-1">{acc.name}</h2>
                   <div className="text-4xl lg:text-5xl font-black text-[#111827] leading-none mb-1">{acc.deposit}</div>
-                  <div className="text-[12px] text-gray-400 mb-5">Minimum deposit</div>
+                  <div className="text-[12px] text-gray-400 mb-5">{tp("min_deposit")}</div>
                   <div className="space-y-2">
-                    {[["Spread", acc.spread], ["Leverage", acc.leverage], ["Commission", acc.commission]].map(([k, v]) => (
+                    {[
+                      [locale === "pt" ? "Spread" : "Spread",         acc.spread],
+                      [locale === "pt" ? "Alavancagem" : "Leverage",  acc.leverage],
+                      [locale === "pt" ? "Comissão" : "Commission",   acc.commission],
+                    ].map(([k, v]) => (
                       <div key={k} className="flex justify-between items-center py-2 border-b border-gray-50">
                         <span className="text-[12px] text-gray-400">{k}</span>
                         <span className="text-[12px] lg:text-[13px] font-semibold text-[#111827]">{v}</span>
@@ -135,7 +174,14 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
                   </div>
                 </div>
                 <div className="px-6 lg:px-7 pb-6 lg:pb-7">
-                  <AccBtn acc={acc} full />
+                  <Link href="https://direct.ollatrade.com/auth/register"
+                    className={`flex items-center justify-center w-full font-bold py-3.5 rounded-xl text-[14px] transition-all hover:-translate-y-0.5 ${
+                      acc.featured
+                        ? "bg-[#00CC44] hover:bg-[#00DD4A] text-black shadow-md shadow-[#00CC44]/20"
+                        : "bg-[#111827] hover:bg-[#1a2540] text-white"
+                    }`}>
+                    {ctaLabels[acc.id as keyof typeof ctaLabels]}
+                  </Link>
                 </div>
               </div>
             ))}
@@ -146,8 +192,8 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
       {/* ── Comparison table ──────────────────────────────────────── */}
       <section className="py-14 lg:py-16 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] mb-2 text-center">Full Account Comparison</h2>
-          <p className="text-gray-500 text-center mb-10 text-[15px]">Detailed breakdown of all conditions across every account type.</p>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] mb-2 text-center">{tp("compare_title")}</h2>
+          <p className="text-gray-500 text-center mb-10 text-[15px]">{tp("compare_subtitle")}</p>
 
           {/* ── DESKTOP TABLE (md+) ──────────────────────────────── */}
           <div className="hidden md:block">
@@ -155,7 +201,7 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
               {/* Header row */}
               <div className="grid" style={{ gridTemplateColumns: "280px 1fr 1fr 1fr" }}>
                 <div className="px-7 py-5 border-b border-gray-100 bg-[#F9FAFB]">
-                  <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Feature</span>
+                  <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">{tp("feature_col")}</span>
                 </div>
                 {accounts.map((acc, i) => (
                   <div key={acc.id}
@@ -170,27 +216,27 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
                       </div>
                     )}
                     <div className="text-[17px] font-extrabold text-[#111827]">{acc.name}</div>
-                    <div className={`text-[11px] mt-0.5 font-medium ${acc.featured ? "text-[#00CC44]" : "text-gray-400"}`}>{acc.tier}</div>
+                    <div className={`text-[11px] mt-0.5 font-medium ${acc.featured ? "text-[#00CC44]" : "text-gray-400"}`}>{tierLabels[acc.id as keyof typeof tierLabels]}</div>
                   </div>
                 ))}
               </div>
 
-              {/* Data rows */}
-              {rows.map((row, idx) => (
-                <div key={row.feature}
+              {/* Data rows — translated */}
+              {rowFeatures.map((feature, idx) => (
+                <div key={feature}
                   className={`grid transition-colors group ${idx % 2 === 0 ? "bg-white" : "bg-[#FAFAFA]"} hover:bg-[#F0FFF4]/35`}
                   style={{ gridTemplateColumns: "280px 1fr 1fr 1fr" }}>
                   <div className="px-7 py-4 flex items-center border-b border-gray-50">
-                    <span className="text-[13px] text-gray-500 font-medium">{row.feature}</span>
+                    <span className="text-[13px] text-gray-500 font-medium">{feature}</span>
                   </div>
-                  {row.values.map((val, ci) => (
+                  {rowValues[idx].map((val, ci) => (
                     <div key={ci}
                       className={`px-6 py-4 flex items-center justify-center border-b border-gray-50 ${ci > 0 ? "border-l" : ""} ${
                         ci === 1
                           ? "bg-[#00CC44]/[0.028] border-l-[#00CC44]/15"
                           : "border-l-gray-50"
                       }`}>
-                      <Cell value={val} variant={row.variant ?? "text"} featured={ci === 1} />
+                      <Cell value={val} variant={rowVariants[idx]} featured={ci === 1} />
                     </div>
                   ))}
                 </div>
@@ -224,7 +270,7 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
                 {/* Card header */}
                 <div className={`px-5 py-4 border-b ${acc.featured ? "bg-[#00CC44]/[0.05] border-[#00CC44]/15" : "bg-[#F9FAFB] border-gray-100"}`}>
                   {acc.featured && (
-                    <span className="bg-[#00CC44] text-black text-[9px] font-extrabold px-3 py-1 rounded-full mb-2 inline-block">★ Most Popular</span>
+                    <span className="bg-[#00CC44] text-black text-[9px] font-extrabold px-3 py-1 rounded-full mb-2 inline-block">★ {tp("popular_pill")}</span>
                   )}
                   <div className="flex items-center justify-between">
                     <div>
@@ -238,13 +284,13 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
                   </div>
                 </div>
 
-                {/* Feature rows */}
+                {/* Feature rows — translated */}
                 <div className="px-5 py-2">
-                  {rows.map((row, ri) => (
-                    <div key={row.feature}
-                      className={`flex items-center justify-between py-3 ${ri < rows.length - 1 ? "border-b border-gray-50" : ""}`}>
-                      <span className="text-[12px] text-gray-500 flex-1 pr-3">{row.feature}</span>
-                      <Cell value={row.values[acc.idx as AccIndex]} variant={row.variant ?? "text"} featured={acc.featured} />
+                  {rowFeatures.map((feature, ri) => (
+                    <div key={feature}
+                      className={`flex items-center justify-between py-3 ${ri < rowFeatures.length - 1 ? "border-b border-gray-50" : ""}`}>
+                      <span className="text-[12px] text-gray-500 flex-1 pr-3">{feature}</span>
+                      <Cell value={rowValues[ri][acc.idx as AccIndex]} variant={rowVariants[ri]} featured={acc.featured} />
                     </div>
                   ))}
                 </div>
@@ -259,12 +305,12 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
 
           {/* Disclaimer */}
           <div className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-1.5">
-            {[
-              "Trading involves risk. Conditions shown are indicative and may vary.",
-              "Spreads are variable and subject to prevailing market conditions.",
-              "Leverage availability depends on your jurisdiction and account type.",
-              "Please read our Risk Disclosures before opening an account.",
-            ].map((note) => (
+            {([
+              locale === "pt" ? "O trading envolve risco. As condições mostradas são indicativas e podem variar." : "Trading involves risk. Conditions shown are indicative and may vary.",
+              locale === "pt" ? "Os spreads são variáveis e sujeitos às condições de mercado vigentes." : "Spreads are variable and subject to prevailing market conditions.",
+              locale === "pt" ? "A disponibilidade de alavancagem depende da sua jurisdição e tipo de conta." : "Leverage availability depends on your jurisdiction and account type.",
+              locale === "pt" ? "Por favor, leia nossas Divulgações de Risco antes de abrir uma conta." : "Please read our Risk Disclosures before opening an account.",
+            ] as string[]).map((note) => (
               <div key={note} className="flex items-start gap-2 text-[12px] text-gray-400">
                 <span className="text-gray-300 flex-shrink-0">·</span>{note}
               </div>
@@ -276,12 +322,29 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
       {/* ── Who is each account for ──────────────────────────────── */}
       <section className="py-12 lg:py-14 bg-[#F5F7FA]">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-extrabold text-[#111827] mb-8 text-center">Who Is Each Account For?</h2>
+          <h2 className="text-2xl font-extrabold text-[#111827] mb-8 text-center">
+            {locale === "pt" ? "Para Quem É Cada Conta?" : "Who Is Each Account For?"}
+          </h2>
           <div className="grid sm:grid-cols-3 gap-5">
             {[
-              { acc: accounts[0], icon: "📋", forWho: "Beginners & small accounts", desc: "Start trading with $10. Full MT4 access, 500+ instruments, EA support, and no commission.", highlights: ["First-time traders","Demo-to-live transition","Small capital"] },
-              { acc: accounts[1], icon: "⭐", forWho: "Active & intermediate traders", desc: "Tighter spreads from 1.0 pips, no commission — for traders who trade regularly with more capital.", highlights: ["Active daily traders","Intermediate experience","Better spread conditions"] },
-              { acc: accounts[2], icon: "👑", forWho: "Professional & high-volume", desc: "Raw spreads from 0.0 pips with transparent commission. Best conditions for serious trading volume.", highlights: ["Professional traders","High trading volume","Minimum possible spreads"] },
+              {
+                acc: accounts[0], icon: "📋",
+                forWho:    locale === "pt" ? "Iniciantes & contas pequenas" : "Beginners & small accounts",
+                desc:      locale === "pt" ? "Comece a negociar com $10. Acesso completo ao MT4, 500+ instrumentos, suporte a EA e sem comissão." : "Start trading with $10. Full MT4 access, 500+ instruments, EA support, and no commission.",
+                highlights: locale === "pt" ? ["Traders de primeira viagem","Transição demo para ao vivo","Capital pequeno"] : ["First-time traders","Demo-to-live transition","Small capital"],
+              },
+              {
+                acc: accounts[1], icon: "⭐",
+                forWho:    locale === "pt" ? "Traders ativos & intermediários" : "Active & intermediate traders",
+                desc:      locale === "pt" ? "Spreads mais competitivos a partir de 1,0 pip, sem comissão — para traders que operam regularmente com mais capital." : "Tighter spreads from 1.0 pips, no commission — for traders who trade regularly with more capital.",
+                highlights: locale === "pt" ? ["Traders ativos diariamente","Experiência intermediária","Melhores condições de spread"] : ["Active daily traders","Intermediate experience","Better spread conditions"],
+              },
+              {
+                acc: accounts[2], icon: "👑",
+                forWho:    locale === "pt" ? "Profissional & alto volume" : "Professional & high-volume",
+                desc:      locale === "pt" ? "Spreads brutos a partir de 0,0 pips com comissão transparente. Melhores condições para volume de trading sério." : "Raw spreads from 0.0 pips with transparent commission. Best conditions for serious trading volume.",
+                highlights: locale === "pt" ? ["Traders profissionais","Alto volume de trading","Spreads mínimos possíveis"] : ["Professional traders","High trading volume","Minimum possible spreads"],
+              },
             ].map(({ acc, icon, forWho, desc, highlights }) => (
               <div key={acc.id} className={`bg-white rounded-2xl p-6 shadow-sm border ${acc.featured ? "border-[#00CC44]/20" : "border-gray-100"}`}>
                 <div className="text-2xl mb-3">{icon}</div>
@@ -301,14 +364,17 @@ export default async function AccountsPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
-      <FAQSection title="Account FAQs" faqs={accountFaqs} />
+      <FAQSection
+        title={locale === "pt" ? "Perguntas Frequentes — Contas" : "Account FAQs"}
+        faqs={tpFaqs}
+      />
 
       <CTASection
-        title="Open Your Account Today"
-        subtitle="Choose the account that fits your trading style and go live in minutes."
-        primaryLabel="Open Account"
+        title={locale === "pt" ? "Abra Sua Conta Hoje" : "Open Your Account Today"}
+        subtitle={locale === "pt" ? "Escolha a conta que se adapta ao seu estilo de trading e vá ao vivo em minutos." : "Choose the account that fits your trading style and go live in minutes."}
+        primaryLabel={locale === "pt" ? "Abrir Conta" : "Open Account"}
         primaryHref="https://direct.ollatrade.com/auth/register"
-        secondaryLabel="View Trading Conditions"
+        secondaryLabel={locale === "pt" ? "Ver Condições de Trading" : "View Trading Conditions"}
         secondaryHref="/trading/conditions"
       />
     </>

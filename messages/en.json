@@ -1756,6 +1756,694 @@
         "q": "What hours can I trade stocks?",
         "a": "Stock CFD trading follows the hours of the underlying exchange (NYSE/NASDAQ for US stocks, LSE for UK stocks). Check your MT4 instrument specifications for current hours."
       }
+    ],
+    "execution": [
+      {
+        "q": "What is market execution?",
+        "a": "Market execution means your orders are filled at the best available market price at the time the order is processed. Olla Trade uses market execution across all account types."
+      },
+      {
+        "q": "Can slippage occur when trading with Olla Trade?",
+        "a": "Yes. Slippage can occur during periods of high market volatility, major economic news releases, or low liquidity conditions. Slippage can be positive (filled at a better price) or negative (filled at a worse price)."
+      },
+      {
+        "q": "How are prices generated?",
+        "a": "Olla Trade pricing is derived from aggregated quotes provided by our liquidity providers. The prices displayed in MetaTrader 4 reflect the best available bid and ask prices from our liquidity pool at any given moment."
+      },
+      {
+        "q": "What factors affect execution quality?",
+        "a": "Execution quality can be influenced by: current market volatility, available liquidity for the instrument being traded, the size of the order relative to available market depth, network connection latency, and the time of day and active trading sessions."
+      },
+      {
+        "q": "What happens during volatile market conditions?",
+        "a": "During periods of high volatility — such as major economic data releases, central bank announcements, or significant geopolitical events — market prices can move rapidly and liquidity may temporarily reduce."
+      },
+      {
+        "q": "Can spreads widen?",
+        "a": "Yes. Spreads are variable and may widen significantly during periods of high market volatility, outside of regular market trading hours, around major economic news releases, or during periods of reduced market liquidity."
+      }
+    ],
+    "platform": [
+      {
+        "q": "What is MetaTrader 4?",
+        "a": "MetaTrader 4 (MT4) is the world's most widely used retail trading platform, developed by MetaQuotes. It offers advanced charting, 30+ built-in technical indicators, 9 chart types, automated trading via Expert Advisors (EAs), and direct market access. Olla Trade provides MT4 access across desktop, web, iOS, and Android."
+      },
+      {
+        "q": "Can I use MT4 on desktop and mobile?",
+        "a": "Yes. MT4 is available on Windows desktop (full-featured client), WebTrader (access from any modern browser with no installation required), iOS (App Store), and Android (Google Play). All versions connect to the same Olla Trade account in real time."
+      },
+      {
+        "q": "Does MT4 support Expert Advisors (EAs)?",
+        "a": "Yes. MetaTrader 4 has full support for automated trading through Expert Advisors written in MQL4. You can import custom EAs, use the built-in strategy tester to backtest against historical data, and run EAs live on your Olla Trade account."
+      },
+      {
+        "q": "How do I log in to MT4 with my Olla Trade account?",
+        "a": "Your MT4 login credentials (account number, password, and server address) are sent to you by email when your Olla Trade account is approved. Open MT4, go to File > Login to Trade Account, enter your credentials, and select the Olla Trade server from the list."
+      },
+      {
+        "q": "Where can I download MetaTrader 4?",
+        "a": "MT4 Desktop for Windows is available for download from the Olla Trade website and from the official MetaQuotes website. The iOS app is on the Apple App Store and the Android version is on Google Play. WebTrader requires no download."
+      }
     ]
+  },
+  "trading_pages": {
+    "conditions": {
+      "hero_badge": "Professional Conditions",
+      "hero_title": "Transparent Trading Conditions",
+      "hero_subtitle": "Competitive spreads, flexible leverage, and market execution across 500+ instruments. All conditions are disclosed upfront — no hidden fees, no surprises.",
+      "hero_cta1": "Open Account",
+      "hero_cta2": "Compare Accounts",
+      "stats_label": "Max Leverage",
+      "stats_spread": "Spreads From",
+      "stats_deposit": "Min. Deposit",
+      "stats_lot": "Min. Trade Size",
+      "stats_mc": "Margin Call",
+      "stats_so": "Stop Out Level",
+      "overview_label": "Conditions Overview",
+      "overview_title": "How We Execute Your Trades",
+      "overview_desc": "Olla Trade uses market execution across all accounts. Orders are filled at the best available market price at the time of submission, subject to available liquidity and market conditions.",
+      "overview_cards": [
+        {
+          "title": "Variable Spreads",
+          "body": "Spreads are variable and reflect live market conditions. Major Forex pairs start from 0.0 pips on the Elite account and from 1.4 pips on the Standard account. Spreads may widen during major economic announcements, market open/close, or periods of reduced liquidity."
+        },
+        {
+          "title": "Market Execution",
+          "body": "All orders are executed at the best available market price. No dealer intervention occurs in the order execution process. Expert Advisors (EAs) and automated trading strategies are fully supported on all account types."
+        },
+        {
+          "title": "Flexible Leverage",
+          "body": "Leverage up to 1:500 is available on Forex pairs. Leverage varies by instrument class. Higher leverage increases both potential gains and losses. Clients should use leverage carefully and in accordance with their risk tolerance."
+        },
+        {
+          "title": "Negative Balance Protection",
+          "body": "Olla Trade applies negative balance protection to all client accounts. In most market conditions, your losses will not exceed your deposited balance. Where an account falls into a negative balance due to exceptional market events, Olla Trade will reset the balance to zero at no charge."
+        },
+        {
+          "title": "No Requotes",
+          "body": "The market execution model means orders are not subject to requotes. All orders are accepted and executed at prevailing market prices. Slippage — execution at a price different from the requested price — may occur in fast-moving markets."
+        },
+        {
+          "title": "EA & Scalping Allowed",
+          "body": "Expert Advisors, scalping strategies, news trading, and hedging are permitted on all Olla Trade accounts. There are no restrictions on trading styles. All strategies must remain within the bounds of the account terms and conditions."
+        }
+      ],
+      "accounts_label": "Account Types",
+      "accounts_title": "Conditions by Account Type",
+      "accounts_desc": "Three account types designed for different experience levels and capital sizes — all on MetaTrader 4.",
+      "accounts_note": "* Spreads are variable. Figures shown are indicative minimum spreads under normal market conditions. Actual spreads may be wider during low-liquidity periods or major news events.",
+      "table_condition": "Condition",
+      "table_standard": "Standard",
+      "table_pro": "Pro ★",
+      "table_elite": "Elite",
+      "row_deposit": "Min. Deposit",
+      "row_spreads": "Spreads From",
+      "row_commission": "Commission",
+      "row_leverage": "Max Leverage",
+      "row_lot": "Min. Trade Size",
+      "row_ea": "EA / Scalping",
+      "row_mc": "Margin Call",
+      "row_so": "Stop Out Level",
+      "row_nbp": "Negative Bal. Prot.",
+      "row_platform": "Platform",
+      "row_ea_val": "Allowed",
+      "row_nbp_val": "Yes",
+      "spreads_label": "Spreads & Pricing",
+      "spreads_title": "Spreads by Instrument Class",
+      "spreads_col1": "Asset Class",
+      "spreads_col2": "Typical Spread",
+      "spreads_col3": "Max Leverage",
+      "spreads_col4": "Margin Call",
+      "spreads_col5": "Stop Out",
+      "spreads_note": "Spreads are variable and depend on market liquidity. They may widen during low-liquidity sessions, major economic events, or market open and close periods.",
+      "leverage_label": "Leverage & Margin",
+      "leverage_title": "Leverage up to 1:500",
+      "leverage_desc1": "Leverage allows traders to control a larger position with a smaller amount of capital. Olla Trade offers leverage up to 1:500 on Forex pairs. Leverage is not fixed — different instruments have different maximum leverage limits based on risk characteristics.",
+      "leverage_desc2": "Higher leverage amplifies both potential profits and potential losses. Clients are responsible for maintaining sufficient margin in their accounts. Olla Trade does not guarantee that margin calls will always prevent losses exceeding the account balance under all market conditions.",
+      "margin_warning_title": "Margin Warning:",
+      "margin_warning_body": "When your account equity falls to 80% of the required margin (Margin Call level), you will receive a margin call notification. At 20% (Stop Out level), positions may begin to be closed automatically to protect remaining equity. Clients are responsible for monitoring margin levels at all times.",
+      "exec_label": "Order Execution",
+      "exec_title": "Market Execution Model",
+      "exec_desc": "All Olla Trade accounts use market execution. Orders are transmitted directly to liquidity providers at the best available price.",
+      "exec_cards": [
+        {
+          "title": "Market Execution",
+          "desc": "Orders are filled at the best available market price at the time of execution — no dealer confirmation required."
+        },
+        {
+          "title": "No Requotes",
+          "desc": "The market execution model eliminates requotes. Every order submitted is accepted and filled at prevailing market prices."
+        },
+        {
+          "title": "Slippage Disclosure",
+          "desc": "Execution price may differ from the requested price, particularly during fast-moving markets or major economic releases. Slippage can be positive or negative."
+        },
+        {
+          "title": "EA Support",
+          "desc": "Fully supports Expert Advisors, automated strategies, scalping, hedging, and all standard MT4 trading approaches."
+        }
+      ],
+      "exec_link": "Full Execution Information →",
+      "orders_label": "Order Types",
+      "orders_title": "Supported Order Types",
+      "order_items": [
+        {
+          "name": "Market Order",
+          "desc": "Execute immediately at the current best available market price."
+        },
+        {
+          "name": "Limit Order",
+          "desc": "Execute at a specified price or better. Used to enter or exit at a pre-defined level."
+        },
+        {
+          "name": "Stop Order",
+          "desc": "Triggered when price reaches a specified level, then executed as a market order."
+        },
+        {
+          "name": "Stop Loss",
+          "desc": "Automatically closes a position at a defined price to limit potential loss."
+        },
+        {
+          "name": "Take Profit",
+          "desc": "Automatically closes a position at a defined price when a profit target is reached."
+        },
+        {
+          "name": "Trailing Stop",
+          "desc": "A dynamic stop loss that follows price movements, locking in profit as the market moves in your favour."
+        }
+      ],
+      "hours_label": "Trading Hours",
+      "hours_title": "Market Hours by Asset",
+      "hours_desc": "Olla Trade follows standard international market hours. All times are in server time (GMT+2 during daylight saving, GMT+3 in winter).",
+      "hours_col1": "Asset Class",
+      "hours_col2": "Market Hours (Server Time)",
+      "hours_col3": "Days",
+      "hours_col4": "Notes",
+      "hours_note": "Trading hours may be affected by public holidays and extraordinary market events. Spreads may widen at market open and close. Check your MT4 platform for live session information.",
+      "instruments_label": "Instruments",
+      "instruments_desc": [
+        {
+          "asset": "Forex",
+          "count": "70+",
+          "desc": "Major, minor, and exotic currency pairs including EUR/USD, GBP/USD, USD/JPY, USD/CHF, and more."
+        },
+        {
+          "asset": "Metals",
+          "count": "4+",
+          "desc": "Gold (XAU/USD), Silver (XAG/USD), and other precious metals via CFDs."
+        },
+        {
+          "asset": "Indices",
+          "count": "15+",
+          "desc": "Global stock indices including US30, SPX500, NAS100, GER30, UK100, and more."
+        },
+        {
+          "asset": "Energies",
+          "count": "5+",
+          "desc": "Oil (Brent & WTI), Natural Gas, and other energy CFDs."
+        },
+        {
+          "asset": "Cryptocurrency",
+          "count": "10+",
+          "desc": "Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Ripple (XRP), and other major crypto CFDs."
+        },
+        {
+          "asset": "Stocks",
+          "count": "1,000+",
+          "desc": "Single stock CFDs from the US, UK, EU, and other major markets including Apple, Amazon, Tesla, and more."
+        }
+      ],
+      "view_market": "View",
+      "risk_label": "Risk Disclosure",
+      "risk_p1": "Trading Forex and CFDs involves significant risk of loss and may not be suitable for all investors. Leveraged trading amplifies both potential profits and potential losses — you could lose more than your initial deposit.",
+      "risk_p2": "Spreads are variable and may widen during periods of market volatility, reduced liquidity, or major economic announcements. Slippage may occur during fast-moving markets. Past performance is not indicative of future results.",
+      "risk_p3": "You should ensure you understand how CFDs work and whether you can afford to take the risk. Please read our",
+      "risk_link": "Risk Disclosures",
+      "risk_p3b": "before trading.",
+      "cta_title": "Trade with Professional Conditions",
+      "cta_subtitle": "Open an account in minutes and access 500+ instruments with tight spreads, fast execution, and full MetaTrader 4 support."
+    },
+    "accounts": {
+      "hero_title": "Choose the Right Trading Account",
+      "hero_subtitle": "Compare trading conditions, spreads, execution, and features across all Olla Trade account types.",
+      "badge": "Account Types",
+      "entry_level": "Entry Level",
+      "most_popular": "Most Popular",
+      "professional": "Professional",
+      "min_deposit": "Minimum deposit",
+      "popular_pill": "Most Popular",
+      "open_std": "Open Standard",
+      "open_pro": "Open Pro Account",
+      "open_elite": "Open Elite Account",
+      "compare_title": "Full Account Comparison",
+      "compare_subtitle": "Detailed breakdown of all conditions across every account type.",
+      "feature_col": "Feature",
+      "row_deposit": "Min. Deposit",
+      "row_type": "Spread Type",
+      "row_spread": "Avg. Spread (EUR/USD)",
+      "row_commission": "Commission",
+      "row_leverage": "Max Leverage",
+      "row_mc": "Margin Call Level",
+      "row_so": "Stop Out Level",
+      "row_instruments": "Instruments",
+      "row_exec": "Order Execution",
+      "row_ea": "Expert Advisors",
+      "row_nbp": "Negative Balance Protection",
+      "row_support": "24/5 Support",
+      "row_fees": "Deposit / Withdrawal Fees",
+      "row_demo": "Demo Account",
+      "val_variable": "Variable",
+      "val_raw": "Raw (variable)",
+      "val_market": "Market",
+      "val_supported": "Supported",
+      "val_yes": "Yes",
+      "val_none": "None",
+      "val_std_support": "Standard",
+      "val_pro_support": "Priority",
+      "val_eli_support": "VIP",
+      "faqs": [
+        {
+          "q": "Which account is best for beginners?",
+          "a": "The Standard account is ideal for beginners — $10 minimum deposit, no commission, full MT4 access, and 500+ instruments."
+        },
+        {
+          "q": "Can I upgrade my account type later?",
+          "a": "Yes. You can upgrade from Standard to Pro or Elite by depositing the required minimum. Contact support to arrange your upgrade."
+        },
+        {
+          "q": "Is a demo account available?",
+          "a": "Yes. A demo account is available for all account types so you can practise with virtual funds before going live."
+        },
+        {
+          "q": "What is the difference between variable and raw spreads?",
+          "a": "Variable spreads fluctuate with market conditions. Raw spreads on the Elite account are the direct interbank rate plus a fixed commission per lot — typically lower in liquid market conditions."
+        },
+        {
+          "q": "How quickly can I open an account?",
+          "a": "Registration takes about 2 minutes. KYC verification typically takes 1–2 business days. You can trade once approved."
+        }
+      ]
+    },
+    "funding": {
+      "stats_fees": "Olla Trade Fees",
+      "stats_methods": "Crypto Methods",
+      "stats_time": "Withdrawal Time",
+      "stats_secure": "SSL Encrypted",
+      "cta_deposit": "Deposit Funds",
+      "cta_withdraw": "Request Withdrawal",
+      "methods_label": "Supported Methods",
+      "methods_title": "Crypto Funding Methods",
+      "methods_subtitle": "Fund your Olla Trade account securely using major cryptocurrencies. All methods are accepted with no fees from Olla Trade.",
+      "label_deposit": "Deposit",
+      "label_withdrawal": "Withdrawal",
+      "label_min": "Min. deposit",
+      "label_fee": "Olla Trade fee",
+      "val_none": "None",
+      "support_note": "Additional payment methods may be available in your client portal.",
+      "contact_support": "Contact support",
+      "support_note2": "for the latest available options.",
+      "flow_label": "Crypto Funding Made Simple",
+      "flow_title": "Secure End-to-End Transaction Flow",
+      "flow_desc": "Every deposit and withdrawal is processed through your personal SSL-encrypted client portal. Your funds move directly from your wallet to your trading account via the blockchain — no intermediaries, no hidden steps.",
+      "flow_features": [
+        {
+          "label": "No Olla Trade Fees",
+          "desc": "We charge zero fees on deposits or withdrawals. Network fees apply on the blockchain side only."
+        },
+        {
+          "label": "Multiple Crypto Methods",
+          "desc": "USDT TRC20, USDT ERC20, Bitcoin, and Ethereum — with more methods available in the client portal."
+        },
+        {
+          "label": "Credited After Confirmations",
+          "desc": "Funds appear in your trading account automatically after the required blockchain confirmations."
+        },
+        {
+          "label": "Same-Method Withdrawals",
+          "desc": "Withdrawals are returned to the same method used for deposit — a standard security requirement."
+        }
+      ],
+      "process_label": "Step-by-Step",
+      "process_title": "How to Deposit & Withdraw",
+      "deposit_title": "Deposit Funds",
+      "withdraw_title": "Withdraw Funds",
+      "deposit_steps": [
+        [
+          "Log in to your Olla Trade client portal.",
+          "Access your account at direct.ollatrade.com using your credentials."
+        ],
+        [
+          "Navigate to Funding / Deposit.",
+          "In your portal dashboard, find the Funding or Deposit section."
+        ],
+        [
+          "Select your preferred crypto method.",
+          "Choose USDT (TRC20/ERC20), Bitcoin, or Ethereum."
+        ],
+        [
+          "Copy the deposit address and send funds.",
+          "Send the exact crypto amount to the provided wallet address."
+        ],
+        [
+          "Funds credited after confirmation.",
+          "Your account balance updates automatically after the required blockchain confirmations."
+        ]
+      ],
+      "withdraw_steps": [
+        [
+          "Log in to your client portal.",
+          "Access your account at direct.ollatrade.com using your credentials."
+        ],
+        [
+          "Navigate to Funding / Withdrawal.",
+          "In your portal dashboard, find the Withdrawal section."
+        ],
+        [
+          "Select your withdrawal method.",
+          "Choose the same method used for your original deposit."
+        ],
+        [
+          "Enter the amount and destination.",
+          "Input the withdrawal amount and your wallet address or bank details."
+        ],
+        [
+          "Submit and await processing.",
+          "Withdrawal requests are reviewed and processed within 24–48 business hours after approval."
+        ]
+      ],
+      "times_label": "Processing Times",
+      "times_title": "Funding Processing Summary",
+      "times_col1": "Method",
+      "times_col2": "Deposit",
+      "times_col3": "Withdrawal",
+      "times_col4": "Olla Trade Fee",
+      "times_col5": "Notes",
+      "times_note": "* Processing times are estimates only and may vary depending on verification status, payment method, and transaction volume. Blockchain network fees may apply.",
+      "rules_label": "Important Rules",
+      "rules_title": "Funding & Withdrawal Requirements",
+      "rules": [
+        {
+          "title": "Account Verification Required",
+          "desc": "Withdrawal requests require completed KYC/AML account verification. Ensure your identity documents and proof of address are submitted and approved."
+        },
+        {
+          "title": "Submit via Client Portal Only",
+          "desc": "All withdrawal requests must be submitted through your official Olla Trade client portal. Requests made via email or chat cannot be accepted for security reasons."
+        },
+        {
+          "title": "Blockchain Confirmations",
+          "desc": "Crypto deposits are credited after sufficient blockchain network confirmations. Processing times vary by network and current congestion conditions."
+        },
+        {
+          "title": "Additional Documents May Be Requested",
+          "desc": "Olla Trade may request additional documentation for security, compliance, or anti-money laundering verification purposes before processing your withdrawal."
+        },
+        {
+          "title": "Bonus Credit Withdrawal",
+          "desc": "Bonus trading credit cannot be withdrawn directly unless explicitly stated in the relevant promotion's official terms and conditions."
+        },
+        {
+          "title": "Same Method Policy",
+          "desc": "Where possible, withdrawals are processed back to the same method used for the original deposit. This is a standard financial security requirement."
+        }
+      ],
+      "security_label": "Security & Protection",
+      "security_title": "How We Protect Your Funds",
+      "security_features": [
+        {
+          "title": "Secure Client Portal",
+          "desc": "All funding and withdrawal operations are conducted through your SSL-encrypted Olla Trade client portal — never via email or third-party links."
+        },
+        {
+          "title": "Identity Verification (KYC)",
+          "desc": "Account verification ensures that only the registered account holder can request or receive funds, protecting you from unauthorised withdrawals."
+        },
+        {
+          "title": "Transaction History",
+          "desc": "A complete record of all deposits, withdrawals, and transactions is available in your client portal at all times for your review."
+        },
+        {
+          "title": "Compliance Review",
+          "desc": "All transactions are subject to standard compliance and anti-money laundering screening in line with applicable financial regulations."
+        },
+        {
+          "title": "Segregated Client Funds",
+          "desc": "Client funds are held separately from company operational funds, providing an additional layer of financial security for your deposits."
+        },
+        {
+          "title": "Processing Oversight",
+          "desc": "Withdrawal requests are reviewed and approved by our operations team during business hours to ensure accuracy and security before processing."
+        }
+      ],
+      "cta_title": "Ready to Fund Your Account?",
+      "cta_subtitle": "Log in to your client portal to make a deposit or withdrawal request."
+    },
+    "execution": {
+      "crosslink_text": "Looking for the formal legal Order Execution Policy document?",
+      "crosslink_link": "View Order Execution Policy →",
+      "intro_label": "About Our Execution",
+      "intro_title": "How Olla Trade Executes Orders",
+      "intro_p1": "Olla Trade operates as an execution-only service using a market execution model. When you place a trade, your order is processed through our trading infrastructure and submitted to available liquidity at the best price achievable under current market conditions.",
+      "intro_p2": "Prices displayed in MetaTrader 4 are derived from aggregated quotes provided by our liquidity providers. These prices are variable and reflect real-time market conditions including supply and demand, overall market liquidity, and the time of the active trading session.",
+      "intro_p3": "Execution quality may vary depending on market conditions. Olla Trade does not provide investment advice and does not guarantee execution at any specific price. Orders are subject to available liquidity and prevailing market conditions at the time of execution.",
+      "intro_cards": [
+        {
+          "title": "Market Execution",
+          "desc": "Orders filled at best available market price in real time, subject to liquidity."
+        },
+        {
+          "title": "Global Markets",
+          "desc": "Access to Forex, Metals, Indices, Energies, Crypto, and Stocks — all through MT4."
+        },
+        {
+          "title": "MT4 Infrastructure",
+          "desc": "All orders processed through MetaTrader 4 — industry-standard trading platform."
+        },
+        {
+          "title": "Variable Pricing",
+          "desc": "Prices derived from liquidity providers and subject to prevailing market conditions."
+        }
+      ],
+      "flow_label": "Trading Infrastructure",
+      "flow_title": "Order Routing & Execution Flow",
+      "flow_desc": "When you submit an order in MetaTrader 4, it is transmitted to Olla Trade's execution infrastructure, validated against available margin and risk parameters, then routed to our liquidity pool. The best available price is selected and the fill confirmation is returned to your terminal.",
+      "flow_features": [
+        {
+          "label": "STP Routing",
+          "desc": "Orders are routed straight-through to liquidity providers without manual dealer intervention under normal conditions."
+        },
+        {
+          "label": "Best Available Price",
+          "desc": "Our pricing engine aggregates quotes from multiple liquidity providers to achieve the best available bid and ask at time of execution."
+        },
+        {
+          "label": "Execution Subject to Liquidity",
+          "desc": "Final execution price depends on available market liquidity and conditions at the moment the order is processed."
+        },
+        {
+          "label": "No Requotes",
+          "desc": "Market execution means all orders are accepted at the prevailing price — you will not be asked to confirm a different price."
+        }
+      ],
+      "model_label": "Execution Model",
+      "model_title": "Order Execution Explained",
+      "model_desc": "Understanding how different order types are processed. Execution quality may vary depending on market conditions and available liquidity.",
+      "model_cards": [
+        {
+          "title": "Market Execution",
+          "desc": "Market orders are filled at the best available price at the time of execution. The final price may differ from the quoted price at the moment the order was placed, particularly in fast-moving market conditions."
+        },
+        {
+          "title": "Pending Orders",
+          "desc": "Pending orders instruct the platform to open a position when the market reaches a specified price. Types include Buy/Sell Limit and Buy/Sell Stop. Execution at the exact specified price is subject to available market liquidity."
+        },
+        {
+          "title": "Stop Loss Orders",
+          "desc": "A Stop Loss order automatically closes a position at a specified loss level. Stop Loss orders help limit potential losses but do not guarantee closure at the exact requested price, particularly during rapid price movements or market gaps."
+        },
+        {
+          "title": "Take Profit Orders",
+          "desc": "A Take Profit order closes a position automatically when the market reaches a specified profit target. Execution is subject to available market liquidity at the time the target price is reached."
+        },
+        {
+          "title": "Slippage",
+          "desc": "Slippage refers to the difference between the expected price of a trade and the price at which the trade is actually executed. Slippage can occur in fast-moving or low-liquidity market conditions and can be positive or negative."
+        },
+        {
+          "title": "No Requote Policy",
+          "desc": "Olla Trade does not issue requotes on client orders. Under the market execution model, all orders are accepted and executed at the best available prevailing market price at the time of submission."
+        }
+      ],
+      "slippage_label": "Slippage & Pricing",
+      "slippage_title": "Understanding Slippage & Price Variation",
+      "slippage_desc": "Slippage is a normal and expected feature of trading in real financial markets. It occurs when the market moves between the moment you submit an order and the moment it is processed by our execution engine.",
+      "slippage_cards": [
+        {
+          "title": "When Slippage Occurs",
+          "desc": "Slippage is most common during high market volatility, major economic news releases, and periods of low liquidity — such as outside regular trading hours or around market open/close."
+        },
+        {
+          "title": "Positive Slippage",
+          "desc": "Positive slippage occurs when your order is filled at a better price than requested — for example, a buy order fills lower than the requested price. This benefits the client."
+        },
+        {
+          "title": "Negative Slippage",
+          "desc": "Negative slippage occurs when your order is filled at a worse price than requested. This can happen during rapid market movements or when large orders consume available liquidity at the requested price."
+        },
+        {
+          "title": "Managing Slippage",
+          "desc": "Use limit orders instead of market orders where possible. Avoid trading immediately around major economic data releases. Monitor the economic calendar and apply appropriate position sizing."
+        }
+      ],
+      "infra_label": "Infrastructure",
+      "infra_title": "Trading Infrastructure",
+      "infra_desc": "Olla Trade's trading infrastructure is built for reliable, continuous order execution across all instruments and sessions.",
+      "infra_cards": [
+        {
+          "title": "Server Location",
+          "desc": "Trading servers are hosted in professional data centres with redundant connectivity and power systems for maximum uptime."
+        },
+        {
+          "title": "Liquidity Aggregation",
+          "desc": "Prices are sourced from multiple institutional liquidity providers. The best available bid and ask prices are aggregated and presented to clients in real time."
+        },
+        {
+          "title": "MT4 Bridge",
+          "desc": "Client orders placed via MetaTrader 4 are transmitted instantly through our MT4 bridge to our execution infrastructure for processing."
+        },
+        {
+          "title": "Continuous Monitoring",
+          "desc": "Our operations team monitors execution quality, server performance, and connectivity on an ongoing basis during all trading sessions."
+        }
+      ],
+      "pricing_label": "Pricing Model",
+      "pricing_title": "How Prices Are Generated",
+      "pricing_desc": "Olla Trade derives all prices from aggregated quotes provided by our institutional liquidity providers. Prices reflect real-time market conditions and are passed through to clients without any artificial mark-up beyond the disclosed spread.",
+      "pricing_points": [
+        "Prices are aggregated from multiple liquidity providers in real time.",
+        "The best available bid and ask prices are presented to clients via MetaTrader 4.",
+        "Spreads are variable and reflect prevailing market liquidity and session activity.",
+        "Olla Trade earns revenue from the spread between bid and ask prices.",
+        "No additional hidden charges are applied to standard trading activity.",
+        "All pricing methodology is disclosed in the Order Execution Policy."
+      ],
+      "pricing_link": "View Order Execution Policy →",
+      "faq_title": "Execution Information FAQs",
+      "cta_title": "Open an Account with Olla Trade",
+      "cta_subtitle": "Access 500+ instruments with market execution, tight spreads, and full MetaTrader 4 support.",
+      "order_types_label": "Order Types",
+      "order_types_title": "Available Order Types",
+      "order_types_desc": "MetaTrader 4 supports a range of order types to help you manage your trading positions. All order types are subject to prevailing market conditions and available liquidity.",
+      "order_types": [
+        {
+          "name": "Market Order",
+          "desc": "Executed immediately at the best available current market price. The fill price may differ from the quoted price at the moment the order is placed.",
+          "tag": "Immediate"
+        },
+        {
+          "name": "Buy/Sell Limit",
+          "desc": "Pending order to open at a more favourable price than current market. A Buy Limit opens below current price; a Sell Limit opens above.",
+          "tag": "Better Price"
+        },
+        {
+          "name": "Buy/Sell Stop",
+          "desc": "Pending order to open beyond the current market level. A Buy Stop triggers above current price; a Sell Stop triggers below.",
+          "tag": "Breakout"
+        },
+        {
+          "name": "Stop Loss",
+          "desc": "Automatically closes a losing position when the market reaches a specified level. Execution is not guaranteed at the exact price during rapid price movements.",
+          "tag": "Risk Management"
+        },
+        {
+          "name": "Take Profit",
+          "desc": "Automatically closes a profitable position when the market reaches a target price. Subject to market conditions and available liquidity at the time of execution.",
+          "tag": "Profit Target"
+        }
+      ]
+    },
+    "platform": {
+      "badge": "MetaTrader 4",
+      "section_title": "The World's Most Popular Trading Platform",
+      "section_desc": "Advanced charting, automated trading, and real-time execution across all global markets — on every device you own. Download or access via browser with no installation required.",
+      "mobile_title": "Available on All Devices",
+      "mobile_sub": "Desktop | WebTrader | iOS | Android",
+      "features": [
+        {
+          "title": "30+ Technical Indicators",
+          "desc": "Built-in MA, MACD, RSI, Bollinger Bands, Ichimoku, and 25+ more indicator types. All with full customisation and overlay capability."
+        },
+        {
+          "title": "Expert Advisors (EAs)",
+          "desc": "Full MQL4 automated trading support. Backtest strategies on historical price data before going live."
+        },
+        {
+          "title": "Custom Alerts",
+          "desc": "Price, indicator, and margin alerts via MT4 desktop, mobile push, or email."
+        },
+        {
+          "title": "Multi-Chart Layout",
+          "desc": "Monitor multiple instruments and timeframes simultaneously on a single screen."
+        },
+        {
+          "title": "9 Chart Timeframes",
+          "desc": "M1 through MN — candlestick, bar, and line chart types available."
+        },
+        {
+          "title": "One-Click Execution",
+          "desc": "Direct chart trading with instant market order submission — no dialog required."
+        },
+        {
+          "title": "Full MQL4 Support",
+          "desc": "Build, import, and run automated strategies written in MetaQuotes Language 4."
+        },
+        {
+          "title": "VPS Compatible",
+          "desc": "Run MT4 and EAs on a Virtual Private Server for 24/5 uninterrupted trading."
+        }
+      ],
+      "cta_explore": "Explore MT4 Features",
+      "cta_title": "Start Trading on MetaTrader 4",
+      "cta_subtitle": "Open a free account and access MT4 on desktop, WebTrader, iOS, and Android with professional trading conditions.",
+      "desktop": "Desktop (Windows)",
+      "desktop_sub": "Windows",
+      "desktop_tag": "Full Featured",
+      "web": "WebTrader",
+      "web_sub": "Browser",
+      "web_tag": "No Install",
+      "ios": "iOS",
+      "ios_sub": "iPhone / iPad",
+      "ios_tag": "App Store",
+      "android": "Android",
+      "android_sub": "Phone / Tablet",
+      "android_tag": "Google Play",
+      "cross_label": "Cross-Device Trading",
+      "cross_title": "One Account. Every Device. Always Synced.",
+      "cross_desc": "Your Olla Trade MT4 account is fully synchronized across every platform. Open a position on desktop, monitor it on mobile, and manage it from your tablet — all in real time.",
+      "cross_items": [
+        {
+          "t": "Desktop (Windows)",
+          "d": "Full MetaTrader 4 with all features: multi-chart layout, full EA support, backtesting, and local alerts."
+        },
+        {
+          "t": "WebTrader (Browser)",
+          "d": "Access your full MT4 account from any modern browser — no installation required. Works on Mac, Linux, and Chromebook."
+        },
+        {
+          "t": "iOS & Android",
+          "d": "The official MT4 mobile app gives you real-time quotes, interactive charts, one-tap trading, and push notifications."
+        },
+        {
+          "t": "Synchronized Data",
+          "d": "Positions, account balance, chart settings, and watchlists stay synchronized across all your devices automatically."
+        }
+      ],
+      "cross_open": "Open Account",
+      "cross_vps": "VPS Guide",
+      "all_title": "All MT4 Platform Features",
+      "all_desc": "Everything a professional trader needs — built into the world's most trusted trading platform.",
+      "faq_title": "MT4 Platform FAQs",
+      "faq_subtitle": "Common questions about MetaTrader 4, account setup, Expert Advisors, and platform compatibility."
+    }
   }
 }

@@ -1,11 +1,10 @@
-import { platformFaqs } from "../../../data/faqs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../../components/ui/PageHero";
 import CTASection from "../../../components/CTASection";
 import FAQSection from "../../../components/ui/FAQSection";
 import FeatureGrid from "../../../components/ui/FeatureGrid";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import {
   IconBarChart, IconCode, IconBell, IconLayers, IconClock,
   IconActivity, IconMonitor, IconGlobe, IconServer, IconSettings, IconShieldCheck,
@@ -513,17 +512,6 @@ function CrossDeviceVisual() {
   );
 }
 
-/* ─── Feature lists ──────────────────────────────────────────────── */
-const features = [
-  { Icon: IconBarChart, title: "30+ Technical Indicators",  desc: "Built-in MA, MACD, RSI, Bollinger Bands, Ichimoku, and 25+ more indicator types." },
-  { Icon: IconCode,     title: "Expert Advisors (EAs)",     desc: "Full MQL4 automated trading support. Backtest strategies on historical price data before going live." },
-  { Icon: IconBell,     title: "Custom Alerts",             desc: "Price, indicator, and margin alerts via MT4 desktop, mobile push, or email." },
-  { Icon: IconLayers,   title: "Multi-Chart Layout",        desc: "Monitor multiple instruments and timeframes simultaneously on a single screen." },
-  { Icon: IconClock,    title: "9 Chart Timeframes",        desc: "M1 through MN — candlestick, bar, and line chart types available." },
-  { Icon: IconActivity, title: "One-Click Execution",       desc: "Direct chart trading with instant market order submission — no dialog required." },
-  { Icon: IconSettings, title: "Full MQL4 Support",         desc: "Build, import, and run automated strategies written in MetaQuotes Language 4." },
-  { Icon: IconServer,   title: "VPS Compatible",            desc: "Run MT4 and EAs on a Virtual Private Server for 24/5 uninterrupted trading." },
-];
 
 function WinIcon({ className = "w-5 h-5" }: { className?: string }) {
   return <svg className={className} viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8.5v8.5H3V3zm9.5 0H21v8.5h-8.5V3zM3 12.5h8.5V21H3v-8.5zm9.5 0H21V21h-8.5v-8.5z"/></svg>;
@@ -542,23 +530,36 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "pt" }];
 }
 
-export default function PlatformPage() {
+export default async function PlatformPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const tp = await getTranslations({ locale, namespace: "trading_pages.platform" });
+  const fq = await getTranslations({ locale, namespace: "faq" });
+
+  const platformFeatures = tp.raw("features") as { title:string; desc:string }[];
+  const crossItems = tp.raw("cross_items") as { t:string; d:string }[];
+  const platformFaqsTr = fq.raw("platform") as { q:string; a:string }[];
+
   const platforms = [
-    { name:"Desktop",  sub:"Windows MT4",   tag:"Most popular", Icon:WinIcon     },
-    { name:"WebTrader",sub:"Any browser",   tag:"No install",   Icon:BrowserIcon  },
-    { name:"iOS",      sub:"iPhone & iPad", tag:"App Store",    Icon:AppleIcon    },
-    { name:"Android",  sub:"All devices",   tag:"Google Play",  Icon:AndroidIcon  },
+    { name: tp("desktop"),  sub: tp("desktop_sub"),  tag: tp("desktop_tag"),  Icon: WinIcon     },
+    { name: tp("web"),      sub: tp("web_sub"),       tag: tp("web_tag"),       Icon: BrowserIcon },
+    { name: tp("ios"),      sub: tp("ios_sub"),       tag: tp("ios_tag"),       Icon: AppleIcon   },
+    { name: tp("android"),  sub: tp("android_sub"),   tag: tp("android_tag"),   Icon: AndroidIcon },
   ];
 
   return (
     <>
       <PageHero
-        badge="MetaTrader 4"
-        title="Trade on the World's Most Popular Platform"
-        subtitle="MT4 gives you advanced charting, automated trading, real-time execution, and access to all global markets — on every device you own."
-        breadcrumbs={[{ label: "Trading", href: "/trading" }, { label: "Platform" }]}
-        cta={{ label: "Open MT4 Account", href: "https://direct.ollatrade.com/auth/register" }}
-        stats={[{ value: "30+", label: "Indicators" }, { value: "9", label: "Chart Types" }, { value: "4", label: "Platforms" }]}
+        badge={tp("badge")}
+        title={locale === "pt" ? "Opere na Plataforma Mais Popular do Mundo" : "Trade on the World's Most Popular Platform"}
+        subtitle={locale === "pt" ? "O MT4 oferece gráficos avançados, trading automatizado, execução em tempo real e acesso a todos os mercados globais — em todos os seus dispositivos." : "MT4 gives you advanced charting, automated trading, real-time execution, and access to all global markets — on every device you own."}
+        breadcrumbs={[{ label: locale === "pt" ? "Trading" : "Trading", href: "/trading" }, { label: locale === "pt" ? "Plataforma" : "Platform" }]}
+        cta={{ label: locale === "pt" ? "Abrir Conta MT4" : "Open MT4 Account", href: "https://direct.ollatrade.com/auth/register" }}
+        stats={[
+          { value: "30+", label: locale === "pt" ? "Indicadores" : "Indicators" },
+          { value: "9",   label: locale === "pt" ? "Tipos de Gráfico" : "Chart Types" },
+          { value: "4",   label: locale === "pt" ? "Plataformas" : "Platforms" },
+        ]}
       />
 
       {/* ── Section 1: Features + Visual 1 (4-chart workstation) ── */}
@@ -567,28 +568,28 @@ export default function PlatformPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — content */}
             <div>
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">MetaTrader 4</div>
-              <h2 className="text-4xl font-extrabold text-[#111827] mb-5 leading-tight">
-                The World&apos;s Most Popular<br />Trading Platform
-              </h2>
-              <p className="text-gray-500 leading-relaxed mb-8 text-[15px]">
-                Advanced charting, automated trading, and real-time execution across all global markets — on every device you own. Download or access via browser with no installation required.
-              </p>
+              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{tp("badge")}</div>
+              <h2 className="text-4xl font-extrabold text-[#111827] mb-5 leading-tight">{tp("section_title")}</h2>
+              <p className="text-gray-500 leading-relaxed mb-8 text-[15px]">{tp("section_desc")}</p>
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                {features.slice(0, 6).map(({ Icon, title, desc }) => (
-                  <div key={title} className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md border border-gray-200 bg-[#F5F7FA] flex items-center justify-center flex-shrink-0 text-gray-400 mt-0.5">
-                      <Icon className="w-3.5 h-3.5" />
+                {platformFeatures.slice(0, 6).map(({ title, desc }, i) => {
+                  const ICONS = [IconBarChart, IconCode, IconBell, IconLayers, IconClock, IconActivity, IconSettings, IconServer];
+                  const Icon = ICONS[i % ICONS.length];
+                  return (
+                    <div key={title} className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-md border border-gray-200 bg-[#F5F7FA] flex items-center justify-center flex-shrink-0 text-gray-400 mt-0.5">
+                        <Icon className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <div className="text-[12px] font-semibold text-[#111827] mb-0.5">{title}</div>
+                        <div className="text-[11px] text-gray-400 leading-relaxed">{desc}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-[12px] font-semibold text-[#111827] mb-0.5">{title}</div>
-                      <div className="text-[11px] text-gray-400 leading-relaxed">{desc}</div>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
               <div className="mb-8">
-                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Available on</div>
+                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">{locale === "pt" ? "Disponível em" : "Available on"}</div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {platforms.map(({ name, sub, tag, Icon }) => (
                     <Link key={name} href="/trading/platform"
@@ -605,7 +606,7 @@ export default function PlatformPage() {
               </div>
               <Link href="https://direct.ollatrade.com/auth/register"
                 className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#00CC44] text-white hover:text-black font-bold px-6 py-3 rounded-lg text-[13px] transition-all">
-                Explore MT4 Platform
+                {tp("cta_explore")}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6"/></svg>
               </Link>
             </div>
@@ -624,13 +625,17 @@ export default function PlatformPage() {
       {/* ── Section 2: Why MT4 ──────────────────────────────────── */}
       <section className="py-16 bg-[#081018]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white mb-3 text-center">Why MT4 Is the Industry Standard</h2>
-          <p className="text-white/40 text-center mb-10 max-w-xl mx-auto text-[15px]">Used by millions of traders worldwide — MT4 has earned its reputation over two decades.</p>
+          <h2 className="text-3xl font-extrabold text-white mb-3 text-center">
+            {locale === "pt" ? "Por Que o MT4 É o Padrão da Indústria" : "Why MT4 Is the Industry Standard"}
+          </h2>
+          <p className="text-white/40 text-center mb-10 max-w-xl mx-auto text-[15px]">
+            {locale === "pt" ? "Usado por milhões de traders em todo o mundo — o MT4 conquistou sua reputação ao longo de duas décadas." : "Used by millions of traders worldwide — MT4 has earned its reputation over two decades."}
+          </p>
           <FeatureGrid features={[
-            { Icon: IconShieldCheck, title: "Proven Reliability",   desc: "MT4 has been the market standard since 2005, trusted by millions of traders and brokers worldwide." },
-            { Icon: IconCode,        title: "Algorithmic Trading",  desc: "Build or deploy automated strategies using MQL4 programming with full backtesting capabilities." },
-            { Icon: IconGlobe,       title: "Universal Access",     desc: "Available on Windows, Mac (via WebTrader), iOS, and Android — any device, any location." },
-            { Icon: IconLayers,      title: "Huge EA Ecosystem",    desc: "Access thousands of Expert Advisors, custom indicators, and scripts from the MetaTrader marketplace." },
+            { Icon: IconShieldCheck, title: locale === "pt" ? "Confiabilidade Comprovada"  : "Proven Reliability",   desc: locale === "pt" ? "O MT4 é o padrão de mercado desde 2005, confiado por milhões de traders e brokers em todo o mundo." : "MT4 has been the market standard since 2005, trusted by millions of traders and brokers worldwide." },
+            { Icon: IconCode,        title: locale === "pt" ? "Trading Algorítmico"        : "Algorithmic Trading",  desc: locale === "pt" ? "Construa ou implante estratégias automatizadas usando programação MQL4 com capacidade completa de backtesting." : "Build or deploy automated strategies using MQL4 programming with full backtesting capabilities." },
+            { Icon: IconGlobe,       title: locale === "pt" ? "Acesso Universal"           : "Universal Access",     desc: locale === "pt" ? "Disponível em Windows, Mac (via WebTrader), iOS e Android — qualquer dispositivo, qualquer local." : "Available on Windows, Mac (via WebTrader), iOS, and Android — any device, any location." },
+            { Icon: IconLayers,      title: locale === "pt" ? "Ecossistema Vasto de EAs"   : "Huge EA Ecosystem",    desc: locale === "pt" ? "Acesse milhares de Expert Advisors, indicadores personalizados e scripts do marketplace MetaTrader." : "Access thousands of Expert Advisors, custom indicators, and scripts from the MetaTrader marketplace." },
           ]} cols={4} dark />
         </div>
       </section>
@@ -649,20 +654,11 @@ export default function PlatformPage() {
 
             {/* Right — content */}
             <div>
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">Cross-Device Trading</div>
-              <h2 className="text-3xl font-extrabold text-[#111827] mb-5 leading-tight">
-                One Account.<br />Every Device. Always Synced.
-              </h2>
-              <p className="text-gray-500 leading-relaxed mb-6 text-[15px]">
-                Your Olla Trade MT4 account is fully synchronized across every platform. Open a position on desktop, monitor it on mobile, and manage it from your tablet — all in real time with the same account credentials.
-              </p>
+              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{tp("cross_label")}</div>
+              <h2 className="text-3xl font-extrabold text-[#111827] mb-5 leading-tight">{tp("cross_title")}</h2>
+              <p className="text-gray-500 leading-relaxed mb-6 text-[15px]">{tp("cross_desc")}</p>
               <div className="space-y-4 mb-8">
-                {[
-                  { t:"Desktop (Windows)",  d:"Full MetaTrader 4 installation with all features: multi-chart layout, full EA support, backtesting, and local alerts." },
-                  { t:"WebTrader (Browser)",d:"Access your full MT4 account from any modern browser — no installation required. Works on Mac, Linux, and Chromebook." },
-                  { t:"iOS & Android",      d:"The official MT4 mobile app gives you real-time quotes, interactive charts, one-tap trading, and push notifications." },
-                  { t:"Synchronized Data", d:"Positions, account balance, chart settings, and watchlists stay synchronized across all your devices automatically." },
-                ].map(({ t, d }) => (
+                {crossItems.map(({ t, d }) => (
                   <div key={t} className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#00CC44] flex-shrink-0 mt-2"/>
                     <div>
@@ -675,11 +671,11 @@ export default function PlatformPage() {
               <div className="flex gap-3 flex-wrap">
                 <Link href="https://direct.ollatrade.com/auth/register"
                   className="inline-flex items-center gap-2 bg-[#00CC44] hover:bg-[#00DD4A] text-black font-bold px-6 py-3 rounded-lg text-[13px] transition-colors">
-                  Open Account
+                  {tp("cross_open")}
                 </Link>
                 <Link href="/tools/vps"
                   className="inline-flex items-center gap-2 border border-gray-200 text-gray-600 hover:text-[#111827] font-medium px-6 py-3 rounded-lg text-[13px] transition-colors">
-                  VPS Guide →
+                  {tp("cross_vps")} →
                 </Link>
               </div>
             </div>
@@ -690,20 +686,28 @@ export default function PlatformPage() {
       {/* ── Section 4: All features ─────────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-[#111827] mb-3 text-center">All MT4 Platform Features</h2>
-          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">
-            Everything a professional trader needs — built into the world's most trusted trading platform.
-          </p>
-          <FeatureGrid features={features} cols={4} />
+          <h2 className="text-3xl font-extrabold text-[#111827] mb-3 text-center">{tp("all_title")}</h2>
+          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-[15px]">{tp("all_desc")}</p>
+          <FeatureGrid
+            features={platformFeatures.map(({ title, desc }, i) => {
+              const ICONS = [IconBarChart, IconCode, IconBell, IconLayers, IconClock, IconActivity, IconSettings, IconServer];
+              return { Icon: ICONS[i % ICONS.length], title, desc };
+            })}
+            cols={4}
+          />
         </div>
       </section>
 
-      <FAQSection title="MT4 Platform FAQs" faqs={platformFaqs} />
+      <FAQSection
+        title={tp("faq_title")}
+        subtitle={tp("faq_subtitle")}
+        faqs={platformFaqsTr}
+      />
       <CTASection
-        title="Start Trading on MT4 Today"
-        subtitle="Open your Olla Trade account and access MT4 on all your devices instantly."
-        primaryLabel="Open Account"
-        secondaryLabel="Compare Accounts"
+        title={tp("cta_title")}
+        subtitle={tp("cta_subtitle")}
+        primaryLabel={locale === "pt" ? "Abrir Conta" : "Open Account"}
+        secondaryLabel={locale === "pt" ? "Comparar Contas" : "Compare Accounts"}
         secondaryHref="/trading/accounts"
       />
     </>
