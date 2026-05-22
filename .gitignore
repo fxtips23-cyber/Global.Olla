@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# article cache (rebuilt by sync on server)
+/data/articles.json
