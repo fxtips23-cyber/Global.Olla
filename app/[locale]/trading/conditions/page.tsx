@@ -91,7 +91,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
               ["0.0 pips",        "Spreads From"],
               [SITE.minDeposit,   "Min. Deposit"],
               ["0.01 lots",       "Min. Trade Size"],
-              ["50%",             "Margin Call"],
+              ["80%",             "Margin Call"],
               ["20%",             "Stop Out Level"],
             ].map(([v, l]) => <StatCard key={l} value={v} label={l} />)}
           </div>
@@ -107,10 +107,10 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
             Olla Trade uses market execution across all accounts. Orders are filled at the best available market price at the time of submission, subject to available liquidity and market conditions.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <InfoCard title="Variable Spreads" body="Spreads are variable and reflect live market conditions. Major Forex pairs start from 0.0 pips on the Elite account and from 1.0 pips on the Standard account. Spreads may widen during major economic announcements, market open/close, or periods of reduced liquidity." />
+            <InfoCard title="Variable Spreads" body="Spreads are variable and reflect live market conditions. Major Forex pairs start from 0.0 pips on the Elite account and from 1.4 pips on the Standard account. Spreads may widen during major economic announcements, market open/close, or periods of reduced liquidity." />
             <InfoCard title="Market Execution" body="All orders are executed at the best available market price. No dealer intervention occurs in the order execution process. Expert Advisors (EAs) and automated trading strategies are fully supported on all account types." />
             <InfoCard title="Flexible Leverage" body="Leverage up to 1:500 is available on Forex pairs. Leverage varies by instrument class. Higher leverage increases both potential gains and losses. Clients should use leverage carefully and in accordance with their risk tolerance." />
-            <InfoCard title="Negative Balance Protection" body="Olla Trade applies negative balance protection to all client accounts. Your total losses cannot exceed your deposited balance. In extreme market conditions where the account falls below zero, the negative balance is reset to zero at no charge." />
+            <InfoCard title="Negative Balance Protection" body="Olla Trade applies negative balance protection to all client accounts. In most market conditions, your losses will not exceed your deposited balance. Where an account falls into a negative balance due to exceptional market events, Olla Trade will reset the balance to zero at no charge to the client." />
             <InfoCard title="No Requotes" body="The market execution model means orders are not subject to requotes. All orders are accepted and executed at prevailing market prices. Slippage — execution at a price different from the requested price — may occur in fast-moving markets." />
             <InfoCard title="EA & Scalping Allowed" body="Expert Advisors, scalping strategies, news trading, and hedging are permitted on all Olla Trade accounts. There are no restrictions on trading styles. All strategies must remain within the bounds of the account terms and conditions." />
           </div>
@@ -138,12 +138,12 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
               <tbody className="divide-y divide-gray-50">
                 {[
                   ["Min. Deposit",         "$10",       "$2,000",   "$20,000"],
-                  ["Spreads From",         "1.0 pips",  "0.6 pips", "0.0 pips"],
-                  ["Commission",          "None",      "None",     "None"],
-                  ["Max Leverage",        "1:500",     "1:500",    "1:500"],
+                  ["Spreads From",         "1.4 pips",  "1.0 pips", "0.0 pips"],
+                  ["Commission",          "None",      "None",     "$3.5 / lot"],
+                  ["Max Leverage",        "1:400",     "1:400",    "1:200"],
                   ["Min. Trade Size",     "0.01 lots", "0.01 lots","0.01 lots"],
                   ["EA / Scalping",       "Allowed",   "Allowed",  "Allowed"],
-                  ["Margin Call",         "50%",       "50%",      "50%"],
+                  ["Margin Call",         "80%",       "80%",      "80%"],
                   ["Stop Out Level",      "20%",       "20%",      "20%"],
                   ["Negative Bal. Prot.", "Yes",       "Yes",      "Yes"],
                   ["Platform",            "MT4",       "MT4",      "MT4"],
@@ -178,12 +178,12 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {[
-                  ["Forex",       "From 0.0 pips", "1:500",  "50%", "20%"],
-                  ["Metals",      "From 25 pts",   "1:200",  "50%", "20%"],
-                  ["Indices",     "From 1 pt",     "1:100",  "50%", "20%"],
-                  ["Energies",    "From 3 pts",    "1:100",  "50%", "20%"],
-                  ["Crypto",      "From 50 pts",   "1:10",   "50%", "20%"],
-                  ["Stocks",      "Market spread", "1:10",   "50%", "20%"],
+                  ["Forex",       "From 0.0 pips", "1:500",  "80%", "20%"],
+                  ["Metals",      "From 25 pts",   "1:200",  "80%", "20%"],
+                  ["Indices",     "From 1 pt",     "1:100",  "80%", "20%"],
+                  ["Energies",    "From 3 pts",    "1:100",  "80%", "20%"],
+                  ["Crypto",      "From 50 pts",   "1:10",   "80%", "20%"],
+                  ["Stocks",      "Market spread", "1:10",   "80%", "20%"],
                 ].map(r => (
                   <tr key={r[0]} className="hover:bg-[#F9FAFB]">
                     {r.map((v, i) => (
@@ -212,7 +212,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
                 Higher leverage amplifies both potential profits and potential losses. Clients are responsible for maintaining sufficient margin in their accounts. Olla Trade does not guarantee that margin calls will always prevent losses exceeding the account balance under all market conditions.
               </p>
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-[12px] text-amber-800">
-                <strong>Margin Warning:</strong> When your account equity falls to 50% of the required margin (Margin Call level), you will receive a notification. At 20% (Stop Out level), positions may begin to be closed automatically to protect remaining equity.
+                <strong>Margin Warning:</strong> When your account equity falls to 80% of the required margin (Margin Call level), you will receive a margin call notification. At 20% (Stop Out level), positions may begin to be closed automatically to protect remaining equity. Clients are responsible for monitoring margin levels at all times.
               </div>
             </div>
             <div className="space-y-3">

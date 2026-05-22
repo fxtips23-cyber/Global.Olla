@@ -42,7 +42,7 @@ export default function EducationPage() {
           </div>
         </div>
       </section>
-      <CTASection title="Put Your Knowledge to Work" subtitle="Open a demo account and practise your strategies risk-free before going live." primaryLabel="Open Account" secondaryLabel="View Forex Glossary" secondaryHref="/tools/glossary" />
+      <CTASection title="Put Your Knowledge to Work" subtitle="Open a demo account and practise your strategies with virtual funds before trading live." primaryLabel="Open Account" secondaryLabel="View Forex Glossary" secondaryHref="/tools/glossary" />
     </>
   );
 }

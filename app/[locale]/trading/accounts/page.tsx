@@ -36,7 +36,7 @@ const rows: Row[] = [
   { feature: "Expert Advisors",               values: ["Supported",       "Supported",      "Supported"],                variant: "check" },
   { feature: "Negative Balance Protection",   values: ["Yes",             "Yes",            "Yes"],                      variant: "check" },
   { feature: "24/5 Support",                  values: ["Standard",        "Priority",       "VIP"],                      variant: "check" },
-  { feature: "Deposit / Withdrawal Fees",     values: ["None (from OT)",  "None (from OT)", "None (from OT)"],           variant: "green" },
+  { feature: "Deposit / Withdrawal Fees",     values: ["None",            "None",           "None"],                     variant: "green" },
   { feature: "Demo Account",                  values: ["Yes",             "Yes",            "Yes"],                      variant: "check" },
 ];
 

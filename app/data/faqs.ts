@@ -343,11 +343,11 @@ export const conditionsFaqs: FAQ[] = [
   },
   {
     q: "Does Olla Trade charge commissions?",
-    a: "No. Olla Trade does not charge per-trade commissions on any account type. The cost of trading is built into the spread. There are no hidden fees on standard trading activity.",
+    a: "Standard and Pro accounts have no per-lot commission — the cost of trading is built into the spread. The Elite account charges $3.5 per lot per side in exchange for raw spreads starting from 0.0 pips. There are no other hidden fees on standard trading activity.",
   },
   {
     q: "What is the margin call and stop out level?",
-    a: "The margin call level is 50% — when account equity falls to 50% of required margin, you receive a warning notification. The stop out level is 20% — when equity falls to 20% of required margin, positions may begin to close automatically to protect remaining equity.",
+    a: "The margin call level is 80% — when account equity falls to 80% of the required margin, you will receive a margin call notification. The stop out level is 20% — when equity falls to 20% of required margin, positions may begin to be closed automatically to protect remaining equity.",
   },
   {
     q: "Is negative balance protection provided?",
