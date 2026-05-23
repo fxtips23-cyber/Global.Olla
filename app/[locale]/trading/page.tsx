@@ -2,45 +2,52 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../components/ui/PageHero";
 import { IconMonitor, IconScale, IconActivity, IconCreditCard, IconDatabase, IconDollar, IconCalendar } from "../../components/ui/Icons";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { ComponentType } from "react";
 
 export const metadata: Metadata = {
   title: "Trading",
   description: "Everything you need to trade with Olla Trade — platform, accounts, conditions, deposits, and more.",
 };
 
-const links = [
-  { Icon: IconMonitor,  title: "Platform (MT4)",         sub: "MetaTrader 4 on all devices",   href: "/trading/platform" },
-  { Icon: IconScale,    title: "Compare Accounts",        sub: "Standard, Pro, and Elite",       href: "/trading/accounts" },
-  { Icon: IconActivity, title: "Trading Conditions",      sub: "Spreads, leverage & margin",     href: "/trading/conditions" },
-  { Icon: IconCreditCard,title:"Deposit",                 sub: "Fund your account",              href: "/trading/deposit" },
-  { Icon: IconDatabase,  title:"Withdrawal",              sub: "Fast and secure",                href: "/trading/withdrawal" },
-  { Icon: IconDollar,    title:"Payment Methods",         sub: "Cards, crypto, wire",            href: "/trading/payment-methods" },
-  { Icon: IconCalendar,  title:"Expiration & Holidays",   sub: "Trading schedule",               href: "/trading/expiration" },
-  { Icon: IconActivity,  title:"Execution Information",   sub: "Order execution policy",         href: "/execution-information" },
+const LINK_ICONS: ComponentType<{ className?: string }>[] = [
+  IconMonitor, IconScale, IconActivity, IconCreditCard, IconDatabase, IconDollar, IconCalendar, IconActivity,
 ];
 
-export default function TradingPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }];
+}
+
+export default async function TradingPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "trading_pages.hub" });
+  const links = t.raw("links") as { title: string; sub: string; href: string }[];
+
   return (
     <>
       <PageHero
-        badge="Trading"
-        title="Trading with Olla Trade"
-        subtitle="Professional trading conditions, multiple account types, and the power of MetaTrader 4."
-        breadcrumbs={[{ label: "Trading" }]}
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("subtitle")}
+        breadcrumbs={[{ label: t("badge") }]}
       />
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {links.map(({ Icon, title, sub, href }) => (
-              <Link key={title} href={href}
-                className="group bg-white border border-gray-100 rounded-2xl p-6 hover:border-[#00CC44]/25 hover:shadow-lg hover:-translate-y-1 transition-all">
-                <div className="w-10 h-10 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-4 group-hover:border-[#111827]/20 group-hover:text-[#111827] transition-colors">
-                  <Icon className="w-5 h-5" />
-                </div>
-                <h3 className="text-[14px] font-bold text-[#111827] mb-1 group-hover:text-[#00AA38] transition-colors">{title}</h3>
-                <p className="text-[12px] text-gray-400">{sub}</p>
-              </Link>
-            ))}
+            {links.map(({ title, sub, href }, i) => {
+              const Icon = LINK_ICONS[i % LINK_ICONS.length];
+              return (
+                <Link key={href} href={href}
+                  className="group bg-white border border-gray-100 rounded-2xl p-6 hover:border-[#00CC44]/25 hover:shadow-lg hover:-translate-y-1 transition-all">
+                  <div className="w-10 h-10 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-4 group-hover:border-[#111827]/20 group-hover:text-[#111827] transition-colors">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-[14px] font-bold text-[#111827] mb-1 group-hover:text-[#00AA38] transition-colors">{title}</h3>
+                  <p className="text-[12px] text-gray-400">{sub}</p>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

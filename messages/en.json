@@ -614,6 +614,52 @@
       "faq_title": "Stock CFD FAQs",
       "cta_title": "Trade 1,000+ Global Stocks",
       "cta_subtitle": "Open your Olla Trade account and access equity markets worldwide from MetaTrader 4."
+    },
+    "hub": {
+      "badge": "500+ Instruments",
+      "title": "Global Markets at Your Fingertips",
+      "subtitle": "Access six major asset classes from a single Olla Trade account. Professional conditions, competitive spreads, and the full power of MT4.",
+      "explore_prefix": "Explore",
+      "cta_title": "Start Trading Global Markets",
+      "cta_subtitle": "Open an account in minutes and access all 500+ instruments from one platform.",
+      "markets": [
+        {
+          "label": "Forex",
+          "sub": "70+ currency pairs",
+          "pip": "From 0.0 pips",
+          "leverage": "Up to 1:500"
+        },
+        {
+          "label": "Metals",
+          "sub": "Precious metals",
+          "pip": "From 25 pts",
+          "leverage": "Up to 1:200"
+        },
+        {
+          "label": "Indices",
+          "sub": "Global stock indices",
+          "pip": "From 1 pt",
+          "leverage": "Up to 1:100"
+        },
+        {
+          "label": "Energies",
+          "sub": "Commodities",
+          "pip": "From 3 pts",
+          "leverage": "Up to 1:100"
+        },
+        {
+          "label": "Crypto",
+          "sub": "Cryptocurrencies",
+          "pip": "From 50 pts",
+          "leverage": "Up to 1:10"
+        },
+        {
+          "label": "Stocks",
+          "sub": "1,000+ equities",
+          "pip": "Market spread",
+          "leverage": "Up to 1:10"
+        }
+      ]
     }
   },
   "trading": {
@@ -1289,6 +1335,187 @@
       "disclaimer_title": "Disclaimer:",
       "disclaimer_text": "Articles and market analysis published by Olla Trade are for informational and educational purposes only. They do not constitute investment advice, a solicitation to trade, or a recommendation to buy or sell any financial instrument.",
       "full_blog_btn": "Full blog →"
+    },
+    "hub": {
+      "badge": "Free Tools",
+      "title": "Professional Trading Tools",
+      "subtitle": "Everything you need to research, plan, and execute — free to all Olla Trade clients.",
+      "live_data_label": "Live Market Data",
+      "spreads_label": "Indicative Spreads",
+      "spreads_title": "Typical Spreads by Instrument",
+      "quick_links_label": "Quick Links",
+      "market_data_note": "Market data is indicative. Prices may vary by account type, liquidity, and market conditions.",
+      "all_tools_label": "All Tools",
+      "all_tools_title": "Free for All Clients",
+      "tools": [
+        {
+          "title": "Economic Calendar",
+          "sub": "Track market-moving events in real time.",
+          "href": "/tools/economic-calendar"
+        },
+        {
+          "title": "Forex Calculator",
+          "sub": "Calculate pip value, margin requirements, and P&L.",
+          "href": "/tools/forex-calculator"
+        },
+        {
+          "title": "Trading Alerts",
+          "sub": "Set custom price alerts on your watched instruments.",
+          "href": "/tools/alerts"
+        },
+        {
+          "title": "VPS Guide",
+          "sub": "Run Expert Advisors 24/5 on a virtual private server.",
+          "href": "/tools/vps"
+        },
+        {
+          "title": "Forex Glossary",
+          "sub": "Master key trading terms from A to Z.",
+          "href": "/tools/glossary"
+        },
+        {
+          "title": "Education Centre",
+          "sub": "Structured learning from Basic to Professional level.",
+          "href": "/tools/education"
+        },
+        {
+          "title": "Articles",
+          "sub": "Latest market analysis and trading insights.",
+          "href": "/tools/news"
+        }
+      ],
+      "quick_links": [
+        {
+          "label": "Forex Calculator",
+          "href": "/tools/forex-calculator",
+          "desc": "Calculate pip value & margin"
+        },
+        {
+          "label": "Economic Calendar",
+          "href": "/tools/economic-calendar",
+          "desc": "Upcoming market events"
+        },
+        {
+          "label": "Trading Alerts",
+          "href": "/tools/alerts",
+          "desc": "Set MT4 price notifications"
+        },
+        {
+          "label": "VPS Guide",
+          "href": "/tools/vps",
+          "desc": "Run EAs 24/5 without downtime"
+        }
+      ]
+    },
+    "education": {
+      "badge": "Learn to Trade",
+      "title": "Trading Education",
+      "subtitle": "Structured learning from beginner to professional. Build your trading knowledge at your own pace.",
+      "levels": [
+        {
+          "badge": "Level 1",
+          "title": "Basic",
+          "topics": [
+            "What is Forex Trading?",
+            "How Currency Pairs Work",
+            "Understanding Pips and Lots",
+            "Basic Order Types — Buy, Sell, Stop, Limit",
+            "What is Leverage and Margin?",
+            "Reading Basic Price Charts",
+            "Introduction to Risk Management",
+            "Demo Account Practice"
+          ]
+        },
+        {
+          "badge": "Level 2",
+          "title": "Advanced",
+          "topics": [
+            "Technical Analysis Fundamentals",
+            "Support and Resistance Levels",
+            "Trend Lines and Channels",
+            "Moving Averages — SMA, EMA",
+            "RSI, MACD, Bollinger Bands",
+            "Fundamental Analysis Basics",
+            "Trading Economic News Events",
+            "Position Sizing and Money Management"
+          ]
+        },
+        {
+          "badge": "Level 3",
+          "title": "Professional",
+          "topics": [
+            "Advanced Chart Patterns",
+            "Elliott Wave Theory",
+            "Multi-Timeframe Analysis",
+            "Building a Trading Plan",
+            "Algorithmic Trading with EAs",
+            "Backtesting Strategies on MT4",
+            "Portfolio Diversification",
+            "Advanced Risk Management"
+          ]
+        }
+      ],
+      "disclaimer": "All educational content is for informational purposes only and does not constitute investment advice.",
+      "glossary_link": "Browse the Forex Glossary →",
+      "cta_title": "Put Your Knowledge to Work",
+      "cta_subtitle": "Open a demo account and practise your strategies with virtual funds before trading live.",
+      "cta_primary": "Open Account",
+      "cta_secondary": "View Forex Glossary"
+    },
+    "glossary": {
+      "badge": "Education",
+      "title": "Forex Glossary",
+      "subtitle": "Master the language of trading. Our comprehensive glossary covers every key term from A to Z.",
+      "terms": [
+        {
+          "term": "Ask Price",
+          "def": "The lowest price a seller is willing to accept for a currency pair. Also called the offer price."
+        },
+        {
+          "term": "Bid Price",
+          "def": "The highest price a buyer is willing to pay for a currency pair."
+        },
+        {
+          "term": "CFD",
+          "def": "Contract for Difference — a financial derivative that allows you to speculate on price movements without owning the underlying asset."
+        },
+        {
+          "term": "Expert Advisor (EA)",
+          "def": "An automated trading program that runs on MetaTrader 4 and can execute trades based on pre-set rules without manual intervention."
+        },
+        {
+          "term": "Leverage",
+          "def": "A mechanism that allows traders to control larger positions with a smaller amount of capital. Leverage amplifies both profits and losses."
+        },
+        {
+          "term": "Lot",
+          "def": "The standard unit of measurement for a Forex transaction. One standard lot equals 100,000 units of the base currency."
+        },
+        {
+          "term": "Margin",
+          "def": "The amount of funds required in your account to open and maintain a leveraged position."
+        },
+        {
+          "term": "Pip",
+          "def": "The smallest standard unit of price movement in a currency pair, typically the fourth decimal place (0.0001) for most pairs."
+        },
+        {
+          "term": "Spread",
+          "def": "The difference between the bid and ask price. It represents the cost of trading and is measured in pips."
+        },
+        {
+          "term": "Stop Loss",
+          "def": "An instruction to close a position automatically when it reaches a specified loss level, to limit further losses."
+        },
+        {
+          "term": "Take Profit",
+          "def": "An instruction to close a position automatically when it reaches a specified profit level."
+        },
+        {
+          "term": "Swap",
+          "def": "An overnight interest charge (or credit) applied to positions held open past the market close. Also called rollover."
+        }
+      ]
     }
   },
   "company": {
@@ -2487,6 +2714,48 @@
           "href": "/legal/complaint-management"
         }
       ]
+    },
+    "hub": {
+      "badge": "Company",
+      "title": "Olla Trade Company",
+      "subtitle": "Learn about our mission, meet our team, and find all the resources you need.",
+      "links": [
+        {
+          "title": "About Us",
+          "sub": "Our story and mission",
+          "href": "/company/about"
+        },
+        {
+          "title": "Partner / Affiliate",
+          "sub": "Earn with Olla Trade",
+          "href": "/company/affiliate"
+        },
+        {
+          "title": "Promotions",
+          "sub": "Active bonuses",
+          "href": "/company/promotions"
+        },
+        {
+          "title": "Contact Us",
+          "sub": "Get in touch",
+          "href": "/company/contact"
+        },
+        {
+          "title": "Get Help",
+          "sub": "FAQs and support",
+          "href": "/company/help"
+        },
+        {
+          "title": "Complaints",
+          "sub": "Complaint process",
+          "href": "/company/complaints"
+        },
+        {
+          "title": "Legal Documents",
+          "sub": "All policies",
+          "href": "/company/legal"
+        }
+      ]
     }
   },
   "legal": {
@@ -2794,6 +3063,72 @@
       "legal_crumb": "Legal",
       "hero_badge": "Legal Document",
       "hero_title": "Order Execution Policy"
+    },
+    "cookies": {
+      "badge": "Privacy",
+      "title": "Cookies Policy",
+      "subtitle": "How Olla Trade uses cookies and how you can manage your preferences.",
+      "what_title": "What are Cookies?",
+      "what_body": "Cookies are small text files stored on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners. Olla Trade uses cookies to improve your browsing experience, analyse site traffic, and personalise content.",
+      "types": [
+        {
+          "name": "Essential Cookies",
+          "desc": "Required for the website to function properly. These cannot be disabled. They enable core functions such as security, account access, and form submissions."
+        },
+        {
+          "name": "Analytics Cookies",
+          "desc": "Help us understand how visitors use our website by collecting anonymous usage data. This allows us to improve the user experience."
+        },
+        {
+          "name": "Functional Cookies",
+          "desc": "Remember your preferences such as language settings, and provide enhanced functionality."
+        },
+        {
+          "name": "Marketing Cookies",
+          "desc": "Used to track visitors across websites and display relevant advertisements. These are optional and can be disabled."
+        }
+      ],
+      "managing_title": "Managing Cookies",
+      "managing_body": "You can control and manage cookies through your browser settings. Most browsers allow you to refuse cookies or delete existing ones. Note that disabling cookies may affect the functionality of our website. For more information, visit your browser’s help documentation."
+    },
+    "complaint_management": {
+      "badge": "Legal",
+      "title": "Complaint Management",
+      "subtitle": "Our formal complaint handling procedures and client dispute resolution process.",
+      "sections": [
+        {
+          "title": "Scope",
+          "body": "This Complaint Management Policy applies to all clients of Olla Trade Ltd. It sets out the procedures for submitting, acknowledging, investigating, and resolving formal complaints."
+        },
+        {
+          "title": "How to Submit a Complaint",
+          "body": "Complaints can be submitted via email to: complaints@ollatrade.com. Please include: your full name, account number, date of the issue, detailed description of the complaint, and copies of any relevant supporting documentation."
+        },
+        {
+          "title": "Acknowledgement",
+          "body": "We will acknowledge receipt of your complaint within 2 business days of receiving it. The acknowledgement will include a reference number and the name of the person handling your complaint."
+        },
+        {
+          "title": "Investigation",
+          "body": "We will investigate your complaint thoroughly and impartially. We aim to provide a full response within 10 business days. For complex complaints requiring further investigation, we may require up to 30 business days and will keep you informed of progress."
+        },
+        {
+          "title": "Resolution",
+          "body": "We will communicate our findings and proposed resolution in writing. Our response will explain our decision and the reasoning behind it. If your complaint is upheld, we will advise on the appropriate remedy."
+        },
+        {
+          "title": "Escalation",
+          "body": "If you are not satisfied with our final response, you may escalate the matter to the relevant regulatory authority or seek independent legal advice. The Company’s registered address for regulatory purposes is: Grace Complex, The Valley, AI 2640, Anguilla."
+        },
+        {
+          "title": "Record Keeping",
+          "body": "All complaint records are maintained for a minimum of 5 years. We use complaint data to identify patterns and improve our services."
+        },
+        {
+          "title": "Contact",
+          "body": "Complaints Department: complaints@ollatrade.com | Phone: +44 7418 641736 | Registered Address: Grace Complex, The Valley, AI 2640, Anguilla"
+        }
+      ]
     }
   },
   "page_content": {
@@ -4396,6 +4731,271 @@
       "all_desc": "Everything a professional trader needs — built into the world's most trusted trading platform.",
       "faq_title": "MT4 Platform FAQs",
       "faq_subtitle": "Common questions about MetaTrader 4, account setup, Expert Advisors, and platform compatibility."
+    },
+    "hub": {
+      "badge": "Trading",
+      "title": "Trading with Olla Trade",
+      "subtitle": "Professional trading conditions, multiple account types, and the power of MetaTrader 4.",
+      "links": [
+        {
+          "title": "Platform (MT4)",
+          "sub": "MetaTrader 4 on all devices",
+          "href": "/trading/platform"
+        },
+        {
+          "title": "Compare Accounts",
+          "sub": "Standard, Pro, and Elite",
+          "href": "/trading/accounts"
+        },
+        {
+          "title": "Trading Conditions",
+          "sub": "Spreads, leverage & margin",
+          "href": "/trading/conditions"
+        },
+        {
+          "title": "Deposit",
+          "sub": "Fund your account",
+          "href": "/trading/deposit"
+        },
+        {
+          "title": "Withdrawal",
+          "sub": "Fast and secure",
+          "href": "/trading/withdrawal"
+        },
+        {
+          "title": "Payment Methods",
+          "sub": "Cards, crypto, wire",
+          "href": "/trading/payment-methods"
+        },
+        {
+          "title": "Expiration & Holidays",
+          "sub": "Trading schedule",
+          "href": "/trading/expiration"
+        },
+        {
+          "title": "Execution Information",
+          "sub": "Order execution policy",
+          "href": "/execution-information"
+        }
+      ]
+    },
+    "deposit": {
+      "badge": "Fund Your Account",
+      "title": "Deposit Funds",
+      "subtitle": "Choose from a wide range of payment methods to fund your Olla Trade account quickly and securely. No fees from Olla Trade.",
+      "cta_login": "Log In to Deposit",
+      "stat_min_label": "Min. Deposit",
+      "stat_fee_label": "Our Fees",
+      "stat_card_label": "Card Processing",
+      "stat_card_val": "Instant",
+      "guarantees": [
+        "Instant crediting on card & e-wallet deposits",
+        "SSL-encrypted, secure transaction processing",
+        "No deposit fees charged by Olla Trade",
+        "All deposits protected by client fund segregation"
+      ],
+      "methods_title": "Available Deposit Methods",
+      "col_processing": "Processing",
+      "col_fee": "Fee",
+      "col_min": "Min. deposit",
+      "fee_val": "No fee",
+      "time_instant": "Instant",
+      "time_network": "Network confirmations",
+      "time_wire": "1–3 business days",
+      "how_title": "How to Deposit",
+      "steps": [
+        "Log in to your Olla Trade client portal.",
+        "Navigate to the Deposit section in your account dashboard.",
+        "Select your preferred payment method.",
+        "Enter the deposit amount and follow the on-screen instructions.",
+        "Your account will be credited once the payment is confirmed."
+      ],
+      "disclaimer": "Processing times may vary. Third-party fees from payment providers may apply and are outside our control. Olla Trade does not charge its own fees on deposits.",
+      "cta_title": "Ready to Fund Your Account?",
+      "cta_login2": "Log In to Deposit",
+      "cta_open": "Open New Account"
+    },
+    "withdrawal": {
+      "badge": "Withdraw Funds",
+      "title": "Withdrawals",
+      "subtitle": "Withdraw your trading profits quickly and securely. We process withdrawal requests promptly with no hidden fees.",
+      "cta_btn": "Request Withdrawal",
+      "stat_proc_label": "Processing",
+      "stat_fee_label": "Our Fees",
+      "stat_ssl_label": "Encrypted",
+      "how_title": "How to Withdraw",
+      "steps": [
+        "Log in to your Olla Trade client portal.",
+        "Navigate to the Withdrawal section in your account dashboard.",
+        "Select your preferred withdrawal method.",
+        "Enter the withdrawal amount and submit your request.",
+        "Processing typically takes 24–48 business hours after approval."
+      ],
+      "policy_title": "Withdrawal Policy",
+      "policy_items": [
+        [
+          "No withdrawal fees",
+          "Olla Trade does not charge fees on withdrawal requests."
+        ],
+        [
+          "Same method rule",
+          "Withdrawals are processed to the same method used for deposit where possible."
+        ],
+        [
+          "KYC required",
+          "Account verification (KYC) must be completed before processing withdrawals."
+        ],
+        [
+          "Processing time",
+          "Withdrawals are processed within 24–48 business hours of approval."
+        ],
+        [
+          "Full terms",
+          "Please review our Withdrawal Conditions page for complete policy details."
+        ]
+      ],
+      "trust": [
+        "Segregated client funds",
+        "SSL-encrypted withdrawals",
+        "Fast 24–48h processing",
+        "No Olla Trade fees"
+      ],
+      "wallet_label": "Client Portal",
+      "wallet_title": "Olla Wallet",
+      "wallet_desc": "The Olla Wallet allows you to transfer funds between your wallet and trading accounts instantly, giving you the flexibility to manage your capital according to your trading needs. Funds held in the Wallet are not subject to market risks, so it is a great way to manage risk and exposure.",
+      "wallet_bullets": [
+        "Instant transfers between wallet and trading accounts",
+        "Add funds using crypto, cards, or bank transfer",
+        "Withdraw to your preferred payment method",
+        "Full transaction history and balance tracking"
+      ],
+      "wallet_cta_primary": "Access Olla Wallet",
+      "wallet_cta_secondary": "How Olla Wallet works",
+      "cta_title": "Access Your Funds Anytime",
+      "cta_primary": "Request Withdrawal",
+      "cta_secondary": "View Withdrawal Conditions"
+    },
+    "payment_methods": {
+      "badge": "Deposits & Withdrawals",
+      "title": "Payment Methods",
+      "subtitle": "A wide range of fast and secure payment options — all with no fees charged by Olla Trade.",
+      "stat_methods_label": "Methods",
+      "stat_fee_label": "Our Fees",
+      "stat_instant_label": "Card & E-Wallet",
+      "stat_instant_val": "Instant",
+      "col_deposit": "Deposit",
+      "col_withdrawal": "Withdrawal",
+      "col_fee": "Fee",
+      "fee_val": "No fee",
+      "time_instant": "Instant",
+      "time_network": "Network confirmations",
+      "time_wire_dep": "1–3 business days",
+      "time_wire_wd": "3–5 business days",
+      "time_card_wd": "3–5 business days",
+      "time_ewallet_wd": "24 hours",
+      "categories": [
+        {
+          "cat": "Credit & Debit Cards",
+          "desc": "Instant deposits with all major credit and debit cards. Secure 3D-verified processing."
+        },
+        {
+          "cat": "E-Wallets",
+          "desc": "Instant deposits and fast withdrawals through popular electronic wallets."
+        },
+        {
+          "cat": "Cryptocurrency",
+          "desc": "Fund your account with major cryptocurrencies. Network confirmation required."
+        },
+        {
+          "cat": "Bank Transfer",
+          "desc": "Traditional wire transfer for larger deposits. Processed within 1–3 business days."
+        }
+      ],
+      "disclaimer": "Please note: Processing times shown are estimates and may vary. Third-party payment providers may charge their own fees which are outside Olla Trade’s control. Olla Trade does not charge fees on deposits or withdrawals. Cryptocurrency processing times depend on network congestion and required confirmations.",
+      "cta_title": "Fund Your Account Today",
+      "cta_primary": "Deposit Funds",
+      "cta_secondary": "Open Account"
+    },
+    "expiration": {
+      "badge": "Trading Schedule",
+      "title": "Expiration & Market Holidays",
+      "subtitle": "Stay informed about trading hours, contract expiration dates, and market closures to plan your trading accordingly.",
+      "sections": [
+        {
+          "title": "Forex Market Hours",
+          "rows": [
+            [
+              "Monday",
+              "00:00 – Friday 23:59 (server time)"
+            ],
+            [
+              "Trading Week",
+              "5 days a week, 24 hours a day"
+            ],
+            [
+              "Market Open",
+              "Sunday 22:00 server time"
+            ],
+            [
+              "Market Close",
+              "Friday 22:00 server time"
+            ]
+          ]
+        },
+        {
+          "title": "Metals (Gold & Silver)",
+          "rows": [
+            [
+              "Trading Hours",
+              "Monday–Friday (24 hours)"
+            ],
+            [
+              "Exceptions",
+              "Reduced liquidity during Asian session"
+            ],
+            [
+              "US Holidays",
+              "Spreads may widen"
+            ]
+          ]
+        },
+        {
+          "title": "Indices",
+          "rows": [
+            [
+              "US30 / SPX500",
+              "Monday–Friday, session hours"
+            ],
+            [
+              "DAX40",
+              "Monday–Friday, European session"
+            ],
+            [
+              "Holiday Closures",
+              "Varies by exchange"
+            ]
+          ]
+        },
+        {
+          "title": "Crypto",
+          "rows": [
+            [
+              "Availability",
+              "24/7 (subject to liquidity)"
+            ],
+            [
+              "Weekend",
+              "Available but lower liquidity"
+            ],
+            [
+              "Note",
+              "Spreads may be wider on weekends"
+            ]
+          ]
+        }
+      ],
+      "important_label": "Important:",
+      "important": "Trading hours are indicative and may be subject to change during public holidays or periods of low liquidity. Check the instrument specifications in your MT4 platform for the most up-to-date schedule. Spreads may widen during market openings, closings, and around major economic events."
     }
   }
 }
