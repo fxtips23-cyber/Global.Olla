@@ -340,12 +340,13 @@
     "testimonials": {
       "badge": "Trader Experiences",
       "title": "Client Feedback",
-      "subtitle": "Read what our clients say about trading with Olla Trade. Reviews verified through Trustpilot.",
-      "rated": "Rated on Trustpilot",
-      "reviews_note": "Client reviews on Trustpilot",
-      "loading_note": "Reviews are loading from Trustpilot. View all verified client reviews directly on Trustpilot.",
-      "cta_title": "View reviews on Trustpilot",
-      "cta_url": "trustpilot.com/review/ollatrade.com"
+      "subtitle": "Read verified client experiences and feedback directly on Trustpilot.",
+      "trustpilot_label": "Trustpilot",
+      "trustpilot_tagline": "Independent review platform",
+      "trustpilot_profile_link": "View our Trustpilot profile",
+      "info_title": "Verified Client Reviews",
+      "info_body": "Client reviews are collected and verified through Trustpilot. You can view the latest feedback directly on our Trustpilot profile.",
+      "cta_label": "View reviews on Trustpilot"
     }
   },
   "footer": {
@@ -404,7 +405,7 @@
       "restricted_text": "Olla Trade Ltd. does not offer services to residents of the United States, Russia, Myanmar, United Arab Emirates, Canada, Israel, New Zealand, Iran, and North Korea (DPRK). It is the client's responsibility to comply with local laws prior to using our services.",
       "registered": "Registered:",
       "registered_text": "Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) as an International Business Company. Registered address: Grace Complex, The Valley, AI 2640, Anguilla.",
-      "copyright": "© {year} Olla Trade Ltd. All rights reserved."
+      "copyright": "© 2026 Olla Trade Ltd. All rights reserved."
     },
     "bottomLinks": {
       "terms": "Terms",

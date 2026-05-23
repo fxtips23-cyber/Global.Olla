@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const RECIPIENT = "info@ollatrade.com";
+const RECIPIENT = process.env.CONTACT_TO || "info@ollatrade.com";
 
 function isValidEmail(e: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
@@ -14,7 +14,12 @@ function sanitize(s: string) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { fullName, email, phone, country, enquiryType, subject, message } = body;
+    const { fullName, email, phone, country, enquiryType, subject, message, pageUrl, _honeypot } = body;
+
+    /* ── Honeypot spam check ─────────────────────────────────────── */
+    if (_honeypot) {
+      return NextResponse.json({ success: true });
+    }
 
     /* ── Validation ──────────────────────────────────────────────── */
     if (!fullName?.trim())          return NextResponse.json({ error: "Full name is required." }, { status: 400 });
@@ -26,6 +31,12 @@ export async function POST(req: NextRequest) {
     if (message.trim().length < 20) return NextResponse.json({ error: "Message must be at least 20 characters." }, { status: 400 });
 
     /* ── Build email HTML ────────────────────────────────────────── */
+    const submittedAt = new Date().toLocaleString("en-GB", {
+      timeZone: "UTC",
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", second: "2-digit",
+    }) + " UTC";
+
     const rows = [
       ["Full Name",    sanitize(fullName)],
       ["Email",        sanitize(email)],
@@ -34,6 +45,8 @@ export async function POST(req: NextRequest) {
       ["Enquiry Type", sanitize(enquiryType)],
       ["Subject",      sanitize(subject)],
       ["Message",      sanitize(message)],
+      ["Page URL",     sanitize(pageUrl || "—")],
+      ["Submitted At", submittedAt],
     ];
 
     const tableRows = rows
@@ -82,8 +95,10 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    const fromAddress = process.env.SMTP_FROM || `"Olla Trade Website" <${process.env.SMTP_USER}>`;
+
     await transporter.sendMail({
-      from:    `"Olla Trade Contact Form" <${process.env.SMTP_USER}>`,
+      from:    fromAddress,
       to:      RECIPIENT,
       replyTo: sanitize(email),
       subject: `New Contact Form Submission - Olla Trade | ${sanitize(enquiryType)}`,

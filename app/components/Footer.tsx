@@ -65,8 +65,6 @@ export default function Footer() {
   const td  = useTranslations("footer.disclaimer");
   const tbl = useTranslations("footer.bottomLinks");
 
-  const year = new Date().getFullYear();
-
   return (
     <footer className="bg-[#050C15]">
 
@@ -151,7 +149,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-[10.5px] text-white/14">
-            <p>{td("copyright").replace("{year}", String(year))}</p>
+            <p>{td("copyright")}</p>
             <div className="flex flex-wrap gap-4">
               {BOTTOM_LINKS.map(([key, href]) => (
                 <Link key={key} href={href} className="hover:text-white/30 transition-colors">{tbl(key as "terms"|"privacy"|"risk"|"cookies"|"complaint")}</Link>

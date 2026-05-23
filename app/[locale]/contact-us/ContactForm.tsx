@@ -80,7 +80,11 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          pageUrl: typeof window !== "undefined" ? window.location.href : "",
+          _honeypot: "",
+        }),
       });
 
       const data = await res.json();
@@ -122,6 +126,8 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      {/* Honeypot — hidden from real users, filled by bots */}
+      <input type="text" name="_honeypot" autoComplete="off" tabIndex={-1} aria-hidden="true" style={{ display: "none" }} />
       {/* Row 1: Name + Email */}
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
