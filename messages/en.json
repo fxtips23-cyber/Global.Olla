@@ -1407,7 +1407,176 @@
       "message_label": "Message",
       "message_placeholder": "How can we help you?",
       "send_btn": "Send Message",
-      "response_note": "We typically respond within 24 business hours."
+      "response_note": "We typically respond within 24 business hours.",
+      "hero_badge": "Get in Touch",
+      "hero_title": "Contact Olla Trade",
+      "hero_desc": "Get in touch with our support team for account assistance, funding queries, trading platform support, and general enquiries. We're available Monday to Friday, 24 hours a day.",
+      "hero_cta": "Get Support",
+      "hero_cta_secondary": "Open Account",
+      "breadcrumb_home": "Home",
+      "breadcrumb_page": "Contact Us",
+      "contact_cards": [
+        {
+          "title": "General Enquiries",
+          "detail": "info@ollatrade.com",
+          "href": "mailto:info@ollatrade.com",
+          "desc": "For general information about Olla Trade services, accounts, and promotions.",
+          "cta": "Send Email"
+        },
+        {
+          "title": "Client Support",
+          "detail": "cst@ollatrade.com",
+          "href": "mailto:cst@ollatrade.com",
+          "desc": "For assistance with your live trading account, funding, and technical issues.",
+          "cta": "Contact Support"
+        },
+        {
+          "title": "Partnership / Affiliate",
+          "detail": "info@ollatrade.com",
+          "href": "mailto:info@ollatrade.com",
+          "desc": "To enquire about our affiliate and partner programme or discuss a business partnership.",
+          "cta": "Partner With Us"
+        },
+        {
+          "title": "Compliance & Complaints",
+          "detail": "View Complaints Process",
+          "href": "/company/complaints",
+          "desc": "To submit a formal complaint or enquire about regulatory and compliance matters.",
+          "cta": "Complaints Process"
+        }
+      ],
+      "office_info_label": "Company Information",
+      "office_address_label": "Registered Address",
+      "office_phone_label": "Phone (24/5)",
+      "office_email_label": "Email",
+      "form_panel_label": "Send a Message",
+      "form_panel_title": "How Can We Help You?",
+      "form_panel_desc": "Fill in the form and our team will get back to you within one business day. For urgent account matters, email cst@ollatrade.com directly.",
+      "response_times_title": "Response Times",
+      "response_times": [
+        [
+          "General enquiries",
+          "1 business day"
+        ],
+        [
+          "Account support",
+          "Same business day"
+        ],
+        [
+          "Partnerships",
+          "2–3 business days"
+        ],
+        [
+          "Complaints",
+          "2 business days"
+        ]
+      ],
+      "hours_row": "Hours",
+      "hours_value": "24/5",
+      "days_row": "Days",
+      "days_value": "Monday – Friday",
+      "weekends_row": "Weekends",
+      "weekends_value": "Limited availability",
+      "form_section_title": "Send Us a Message",
+      "self_service_label": "Self-Service",
+      "quick_help_title": "Quick Help",
+      "quick_help_desc": "Find answers and manage your account directly — without waiting for a response.",
+      "quick_help": [
+        {
+          "title": "Account Registration",
+          "desc": "Open a Standard, Pro or Elite live account in under 5 minutes.",
+          "href": "https://direct.ollatrade.com/auth/register"
+        },
+        {
+          "title": "Funding & Withdrawals",
+          "desc": "Deposit and withdraw funds securely via your client portal.",
+          "href": "/funding-and-withdrawals"
+        },
+        {
+          "title": "Platform Support",
+          "desc": "MetaTrader 4 setup, EA configuration, and technical guidance.",
+          "href": "/trading/platform"
+        },
+        {
+          "title": "Partner Programme",
+          "desc": "Join the Olla Trade affiliate programme and earn commissions.",
+          "href": "/company/affiliate"
+        },
+        {
+          "title": "Complaints",
+          "desc": "Submit a formal complaint through our structured complaints process.",
+          "href": "/company/complaints"
+        }
+      ],
+      "support_section_label": "Support Hours",
+      "support_section_title": "We're Available 24/5",
+      "support_section_desc": "Our client support team is available Monday through Friday, 24 hours a day, to assist with account questions, platform support, funding enquiries, and more. Weekend support may be limited — for urgent matters, please email cst@ollatrade.com.",
+      "email_us_btn": "Email Us",
+      "view_faqs_btn": "View FAQs",
+      "availability_days": [
+        {
+          "day": "Monday – Friday",
+          "hours": "24 hours",
+          "status": "Available",
+          "active": true
+        },
+        {
+          "day": "Saturday",
+          "hours": "Limited",
+          "status": "Limited",
+          "active": false
+        },
+        {
+          "day": "Sunday",
+          "hours": "Limited",
+          "status": "Limited",
+          "active": false
+        },
+        {
+          "day": "Public Holidays",
+          "hours": "May vary",
+          "status": "May vary",
+          "active": false
+        }
+      ],
+      "channels_email_label": "Email Support",
+      "channels_phone_label": "Phone",
+      "follow_label": "Follow Olla Trade",
+      "faq_title": "Contact & Support FAQs",
+      "faq_subtitle": "Common questions about reaching our team and managing your account.",
+      "contact_faqs": [
+        {
+          "q": "How can I contact Olla Trade support?",
+          "a": "You can reach our support team by email at info@ollatrade.com or cst@ollatrade.com, or by phone at +44 7418 641736. Our team is available Monday to Friday, 24 hours a day (24/5). You can also use the contact form on this page for non-urgent enquiries."
+        },
+        {
+          "q": "Where can I get platform support?",
+          "a": "For MetaTrader 4 technical issues, account login problems, or platform-related questions, email cst@ollatrade.com with your account number and a description of the issue."
+        },
+        {
+          "q": "How can I submit a formal complaint?",
+          "a": "To submit a formal complaint, email our compliance team at info@ollatrade.com with your full name, account number, a clear description of the issue, and any supporting documentation. We acknowledge complaints within 2 business days and aim to resolve them within 10 business days."
+        },
+        {
+          "q": "How can I contact the partnership or affiliate team?",
+          "a": "For partnership, affiliate, and business development enquiries, please email info@ollatrade.com with your details. Our team will respond within 2–3 business days."
+        },
+        {
+          "q": "How long does support usually take to respond?",
+          "a": "Our support team aims to respond to email enquiries within one business day. Phone support is available Monday to Friday, 24/5. For urgent account matters, phone contact is recommended."
+        }
+      ],
+      "address_section_label": "Our Address",
+      "address_lines": [
+        "Olla Trade Ltd.",
+        "Grace Complex, The Valley",
+        "AI 2640, Anguilla",
+        "Registration No. A000001849"
+      ],
+      "address_legal_note": "Olla Trade Ltd. is incorporated in Anguilla as an International Business Company, operating as an execution-only trading service. Please use the contact channels above for all enquiries.",
+      "map_note": "Olla Trade does not operate client-facing offices. All account management is conducted through the secure online client portal. Please contact us via email or phone for all enquiries.",
+      "compliance_text": "Olla Trade staff will never request your account password or PIN via email, phone, or chat. If you receive such a request, do not comply and report it immediately to info@ollatrade.com. Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) and operates as an execution-only service.",
+      "compliance_important": "Important:"
     },
     "help": {
       "badge": "Support Centre",
@@ -2270,6 +2439,54 @@
       "cta_label_apply": "Apply as a Partner",
       "cta_label_contact": "Contact Affiliate Team",
       "compliance_text": "Affiliates must not claim guaranteed earnings, guaranteed returns, or risk-free trading. All marketing must include appropriate risk warnings. Affiliates may not target restricted country residents."
+    },
+    "legal": {
+      "badge": "Legal & Compliance",
+      "title": "Legal Documents",
+      "subtitle": "All Olla Trade legal documents, policies, and compliance information in one place.",
+      "company_crumb": "Company",
+      "docs": [
+        {
+          "title": "Terms & Conditions",
+          "desc": "The complete terms governing your use of Olla Trade services, account registration, and trading.",
+          "href": "/legal/terms"
+        },
+        {
+          "title": "Privacy Policy",
+          "desc": "How Olla Trade collects, uses, and protects your personal data in compliance with applicable privacy laws.",
+          "href": "/legal/privacy"
+        },
+        {
+          "title": "Risk Disclosures",
+          "desc": "Important risk warnings for trading Forex and CFDs. Please read before opening an account.",
+          "href": "/legal/risk-disclosures"
+        },
+        {
+          "title": "KYC / AML Policy",
+          "desc": "Our Know Your Customer and Anti-Money Laundering compliance procedures.",
+          "href": "/legal/kyc-aml"
+        },
+        {
+          "title": "Withdrawal Conditions",
+          "desc": "Terms and conditions governing withdrawal requests from your Olla Trade account.",
+          "href": "/legal/withdrawal-conditions"
+        },
+        {
+          "title": "Cookies Policy",
+          "desc": "How we use cookies and similar technologies on our website.",
+          "href": "/legal/cookies"
+        },
+        {
+          "title": "Order Execution Policy",
+          "desc": "Our approach to executing client orders and achieving best execution.",
+          "href": "/legal/execution-policy"
+        },
+        {
+          "title": "Complaint Management",
+          "desc": "Our formal complaint handling procedures and escalation process.",
+          "href": "/legal/complaint-management"
+        }
+      ]
     }
   },
   "legal": {
@@ -3301,15 +3518,23 @@
     "contact": [
       {
         "q": "How can I contact Olla Trade support?",
-        "a": "Email cst@ollatrade.com or info@ollatrade.com. Our team is available Monday to Friday, 24 hours a day (24/5)."
+        "a": "You can reach our support team by email at info@ollatrade.com or cst@ollatrade.com, or by phone at +44 7418 641736. Our team is available Monday to Friday, 24 hours a day (24/5). You can also use the contact form on this page for non-urgent enquiries."
       },
       {
-        "q": "How do I request a withdrawal?",
-        "a": "Log in to your client portal, go to Funding and Withdrawals, select Withdraw, choose your method and submit. Processing takes 24-48 business hours."
+        "q": "Where can I get platform support?",
+        "a": "For MetaTrader 4 technical issues, account login problems, or platform-related questions, email cst@ollatrade.com with your account number and a description of the issue."
       },
       {
-        "q": "How do I become an Olla Trade partner?",
-        "a": "Email info@ollatrade.com or visit our Partner Programme page."
+        "q": "How can I submit a formal complaint?",
+        "a": "To submit a formal complaint, email our compliance team at info@ollatrade.com with your full name, account number, a clear description of the issue, and any supporting documentation. We acknowledge complaints within 2 business days and aim to resolve them within 10 business days."
+      },
+      {
+        "q": "How can I contact the partnership or affiliate team?",
+        "a": "For partnership, affiliate, and business development enquiries, please email info@ollatrade.com with your details. Our team will respond within 2–3 business days."
+      },
+      {
+        "q": "How long does support usually take to respond?",
+        "a": "Our support team aims to respond to email enquiries within one business day. Phone support is available Monday to Friday, 24/5. For urgent account matters, phone contact is recommended."
       }
     ],
     "funding": [

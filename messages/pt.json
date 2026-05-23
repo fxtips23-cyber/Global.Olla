@@ -1402,7 +1402,176 @@
       "message_label": "Mensagem",
       "message_placeholder": "Como podemos ajudá-lo?",
       "send_btn": "Enviar Mensagem",
-      "response_note": "Geralmente respondemos em até 24 horas úteis."
+      "response_note": "Geralmente respondemos em até 24 horas úteis.",
+      "hero_badge": "Entre em Contato",
+      "hero_title": "Contate a Olla Trade",
+      "hero_desc": "Entre em contato com nossa equipe de suporte para assistência com conta, consultas de financiamento, suporte da plataforma de trading e consultas gerais. Estamos disponíveis de segunda a sexta-feira, 24 horas por dia.",
+      "hero_cta": "Obter Suporte",
+      "hero_cta_secondary": "Abrir Conta",
+      "breadcrumb_home": "Início",
+      "breadcrumb_page": "Fale Conosco",
+      "contact_cards": [
+        {
+          "title": "Consultas Gerais",
+          "detail": "info@ollatrade.com",
+          "href": "mailto:info@ollatrade.com",
+          "desc": "Para informações gerais sobre os serviços, contas e promoções da Olla Trade.",
+          "cta": "Enviar E-mail"
+        },
+        {
+          "title": "Suporte ao Cliente",
+          "detail": "cst@ollatrade.com",
+          "href": "mailto:cst@ollatrade.com",
+          "desc": "Para assistência com sua conta de trading ao vivo, financiamento e problemas técnicos.",
+          "cta": "Contatar Suporte"
+        },
+        {
+          "title": "Parceria / Afiliado",
+          "detail": "info@ollatrade.com",
+          "href": "mailto:info@ollatrade.com",
+          "desc": "Para consultar nosso programa de afiliados e parceiros ou discutir uma parceria de negócios.",
+          "cta": "Seja Parceiro"
+        },
+        {
+          "title": "Conformidade e Reclamações",
+          "detail": "Ver Processo de Reclamação",
+          "href": "/company/complaints",
+          "desc": "Para enviar uma reclamação formal ou consultar sobre assuntos regulatórios e de conformidade.",
+          "cta": "Processo de Reclamação"
+        }
+      ],
+      "office_info_label": "Informações da Empresa",
+      "office_address_label": "Endereço Registrado",
+      "office_phone_label": "Telefone (24/5)",
+      "office_email_label": "E-mail",
+      "form_panel_label": "Enviar uma Mensagem",
+      "form_panel_title": "Como Podemos Ajudá-lo?",
+      "form_panel_desc": "Preencha o formulário e nossa equipe retornará em até um dia útil. Para assuntos urgentes de conta, envie um e-mail diretamente para cst@ollatrade.com.",
+      "response_times_title": "Tempos de Resposta",
+      "response_times": [
+        [
+          "Consultas gerais",
+          "1 dia útil"
+        ],
+        [
+          "Suporte de conta",
+          "Mesmo dia útil"
+        ],
+        [
+          "Parcerias",
+          "2–3 dias úteis"
+        ],
+        [
+          "Reclamações",
+          "2 dias úteis"
+        ]
+      ],
+      "hours_row": "Horário",
+      "hours_value": "24/5",
+      "days_row": "Dias",
+      "days_value": "Segunda – Sexta",
+      "weekends_row": "Fins de Semana",
+      "weekends_value": "Disponibilidade limitada",
+      "form_section_title": "Envie-nos uma Mensagem",
+      "self_service_label": "Autoatendimento",
+      "quick_help_title": "Ajuda Rápida",
+      "quick_help_desc": "Encontre respostas e gerencie sua conta diretamente — sem precisar aguardar uma resposta.",
+      "quick_help": [
+        {
+          "title": "Cadastro de Conta",
+          "desc": "Abra uma conta Standard, Pro ou Elite em menos de 5 minutos.",
+          "href": "https://direct.ollatrade.com/auth/register"
+        },
+        {
+          "title": "Depósitos e Saques",
+          "desc": "Deposite e saque fundos com segurança pelo portal do cliente.",
+          "href": "/funding-and-withdrawals"
+        },
+        {
+          "title": "Suporte da Plataforma",
+          "desc": "Configuração do MetaTrader 4, configuração de EA e orientação técnica.",
+          "href": "/trading/platform"
+        },
+        {
+          "title": "Programa de Parceiros",
+          "desc": "Junte-se ao programa de afiliados da Olla Trade e ganhe comissões.",
+          "href": "/company/affiliate"
+        },
+        {
+          "title": "Reclamações",
+          "desc": "Envie uma reclamação formal através do nosso processo estruturado.",
+          "href": "/company/complaints"
+        }
+      ],
+      "support_section_label": "Horário de Suporte",
+      "support_section_title": "Estamos Disponíveis 24/5",
+      "support_section_desc": "Nossa equipe de suporte ao cliente está disponível de segunda a sexta-feira, 24 horas por dia, para auxiliar com dúvidas de conta, suporte da plataforma, consultas de financiamento e mais. O suporte nos fins de semana pode ser limitado — para assuntos urgentes, envie um e-mail para cst@ollatrade.com.",
+      "email_us_btn": "Enviar E-mail",
+      "view_faqs_btn": "Ver Perguntas Frequentes",
+      "availability_days": [
+        {
+          "day": "Segunda – Sexta",
+          "hours": "24 horas",
+          "status": "Disponível",
+          "active": true
+        },
+        {
+          "day": "Sábado",
+          "hours": "Limitado",
+          "status": "Limitado",
+          "active": false
+        },
+        {
+          "day": "Domingo",
+          "hours": "Limitado",
+          "status": "Limitado",
+          "active": false
+        },
+        {
+          "day": "Feriados",
+          "hours": "Pode variar",
+          "status": "Pode variar",
+          "active": false
+        }
+      ],
+      "channels_email_label": "Suporte por E-mail",
+      "channels_phone_label": "Telefone",
+      "follow_label": "Siga a Olla Trade",
+      "faq_title": "Perguntas Frequentes — Contato e Suporte",
+      "faq_subtitle": "Perguntas comuns sobre como entrar em contato com nossa equipe e gerenciar sua conta.",
+      "contact_faqs": [
+        {
+          "q": "Como posso contatar o suporte da Olla Trade?",
+          "a": "Você pode contatar nossa equipe de suporte por e-mail em info@ollatrade.com ou cst@ollatrade.com, ou por telefone em +44 7418 641736. Nossa equipe está disponível de segunda a sexta-feira, 24 horas por dia (24/5). Você também pode usar o formulário de contato nesta página para consultas não urgentes."
+        },
+        {
+          "q": "Onde posso obter suporte para a plataforma?",
+          "a": "Para problemas técnicos do MetaTrader 4, problemas de login na conta ou perguntas relacionadas à plataforma, envie um e-mail para cst@ollatrade.com com seu número de conta e uma descrição do problema."
+        },
+        {
+          "q": "Como posso enviar uma reclamação formal?",
+          "a": "Para enviar uma reclamação formal, envie um e-mail para nossa equipe de conformidade em info@ollatrade.com com seu nome completo, número de conta, uma descrição clara do problema e qualquer documentação de suporte. Confirmamos as reclamações em 2 dias úteis e buscamos resolvê-las em 10 dias úteis."
+        },
+        {
+          "q": "Como posso contatar a equipe de parceria ou afiliados?",
+          "a": "Para consultas de parceria, afiliados e desenvolvimento de negócios, envie um e-mail para info@ollatrade.com com seus dados. Nossa equipe responderá em 2 a 3 dias úteis."
+        },
+        {
+          "q": "Quanto tempo o suporte geralmente leva para responder?",
+          "a": "Nossa equipe de suporte busca responder a consultas por e-mail dentro de um dia útil. O suporte por telefone está disponível de segunda a sexta-feira, 24/5. Para assuntos urgentes de conta, o contato por telefone é recomendado."
+        }
+      ],
+      "address_section_label": "Nosso Endereço",
+      "address_lines": [
+        "Olla Trade Ltd.",
+        "Grace Complex, The Valley",
+        "AI 2640, Anguilla",
+        "Registo Nº A000001849"
+      ],
+      "address_legal_note": "A Olla Trade Ltd. está incorporada em Anguilla como uma Empresa Internacional, operando como um serviço de execução exclusiva. Por favor, use os canais de contato acima para todas as consultas.",
+      "map_note": "A Olla Trade não opera escritórios atendendo clientes presencialmente. Todo o gerenciamento de conta é realizado através do portal seguro do cliente online. Entre em contato por e-mail ou telefone para todas as consultas.",
+      "compliance_text": "A equipe da Olla Trade nunca solicitará sua senha de conta ou PIN por e-mail, telefone ou chat. Se você receber tal solicitação, não cumpra e reporte imediatamente para info@ollatrade.com. A Olla Trade Ltd. está incorporada em Anguilla (Reg. Nº A000001849) e opera como um serviço de execução exclusiva.",
+      "compliance_important": "Importante:"
     },
     "help": {
       "badge": "Central de Ajuda",
@@ -2265,6 +2434,54 @@
       "cta_label_apply": "Candidatar-se como Parceiro",
       "cta_label_contact": "Contatar Equipe de Afiliados",
       "compliance_text": "Os afiliados não devem alegar ganhos garantidos, retornos garantidos ou trading sem risco. Todo o marketing deve incluir avisos de risco adequados. Os afiliados não podem direcionar residentes de países restritos."
+    },
+    "legal": {
+      "badge": "Legal e Conformidade",
+      "title": "Documentos Legais",
+      "subtitle": "Todos os documentos legais, políticas e informações de conformidade da Olla Trade em um só lugar.",
+      "company_crumb": "Empresa",
+      "docs": [
+        {
+          "title": "Termos e Condições",
+          "desc": "Os termos completos que regem o uso dos serviços da Olla Trade, registro de conta e trading.",
+          "href": "/legal/terms"
+        },
+        {
+          "title": "Política de Privacidade",
+          "desc": "Como a Olla Trade coleta, usa e protege seus dados pessoais em conformidade com as leis de privacidade aplicáveis.",
+          "href": "/legal/privacy"
+        },
+        {
+          "title": "Divulgações de Risco",
+          "desc": "Avisos de risco importantes para trading de Forex e CFDs. Leia antes de abrir uma conta.",
+          "href": "/legal/risk-disclosures"
+        },
+        {
+          "title": "Política KYC / AML",
+          "desc": "Nossos procedimentos de conformidade de Conheça Seu Cliente e Combate à Lavagem de Dinheiro.",
+          "href": "/legal/kyc-aml"
+        },
+        {
+          "title": "Condições de Saque",
+          "desc": "Termos e condições que regem as solicitações de saque da sua conta Olla Trade.",
+          "href": "/legal/withdrawal-conditions"
+        },
+        {
+          "title": "Política de Cookies",
+          "desc": "Como usamos cookies e tecnologias similares em nosso site.",
+          "href": "/legal/cookies"
+        },
+        {
+          "title": "Política de Execução",
+          "desc": "Nossa abordagem para executar ordens de clientes e alcançar a melhor execução.",
+          "href": "/legal/execution-policy"
+        },
+        {
+          "title": "Gestão de Reclamações",
+          "desc": "Nossos procedimentos formais de tratamento de reclamações e processo de escalonamento.",
+          "href": "/legal/complaint-management"
+        }
+      ]
     }
   },
   "legal": {
@@ -2808,23 +3025,23 @@
     "contact": [
       {
         "q": "Como posso contatar o suporte da Olla Trade?",
-        "a": "Você pode entrar em contato com nossa equipe de suporte por e-mail em cst@ollatrade.com ou info@ollatrade.com. Nossa equipe está disponível de segunda a sexta-feira, 24 horas por dia (24/5). Por favor, inclua o número da sua conta e uma descrição clara da sua solicitação."
+        "a": "Você pode contatar nossa equipe de suporte por e-mail em info@ollatrade.com ou cst@ollatrade.com, ou por telefone em +44 7418 641736. Nossa equipe está disponível de segunda a sexta-feira, 24 horas por dia (24/5). Você também pode usar o formulário de contato nesta página para consultas não urgentes."
       },
       {
-        "q": "Como solicito um saque?",
-        "a": "Faça login no seu portal do cliente da Olla Trade em direct.ollatrade.com, navegue até a seção de Depósito e Saque, selecione Sacar, escolha seu método, insira o valor e envie sua solicitação. O processamento geralmente leva de 24 a 48 horas úteis."
+        "q": "Onde posso obter suporte para a plataforma?",
+        "a": "Para problemas técnicos do MetaTrader 4, problemas de login na conta ou perguntas relacionadas à plataforma, envie um e-mail para cst@ollatrade.com com seu número de conta e uma descrição do problema."
       },
       {
-        "q": "Onde posso encontrar os detalhes da minha conta?",
-        "a": "Os detalhes da sua conta — incluindo número da conta, endereço do servidor e saldo — estão disponíveis em seu portal do cliente da Olla Trade após o login."
+        "q": "Como posso enviar uma reclamação formal?",
+        "a": "Para enviar uma reclamação formal, envie um e-mail para nossa equipe de conformidade em info@ollatrade.com com seu nome completo, número de conta, uma descrição clara do problema e qualquer documentação de suporte. Confirmamos as reclamações em 2 dias úteis e buscamos resolvê-las em 10 dias úteis."
       },
       {
-        "q": "Como me torno um parceiro da Olla Trade?",
-        "a": "Para saber mais sobre nosso programa de afiliados e parceiros, envie um e-mail para info@ollatrade.com ou visite nossa página do Programa de Parceiros."
+        "q": "Como posso contatar a equipe de parceria ou afiliados?",
+        "a": "Para consultas de parceria, afiliados e desenvolvimento de negócios, envie um e-mail para info@ollatrade.com com seus dados. Nossa equipe responderá em 2 a 3 dias úteis."
       },
       {
-        "q": "Como faço uma reclamação formal?",
-        "a": "Para fazer uma reclamação formal, envie um e-mail para nossa equipe de conformidade em info@ollatrade.com com seu nome completo, número da conta, descrição do problema e qualquer documentação de suporte. Reconhecemos as reclamações em até 2 dias úteis."
+        "q": "Quanto tempo o suporte geralmente leva para responder?",
+        "a": "Nossa equipe de suporte busca responder a consultas por e-mail dentro de um dia útil. O suporte por telefone está disponível de segunda a sexta-feira, 24/5. Para assuntos urgentes de conta, o contato por telefone é recomendado."
       }
     ],
     "vps": [
