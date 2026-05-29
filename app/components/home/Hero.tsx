@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const stats = [
   { value: "500+",     label: "Instruments" },
@@ -32,7 +32,7 @@ export default function Hero() {
         {/* Primary rising chart line — green */}
         <path
           d="M0,580 C120,545 240,510 360,475 C480,440 560,455 660,415 C760,375 840,355 940,315 C1040,275 1120,295 1220,255 C1320,215 1380,195 1440,175"
-          stroke="#00CC44"
+          stroke="#29B5D4"
           strokeWidth="2"
           strokeOpacity="0.30"
           strokeLinecap="round"
@@ -40,7 +40,7 @@ export default function Hero() {
         {/* Area fill under primary line */}
         <path
           d="M0,580 C120,545 240,510 360,475 C480,440 560,455 660,415 C760,375 840,355 940,315 C1040,275 1120,295 1220,255 C1320,215 1380,195 1440,175 L1440,800 L0,800 Z"
-          fill="#00CC44"
+          fill="#29B5D4"
           fillOpacity="0.05"
         />
         {/* Secondary line */}
@@ -54,7 +54,7 @@ export default function Hero() {
         {/* Dashed tertiary line */}
         <path
           d="M0,545 C100,518 210,508 320,475 C430,442 500,462 610,428 C720,394 810,374 920,340 C1030,306 1120,326 1230,292 C1340,258 1390,240 1440,222"
-          stroke="#00CC44"
+          stroke="#29B5D4"
           strokeWidth="1"
           strokeOpacity="0.14"
           strokeLinecap="round"
@@ -68,13 +68,13 @@ export default function Hero() {
         {/* City skyline silhouette */}
         <path
           d="M0,800 L0,668 L40,668 L40,648 L65,648 L65,632 L82,632 L82,618 L98,618 L98,632 L115,632 L115,650 L145,650 L145,630 L168,630 L168,612 L185,612 L185,600 L202,600 L202,612 L220,612 L220,632 L248,632 L248,648 L272,648 L272,660 L298,660 L298,642 L320,642 L320,628 L340,628 L340,614 L358,614 L358,628 L378,628 L378,645 L405,645 L405,658 L432,658 L432,640 L455,640 L455,624 L475,624 L475,610 L492,610 L492,598 L510,598 L510,610 L528,610 L528,625 L552,625 L552,640 L578,640 L578,654 L605,654 L605,666 L632,666 L632,648 L658,648 L658,632 L678,632 L678,618 L695,618 L695,605 L712,605 L712,618 L730,618 L730,632 L755,632 L755,648 L780,648 L780,660 L808,660 L808,644 L832,644 L832,628 L852,628 L852,614 L870,614 L870,628 L890,628 L890,645 L915,645 L915,658 L942,658 L942,640 L968,640 L968,624 L988,624 L988,610 L1005,610 L1005,596 L1022,596 L1022,610 L1040,610 L1040,625 L1065,625 L1065,640 L1090,640 L1090,654 L1118,654 L1118,666 L1145,666 L1145,648 L1170,648 L1170,632 L1190,632 L1190,618 L1208,618 L1208,632 L1228,632 L1228,648 L1252,648 L1252,662 L1278,662 L1278,672 L1305,672 L1305,656 L1330,656 L1330,640 L1350,640 L1350,655 L1372,655 L1372,668 L1400,668 L1400,678 L1440,678 L1440,800 Z"
-          fill="#00CC44"
+          fill="#29B5D4"
           fillOpacity="0.06"
         />
         {/* Volume bars at bottom */}
         <g fillOpacity="0.07">
           {[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26].map((i) => (
-            <rect key={i} x={12 + i * 53} y={800 - 55 - (20 + (i * 7 % 22))} width="28" height={20 + (i * 7 % 22)} fill={i % 3 === 0 ? "#00CC44" : "white"} rx="1" />
+            <rect key={i} x={12 + i * 53} y={800 - 55 - (20 + (i * 7 % 22))} width="28" height={20 + (i * 7 % 22)} fill={i % 3 === 0 ? "#29B5D4" : "white"} rx="1" />
           ))}
         </g>
       </svg>
@@ -99,8 +99,8 @@ export default function Hero() {
         {/* Live badge */}
         <div className="inline-flex items-center gap-2.5 mb-8">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00CC44] opacity-50" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00CC44]" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#29B5D4] opacity-50" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#29B5D4]" />
           </span>
           <span className="text-[11px] font-semibold text-white/35 uppercase tracking-[0.22em]">
             Trusted Online Trading Platform
@@ -111,7 +111,7 @@ export default function Hero() {
         <h1 className="font-extrabold text-white leading-[1.04] tracking-tight mb-7 max-w-5xl"
           style={{ fontSize: "clamp(44px, 6vw, 90px)" }}>
           Trade Global Markets<br />
-          <span className="text-[#00CC44]">with Confidence.</span>
+          <span className="text-[#29B5D4]">with Confidence.</span>
         </h1>
 
         {/* Sub-headline — fluid 17 → 21px */}
@@ -123,14 +123,14 @@ export default function Hero() {
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
           <Link
-            href="https://direct.ollatrade.com/auth/register"
-            className="inline-flex items-center justify-center bg-[#00CC44] hover:bg-[#00DD4A] text-black font-bold rounded-xl transition-colors"
+            href="https://portal.ollatrade.com/auth/register"
+            className="inline-flex items-center justify-center bg-[#29B5D4] hover:bg-[#1FA5C4] text-white font-bold rounded-xl transition-colors"
             style={{ fontSize: 16, padding: "18px 48px", minWidth: 210 }}
           >
             Open Account
           </Link>
           <Link
-            href="https://direct.ollatrade.com/auth/login"
+            href="https://portal.ollatrade.com/auth/login"
             className="inline-flex items-center justify-center border border-white/20 hover:border-white/40 text-white/65 hover:text-white font-medium rounded-xl transition-all hover:bg-white/5"
             style={{ fontSize: 16, padding: "17px 48px", minWidth: 210 }}
           >
@@ -140,7 +140,7 @@ export default function Hero() {
 
         {/* Micro-link */}
         <Link href="/company/promotions"
-          className="text-[12px] text-white/22 hover:text-[#00CC44] transition-colors uppercase tracking-widest">
+          className="text-[12px] text-white/22 hover:text-[#29B5D4] transition-colors uppercase tracking-widest">
           View promotions →
         </Link>
 

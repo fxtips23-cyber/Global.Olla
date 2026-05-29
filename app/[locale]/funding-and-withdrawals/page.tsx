@@ -1,9 +1,7 @@
-import { fundingFaqs } from '../../data/faqs';
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import FundingVisual from "../../components/visuals/FundingVisual";
 import Link from "next/link";
 import PageHero from "../../components/ui/PageHero";
-import FAQSection from "../../components/ui/FAQSection";
 import CTASection from "../../components/CTASection";
 import {
   IconBitcoin,
@@ -31,7 +29,7 @@ export const metadata: Metadata = {
 function StepNum({ n }: { n: number }) {
   return (
     <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-[12px] font-extrabold text-black"
-      style={{ background: "#00CC44" }}>
+      style={{ background: "#29B5D4" }}>
       {n}
     </div>
   );
@@ -136,17 +134,6 @@ const securityFeatures = [
   { Icon: IconClock,       title: "Processing Oversight",           desc: "Withdrawal requests are reviewed and approved by our operations team during business hours to ensure accuracy and security before processing." },
 ];
 
-/* ─── FAQs ─────────────────────────────────────────────────────────── */
-const faqs = [
-  { q: "How do I deposit funds?",                 a: "Log in to your Olla Trade client portal, navigate to the Funding section, select your preferred crypto method, and follow the on-screen instructions to generate a deposit address. Send the exact amount of crypto to the provided address. Your account will be credited after the required network confirmations." },
-  { q: "How do I request a withdrawal?",          a: "Log in to your client portal, go to Funding and Withdrawals, select Withdraw, choose your withdrawal method, enter the amount, and submit your request. Our team will process it within 24–48 business hours after approval. Account verification must be completed before withdrawal requests are accepted." },
-  { q: "Which crypto methods are supported?",     a: "Olla Trade currently supports USDT (TRC20 and ERC20), Bitcoin (BTC), and Ethereum (ETH). Additional funding methods may be available in your client portal. Contact our support team for the latest available options." },
-  { q: "How long does withdrawal take?",          a: "Withdrawal requests are typically processed within 24–48 business hours after approval. Processing times may vary depending on account verification status, the payment method, and volume of requests. Crypto withdrawals are also subject to blockchain network confirmation times." },
-  { q: "Why is account verification required?",   a: "Account verification (KYC) is a legal and regulatory requirement. It protects you from fraudulent withdrawal attempts and ensures compliance with applicable anti-money laundering regulations. Withdrawals cannot be processed until verification is complete." },
-  { q: "Can I withdraw my bonus credit?",         a: "Bonus trading credit cannot be withdrawn directly unless the specific promotion's official terms and conditions explicitly state otherwise. Trading profits generated using bonus credit may be withdrawable subject to the relevant promotion terms." },
-  { q: "Where can I view my transaction history?",a: "A complete record of all your deposits, withdrawals, and account transactions is available in your Olla Trade client portal under the Transaction History section. You can filter by date range, method, and transaction type." },
-  { q: "Are there any fees on deposits or withdrawals?", a: "Olla Trade does not charge its own fees on deposits or withdrawals. However, blockchain network fees (gas fees, miner fees) are charged by the respective networks and are outside our control. Third-party payment providers may also apply their own processing fees." },
-];
 
 /* ═══════════════════════════════════════════════════════════════════ */
 export function generateStaticParams() {
@@ -158,15 +145,11 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
   setRequestLocale(locale);
   const t  = await getTranslations({ locale, namespace: "trading.funding" });
   const tp = await getTranslations({ locale, namespace: "trading_pages.funding" });
-  const fq = await getTranslations({ locale, namespace: "faq" });
-
   const tpFlowFeats  = tp.raw("flow_features")   as { label:string; desc:string }[];
   const tpRules      = tp.raw("rules")            as { title:string; desc:string }[];
   const tpSecFeats   = tp.raw("security_features") as { title:string; desc:string }[];
   const depositSteps = tp.raw("deposit_steps")   as [string,string][];
   const withdrawSteps= tp.raw("withdraw_steps")  as [string,string][];
-  const tpFaqs       = fq.raw("funding") as { q:string; a:string }[];
-
   return (
     <>
       {/* ── 1. Hero ────────────────────────────────────────────── */}
@@ -183,12 +166,12 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
         ]}
       >
         <div className="flex flex-wrap gap-3 mt-7">
-          <Link href="https://direct.ollatrade.com/auth/login"
+          <Link href="https://portal.ollatrade.com/auth/login"
             className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
-            style={{ background: "#00CC44", color: "#000" }}>
+            style={{ background: "#29B5D4", color: "#000" }}>
             {tp("cta_deposit")}
           </Link>
-          <Link href="https://direct.ollatrade.com/auth/login"
+          <Link href="https://portal.ollatrade.com/auth/login"
             className="inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-xl text-[14px] transition-all text-white/65 hover:text-white"
             style={{ border: "1px solid rgba(255,255,255,0.18)" }}>
             {tp("cta_withdraw")}
@@ -200,7 +183,7 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("methods_label")}</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("methods_label")}</div>
             <h2 className="text-3xl font-extrabold text-[#111827] mb-3">{tp("methods_title")}</h2>
             <p className="text-gray-500 max-w-xl mx-auto text-[15px]">{tp("methods_subtitle")}</p>
           </div>
@@ -208,13 +191,13 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {cryptoMethods.map(({ Icon, name, network, depositTime, withdrawalTime, minDeposit, notes }) => (
               <div key={`${name}-${network}`}
-                className="group bg-white border border-gray-100 rounded-2xl p-6 hover:border-[#00CC44]/25 hover:shadow-md transition-all duration-200">
+                className="group bg-white border border-gray-100 rounded-2xl p-6 hover:border-[#29B5D4]/25 hover:shadow-md transition-all duration-200">
                 {/* Icon */}
                 <div className="w-10 h-10 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-4 group-hover:border-[#111827]/20 group-hover:text-[#111827] transition-colors">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="text-[15px] font-extrabold text-[#111827]">{name}</div>
-                <div className="text-[11px] font-semibold text-[#00CC44] mb-4">{network}</div>
+                <div className="text-[11px] font-semibold text-[#29B5D4] mb-4">{network}</div>
                 <div className="space-y-2 text-[12px] text-gray-500">
                   <div className="flex justify-between py-1.5 border-b border-gray-50">
                     <span>{tp("label_deposit")}</span>
@@ -230,7 +213,7 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
                   </div>
                   <div className="flex justify-between py-1.5">
                     <span>{locale === "pt" ? "Taxa Olla Trade" : "Olla Trade fee"}</span>
-                    <span className="font-semibold text-[#00CC44]">{tp("val_none")}</span>
+                    <span className="font-semibold text-[#29B5D4]">{tp("val_none")}</span>
                   </div>
                 </div>
                 <p className="text-[11px] text-gray-400 leading-relaxed mt-3 pt-3 border-t border-gray-50">{notes}</p>
@@ -241,7 +224,7 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
           <div className="bg-[#F5F7FA] border border-gray-200 rounded-xl p-4 text-center">
             <p className="text-[12px] text-gray-500">
               {tp("support_note")}{" "}
-              <Link href="/contact-us" className="text-[#00CC44] hover:underline font-semibold">{tp("contact_support")}</Link> {tp("support_note2")}
+              <Link href="/contact-us" className="text-[#29B5D4] hover:underline font-semibold">{tp("contact_support")}</Link> {tp("support_note2")}
             </p>
           </div>
         </div>
@@ -252,14 +235,14 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("flow_label")}</div>
+              <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("flow_label")}</div>
               <h2 className="text-3xl font-extrabold text-white mb-5">{tp("flow_title")}</h2>
               <p className="text-white/45 text-[14px] leading-relaxed mb-6">{tp("flow_desc")}</p>
               <div className="space-y-3">
                 {tpFlowFeats.map(({ label, desc }) => (
                   <div key={label} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#00CC44]/15 border border-[#00CC44]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-3 h-3 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <div className="w-5 h-5 rounded-full bg-[#29B5D4]/15 border border-[#29B5D4]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-[#29B5D4]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                     </div>
@@ -282,7 +265,7 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Step-by-Step</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">Step-by-Step</div>
             <h2 className="text-3xl font-extrabold text-[#111827]">How to Deposit &amp; Withdraw</h2>
           </div>
 
@@ -336,7 +319,7 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("times_label")}</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("times_label")}</div>
             <h2 className="text-3xl font-extrabold text-[#111827] mb-3">{tp("times_title")}</h2>
             <p className="text-gray-500 max-w-xl mx-auto text-[15px]">
               {locale === "pt" ? "Os prazos mostrados são estimativas. Os tempos de processamento podem variar com base nas condições da rede, status de verificação da conta e volume de solicitações." : "Times shown are estimates. Processing times may vary based on network conditions, account verification status, and request volume."}
@@ -358,7 +341,7 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
                     <td className="px-5 py-4 font-bold text-[#111827]">{row.Method}</td>
                     <td className="px-5 py-4 text-gray-600">{row.Deposit}</td>
                     <td className="px-5 py-4 text-gray-600">{row.Withdrawal}</td>
-                    <td className="px-5 py-4 font-semibold text-[#00CC44]">{row["Olla Trade Fee"]}</td>
+                    <td className="px-5 py-4 font-semibold text-[#29B5D4]">{row["Olla Trade Fee"]}</td>
                     <td className="px-5 py-4 text-gray-400 text-[12px]">{row.Notes}</td>
                   </tr>
                 ))}
@@ -392,7 +375,7 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("rules_label")}</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("rules_label")}</div>
             <h2 className="text-3xl font-extrabold text-[#111827] mb-3">{tp("rules_title")}</h2>
             <p className="text-gray-500 max-w-xl mx-auto text-[15px]">
               {locale === "pt" ? "Por favor, leia e compreenda as seguintes condições antes de solicitar um depósito ou saque." : "Please read and understand the following conditions before requesting a deposit or withdrawal."}
@@ -414,7 +397,7 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
       <section className="py-16 bg-[#050C15]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("security_label")}</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("security_label")}</div>
             <h2 className="text-3xl font-extrabold text-white mb-3">{tp("security_title")}</h2>
             <p className="text-white/40 max-w-xl mx-auto text-[15px]">
               {locale === "pt" ? "Toda transação de financiamento e saque é protegida por múltiplas camadas de segurança dentro do portal do cliente da Olla Trade." : "Every funding and withdrawal transaction is protected by multiple layers of security within the Olla Trade client portal."}
@@ -423,8 +406,8 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {tpSecFeats.map(({ title, desc }) => (
-              <div key={title} className="group border border-white/8 bg-white/[0.03] rounded-2xl p-6 hover:border-[#00CC44]/20 hover:bg-white/[0.05] transition-all duration-200">
-                <div className="w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-white/40 flex items-center justify-center mb-4 group-hover:text-[#00CC44] group-hover:border-[#00CC44]/25 transition-colors">
+              <div key={title} className="group border border-white/8 bg-white/[0.03] rounded-2xl p-6 hover:border-[#29B5D4]/20 hover:bg-white/[0.05] transition-all duration-200">
+                <div className="w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-white/40 flex items-center justify-center mb-4 group-hover:text-[#29B5D4] group-hover:border-[#29B5D4]/25 transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
                 </div>
                 <h4 className="text-[14px] font-bold text-white/80 mb-2">{title}</h4>
@@ -435,21 +418,15 @@ export default async function FundingAndWithdrawalsPage({ params }: { params: Pr
         </div>
       </section>
 
-      {/* ── 8. FAQs ─────────────────────────────────────────────── */}
-      <FAQSection
-        title={locale === "pt" ? "Perguntas Frequentes — Depósito & Saque" : "Funding & Withdrawal FAQs"}
-        subtitle={locale === "pt" ? "Respostas às perguntas comuns sobre depósito e saque na Olla Trade." : "Answers to common questions about depositing and withdrawing funds with Olla Trade."}
-        faqs={tpFaqs}
-      />
 
       {/* ── 9. Final CTA ────────────────────────────────────────── */}
       <CTASection
         title={tp("cta_title")}
         subtitle={tp("cta_subtitle")}
         primaryLabel={locale === "pt" ? "Login no Portal" : "Login to Portal"}
-        primaryHref="https://direct.ollatrade.com/auth/login"
+        primaryHref="https://portal.ollatrade.com/auth/login"
         secondaryLabel={locale === "pt" ? "Abrir Conta Ao Vivo" : "Open Live Account"}
-        secondaryHref="https://direct.ollatrade.com/auth/register"
+        secondaryHref="https://portal.ollatrade.com/auth/register"
       />
 
       {/* Compliance footer note */}

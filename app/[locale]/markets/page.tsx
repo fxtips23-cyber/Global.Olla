@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../components/ui/PageHero";
 import CTASection from "../../components/CTASection";
@@ -44,16 +44,16 @@ export default async function MarketsPage({ params }: { params: Promise<{ locale
             {markets.map((m, i) => {
               const meta = MARKET_META[i];
               return (
-                <Link key={meta.href} href={meta.href} className="bg-white rounded-2xl border border-gray-100 p-7 hover:border-[#00CC44]/30 hover:shadow-lg hover:-translate-y-1 transition-all group">
+                <Link key={meta.href} href={meta.href} className="bg-white rounded-2xl border border-gray-100 p-7 hover:border-[#29B5D4]/30 hover:shadow-lg hover:-translate-y-1 transition-all group">
                   <div className="text-4xl mb-4">{meta.icon}</div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-[#00AA38] transition-colors">{m.label}</h2>
+                  <h2 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-[#29B5D4] transition-colors">{m.label}</h2>
                   <p className="text-sm text-gray-400 mb-4">{m.sub}</p>
                   <p className="text-sm text-gray-600 mb-5 leading-relaxed">{INSTRUMENTS[i]}</p>
                   <div className="flex gap-3 flex-wrap text-xs mb-5">
-                    <span className="bg-[#00CC44]/8 text-[#00AA38] px-2.5 py-1 rounded-full font-medium">{m.pip}</span>
+                    <span className="bg-[#29B5D4]/8 text-[#29B5D4] px-2.5 py-1 rounded-full font-medium">{m.pip}</span>
                     <span className="bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full font-medium">{m.leverage}</span>
                   </div>
-                  <span className="text-sm font-semibold text-[#00CC44] group-hover:text-[#00DD4A] transition-colors">{explorePrefix} {m.label} →</span>
+                  <span className="text-sm font-semibold text-[#29B5D4] group-hover:text-[#1FA5C4] transition-colors">{explorePrefix} {m.label} →</span>
                 </Link>
               );
             })}

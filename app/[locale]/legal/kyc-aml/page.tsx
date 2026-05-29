@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
-import FAQSection from "../../../components/ui/FAQSection";
 import { IconShieldCheck, IconUsers, IconLock, IconDatabase, IconCheck, IconActivity } from "../../../components/ui/Icons";
-import { kycAmlFaqs } from "../../../data/extra-faqs";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "KYC / AML Policy", description: "Olla Trade's Know Your Customer and Anti-Money Laundering policy — identity verification requirements, document acceptance, and compliance procedures." };
@@ -42,7 +40,7 @@ export default async function KYCAMLPage({ params }: { params: Promise<{ locale:
               <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5">
                 <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">{t("toc_label")}</div>
                 <nav className="space-y-0.5">
-                  {sectionsNav.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
+                  {sectionsNav.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#29B5D4] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
                 </nav>
               </div>
             </div>
@@ -70,7 +68,7 @@ export default async function KYCAMLPage({ params }: { params: Promise<{ locale:
                   <div className="mt-4 space-y-2">
                     {identityDocs.map(([docTitle, docDesc]) => (
                       <div key={docTitle} className="flex items-start gap-3 bg-[#F5F7FA] border border-gray-100 rounded-xl p-3">
-                        <IconCheck className="w-4 h-4 text-[#00CC44] flex-shrink-0 mt-0.5" />
+                        <IconCheck className="w-4 h-4 text-[#29B5D4] flex-shrink-0 mt-0.5" />
                         <div><div className="text-[13px] font-bold text-[#111827]">{docTitle}</div><div className="text-[11px] text-gray-500">{docDesc}</div></div>
                       </div>
                     ))}
@@ -90,7 +88,7 @@ export default async function KYCAMLPage({ params }: { params: Promise<{ locale:
                   <div className="mt-4 space-y-2">
                     {addressDocs.map(([docTitle, docDesc]) => (
                       <div key={docTitle} className="flex items-start gap-3 bg-[#F5F7FA] border border-gray-100 rounded-xl p-3">
-                        <IconCheck className="w-4 h-4 text-[#00CC44] flex-shrink-0 mt-0.5" />
+                        <IconCheck className="w-4 h-4 text-[#29B5D4] flex-shrink-0 mt-0.5" />
                         <div><div className="text-[13px] font-bold text-[#111827]">{docTitle}</div><div className="text-[11px] text-gray-500">{docDesc}</div></div>
                       </div>
                     ))}
@@ -109,7 +107,7 @@ export default async function KYCAMLPage({ params }: { params: Promise<{ locale:
                   <div className="mt-4 space-y-2">
                     {amlItems.map((item) => (
                       <div key={item} className="flex items-center gap-2 text-[13px] text-gray-600">
-                        <IconCheck className="w-3.5 h-3.5 text-[#00CC44] flex-shrink-0" />{item}
+                        <IconCheck className="w-3.5 h-3.5 text-[#29B5D4] flex-shrink-0" />{item}
                       </div>
                     ))}
                   </div>
@@ -146,7 +144,7 @@ export default async function KYCAMLPage({ params }: { params: Promise<{ locale:
                 </div>
                 <div className="text-[14px] text-gray-600 leading-relaxed space-y-3">
                   <p>{isPT ? t("security_p1") : "All documents and personal information submitted for KYC purposes are handled in accordance with Olla Trade's Privacy Policy and applicable data protection laws. Documents are stored securely with access limited to authorised compliance personnel only. We do not share your personal information with third parties except as required by law, regulation, or to comply with legal obligations."}</p>
-                  <p>{isPT ? t("security_contact") : "For privacy-related queries, contact us at"} <a href="mailto:info@ollatrade.com" className="text-[#00CC44] hover:underline">info@ollatrade.com</a>.</p>
+                  <p>{isPT ? t("security_contact") : "For privacy-related queries, contact us at"} <a href="mailto:info@ollatrade.com" className="text-[#29B5D4] hover:underline">info@ollatrade.com</a>.</p>
                 </div>
               </div>
             </div>
@@ -154,7 +152,6 @@ export default async function KYCAMLPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      <FAQSection title={t("faq_title")} faqs={kycAmlFaqs} />
     </>
   );
 }

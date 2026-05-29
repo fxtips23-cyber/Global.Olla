@@ -1,5 +1,5 @@
-{
-  "meta": {
+﻿{
+"meta": {
     "siteName": "Olla Trade",
     "defaultTitle": "Olla Trade | Plataforma Profissional de Trading Online",
     "defaultDescription": "Opere Forex, Metais, Índices, Criptomoedas, Energias e Ações com a Olla Trade. Acesse mercados globais com MT4, spreads a partir de 0,0 pips e alavancagem de até 1:500."
@@ -13,6 +13,8 @@
   "nav": {
     "markets": "Mercados",
     "trading": "Trading",
+    "partners": "Parceiros",
+    "learn": "Aprender",
     "tools": "Ferramentas",
     "company": "Empresa",
     "promotions": "Promoções",
@@ -85,6 +87,16 @@
       "complaints_sub": "Processo de reclamação",
       "cta": "Falar com suporte →",
       "badge": "Suporte 24/5"
+    },
+    "partners_sub": {
+      "partner": "Parceria",
+      "partner_sub": "Programa de IB & afiliados"
+    },
+    "learn_sub": {
+      "articles": "Artigos",
+      "articles_sub": "Notícias & análises de mercado",
+      "education": "Educação",
+      "education_sub": "Aprenda a operar"
     }
   },
   "hero": {
@@ -394,18 +406,18 @@
       "support": "Suporte (24/5)",
       "email": "E-mail",
       "entity": "Entidade",
-      "entityVal": "Olla Trade Ltd. · Serviço somente de execução"
+      "entityVal": "Olla Capital Financial Services L.L.C. · Serviço somente de execução"
     },
     "disclaimer": {
       "risk": "Aviso de Risco:",
       "risk_text": "O trading de Forex e CFDs envolve riscos inerentes que podem resultar na perda do capital investido. Recomendamos fortemente operar apenas com recursos que você pode se dar ao luxo de perder. O trading alavancado é de alto risco e pode não ser adequado para todos os investidores. É possível perder mais do que o depósito inicial. Certifique-se de compreender totalmente os riscos antes de operar.",
       "exec": "Somente Execução:",
-      "exec_text": "A Olla Trade Ltd. opera exclusivamente como um serviço de execução e não fornece assessoria de investimentos, gestão de carteiras ou serviços de consultoria. As informações neste site são apenas para fins informativos gerais e não constituem recomendação de operação em nenhum instrumento financeiro.",
+      "exec_text": "A Olla Capital Financial Services L.L.C. opera exclusivamente como um serviço de execução e não fornece assessoria de investimentos, gestão de carteiras ou serviços de consultoria. As informações neste site são apenas para fins informativos gerais e não constituem recomendação de operação em nenhum instrumento financeiro.",
       "restricted": "Jurisdições Restritas:",
-      "restricted_text": "A Olla Trade Ltd. não oferece serviços a residentes dos Estados Unidos, Rússia, Myanmar, Emirados Árabes Unidos, Canadá, Israel, Nova Zelândia, Irã e Coreia do Norte (RPDC).",
+      "restricted_text": "A Olla Capital Financial Services L.L.C. não oferece serviços a residentes dos Estados Unidos, Rússia, Myanmar, Emirados Árabes Unidos, Canadá, Israel, Nova Zelândia, Irã e Coreia do Norte (RPDC).",
       "registered": "Registrada:",
-      "registered_text": "A Olla Trade Ltd. está constituída em Anguila (Reg. No. A000001849) como uma Empresa de Negócios Internacional. Endereço registrado: Grace Complex, The Valley, AI 2640, Anguila.",
-      "copyright": "© 2026 Olla Trade Ltd. Todos os direitos reservados."
+      "registered_text": "A Olla Capital Financial Services L.L.C. está constituída em Anguila (Reg. No. A000001849) como uma Empresa de Negócios Internacional. Endereço registrado: Grace Complex, The Valley, AI 2640, Anguila.",
+      "copyright": "© 2026 Olla Capital Financial Services L.L.C. Todos os direitos reservados."
     },
     "bottomLinks": {
       "terms": "Termos",
@@ -1530,7 +1542,7 @@
       "cta_subtitle": "Abra uma conta em minutos e junte-se a milhares de traders na Olla Trade.",
       "who_p1": "A Olla Trade é uma plataforma de trading online profissional que oferece acesso aos mercados financeiros globais em Forex, Metais, Índices, Energias, Criptomoedas e Ações — tudo através da plataforma padrão do setor, MetaTrader 4.",
       "who_p2": "Fomos criados com uma convicção: que ferramentas de trading profissionais, condições de mercado competitivas e um serviço transparente devem estar disponíveis para todos os traders — independentemente do tamanho da conta ou nível de experiência.",
-      "who_p3": "A Olla Trade Ltd. está incorporada em Anguilla (Registo Nº A000001849) e opera como uma Empresa Internacional sob a lei de Anguilla, oferecendo serviços de trading através do MetaTrader 4.",
+      "who_p3": "A Olla Capital Financial Services L.L.C. está incorporada em Anguilla (Registo Nº A000001849) e opera como uma Empresa Internacional sob a lei de Anguilla, oferecendo serviços de trading através do MetaTrader 4.",
       "vision_body": "Construir um mundo onde a liberdade financeira seja acessível a todos — onde qualquer pessoa, em qualquer lugar, possa acessar os mercados globais com ferramentas profissionais e condições justas.",
       "mission_body": "Fornecer uma plataforma de trading segura, intuitiva e confiável que permita a indivíduos de todo o mundo operar nos mercados globais com confiança.",
       "commitment_body": "Transparência nos preços, honestidade na comunicação de riscos, confiabilidade na execução e uma abordagem centrada no cliente em cada decisão que tomamos.",
@@ -1596,9 +1608,9 @@
           "desc": "Suporte dedicado, políticas transparentes e uma equipe que genuinamente apoia o crescimento dos clientes como participantes do mercado."
         }
       ],
-      "legal_company": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. Nº A000001849) como uma Empresa Internacional sob a lei de Anguilla.",
+      "legal_company": "A Olla Capital Financial Services L.L.C. está incorporada em Anguilla (Reg. Nº A000001849) como uma Empresa Internacional sob a lei de Anguilla.",
       "legal_address": "Grace Complex, The Valley, AI 2640, Anguilla.",
-      "legal_execution": "A Olla Trade Ltd. opera exclusivamente como um serviço de execução e não fornece aconselhamento de investimento ou gestão de carteiras.",
+      "legal_execution": "A Olla Capital Financial Services L.L.C. opera exclusivamente como um serviço de execução e não fornece aconselhamento de investimento ou gestão de carteiras.",
       "legal_restricted": "Serviços não disponíveis para residentes dos EUA, Rússia, Myanmar, Emirados Árabes Unidos, Canadá, Israel, Nova Zelândia, Irã e Coreia do Norte.",
       "cta_label_open": "Abrir Conta",
       "cta_label_contact": "Fale Conosco"
@@ -1791,14 +1803,14 @@
       ],
       "address_section_label": "Nosso Endereço",
       "address_lines": [
-        "Olla Trade Ltd.",
+        "Olla Capital Financial Services L.L.C.",
         "Grace Complex, The Valley",
         "AI 2640, Anguilla",
         "Registo Nº A000001849"
       ],
-      "address_legal_note": "A Olla Trade Ltd. está incorporada em Anguilla como uma Empresa Internacional, operando como um serviço de execução exclusiva. Por favor, use os canais de contato acima para todas as consultas.",
+      "address_legal_note": "A Olla Capital Financial Services L.L.C. está incorporada em Anguilla como uma Empresa Internacional, operando como um serviço de execução exclusiva. Por favor, use os canais de contato acima para todas as consultas.",
       "map_note": "A Olla Trade não opera escritórios atendendo clientes presencialmente. Todo o gerenciamento de conta é realizado através do portal seguro do cliente online. Entre em contato por e-mail ou telefone para todas as consultas.",
-      "compliance_text": "A equipe da Olla Trade nunca solicitará sua senha de conta ou PIN por e-mail, telefone ou chat. Se você receber tal solicitação, não cumpra e reporte imediatamente para info@ollatrade.com. A Olla Trade Ltd. está incorporada em Anguilla (Reg. Nº A000001849) e opera como um serviço de execução exclusiva.",
+      "compliance_text": "A equipe da Olla Trade nunca solicitará sua senha de conta ou PIN por e-mail, telefone ou chat. Se você receber tal solicitação, não cumpra e reporte imediatamente para info@ollatrade.com. A Olla Capital Financial Services L.L.C. está incorporada em Anguilla (Reg. Nº A000001849) e opera como um serviço de execução exclusiva.",
       "compliance_important": "Importante:"
     },
     "help": {
@@ -2467,7 +2479,7 @@
         {
           "title": "Endereço Registrado",
           "value": "Grace Complex, The Valley, AI 2640, Anguilla",
-          "sub": "Olla Trade Ltd. · Reg. Nº A000001849"
+          "sub": "Olla Capital Financial Services L.L.C. · Reg. Nº A000001849"
         }
       ],
       "submit_desc": "Envie um e-mail diretamente para nossa equipe de reclamações em complaints@ollatrade.com. Inclua o número da sua conta e uma descrição clara das suas preocupações. Como alternativa, contate nossa equipe de suporte primeiro — muitos problemas podem ser resolvidos sem uma reclamação formal.",
@@ -2496,7 +2508,7 @@
           "a": "Não. O envio de uma reclamação não afetará o status da sua conta, privilégios de trading ou quaisquer transações pendentes. Todas as reclamações são revisadas independentemente e de forma imparcial pela nossa equipe de conformidade."
         }
       ],
-      "legal_note": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. Nº A000001849) e opera como um serviço de execução exclusiva. Todas as reclamações são tratadas de acordo com nossa Política Interna de Gestão de Reclamações. Os registros de reclamações são retidos por no mínimo 5 anos."
+      "legal_note": "A Olla Capital Financial Services L.L.C. está incorporada em Anguilla (Reg. Nº A000001849) e opera como um serviço de execução exclusiva. Todas as reclamações são tratadas de acordo com nossa Política Interna de Gestão de Reclamações. Os registros de reclamações são retidos por no mínimo 5 anos."
     },
     "affiliate": {
       "badge": "Programa de Parceiros",
@@ -2763,14 +2775,14 @@
       "toc_label": "Seções",
       "company_details_title": "Dados da Empresa",
       "company_details": [
-        "Olla Trade Ltd. · Incorporada em Anguilla · Registo Nº A000001849",
+        "Olla Capital Financial Services L.L.C. · Incorporada em Anguilla · Registo Nº A000001849",
         "Endereço Registrado: Grace Complex, The Valley, AI 2640, Anguilla"
       ],
       "sections": [
         {
           "id": "intro",
           "title": "1. Introdução",
-          "content": "Estes Termos e Condições ('Termos') regem a relação entre a Olla Trade Ltd. ('a Empresa', 'nós') e o cliente ('você', 'o Cliente') e fazem parte integrante do Contrato do Cliente. Ao registrar uma conta na Olla Trade, você confirma que leu, compreendeu e concordou em ficar vinculado por estes Termos. A Olla Trade Ltd. está incorporada em Anguilla (Registo Nº A000001849) como uma Empresa Internacional, fornecendo serviços de trading de Forex e CFDs através da plataforma MetaTrader 4."
+          "content": "Estes Termos e Condições ('Termos') regem a relação entre a Olla Capital Financial Services L.L.C. ('a Empresa', 'nós') e o cliente ('você', 'o Cliente') e fazem parte integrante do Contrato do Cliente. Ao registrar uma conta na Olla Trade, você confirma que leu, compreendeu e concordou em ficar vinculado por estes Termos. A Olla Capital Financial Services L.L.C. está incorporada em Anguilla (Registo Nº A000001849) como uma Empresa Internacional, fornecendo serviços de trading de Forex e CFDs através da plataforma MetaTrader 4."
         },
         {
           "id": "eligibility",
@@ -2815,7 +2827,7 @@
         {
           "id": "governing",
           "title": "10. Lei Aplicável",
-          "content": "Estes Termos são regidos pelas leis de Anguilla. Quaisquer disputas estarão sujeitas à jurisdição dos tribunais de Anguilla. A Empresa incentiva os clientes a usar nosso processo formal de reclamações antes de iniciar procedimentos legais. Contato: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla."
+          "content": "Estes Termos são regidos pelas leis de Anguilla. Quaisquer disputas estarão sujeitas à jurisdição dos tribunais de Anguilla. A Empresa incentiva os clientes a usar nosso processo formal de reclamações antes de iniciar procedimentos legais. Contato: info@ollatrade.com | Olla Capital Financial Services L.L.C., Grace Complex, The Valley, AI 2640, Anguilla."
         }
       ]
     },
@@ -2828,7 +2840,7 @@
         {
           "id": "intro",
           "title": "1. Introdução",
-          "content": "A Olla Trade Ltd. ('nós', 'Empresa') está comprometida em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e compartilhamos suas informações pessoais quando você usa nossos serviços. Esta política aplica-se a todos os clientes, visitantes e usuários dos serviços da Olla Trade. Ao usar nossos serviços, você consente com as práticas de dados descritas nesta política."
+          "content": "A Olla Capital Financial Services L.L.C. ('nós', 'Empresa') está comprometida em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e compartilhamos suas informações pessoais quando você usa nossos serviços. Esta política aplica-se a todos os clientes, visitantes e usuários dos serviços da Olla Trade. Ao usar nossos serviços, você consente com as práticas de dados descritas nesta política."
         },
         {
           "id": "collect",
@@ -2868,7 +2880,7 @@
         {
           "id": "contact",
           "title": "9. Contato",
-          "content": "Para consultas relacionadas à privacidade, solicitações de acesso a dados ou para exercer seus direitos de proteção de dados, entre em contato: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla. Buscamos responder a todas as solicitações relacionadas à privacidade dentro de 30 dias."
+          "content": "Para consultas relacionadas à privacidade, solicitações de acesso a dados ou para exercer seus direitos de proteção de dados, entre em contato: info@ollatrade.com | Olla Capital Financial Services L.L.C., Grace Complex, The Valley, AI 2640, Anguilla. Buscamos responder a todas as solicitações relacionadas à privacidade dentro de 30 dias."
         }
       ]
     },
@@ -3187,7 +3199,7 @@
     "execution": {
       "badge": "Política de Execução",
       "title": "Política de Execução de Ordens",
-      "subtitle": "Esta política descreve como a Olla Trade Ltd. executa ordens de clientes, os fatores considerados e as obrigações tanto da Empresa quanto do cliente.",
+      "subtitle": "Esta política descreve como a Olla Capital Financial Services L.L.C. executa ordens de clientes, os fatores considerados e as obrigações tanto da Empresa quanto do cliente.",
       "effective_label": "Vigência:",
       "reviewed_label": "Última Revisão:",
       "crosslink_text": "Para um guia prático sobre execução, consulte a página de Informações de Execução.",
@@ -3250,7 +3262,7 @@
       "sections": [
         {
           "title": "Escopo",
-          "body": "Esta Política de Gestão de Reclamações se aplica a todos os clientes da Olla Trade Ltd. Estabelece os procedimentos para envio, reconhecimento, investigação e resolução de reclamações formais."
+          "body": "Esta Política de Gestão de Reclamações se aplica a todos os clientes da Olla Capital Financial Services L.L.C. Estabelece os procedimentos para envio, reconhecimento, investigação e resolução de reclamações formais."
         },
         {
           "title": "Como Enviar uma Reclamação",
@@ -3355,7 +3367,7 @@
       },
       {
         "q": "Posso usar Expert Advisors (EAs) na Olla Trade?",
-        "a": "Sim. Expert Advisors, negociação automatizada, scalping, hedging e todas as abordagens de negociação padrão do MT4 são permitidos em todos os tipos de conta da Olla Trade."
+        "a": "Sim. Expert Advisors, negociação automatizada, scOllag, hedging e todas as abordagens de negociação padrão do MT4 são permitidos em todos os tipos de conta da Olla Trade."
       }
     ],
     "contact": [
@@ -3799,7 +3811,7 @@
     "about": {
       "who_we_are_p1": "A Olla Trade é uma plataforma profissional de negociação online que oferece acesso aos mercados financeiros globais em Forex, Metais, Índices, Energias, Criptomoedas e Ações — tudo através da plataforma padrão da indústria, o MetaTrader 4.",
       "who_we_are_p2": "Fomos construídos com uma crença: que ferramentas de negociação profissionais, condições de mercado competitivas e atendimento transparente devem estar disponíveis para todos os traders — independentemente do tamanho da conta ou nível de experiência.",
-      "who_we_are_p3": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. No. A000001849) e opera como uma Empresa de Negócios Internacional sob a lei de Anguilla, oferecendo serviços de negociação através do MetaTrader 4.",
+      "who_we_are_p3": "A Olla Capital Financial Services L.L.C. está incorporada em Anguilla (Reg. No. A000001849) e opera como uma Empresa de Negócios Internacional sob a lei de Anguilla, oferecendo serviços de negociação através do MetaTrader 4.",
       "vision_body": "Construir um mundo onde a liberdade financeira seja acessível a todos — onde qualquer pessoa, em qualquer lugar, possa acessar os mercados globais com ferramentas profissionais e condições justas.",
       "mission_body": "Fornecer uma plataforma de negociação segura, intuitiva e confiável que permita que pessoas em todo o mundo negociem os mercados globais com confiança.",
       "commitment_body": "Transparência nos preços, honestidade na comunicação de riscos, confiabilidade na execução e uma abordagem focada no cliente em cada decisão que tomamos.",
@@ -3856,9 +3868,9 @@
         }
       ],
       "legal_section": {
-        "company": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. No. A000001849) como uma Empresa de Negócios Internacional sob a lei de Anguilla.",
+        "company": "A Olla Capital Financial Services L.L.C. está incorporada em Anguilla (Reg. No. A000001849) como uma Empresa de Negócios Internacional sob a lei de Anguilla.",
         "address": "Endereço registrado: Grace Complex, The Valley, AI 2640, Anguilla.",
-        "execution_only": "A Olla Trade Ltd. opera exclusivamente como um serviço de execução de ordens e não fornece aconselhamento de investimentos ou gestão de portfólio.",
+        "execution_only": "A Olla Capital Financial Services L.L.C. opera exclusivamente como um serviço de execução de ordens e não fornece aconselhamento de investimentos ou gestão de portfólio.",
         "restricted": "Serviços não disponíveis para residentes dos EUA, Rússia, Myanmar, Emirados Árabes Unidos, Canadá, Israel, Nova Zelândia, Irã e Coreia do Norte."
       }
     },
@@ -3927,7 +3939,7 @@
       "partner_desc": "Junte-se ao programa de afiliados da Olla Trade e ganhe comissões.",
       "important": "Importante:",
       "security_text": "A equipe da Olla Trade nunca solicitará sua senha de conta ou PIN por e-mail, telefone ou chat. Se você receber tal solicitação, não cumpra e relate imediatamente.",
-      "compliance_note": "A Olla Trade Ltd. está incorporada em Anguilla (Reg. No. A000001849) e opera como um serviço exclusivo de execução de ordens."
+      "compliance_note": "A Olla Capital Financial Services L.L.C. está incorporada em Anguilla (Reg. No. A000001849) e opera como um serviço exclusivo de execução de ordens."
     },
     "help": {
       "common_issues": "Problemas Comuns e Soluções",
@@ -4605,8 +4617,8 @@
           "body": "O modelo de execução a mercado significa que as ordens não estão sujeitas a requotes. Todas as ordens são aceitas e executadas aos preços de mercado vigentes. Derrapagem — execução a um preço diferente do solicitado — pode ocorrer em mercados de movimento rápido."
         },
         {
-          "title": "EA & Scalping Permitidos",
-          "body": "Expert Advisors, estratégias de scalping, negociação de notícias e hedging são permitidos em todas as contas Olla Trade. Não há restrições nos estilos de trading. Todas as estratégias devem permanecer dentro dos limites dos termos e condições da conta."
+          "title": "EA & ScOllag Permitidos",
+          "body": "Expert Advisors, estratégias de scOllag, negociação de notícias e hedging são permitidos em todas as contas Olla Trade. Não há restrições nos estilos de trading. Todas as estratégias devem permanecer dentro dos limites dos termos e condições da conta."
         }
       ],
       "accounts_label": "Tipos de Conta",
@@ -4622,7 +4634,7 @@
       "row_commission": "Comissão",
       "row_leverage": "Alavancagem Máxima",
       "row_lot": "Tamanho Mín. de Operação",
-      "row_ea": "EA / Scalping",
+      "row_ea": "EA / ScOllag",
       "row_mc": "Chamada de Margem",
       "row_so": "Nível de Stop Out",
       "row_nbp": "Prot. Saldo Negativo",
@@ -4661,7 +4673,7 @@
         },
         {
           "title": "Suporte a EA",
-          "desc": "Suporta totalmente Expert Advisors, estratégias automatizadas, scalping, hedging e todas as abordagens padrão de trading no MT4."
+          "desc": "Suporta totalmente Expert Advisors, estratégias automatizadas, scOllag, hedging e todas as abordagens padrão de trading no MT4."
         }
       ],
       "exec_link": "Informações Completas de Execução →",

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import { IconPhone, IconMail, IconMapPin } from "../../../components/ui/Icons";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -46,14 +46,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 {formFields.map((f) => (
                   <div key={f}>
                     <label className="text-[11px] font-semibold text-gray-400 mb-1 block uppercase tracking-wider">{f}</label>
-                    <input type="text" placeholder={f} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-[13px] text-gray-700 focus:outline-none focus:border-[#00CC44] transition-colors" />
+                    <input type="text" placeholder={f} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-[13px] text-gray-700 focus:outline-none focus:border-[#29B5D4] transition-colors" />
                   </div>
                 ))}
                 <div>
                   <label className="text-[11px] font-semibold text-gray-400 mb-1 block uppercase tracking-wider">{t("message_label")}</label>
-                  <textarea rows={4} placeholder={t("message_placeholder")} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-[13px] text-gray-700 focus:outline-none focus:border-[#00CC44] transition-colors resize-none" />
+                  <textarea rows={4} placeholder={t("message_placeholder")} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-[13px] text-gray-700 focus:outline-none focus:border-[#29B5D4] transition-colors resize-none" />
                 </div>
-                <button className="w-full bg-[#00CC44] hover:bg-[#00DD4A] text-black font-bold py-3 rounded-lg text-[13px] transition-colors">{t("send_btn")}</button>
+                <button className="w-full bg-[#29B5D4] hover:bg-[#1FA5C4] text-white font-bold py-3 rounded-lg text-[13px] transition-colors">{t("send_btn")}</button>
                 <p className="text-[11px] text-gray-400 text-center">{t("response_note")}</p>
               </div>
             </div>

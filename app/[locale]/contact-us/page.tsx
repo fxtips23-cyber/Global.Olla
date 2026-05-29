@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
-import FAQSection from "../../components/ui/FAQSection";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import {
   IconMail, IconPhone, IconMapPin, IconHeadset, IconUsers,
@@ -18,7 +17,7 @@ const CARD_ICONS: ComponentType<{ className?: string }>[] = [IconMail, IconHeads
 const HELP_ICONS: ComponentType<{ className?: string }>[] = [IconUsers, IconActivity, IconMonitor, IconBook, IconShield];
 
 const OFFICE_CONFIG = [
-  { accent: "#00CC44",  accentBg: "rgba(0,204,68,0.13)",   accentBorder: "rgba(0,204,68,0.28)",   barFrom: "#00CC44",  barTo: "#009933",  Icon: IconMapPin },
+  { accent: "#29B5D4",  accentBg: "rgba(41,181,212,0.13)",   accentBorder: "rgba(41,181,212,0.28)",   barFrom: "#29B5D4",  barTo: "#009933",  Icon: IconMapPin },
   { accent: "#00BFA5",  accentBg: "rgba(0,191,165,0.13)",  accentBorder: "rgba(0,191,165,0.28)",  barFrom: "#00BFA5",  barTo: "#00897B",  Icon: IconPhone },
   { accent: "#AB47BC",  accentBg: "rgba(171,71,188,0.13)", accentBorder: "rgba(171,71,188,0.28)", barFrom: "#AB47BC",  barTo: "#7B1FA2",  Icon: IconMail },
 ];
@@ -44,7 +43,6 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
   const quickHelp      = t.raw("quick_help")        as { title: string; desc: string; href: string }[];
   const availDays      = t.raw("availability_days") as { day: string; hours: string; active: boolean }[];
   const addressLines   = t.raw("address_lines")     as string[];
-  const contactFaqs    = t.raw("contact_faqs")      as { q: string; a: string }[];
 
   const officeDetails = [
     { ...OFFICE_CONFIG[0], label: t("office_address_label"), lines: addressLines },
@@ -59,23 +57,23 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
         <div className="pointer-events-none absolute inset-0"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px)", backgroundSize: "80px 80px" }} />
         <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[500px]"
-          style={{ background: "radial-gradient(ellipse at 80% 20%, rgba(0,204,68,0.05) 0%, transparent 60%)" }} />
+          style={{ background: "radial-gradient(ellipse at 80% 20%, rgba(41,181,212,0.05) 0%, transparent 60%)" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-[11px] text-white/22 mb-6">
             <Link href="/" className="hover:text-white/45 transition-colors">{t("breadcrumb_home")}</Link>
             <span className="text-white/10">/</span>
             <span className="text-white/40">{t("breadcrumb_page")}</span>
           </nav>
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{t("hero_badge")}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-5">{t("hero_badge")}</div>
           <h1 className="text-5xl sm:text-6xl font-extrabold text-white mb-5 leading-tight max-w-3xl">{t("hero_title")}</h1>
           <p className="text-[17px] text-white/40 max-w-2xl leading-relaxed mb-9">{t("hero_desc")}</p>
           <div className="flex flex-wrap gap-3">
             <a href="#contact-form"
               className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
-              style={{ background: "#00CC44", color: "#000" }}>
+              style={{ background: "#29B5D4", color: "#000" }}>
               {t("hero_cta")}
             </a>
-            <Link href="https://direct.ollatrade.com/auth/register"
+            <Link href="https://portal.ollatrade.com/auth/register"
               className="inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-xl text-[14px] transition-all text-white/65 hover:text-white"
               style={{ border: "1px solid rgba(255,255,255,0.18)" }}>
               {t("hero_cta_secondary")}
@@ -91,16 +89,16 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
             {contactCards.map(({ title, detail, href, desc, cta }, i) => {
               const Icon = CARD_ICONS[i % CARD_ICONS.length];
               return (
-                <div key={title} className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col hover:border-[#00CC44]/20 hover:shadow-md transition-all duration-200">
+                <div key={title} className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col hover:border-[#29B5D4]/20 hover:shadow-md transition-all duration-200">
                   <div className="w-10 h-10 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-5 flex-shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-[14px] font-bold text-[#111827] mb-1.5">{title}</h3>
                   <p className="text-[12px] text-gray-500 leading-relaxed mb-4 flex-1">{desc}</p>
-                  <a href={href} className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#00CC44] hover:text-[#00AA38] transition-colors group mt-auto">
+                  <a href={href} className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#29B5D4] hover:text-[#29B5D4] transition-colors group mt-auto">
                     <span className="font-mono text-[11px] text-gray-400 block mb-1">{detail}</span>
                   </a>
-                  <a href={href} className="mt-2 w-full flex items-center justify-center border border-[#00CC44]/25 hover:bg-[#00CC44] hover:text-black hover:border-[#00CC44] text-[#00CC44] font-semibold py-2.5 rounded-lg text-[12px] transition-all">
+                  <a href={href} className="mt-2 w-full flex items-center justify-center border border-[#29B5D4]/25 hover:bg-[#29B5D4] hover:text-black hover:border-[#29B5D4] text-[#29B5D4] font-semibold py-2.5 rounded-lg text-[12px] transition-all">
                     {cta} →
                   </a>
                 </div>
@@ -113,7 +111,7 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
       {/* ── 3. Office information ─────────────────────────────────── */}
       <section className="py-14 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-8">{t("office_info_label")}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-8">{t("office_info_label")}</div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {officeDetails.map(({ Icon, label, lines, accent, accentBg, accentBorder, barFrom, barTo }) => (
               <div key={label} className="relative bg-[#0D1520] rounded-2xl overflow-hidden border border-white/8 hover:border-white/16 transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40">
@@ -139,17 +137,17 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[380px_1fr] gap-12 lg:gap-16 items-start">
             <div className="lg:sticky lg:top-24">
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("form_panel_label")}</div>
+              <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{t("form_panel_label")}</div>
               <h2 className="text-3xl font-extrabold text-[#111827] mb-4 leading-tight">{t("form_panel_title")}</h2>
               <p className="text-[14px] text-gray-500 leading-relaxed mb-8">
                 {t("form_panel_desc").split("cst@ollatrade.com")[0]}
-                <a href="mailto:cst@ollatrade.com" className="text-[#00CC44] hover:underline">cst@ollatrade.com</a>
+                <a href="mailto:cst@ollatrade.com" className="text-[#29B5D4] hover:underline">cst@ollatrade.com</a>
                 {t("form_panel_desc").split("cst@ollatrade.com")[1]}
               </p>
 
               <div className="bg-[#111827] rounded-2xl p-5 mb-5">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-[#00CC44]/15 border border-[#00CC44]/25 text-[#00CC44] flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-[#29B5D4]/15 border border-[#29B5D4]/25 text-[#29B5D4] flex items-center justify-center">
                     <IconClock className="w-4 h-4" />
                   </div>
                   <span className="text-[13px] font-bold text-white">{t("response_times_title")}</span>
@@ -158,7 +156,7 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
                   {responseTimes.map(([type, time]) => (
                     <div key={type} className="flex items-center justify-between py-2 border-b border-white/8">
                       <span className="text-[12px] text-white/40">{type}</span>
-                      <span className="text-[12px] text-[#00CC44] font-semibold">{time}</span>
+                      <span className="text-[12px] text-[#29B5D4] font-semibold">{time}</span>
                     </div>
                   ))}
                 </div>
@@ -198,7 +196,7 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("self_service_label")}</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{t("self_service_label")}</div>
             <h2 className="text-3xl font-extrabold text-[#111827] mb-3">{t("quick_help_title")}</h2>
             <p className="text-gray-500 max-w-xl mx-auto text-[15px]">{t("quick_help_desc")}</p>
           </div>
@@ -207,11 +205,11 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
               const Icon = HELP_ICONS[i % HELP_ICONS.length];
               return (
                 <Link key={title} href={href}
-                  className="group bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5 text-center hover:bg-white hover:border-[#00CC44]/20 hover:shadow-md transition-all duration-200">
+                  className="group bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5 text-center hover:bg-white hover:border-[#29B5D4]/20 hover:shadow-md transition-all duration-200">
                   <div className="w-10 h-10 rounded-xl border border-gray-200 bg-white text-gray-400 flex items-center justify-center mx-auto mb-4 group-hover:border-[#111827]/20 group-hover:text-[#111827] transition-colors">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h4 className="text-[13px] font-bold text-[#111827] mb-2 group-hover:text-[#00AA38] transition-colors">{title}</h4>
+                  <h4 className="text-[13px] font-bold text-[#111827] mb-2 group-hover:text-[#29B5D4] transition-colors">{title}</h4>
                   <p className="text-[11px] text-gray-500 leading-relaxed">{desc}</p>
                 </Link>
               );
@@ -225,17 +223,17 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{t("support_section_label")}</div>
+              <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-5">{t("support_section_label")}</div>
               <h2 className="text-3xl font-extrabold text-white mb-4">{t("support_section_title")}</h2>
               <p className="text-white/45 text-[15px] leading-relaxed mb-8">
                 {t("support_section_desc").split("cst@ollatrade.com")[0]}
-                <a href="mailto:cst@ollatrade.com" className="text-[#00CC44] hover:underline">cst@ollatrade.com</a>
+                <a href="mailto:cst@ollatrade.com" className="text-[#29B5D4] hover:underline">cst@ollatrade.com</a>
                 {t("support_section_desc").split("cst@ollatrade.com")[1]}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="mailto:info@ollatrade.com"
                   className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-xl text-[13px] transition-colors"
-                  style={{ background: "#00CC44", color: "#000" }}>
+                  style={{ background: "#29B5D4", color: "#000" }}>
                   {t("email_us_btn")}
                 </a>
                 <Link href="/company/help"
@@ -249,12 +247,12 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
             <div className="grid sm:grid-cols-2 gap-4">
               {availDays.map(({ day, hours, active }) => (
                 <div key={day} className="rounded-xl p-4 flex items-start gap-3"
-                  style={{ background: active ? "rgba(0,204,68,0.08)" : "rgba(255,255,255,0.04)", border: `1px solid ${active ? "rgba(0,204,68,0.2)" : "rgba(255,255,255,0.07)"}` }}>
+                  style={{ background: active ? "rgba(41,181,212,0.08)" : "rgba(255,255,255,0.04)", border: `1px solid ${active ? "rgba(41,181,212,0.2)" : "rgba(255,255,255,0.07)"}` }}>
                   <div className="w-2 h-2 rounded-full flex-shrink-0 mt-1.5"
-                    style={{ background: active ? "#00CC44" : "rgba(255,255,255,0.2)" }} />
+                    style={{ background: active ? "#29B5D4" : "rgba(255,255,255,0.2)" }} />
                   <div>
                     <div className="text-[13px] font-bold" style={{ color: active ? "#fff" : "rgba(255,255,255,0.55)" }}>{day}</div>
-                    <div className="text-[12px] mt-0.5" style={{ color: active ? "#00CC44" : "rgba(255,255,255,0.28)" }}>{hours}</div>
+                    <div className="text-[12px] mt-0.5" style={{ color: active ? "#29B5D4" : "rgba(255,255,255,0.28)" }}>{hours}</div>
                   </div>
                 </div>
               ))}
@@ -295,15 +293,13 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
         </div>
       </section>
 
-      {/* ── 7. FAQ ───────────────────────────────────────────────── */}
-      <FAQSection title={t("faq_title")} subtitle={t("faq_subtitle")} faqs={contactFaqs} />
 
       {/* ── 8. Address card ──────────────────────────────────────── */}
       <section className="py-14 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-7">
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{t("address_section_label")}</div>
+              <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-5">{t("address_section_label")}</div>
               <div className="flex items-start gap-3">
                 <div className="w-9 h-9 rounded-xl border border-gray-200 bg-white text-gray-400 flex items-center justify-center flex-shrink-0">
                   <IconMapPin className="w-4 h-4" />
@@ -321,11 +317,11 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
             <div className="bg-[#0A1520] border border-white/10 rounded-2xl overflow-hidden flex flex-col">
               <div className="flex-1 relative min-h-[200px]" style={{ background: "#0D1828" }}>
                 <div className="absolute inset-0"
-                  style={{ backgroundImage: "linear-gradient(rgba(0,204,68,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,204,68,0.04) 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
+                  style={{ backgroundImage: "linear-gradient(rgba(41,181,212,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(41,181,212,0.04) 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-12 h-12 rounded-full border-2 border-[#00CC44] bg-[#00CC44]/15 flex items-center justify-center">
-                      <IconMapPin className="w-6 h-6 text-[#00CC44]" />
+                    <div className="w-12 h-12 rounded-full border-2 border-[#29B5D4] bg-[#29B5D4]/15 flex items-center justify-center">
+                      <IconMapPin className="w-6 h-6 text-[#29B5D4]" />
                     </div>
                     <div className="bg-[#0D1520]/90 border border-white/10 rounded-xl px-4 py-2 text-center backdrop-blur-sm">
                       <div className="text-[11px] font-bold text-white">Olla Trade Ltd.</div>
@@ -334,11 +330,11 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
                   </div>
                 </div>
                 <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
-                  <path d="M50,80 C100,60 150,90 200,70 C250,50 300,80 350,60" stroke="#00CC44" strokeWidth="1" fill="none"/>
-                  <path d="M20,140 C80,120 160,150 220,130 C280,110 340,140 380,125" stroke="#00CC44" strokeWidth="0.5" fill="none"/>
-                  <path d="M30,180 C100,165 180,185 240,170 C300,155 360,175 390,165" stroke="#00CC44" strokeWidth="0.5" fill="none" strokeDasharray="4 3"/>
-                  <circle cx="200" cy="120" r="4" fill="#00CC44" opacity="0.8"/>
-                  <circle cx="200" cy="120" r="10" fill="#00CC44" opacity="0.2"/>
+                  <path d="M50,80 C100,60 150,90 200,70 C250,50 300,80 350,60" stroke="#29B5D4" strokeWidth="1" fill="none"/>
+                  <path d="M20,140 C80,120 160,150 220,130 C280,110 340,140 380,125" stroke="#29B5D4" strokeWidth="0.5" fill="none"/>
+                  <path d="M30,180 C100,165 180,185 240,170 C300,155 360,175 390,165" stroke="#29B5D4" strokeWidth="0.5" fill="none" strokeDasharray="4 3"/>
+                  <circle cx="200" cy="120" r="4" fill="#29B5D4" opacity="0.8"/>
+                  <circle cx="200" cy="120" r="10" fill="#29B5D4" opacity="0.2"/>
                 </svg>
               </div>
               <div className="px-5 py-4 border-t border-white/8">
@@ -354,7 +350,7 @@ export default async function ContactUsPage({ params }: { params: Promise<{ loca
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[11px] text-white/20 text-center leading-relaxed">
             <strong className="text-white/30">{t("compliance_important")}</strong> {t("compliance_text").split("info@ollatrade.com")[0]}
-            <a href="mailto:info@ollatrade.com" className="text-[#00CC44]/60 hover:text-[#00CC44] transition-colors">info@ollatrade.com</a>
+            <a href="mailto:info@ollatrade.com" className="text-[#29B5D4]/60 hover:text-[#29B5D4] transition-colors">info@ollatrade.com</a>
             {t("compliance_text").split("info@ollatrade.com")[1]}
           </p>
         </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useTranslations } from "next-intl";
 
 const TRUSTPILOT_URL = "https://www.trustpilot.com/review/ollatrade.com";
@@ -11,94 +11,92 @@ function TrustpilotStar({ className }: { className?: string }) {
   );
 }
 
-function ExternalLinkIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-    </svg>
-  );
-}
-
 export default function Testimonials() {
   const t = useTranslations("home.testimonials");
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F8FAFC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: "#050B14" }}>
 
-        {/* ── Header ─────────────────────────────────────────────── */}
-        <div className="text-center mb-12">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">
-            {t("badge")}
+      {/* Center glow */}
+      <div className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 60% 40% at 50% 50%, rgba(26,144,195,0.06) 0%, transparent 70%)" }} />
+
+      <div className="relative max-w-[1380px] mx-auto px-5 lg:px-8">
+
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2.5 mb-5 px-4 py-2 rounded-full"
+            style={{ background: "rgba(26,144,195,0.10)", border: "1px solid rgba(26,144,195,0.20)" }}>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] flex-shrink-0" />
+            <span className="text-[11px] font-bold text-[#38BDF8] uppercase tracking-widest">{t("badge")}</span>
           </div>
-          <h2 className="text-4xl font-extrabold text-[#111827] mb-4">
+          <h2 className="font-bold text-white leading-tight mb-4" style={{ fontSize: "clamp(28px, 3.5vw, 48px)", letterSpacing: "-0.02em" }}>
             {t("title")}
           </h2>
-          <p className="text-gray-500 text-[16px] leading-relaxed max-w-xl mx-auto">
-            {t("subtitle")}
-          </p>
+          <p className="text-[15px] leading-relaxed" style={{ color: "#8B9DB0" }}>{t("subtitle")}</p>
         </div>
 
-        {/* ── Two cards ──────────────────────────────────────────── */}
+        {/* Two cards */}
         <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto mb-10">
 
           {/* Trustpilot brand card */}
-          <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col items-center text-center shadow-sm">
-            <div className="flex items-center gap-2.5 mb-3">
-              <TrustpilotStar className="w-8 h-8" />
-              <span className="text-[22px] font-extrabold text-[#111827] tracking-tight">
+          <div className="flex flex-col items-center text-center p-8 rounded-2xl"
+            style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <div className="flex items-center gap-3 mb-3">
+              <TrustpilotStar className="w-9 h-9" />
+              <span className="font-bold text-white" style={{ fontSize: "clamp(18px, 2vw, 24px)" }}>
                 {t("trustpilot_label")}
               </span>
             </div>
-            <p className="text-[13px] text-gray-400 mb-6">
+            <p className="text-[13px] mb-6" style={{ color: "#5A6A7A" }}>
               {t("trustpilot_tagline")}
             </p>
-            <a
-              href={TRUSTPILOT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#00B67A] hover:underline underline-offset-4 transition-colors"
-            >
+            <a href={TRUSTPILOT_URL} target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[13px] font-semibold transition-colors"
+              style={{ color: "#00B67A" }}>
               {t("trustpilot_profile_link")}
-              <ExternalLinkIcon className="w-3.5 h-3.5" />
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
           </div>
 
-          {/* Verified reviews info card */}
-          <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col shadow-sm">
+          {/* Verified info card */}
+          <div className="flex flex-col p-8 rounded-2xl"
+            style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
             <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5 flex-shrink-0"
-              style={{ background: "rgba(0,204,68,0.08)" }}>
-              <svg className="w-5 h-5 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2}
-                viewBox="0 0 24 24" aria-hidden="true">
+              style={{ background: "rgba(26,144,195,0.10)", border: "1px solid rgba(26,144,195,0.20)", color: "#38BDF8" }}>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round"
                   d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 className="text-[16px] font-bold text-[#111827] mb-3">
+            <h3 className="text-[14px] font-semibold mb-3" style={{ color: "rgba(255,255,255,0.85)" }}>
               {t("info_title")}
             </h3>
-            <p className="text-[14px] text-gray-500 leading-relaxed">
+            <p className="text-[13px] leading-relaxed" style={{ color: "#5A6A7A" }}>
               {t("info_body")}
             </p>
           </div>
         </div>
 
-        {/* ── CTA button ─────────────────────────────────────────── */}
+        {/* CTA */}
         <div className="flex justify-center">
-          <a
-            href={TRUSTPILOT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white border border-gray-200 hover:border-[#00B67A]/50 hover:shadow-md rounded-2xl px-8 py-4 transition-all duration-200 group"
-          >
+          <a href={TRUSTPILOT_URL} target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl transition-all duration-300 group"
+            style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}
+            onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "rgba(0,182,122,0.35)"; }}
+            onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "rgba(255,255,255,0.08)"; }}>
             <TrustpilotStar className="w-5 h-5 flex-shrink-0" />
-            <span className="text-[14px] font-bold text-[#111827] group-hover:text-[#00B67A] transition-colors">
+            <span className="text-[13px] font-semibold transition-colors" style={{ color: "rgba(255,255,255,0.70)" }}>
               {t("cta_label")}
             </span>
-            <ExternalLinkIcon className="w-4 h-4 text-gray-400 group-hover:text-[#00B67A] transition-colors ml-1 flex-shrink-0" />
+            <svg className="w-4 h-4 flex-shrink-0 ml-1" style={{ color: "#5A6A7A" }}
+              fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
           </a>
         </div>
-
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
@@ -35,7 +35,7 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
               <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5">
                 <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">{t("toc_label")}</div>
                 <nav className="space-y-0.5">
-                  {sections.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
+                  {sections.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#29B5D4] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
                 </nav>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
                 <h3 className="text-[14px] font-bold text-[#111827] mb-2">{t("company_details_title")}</h3>
                 <div className="text-[13px] text-gray-600 space-y-1">
                   {companyDetails.map((line, i) => <p key={i}>{line}</p>)}
-                  <p>{locale === "pt" ? "Contato:" : "Contact:"} <a href="mailto:info@ollatrade.com" className="text-[#00CC44] hover:underline">info@ollatrade.com</a></p>
+                  <p>{locale === "pt" ? "Contato:" : "Contact:"} <a href="mailto:info@ollatrade.com" className="text-[#29B5D4] hover:underline">info@ollatrade.com</a></p>
                 </div>
               </div>
             </div>

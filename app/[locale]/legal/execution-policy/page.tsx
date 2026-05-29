@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "../../../lib/constants";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -62,7 +62,7 @@ export default async function ExecutionPolicyPage({ params }: { params: Promise<
             <span className="text-white/10">/</span>
             <span className="text-white/40">{t("title")}</span>
           </nav>
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{t("hero_badge")}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-5">{t("hero_badge")}</div>
           <h1 className="text-5xl sm:text-6xl font-extrabold text-white mb-5 leading-tight max-w-3xl">{t("hero_title")}</h1>
           <p className="text-[16px] text-white/40 max-w-2xl leading-relaxed mb-8">{t("subtitle")}</p>
           <div className="flex flex-wrap gap-4 text-[11px]">
@@ -81,7 +81,7 @@ export default async function ExecutionPolicyPage({ params }: { params: Promise<
       <div className="bg-[#0A1220] border-b border-white/6 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[12px] text-white/35">{t("crosslink_text")}</p>
-          <Link href="/execution-information" className="text-[12px] font-semibold text-[#00CC44] hover:text-[#00DD4A] transition-colors flex items-center gap-1.5 flex-shrink-0">
+          <Link href="/execution-information" className="text-[12px] font-semibold text-[#29B5D4] hover:text-[#1FA5C4] transition-colors flex items-center gap-1.5 flex-shrink-0">
             {t("crosslink_link")}
           </Link>
         </div>
@@ -95,7 +95,7 @@ export default async function ExecutionPolicyPage({ params }: { params: Promise<
                 <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">{t("toc_label")}</div>
                 <nav className="space-y-1">
                   {sectionsList.map((s, i) => (
-                    <a key={s} href={`#s${i + 1}`} className="flex items-center gap-2 text-[12px] text-gray-500 hover:text-[#00CC44] transition-colors py-0.5">
+                    <a key={s} href={`#s${i + 1}`} className="flex items-center gap-2 text-[12px] text-gray-500 hover:text-[#29B5D4] transition-colors py-0.5">
                       <span className="text-[10px] font-bold text-gray-300 w-5 flex-shrink-0">{String(i + 1).padStart(2, "0")}</span>
                       {s}
                     </a>
@@ -181,7 +181,7 @@ export default async function ExecutionPolicyPage({ params }: { params: Promise<
                   </Section>
                   <Section id="s15" title="15. Divulgação de Risco">
                     <p>O trading de Forex e CFDs envolve risco significativo de perda. O trading alavancado amplifica tanto os lucros potenciais quanto as perdas potenciais. É possível perder mais do que o depósito inicial.</p>
-                    <p>Os clientes devem ler as <Link href="/legal/risk-disclosures" className="text-[#00CC44] hover:underline font-semibold">Divulgações de Risco</Link> completas antes de operar.</p>
+                    <p>Os clientes devem ler as <Link href="/legal/risk-disclosures" className="text-[#29B5D4] hover:underline font-semibold">Divulgações de Risco</Link> completas antes de operar.</p>
                   </Section>
                   <Section id="s16" title="16. Informações de Contato">
                     <p>Para consultas sobre esta Política ou execução de ordens, entre em contato:</p>
@@ -265,7 +265,7 @@ export default async function ExecutionPolicyPage({ params }: { params: Promise<
                   </Section>
                   <Section id="s15" title="15. Risk Disclosure">
                     <p>Trading Forex and CFDs involves significant risk of loss. It is possible to lose more than your initial deposit.</p>
-                    <p>Clients should read the full <Link href="/legal/risk-disclosures" className="text-[#00CC44] hover:underline font-semibold">Risk Disclosures</Link> before trading.</p>
+                    <p>Clients should read the full <Link href="/legal/risk-disclosures" className="text-[#29B5D4] hover:underline font-semibold">Risk Disclosures</Link> before trading.</p>
                   </Section>
                   <Section id="s16" title="16. Contact Information">
                     <p>For queries regarding this Policy or order execution, please contact:</p>
@@ -291,10 +291,10 @@ export default async function ExecutionPolicyPage({ params }: { params: Promise<
                 <div className="grid sm:grid-cols-2 gap-3">
                   {relatedDocs.map(({ label, href, desc }) => (
                     <Link key={label} href={href}
-                      className="flex items-start gap-3 p-4 border border-gray-100 rounded-xl hover:border-[#00CC44]/20 hover:bg-[#F5F7FA] transition-all group">
-                      <div className="w-2 h-2 rounded-full bg-[#00CC44] flex-shrink-0 mt-1.5" />
+                      className="flex items-start gap-3 p-4 border border-gray-100 rounded-xl hover:border-[#29B5D4]/20 hover:bg-[#F5F7FA] transition-all group">
+                      <div className="w-2 h-2 rounded-full bg-[#29B5D4] flex-shrink-0 mt-1.5" />
                       <div>
-                        <div className="text-[13px] font-bold text-[#111827] group-hover:text-[#00CC44] transition-colors">{label}</div>
+                        <div className="text-[13px] font-bold text-[#111827] group-hover:text-[#29B5D4] transition-colors">{label}</div>
                         <div className="text-[11px] text-gray-400 leading-relaxed mt-0.5">{desc}</div>
                       </div>
                     </Link>

@@ -38,7 +38,7 @@ export default function FAQSection({
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">FAQ</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">FAQ</div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] mb-3">{title}</h2>
           {subtitle && (
             <p className="text-gray-500 max-w-2xl mx-auto text-[15px] leading-relaxed">{subtitle}</p>
@@ -55,11 +55,11 @@ export default function FAQSection({
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
                 >
-                  <span className={`text-[15px] font-semibold leading-snug transition-colors ${isOpen ? "text-[#00CC44]" : "text-[#111827] group-hover:text-[#00AA38]"}`}>
+                  <span className={`text-[15px] font-semibold leading-snug transition-colors ${isOpen ? "text-[#29B5D4]" : "text-[#111827] group-hover:text-[#29B5D4]"}`}>
                     {f.q}
                   </span>
                   <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300 ${
-                    isOpen ? "bg-[#00CC44] text-black rotate-180" : "bg-gray-100 text-gray-400 group-hover:bg-[#00CC44]/15 group-hover:text-[#00CC44]"
+                    isOpen ? "bg-[#29B5D4] text-white rotate-180" : "bg-gray-100 text-gray-400 group-hover:bg-[#29B5D4]/15 group-hover:text-[#29B5D4]"
                   }`}>
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />

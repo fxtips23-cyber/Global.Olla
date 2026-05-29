@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const steps = [
   {
@@ -42,7 +42,7 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#00CC44]/10 text-[#00AA38] text-xs font-semibold px-4 py-2 rounded-full mb-4 uppercase tracking-wider border border-[#00CC44]/20">
+          <div className="inline-flex items-center gap-2 bg-[#29B5D4]/10 text-[#29B5D4] text-xs font-semibold px-4 py-2 rounded-full mb-4 uppercase tracking-wider border border-[#29B5D4]/20">
             Simple Process
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
@@ -56,19 +56,19 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="grid md:grid-cols-3 gap-8 relative">
           {/* Connector line (desktop) */}
-          <div className="hidden md:block absolute top-14 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-[#00CC44]/30 via-[#00CC44] to-[#00CC44]/30 z-0" />
+          <div className="hidden md:block absolute top-14 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-[#29B5D4]/30 via-[#29B5D4] to-[#29B5D4]/30 z-0" />
 
           {steps.map((step, index) => (
             <div key={step.number} className="relative flex flex-col items-center text-center group">
-              <div className="relative z-10 w-28 h-28 rounded-full bg-white border-2 border-gray-200 flex flex-col items-center justify-center mb-6 shadow-lg group-hover:border-[#00CC44] group-hover:shadow-green-100 transition-all duration-300">
-                <div className="text-[#00CC44] mb-1">{step.icon}</div>
-                <div className="text-xs font-bold text-[#00AA38] tracking-widest">STEP {step.number}</div>
+              <div className="relative z-10 w-28 h-28 rounded-full bg-white border-2 border-gray-200 flex flex-col items-center justify-center mb-6 shadow-lg group-hover:border-[#29B5D4] group-hover:shadow-[#29B5D4]/10 transition-all duration-300">
+                <div className="text-[#29B5D4] mb-1">{step.icon}</div>
+                <div className="text-xs font-bold text-[#29B5D4] tracking-widest">STEP {step.number}</div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed max-w-xs">{step.description}</p>
 
               {index < steps.length - 1 && (
-                <div className="md:hidden mt-6 text-[#00CC44]">
+                <div className="md:hidden mt-6 text-[#29B5D4]">
                   <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -81,8 +81,8 @@ export default function HowItWorks() {
         {/* CTA */}
         <div className="text-center mt-14">
           <Link
-            href="https://direct.ollatrade.com/auth/register"
-            className="inline-flex items-center gap-2 bg-[#00CC44] hover:bg-[#00DD4A] text-black font-bold px-8 py-4 rounded-md text-base transition-all duration-200 shadow-lg shadow-green-900/20 hover:-translate-y-0.5"
+            href="https://portal.ollatrade.com/auth/register"
+            className="inline-flex items-center gap-2 bg-[#29B5D4] hover:bg-[#1FA5C4] text-white font-bold px-8 py-4 rounded-xl text-base transition-all duration-200 shadow-lg shadow-[#29B5D4]/20 hover:-translate-y-0.5"
           >
             Start Claiming Your Bonus
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

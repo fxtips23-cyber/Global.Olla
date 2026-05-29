@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Centralised FAQ data — one export per page.
  * Import only the relevant FAQ set on each page.
  * Content must remain compliant: no guaranteed profit, no risk-free claims,
@@ -179,7 +179,7 @@ export const platformFaqs: FAQ[] = [
 export const fundingFaqs: FAQ[] = [
   {
     q: "How do I deposit funds into my Olla Trade account?",
-    a: "Log in to your Olla Trade client portal at direct.ollatrade.com, navigate to the Funding section, select your preferred crypto method (USDT TRC20, USDT ERC20, Bitcoin, or Ethereum), and follow the on-screen instructions to generate your deposit address. Your account balance will be updated after the required blockchain network confirmations.",
+    a: "Log in to your Olla Trade client portal at portal.ollatrade.com, navigate to the Funding section, select your preferred crypto method (USDT TRC20, USDT ERC20, Bitcoin, or Ethereum), and follow the on-screen instructions to generate your deposit address. Your account balance will be updated after the required blockchain network confirmations.",
   },
   {
     q: "How do I request a withdrawal?",
@@ -355,6 +355,6 @@ export const conditionsFaqs: FAQ[] = [
   },
   {
     q: "Can I use Expert Advisors (EAs) on Olla Trade?",
-    a: "Yes. Expert Advisors, automated trading, scalping, hedging, and all standard MT4 trading approaches are permitted on all Olla Trade account types. There are no restrictions on trading strategy style.",
+    a: "Yes. Expert Advisors, automated trading, scOllag, hedging, and all standard MT4 trading approaches are permitted on all Olla Trade account types. There are no restrictions on trading strategy style.",
   },
 ];

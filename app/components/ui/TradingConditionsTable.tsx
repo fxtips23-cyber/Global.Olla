@@ -18,7 +18,7 @@ export default function TradingConditionsTable({ title, headers, rows, highlight
         <thead>
           <tr className="border-b border-gray-100">
             {headers.map((h, i) => (
-              <th key={h} className={`px-5 py-3.5 text-left text-xs font-bold uppercase tracking-wider ${i === 0 ? "text-gray-400" : i === highlightCol ? "text-[#00CC44]" : "text-gray-400"}`}>{h}</th>
+              <th key={h} className={`px-5 py-3.5 text-left text-xs font-bold uppercase tracking-wider ${i === 0 ? "text-gray-400" : i === highlightCol ? "text-[#29B5D4]" : "text-gray-400"}`}>{h}</th>
             ))}
           </tr>
         </thead>
@@ -26,7 +26,7 @@ export default function TradingConditionsTable({ title, headers, rows, highlight
           {rows.map((row, ri) => (
             <tr key={ri} className="hover:bg-[#F5F7FA] transition-colors">
               {headers.map((h, ci) => (
-                <td key={h} className={`px-5 py-3.5 ${ci === 0 ? "font-semibold text-[#111827]" : ci === highlightCol ? "font-bold text-[#00CC44]" : "text-gray-600"}`}>
+                <td key={h} className={`px-5 py-3.5 ${ci === 0 ? "font-semibold text-[#111827]" : ci === highlightCol ? "font-bold text-[#29B5D4]" : "text-gray-600"}`}>
                   {row[h]}
                 </td>
               ))}

@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "../../../lib/constants";
-import FAQSection from "../../../components/ui/FAQSection";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 function SectionLabel({ text }: { text: string }) {
-  return <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{text}</div>;
+  return <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{text}</div>;
 }
 
 const STEP_ICONS = [
@@ -36,7 +35,6 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
   const timelineHdrs  = t.raw("timeline_headers") as string[];
   const timelineRows  = t.raw("timeline_rows")    as string[][];
   const contactItems  = t.raw("contact_items")    as { title: string; value: string; sub: string }[];
-  const faqs          = t.raw("faqs")             as { q: string; a: string }[];
 
   return (
     <>
@@ -44,7 +42,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
         <div className="pointer-events-none absolute inset-0"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px)", backgroundSize: "80px 80px" }} />
         <div className="pointer-events-none absolute top-0 right-0 w-[400px] h-[400px]"
-          style={{ background: "radial-gradient(ellipse at 80% 20%, rgba(0,204,68,0.05) 0%, transparent 60%)" }} />
+          style={{ background: "radial-gradient(ellipse at 80% 20%, rgba(41,181,212,0.05) 0%, transparent 60%)" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-[11px] text-white/22 mb-6">
             <Link href="/" className="hover:text-white/45 transition-colors">{locale === "pt" ? "Início" : "Home"}</Link>
@@ -53,13 +51,13 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
             <span className="text-white/10">/</span>
             <span className="text-white/40">{locale === "pt" ? "Reclamações" : "Complaints"}</span>
           </nav>
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{t("hero_badge")}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-5">{t("hero_badge")}</div>
           <h1 className="text-5xl sm:text-6xl font-extrabold text-white mb-5 leading-tight max-w-3xl">{t("hero_title")}</h1>
           <p className="text-[17px] text-white/40 max-w-2xl leading-relaxed mb-9">{t("hero_desc")}</p>
           <div className="flex flex-wrap gap-3">
             <a href="mailto:complaints@ollatrade.com"
               className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
-              style={{ background: "#00CC44", color: "#000" }}>
+              style={{ background: "#29B5D4", color: "#000" }}>
               {t("hero_cta_primary")}
             </a>
             <Link href="/contact-us"
@@ -103,7 +101,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
               <div className="space-y-3">
                 {infoItems.map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#00CC44]/10 border border-[#00CC44]/20 text-[#00CC44] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-5 h-5 rounded-full bg-[#29B5D4]/10 border border-[#29B5D4]/20 text-[#29B5D4] flex items-center justify-center flex-shrink-0 mt-0.5">
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
                     </div>
                     <p className="text-[13px] text-gray-700 leading-relaxed">{item}</p>
@@ -117,7 +115,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
               <div className="space-y-3">
                 {complaintCats.map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-4 bg-[#F5F7FA] border border-gray-100 rounded-xl p-4">
-                    <div className="w-2 h-2 rounded-full bg-[#00CC44] flex-shrink-0 mt-2" />
+                    <div className="w-2 h-2 rounded-full bg-[#29B5D4] flex-shrink-0 mt-2" />
                     <div>
                       <h4 className="text-[13px] font-bold text-[#111827] mb-0.5">{title}</h4>
                       <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
@@ -163,7 +161,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
                   <tr key={stage} className="hover:bg-[#F9FAFB]">
                     <td className="px-6 py-3.5 font-bold text-[#111827] text-[13px]">{stage}</td>
                     <td className="px-6 py-3.5 text-gray-600 text-[13px]">{action}</td>
-                    <td className="px-6 py-3.5 text-[#00CC44] font-semibold text-[13px]">{timeline}</td>
+                    <td className="px-6 py-3.5 text-[#29B5D4] font-semibold text-[13px]">{timeline}</td>
                   </tr>
                 ))}
               </tbody>
@@ -183,7 +181,7 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
               <div className="flex flex-wrap gap-3">
                 <Link href="/legal/complaint-management"
                   className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-xl text-[13px] transition-colors"
-                  style={{ background: "#00CC44", color: "#000" }}>
+                  style={{ background: "#29B5D4", color: "#000" }}>
                   {t("escalation_cta_policy")}
                 </Link>
                 <a href="mailto:complaints@ollatrade.com"
@@ -214,11 +212,11 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
             <div className="flex flex-wrap justify-center gap-3">
               <a href="mailto:complaints@ollatrade.com"
                 className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
-                style={{ background: "#00CC44", color: "#000" }}>
+                style={{ background: "#29B5D4", color: "#000" }}>
                 {t("submit_cta_email")}
               </a>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-xl text-[14px] text-[#111827] hover:text-[#00CC44] transition-colors"
+                className="inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-xl text-[14px] text-[#111827] hover:text-[#29B5D4] transition-colors"
                 style={{ border: "1px solid #e5e7eb" }}>
                 {t("submit_cta_support")}
               </Link>
@@ -227,13 +225,11 @@ export default async function ComplaintsPage({ params }: { params: Promise<{ loc
         </div>
       </section>
 
-      <FAQSection title={t("faq_title")} subtitle={t("faq_subtitle")} faqs={faqs} />
-
       <div className="bg-[#050C15] border-t border-white/5 py-6">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[11px] text-white/20 text-center leading-relaxed">
             {t("legal_note")}{" "}
-            <Link href="/legal/complaint-management" className="text-[#00CC44]/60 hover:text-[#00CC44] transition-colors">{t("escalation_cta_policy")}</Link>.
+            <Link href="/legal/complaint-management" className="text-[#29B5D4]/60 hover:text-[#29B5D4] transition-colors">{t("escalation_cta_policy")}</Link>.
           </p>
         </div>
       </div>

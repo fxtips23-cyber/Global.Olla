@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -60,7 +60,7 @@ function ArticleCard({ a, featured = false, locale = "en" }: { a: Article; featu
         {/* Category pill overlay */}
         {a.categories[0] && (
           <div className="absolute top-3 left-3">
-            <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#00CC44] text-black uppercase tracking-wider">
+            <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#29B5D4] text-white uppercase tracking-wider">
               {a.categories[0]}
             </span>
           </div>
@@ -74,13 +74,13 @@ function ArticleCard({ a, featured = false, locale = "en" }: { a: Article; featu
           <span className="text-gray-200">·</span>
           <span className="text-[11px] text-gray-400">{a.readTime} {locale === "pt" ? "min" : "min read"}</span>
         </div>
-        <h3 className={`font-bold text-[#111827] mb-2 group-hover:text-[#00AA38] transition-colors leading-snug ${featured ? "text-[18px]" : "text-[14px]"}`}>
+        <h3 className={`font-bold text-[#111827] mb-2 group-hover:text-[#29B5D4] transition-colors leading-snug ${featured ? "text-[18px]" : "text-[14px]"}`}>
           {a.title}
         </h3>
         <p className="text-[12px] text-gray-500 leading-relaxed flex-1 line-clamp-3">{a.excerpt}</p>
         <div className="mt-4 flex items-center justify-between">
           <span className="text-[11px] text-gray-400">{a.author}</span>
-          <span className="text-[11px] font-semibold text-[#00CC44] group-hover:text-[#00AA38] transition-colors flex items-center gap-1">
+          <span className="text-[11px] font-semibold text-[#29B5D4] group-hover:text-[#29B5D4] transition-colors flex items-center gap-1">
             {locale === "pt" ? "Ler artigo" : "Read article"}
             <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -152,7 +152,7 @@ export default function ArticlesClient({ locale = "en" }: { locale?: string }) {
                 placeholder={locale === "pt" ? "Buscar artigos…" : "Search articles…"}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-white/6 border border-white/10 rounded-xl text-[13px] text-white/80 placeholder-white/25 focus:outline-none focus:border-[#00CC44]/40 transition-colors"
+                className="w-full pl-10 pr-4 py-2.5 bg-white/6 border border-white/10 rounded-xl text-[13px] text-white/80 placeholder-white/25 focus:outline-none focus:border-[#29B5D4]/40 transition-colors"
               />
             </div>
 
@@ -164,7 +164,7 @@ export default function ArticlesClient({ locale = "en" }: { locale?: string }) {
                   onClick={() => setCategory(cat)}
                   className={`px-3.5 py-2 rounded-full text-[11px] font-semibold transition-all ${
                     category === cat
-                      ? "bg-[#00CC44] text-black"
+                      ? "bg-[#29B5D4] text-white"
                       : "text-white/45 border border-white/10 hover:border-white/25 hover:text-white/65"
                   }`}
                 >
@@ -219,7 +219,7 @@ export default function ArticlesClient({ locale = "en" }: { locale?: string }) {
             {(debouncedSearch || category !== "all") && (
               <button
                 onClick={() => { setSearch(""); setCategory("all"); }}
-                className="mt-4 text-[12px] font-semibold text-[#00CC44] hover:text-[#00AA38] underline underline-offset-4"
+                className="mt-4 text-[12px] font-semibold text-[#29B5D4] hover:text-[#29B5D4] underline underline-offset-4"
               >
                 Clear filters
               </button>
@@ -230,7 +230,7 @@ export default function ArticlesClient({ locale = "en" }: { locale?: string }) {
             {/* Featured article (first result, page 1 only) */}
             {page === 1 && !debouncedSearch && category === "all" && featured && (
               <div className="mb-8">
-                <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{locale === "pt" ? "Artigo em Destaque" : "Featured Article"}</div>
+                <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{locale === "pt" ? "Artigo em Destaque" : "Featured Article"}</div>
                 <ArticleCard a={featured} featured locale={locale} />
               </div>
             )}
@@ -286,7 +286,7 @@ export default function ArticlesClient({ locale = "en" }: { locale?: string }) {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
-            style={{ background: "#00CC44", color: "#000" }}
+            style={{ background: "#29B5D4", color: "#ffffff" }}
           >
             {locale === "pt" ? "Ver Todos na Olla Trade" : "View All on Olla Trade"}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">

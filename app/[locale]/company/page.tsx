@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../components/ui/PageHero";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -24,9 +24,9 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {links.map((l, i) => (
-              <Link key={l.href} href={l.href} className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-[#00CC44]/30 hover:shadow-lg hover:-translate-y-1 transition-all group">
+              <Link key={l.href} href={l.href} className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-[#29B5D4]/30 hover:shadow-lg hover:-translate-y-1 transition-all group">
                 <div className="text-3xl mb-4">{ICONS[i % ICONS.length]}</div>
-                <h3 className="text-base font-bold text-gray-900 mb-1 group-hover:text-[#00AA38] transition-colors">{l.title}</h3>
+                <h3 className="text-base font-bold text-gray-900 mb-1 group-hover:text-[#29B5D4] transition-colors">{l.title}</h3>
                 <p className="text-xs text-gray-400">{l.sub}</p>
               </Link>
             ))}

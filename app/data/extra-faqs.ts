@@ -1,4 +1,4 @@
-/** Additional FAQ sets for tools and legal pages */
+﻿/** Additional FAQ sets for tools and legal pages */
 export interface FAQ { q: string; a: string; }
 
 export const alertsFaqs: FAQ[] = [

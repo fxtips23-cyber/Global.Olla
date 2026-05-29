@@ -1,13 +1,13 @@
-export default function GlobalMarketsVisual() {
+﻿export default function GlobalMarketsVisual() {
   /* Financial center nodes */
   const cities = [
-    { x: 178, y: 135, label: "London",    lat: "51°N", lng: "0°E",   active: true,  color: "#00CC44" },
+    { x: 178, y: 135, label: "London",    lat: "51°N", lng: "0°E",   active: true,  color: "#29B5D4" },
     { x: 340, y: 128, label: "Frankfurt", lat: "50°N", lng: "8°E",   active: false, color: "#9CA3AF" },
-    { x: 80,  y: 190, label: "New York",  lat: "40°N", lng: "74°W",  active: true,  color: "#00CC44" },
+    { x: 80,  y: 190, label: "New York",  lat: "40°N", lng: "74°W",  active: true,  color: "#29B5D4" },
     { x: 155, y: 220, label: "São Paulo", lat: "23°S", lng: "46°W",  active: false, color: "#9CA3AF" },
     { x: 580, y: 148, label: "Dubai",     lat: "25°N", lng: "55°E",  active: false, color: "#9CA3AF" },
-    { x: 680, y: 158, label: "Singapore", lat: "1°N",  lng: "103°E", active: true,  color: "#00CC44" },
-    { x: 735, y: 128, label: "Tokyo",     lat: "35°N", lng: "139°E", active: true,  color: "#00CC44" },
+    { x: 680, y: 158, label: "Singapore", lat: "1°N",  lng: "103°E", active: true,  color: "#29B5D4" },
+    { x: 735, y: 128, label: "Tokyo",     lat: "35°N", lng: "139°E", active: true,  color: "#29B5D4" },
     { x: 420, y: 175, label: "Cairo",     lat: "30°N", lng: "31°E",  active: false, color: "#9CA3AF" },
     { x: 628, y: 200, label: "Mumbai",    lat: "18°N", lng: "72°E",  active: false, color: "#9CA3AF" },
     { x: 760, y: 225, label: "Sydney",    lat: "33°S", lng: "151°E", active: false, color: "#9CA3AF" },
@@ -30,8 +30,8 @@ export default function GlobalMarketsVisual() {
 
         {/* Deep space background glow */}
         <ellipse cx={420} cy={237} rx={380} ry={200} fill="#1E88E5" fillOpacity="0.025" />
-        <ellipse cx={180} cy={180} rx={180} ry={100} fill="#00CC44" fillOpacity="0.025" />
-        <ellipse cx={700} cy={180} rx={150} ry={100} fill="#00CC44" fillOpacity="0.02" />
+        <ellipse cx={180} cy={180} rx={180} ry={100} fill="#29B5D4" fillOpacity="0.025" />
+        <ellipse cx={700} cy={180} rx={150} ry={100} fill="#29B5D4" fillOpacity="0.02" />
 
         {/* ── World map: latitude/longitude grid ──────────── */}
         {/* Latitude circles (approximate) */}
@@ -71,7 +71,7 @@ export default function GlobalMarketsVisual() {
           return (
             <path key={i}
               d={`M${x1},${y1} Q${mx},${my} ${x2},${y2}`}
-              stroke="#00CC44" strokeOpacity="0.25" strokeWidth="1.2"
+              stroke="#29B5D4" strokeOpacity="0.25" strokeWidth="1.2"
               fill="none" strokeDasharray="6 4" />
           );
         })}
@@ -99,7 +99,7 @@ export default function GlobalMarketsVisual() {
         {/* Horizontal streaming data */}
         {[170,200,230].map(y => (
           <line key={y} x1={70} y1={y} x2={770} y2={y}
-            stroke="#00CC44" strokeOpacity="0.06" strokeWidth="1" />
+            stroke="#29B5D4" strokeOpacity="0.06" strokeWidth="1" />
         ))}
 
         {/* ── Right panel: Live market summary ─────────────── */}
@@ -117,19 +117,19 @@ export default function GlobalMarketsVisual() {
             <line x1={610} y1={317 + i * 25} x2={810} y2={317 + i * 25}
               stroke="white" strokeOpacity="0.04" strokeWidth="0.5" />
             <circle cx={618} cy={326 + i * 25} r={3}
-              fill={bull ? "#00CC44" : "#EF4444"} fillOpacity="0.7" />
+              fill={bull ? "#29B5D4" : "#EF4444"} fillOpacity="0.7" />
             <text x={630} y={330 + i * 25} fill="white" fillOpacity="0.55"
               fontSize="8" fontFamily="monospace">{sym}</text>
             <text x={760} y={330 + i * 25} fill="white" fillOpacity="0.45"
               fontSize="8" fontFamily="monospace" textAnchor="end">{val}</text>
-            <text x={808} y={330 + i * 25} fill={bull ? "#00CC44" : "#EF4444"}
+            <text x={808} y={330 + i * 25} fill={bull ? "#29B5D4" : "#EF4444"}
               fontSize="8" fontFamily="monospace" textAnchor="end" fontWeight="bold">{chg}</text>
           </g>
         ))}
 
         {/* ── Left panel: Company identity ─────────────────── */}
         <rect x={20} y={300} width={200} height={120} fill="#081828" stroke="rgba(255,255,255,0.08)" strokeWidth="1" rx="8" />
-        <text x={120} y={320} fill="white" fillOpacity="0.2" fontSize="7" fontFamily="monospace" textAnchor="middle" letterSpacing="1">OLLA TRADE LTD.</text>
+        <text x={120} y={320} fill="white" fillOpacity="0.2" fontSize="7" fontFamily="monospace" textAnchor="middle" letterSpacing="1">Olla Trade LTD.</text>
         <line x1={30} y1={326} x2={210} y2={326} stroke="rgba(255,255,255,0.05)" strokeWidth="0.5" />
         {[
           { label: "Incorporated", value: "Anguilla" },
@@ -140,23 +140,23 @@ export default function GlobalMarketsVisual() {
         ].map(({ label, value }, i) => (
           <g key={label}>
             <text x={32} y={342 + i * 16} fill="white" fillOpacity="0.22" fontSize="7" fontFamily="monospace">{label}</text>
-            <text x={208} y={342 + i * 16} fill="#00CC44" fontSize="7" fontFamily="monospace"
+            <text x={208} y={342 + i * 16} fill="#29B5D4" fontSize="7" fontFamily="monospace"
               textAnchor="end" fillOpacity="0.65">{value}</text>
           </g>
         ))}
 
         {/* ── Center globe indicator ────────────────────────── */}
-        <circle cx={420} cy={237} r={18} fill="rgba(0,204,68,0.08)"
-          stroke="rgba(0,204,68,0.2)" strokeWidth="1.5" />
-        <circle cx={420} cy={237} r={9} fill="rgba(0,204,68,0.15)"
-          stroke="rgba(0,204,68,0.4)" strokeWidth="1" />
-        <circle cx={420} cy={237} r={3} fill="#00CC44" fillOpacity="0.9" />
-        <text x={420} y={265} fill="#00CC44" fontSize="7" fontFamily="monospace"
+        <circle cx={420} cy={237} r={18} fill="rgba(41,181,212,0.08)"
+          stroke="rgba(41,181,212,0.2)" strokeWidth="1.5" />
+        <circle cx={420} cy={237} r={9} fill="rgba(41,181,212,0.15)"
+          stroke="rgba(41,181,212,0.4)" strokeWidth="1" />
+        <circle cx={420} cy={237} r={3} fill="#29B5D4" fillOpacity="0.9" />
+        <text x={420} y={265} fill="#29B5D4" fontSize="7" fontFamily="monospace"
           textAnchor="middle" fillOpacity="0.6">GLOBAL HUB</text>
 
         {/* Corner accents */}
-        <line x1={0} y1={0} x2={35} y2={0} stroke="#00CC44" strokeOpacity="0.2" strokeWidth="2" />
-        <line x1={0} y1={0} x2={0} y2={35} stroke="#00CC44" strokeOpacity="0.2" strokeWidth="2" />
+        <line x1={0} y1={0} x2={35} y2={0} stroke="#29B5D4" strokeOpacity="0.2" strokeWidth="2" />
+        <line x1={0} y1={0} x2={0} y2={35} stroke="#29B5D4" strokeOpacity="0.2" strokeWidth="2" />
         <line x1={805} y1={473} x2={840} y2={473} stroke="#1E88E5" strokeOpacity="0.2" strokeWidth="2" />
         <line x1={840} y1={438} x2={840} y2={473} stroke="#1E88E5" strokeOpacity="0.2" strokeWidth="2" />
       </svg>

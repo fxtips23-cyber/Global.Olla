@@ -22,13 +22,13 @@ export default function PaymentSection() {
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {methods.map((m) => (
-              <div key={m.label} className="flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-lg px-4 py-2.5 text-sm font-medium text-gray-700 hover:border-[#00CC44]/30 hover:bg-[#00CC44]/5 transition-colors cursor-default">
+              <div key={m.label} className="flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-lg px-4 py-2.5 text-sm font-medium text-gray-700 hover:border-[#29B5D4]/30 hover:bg-[#29B5D4]/5 transition-colors cursor-default">
                 <span className="text-lg">{m.icon}</span>
                 <span className="text-xs">{m.label}</span>
               </div>
             ))}
           </div>
-          <Link href="/trading/payment-methods" className="flex-shrink-0 text-sm font-semibold text-[#00AA38] hover:text-[#00CC44] underline underline-offset-4 transition-colors whitespace-nowrap">
+          <Link href="/trading/payment-methods" className="flex-shrink-0 text-sm font-semibold text-[#29B5D4] hover:text-[#29B5D4] underline underline-offset-4 transition-colors whitespace-nowrap">
             All methods →
           </Link>
         </div>

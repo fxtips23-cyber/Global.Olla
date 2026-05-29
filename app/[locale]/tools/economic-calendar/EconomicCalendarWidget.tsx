@@ -54,11 +54,11 @@ export default function EconomicCalendarWidget() {
         <div className="flex flex-wrap gap-3 justify-center">
           <Link href="https://www.mql5.com/en/economic-calendar" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 font-bold px-5 py-2.5 rounded-xl text-[13px] transition-colors"
-            style={{ background: "#00CC44", color: "#000" }}>
+            style={{ background: "#29B5D4", color: "#000" }}>
             MQL5 Economic Calendar
           </Link>
           <Link href="https://www.tradingview.com/economic-calendar/" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-xl text-[13px] border border-gray-200 text-[#111827] hover:border-[#00CC44]/30 transition-colors">
+            className="inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-xl text-[13px] border border-gray-200 text-[#111827] hover:border-[#29B5D4]/30 transition-colors">
             TradingView Calendar
           </Link>
         </div>
@@ -71,7 +71,7 @@ export default function EconomicCalendarWidget() {
       {!loaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-[#050C15]">
           <div className="flex flex-col items-center gap-3">
-            <svg className="w-6 h-6 animate-spin text-[#00CC44]" fill="none" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 animate-spin text-[#29B5D4]" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>

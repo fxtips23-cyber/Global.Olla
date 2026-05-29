@@ -41,7 +41,7 @@ export default function LanguageSwitcher({ mobile = false }: { mobile?: boolean 
               disabled={pending}
               className={`py-2.5 rounded-xl text-[12px] font-bold transition-all ${
                 loc === locale
-                  ? "bg-[#00CC44] text-black"
+                  ? "bg-[#29B5D4] text-white"
                   : "bg-white/6 text-white/50 hover:bg-white/12 hover:text-white border border-white/8"
               }`}
             >
@@ -84,10 +84,10 @@ export default function LanguageSwitcher({ mobile = false }: { mobile?: boolean 
                   : "text-white/50 hover:text-white hover:bg-white/5"
               }`}
             >
-              <span className="text-[11px] font-extrabold w-5 text-center text-[#00CC44]">{FLAGS[loc]}</span>
+              <span className="text-[11px] font-extrabold w-5 text-center text-[#29B5D4]">{FLAGS[loc]}</span>
               <span>{LABELS[loc]}</span>
               {loc === locale && (
-                <svg className="w-3 h-3 text-[#00CC44] ml-auto flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                <svg className="w-3 h-3 text-[#29B5D4] ml-auto flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               )}

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../../components/ui/PageHero";
 import CTASection from "../../../components/CTASection";
@@ -38,17 +38,17 @@ function BackPhone() {
         </div>
         <div className="px-2 py-1.5 space-y-1">
           {[
-            { name: "Bank Cards",     tag: "Recommended", tagColor: "#00CC44", active: true },
-            { name: "USDT (TRC20)",   tag: "Instant",     tagColor: "#00CC44", active: false },
+            { name: "Bank Cards",     tag: "Recommended", tagColor: "#29B5D4", active: true },
+            { name: "USDT (TRC20)",   tag: "Instant",     tagColor: "#29B5D4", active: false },
             { name: "Bitcoin (BTC)",  tag: "",             tagColor: "",        active: false },
             { name: "Ethereum (ETH)", tag: "",             tagColor: "",        active: false },
             { name: "Bank Transfer",  tag: "",             tagColor: "",        active: false },
           ].map((m) => (
             <div key={m.name} className="flex items-center gap-2 px-2 py-1.5 rounded-lg"
-              style={{ background: m.active ? "rgba(0,204,68,0.08)" : "transparent", border: m.active ? "0.5px solid rgba(0,204,68,0.2)" : "0.5px solid rgba(255,255,255,0.04)" }}>
+              style={{ background: m.active ? "rgba(41,181,212,0.08)" : "transparent", border: m.active ? "0.5px solid rgba(41,181,212,0.2)" : "0.5px solid rgba(255,255,255,0.04)" }}>
               <div className="w-3 h-3 rounded-full flex-shrink-0 flex items-center justify-center"
-                style={{ border: m.active ? "1.5px solid #00CC44" : "1.5px solid rgba(255,255,255,0.2)", background: "transparent" }}>
-                {m.active && <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#00CC44" }} />}
+                style={{ border: m.active ? "1.5px solid #29B5D4" : "1.5px solid rgba(255,255,255,0.2)", background: "transparent" }}>
+                {m.active && <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#29B5D4" }} />}
               </div>
               <div className="flex-1 min-w-0">
                 <div className="text-[7px] font-semibold" style={{ color: m.active ? "#fff" : "rgba(255,255,255,0.55)" }}>{m.name}</div>
@@ -58,7 +58,7 @@ function BackPhone() {
           ))}
         </div>
         <div className="text-center py-2">
-          <span className="text-[7px] font-semibold" style={{ color: "#00CC44" }}>Show more →</span>
+          <span className="text-[7px] font-semibold" style={{ color: "#29B5D4" }}>Show more →</span>
         </div>
       </div>
       <div className="w-5 h-0.5 rounded-full mx-auto mt-1.5" style={{ background: "rgba(255,255,255,0.2)" }} />
@@ -82,7 +82,7 @@ function FrontPhone() {
         </div>
         <div className="flex items-center justify-between px-3 py-2" style={{ background: "#0A1520" }}>
           <div className="flex items-center gap-1.5">
-            <div className="w-5 h-5 rounded-full flex items-center justify-center text-[7px] font-bold text-black" style={{ background: "#00CC44" }}>A</div>
+            <div className="w-5 h-5 rounded-full flex items-center justify-center text-[7px] font-bold text-black" style={{ background: "#29B5D4" }}>A</div>
             <span className="text-[7.5px] font-semibold text-white/70">Olla Wallet</span>
           </div>
           <svg className="w-3 h-3 text-white/40" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
@@ -90,7 +90,7 @@ function FrontPhone() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.73 21a2 2 0 0 1-3.46 0" />
           </svg>
         </div>
-        <div className="mx-2 rounded-xl p-3 mb-2" style={{ background: "linear-gradient(135deg, #00CC44 0%, #009933 100%)" }}>
+        <div className="mx-2 rounded-xl p-3 mb-2" style={{ background: "linear-gradient(135deg, #29B5D4 0%, #009933 100%)" }}>
           <div className="text-[6.5px] font-semibold text-black/60 mb-0.5">Olla Wallet</div>
           <div className="text-[18px] font-extrabold text-black leading-none">$2,152.<span className="text-[12px]">12</span></div>
           <div className="text-[6px] text-black/50 mt-0.5">W02148843USD</div>
@@ -104,7 +104,7 @@ function FrontPhone() {
         </div>
         <div className="flex items-center justify-between px-3 py-1.5">
           <span className="text-[6.5px] font-bold text-white/50">Transactions</span>
-          <span className="text-[6.5px] font-semibold" style={{ color: "#00CC44" }}>View history &rsaquo;</span>
+          <span className="text-[6.5px] font-semibold" style={{ color: "#29B5D4" }}>View history &rsaquo;</span>
         </div>
         <div className="grid grid-cols-3 gap-1.5 px-2 mb-2">
           {[
@@ -113,8 +113,8 @@ function FrontPhone() {
             { label: "Withdraw",  icon: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" },
           ].map(({ label, icon }) => (
             <div key={label} className="flex flex-col items-center gap-1">
-              <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: "rgba(0,204,68,0.15)", border: "0.5px solid rgba(0,204,68,0.25)" }}>
-                <svg className="w-3.5 h-3.5" style={{ color: "#00CC44" }} fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+              <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: "rgba(41,181,212,0.15)", border: "0.5px solid rgba(41,181,212,0.25)" }}>
+                <svg className="w-3.5 h-3.5" style={{ color: "#29B5D4" }} fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                   <path d={icon} />
                 </svg>
               </div>
@@ -133,7 +133,7 @@ function FrontPhone() {
           <div className="flex rounded-lg overflow-hidden mb-2" style={{ background: "rgba(255,255,255,0.06)", padding: "2px" }}>
             {["Real","Demo"].map((tab, i) => (
               <div key={tab} className="flex-1 text-center py-1 rounded-md text-[6.5px] font-bold"
-                style={i === 0 ? { background: "#00CC44", color: "#000" } : { color: "rgba(255,255,255,0.35)" }}>
+                style={i === 0 ? { background: "#29B5D4", color: "#000" } : { color: "rgba(255,255,255,0.35)" }}>
                 {tab}
               </div>
             ))}
@@ -143,7 +143,7 @@ function FrontPhone() {
               <div>
                 <div className="text-[7px] font-bold text-white/75">#84765829</div>
                 <div className="flex items-center gap-1 mt-0.5">
-                  <span className="text-[5px] font-bold px-1 py-0.5 rounded" style={{ background: "rgba(0,204,68,0.2)", color: "#00CC44" }}>Real</span>
+                  <span className="text-[5px] font-bold px-1 py-0.5 rounded" style={{ background: "rgba(41,181,212,0.2)", color: "#29B5D4" }}>Real</span>
                   <span className="text-[5px] text-white/30">MT4 Standard</span>
                 </div>
               </div>
@@ -159,10 +159,10 @@ function FrontPhone() {
             { icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z", label: "Settings",  active: false },
           ].map(({ icon, label, active }) => (
             <div key={label} className="flex flex-col items-center gap-0.5">
-              <svg className="w-3 h-3" fill="none" stroke={active ? "#00CC44" : "rgba(255,255,255,0.25)"} strokeWidth={1.5} viewBox="0 0 24 24">
+              <svg className="w-3 h-3" fill="none" stroke={active ? "#29B5D4" : "rgba(255,255,255,0.25)"} strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d={icon} />
               </svg>
-              <span className="text-[4.5px]" style={{ color: active ? "#00CC44" : "rgba(255,255,255,0.22)" }}>{label}</span>
+              <span className="text-[4.5px]" style={{ color: active ? "#29B5D4" : "rgba(255,255,255,0.22)" }}>{label}</span>
             </div>
           ))}
         </div>
@@ -193,7 +193,7 @@ export default async function WithdrawalPage({ params }: { params: Promise<{ loc
         title={t("title")}
         subtitle={t("subtitle")}
         breadcrumbs={[{ label: "Trading", href: "/trading" }, { label: locale === "pt" ? "Retiradas" : "Withdrawals" }]}
-        cta={{ label: t("cta_btn"), href: "https://direct.ollatrade.com/auth/login" }}
+        cta={{ label: t("cta_btn"), href: "https://portal.ollatrade.com/auth/login" }}
         stats={[{ value: "24–48h", label: t("stat_proc_label") }, { value: "0%", label: t("stat_fee_label") }, { value: "SSL", label: t("stat_ssl_label") }]}
       />
 
@@ -207,7 +207,7 @@ export default async function WithdrawalPage({ params }: { params: Promise<{ loc
               <ol className="space-y-3">
                 {steps.map((s, i) => (
                   <li key={i} className="flex items-start gap-3 text-[13px] text-gray-600">
-                    <span className="w-6 h-6 rounded-full bg-[#00CC44] text-black text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="w-6 h-6 rounded-full bg-[#29B5D4] text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                       {i + 1}
                     </span>
                     {s}
@@ -222,7 +222,7 @@ export default async function WithdrawalPage({ params }: { params: Promise<{ loc
               <div className="space-y-3">
                 {policyItems.map(([title, desc]) => (
                   <div key={title} className="flex items-start gap-3 text-[13px] text-gray-600">
-                    <div className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0 mt-0.5 text-[#00CC44]">
+                    <div className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0 mt-0.5 text-[#29B5D4]">
                       <IconCheck className="w-3.5 h-3.5" />
                     </div>
                     <div><strong className="text-[#111827]">{title}:</strong> {desc}</div>
@@ -260,28 +260,28 @@ export default async function WithdrawalPage({ params }: { params: Promise<{ loc
                   <FrontPhone />
                 </div>
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-48 h-6 rounded-full"
-                  style={{ background: "radial-gradient(ellipse, rgba(0,204,68,0.12) 0%, transparent 70%)", filter: "blur(4px)" }} />
+                  style={{ background: "radial-gradient(ellipse, rgba(41,181,212,0.12) 0%, transparent 70%)", filter: "blur(4px)" }} />
               </div>
             </div>
             <div>
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{t("wallet_label")}</div>
+              <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-5">{t("wallet_label")}</div>
               <h2 className="text-4xl font-extrabold text-white mb-5 leading-tight">{t("wallet_title")}</h2>
               <p className="text-white/50 text-[16px] leading-relaxed mb-8">{t("wallet_desc")}</p>
               <div className="space-y-3 mb-8">
                 {walletBullets.map((f, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                      style={{ background: "rgba(0,204,68,0.15)", border: "1px solid rgba(0,204,68,0.3)" }}>
-                      <IconCheck className="w-2.5 h-2.5 text-[#00CC44]" />
+                      style={{ background: "rgba(41,181,212,0.15)", border: "1px solid rgba(41,181,212,0.3)" }}>
+                      <IconCheck className="w-2.5 h-2.5 text-[#29B5D4]" />
                     </div>
                     <span className="text-[13px] text-white/55">{f}</span>
                   </div>
                 ))}
               </div>
               <div className="flex flex-wrap gap-3">
-                <Link href="https://direct.ollatrade.com/auth/login"
+                <Link href="https://portal.ollatrade.com/auth/login"
                   className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
-                  style={{ background: "#00CC44", color: "#000" }}>
+                  style={{ background: "#29B5D4", color: "#000" }}>
                   {t("wallet_cta_primary")}
                   <IconArrowRight className="w-4 h-4" />
                 </Link>
@@ -299,7 +299,7 @@ export default async function WithdrawalPage({ params }: { params: Promise<{ loc
       <CTASection
         title={t("cta_title")}
         primaryLabel={t("cta_primary")}
-        primaryHref="https://direct.ollatrade.com/auth/login"
+        primaryHref="https://portal.ollatrade.com/auth/login"
         secondaryLabel={t("cta_secondary")}
         secondaryHref="/legal/withdrawal-conditions"
       />

@@ -30,7 +30,7 @@ export default function MarketStatus() {
   const isForexOpen = !isWeekend && !(utcDay === 1 && utcH < 22 ? false : false);
 
   const statuses = [
-    { name: "Forex",         open: !isWeekend,                           color: "#00CC44" },
+    { name: "Forex",         open: !isWeekend,                           color: "#29B5D4" },
     { name: "Gold & Silver", open: !isWeekend && utcH >= 1,              color: "#F59E0B" },
     { name: "Indices",       open: !isWeekend && utcH >= 8 && utcH < 22, color: "#1E88E5" },
     { name: "Cryptocurrency",open: !isWeekend,                           color: "#7C3AED" },
@@ -49,7 +49,7 @@ export default function MarketStatus() {
           </div>
         </div>
         <div className="text-right">
-          <div className="text-[22px] font-black text-[#00CC44]">{openCount}</div>
+          <div className="text-[22px] font-black text-[#29B5D4]">{openCount}</div>
           <div className="text-[9px] text-white/30">of {statuses.length} open</div>
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function MarketStatus() {
               <span className="text-[11px] text-white/55">{name}</span>
             </div>
             <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full ${
-              open ? "text-[#00CC44] bg-[#00CC44]/10" : "text-white/20 bg-white/4"
+              open ? "text-[#29B5D4] bg-[#29B5D4]/10" : "text-white/20 bg-white/4"
             }`}>
               {open ? "OPEN" : "CLOSED"}
             </span>

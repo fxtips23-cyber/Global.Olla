@@ -1,4 +1,4 @@
-export const SITE = {
+﻿export const SITE = {
   activeClients:  "21K+",
   instruments:    "500+",
   minDeposit:     "$10",
@@ -12,8 +12,8 @@ export const SITE = {
   regNumber:      "A000001849",
   address:        "Grace Complex, The Valley, AI 2640, Anguilla",
   accountTypes:   ["Standard", "Pro", "Elite"] as const,
-  registerUrl:    "https://direct.ollatrade.com/auth/register",
-  loginUrl:       "https://direct.ollatrade.com/auth/login",
+  registerUrl:    "https://portal.ollatrade.com/auth/register",
+  loginUrl:       "https://portal.ollatrade.com/auth/login",
   articlesUrl:    "https://ollatrade.com/articles/",
   trustpilotUrl:  "https://www.trustpilot.com/review/ollatrade.com",
 } as const;

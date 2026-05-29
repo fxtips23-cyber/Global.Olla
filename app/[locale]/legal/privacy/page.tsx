@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
@@ -38,7 +38,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
               <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5">
                 <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">{t("toc_label")}</div>
                 <nav className="space-y-0.5">
-                  {sections.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
+                  {sections.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#29B5D4] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
                 </nav>
               </div>
             </div>

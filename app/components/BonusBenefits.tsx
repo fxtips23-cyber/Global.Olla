@@ -52,7 +52,7 @@ export default function BonusBenefits() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#00CC44]/10 text-[#00AA38] text-xs font-semibold px-4 py-2 rounded-full mb-4 uppercase tracking-wider border border-[#00CC44]/20">
+          <div className="inline-flex items-center gap-2 bg-[#29B5D4]/10 text-[#29B5D4] text-xs font-semibold px-4 py-2 rounded-full mb-4 uppercase tracking-wider border border-[#29B5D4]/20">
             Bonus Advantages
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
@@ -68,9 +68,9 @@ export default function BonusBenefits() {
           {benefits.map((b, i) => (
             <div
               key={b.title}
-              className={`bg-[#F8FAFC] rounded-xl p-6 border border-gray-100 hover:border-[#00CC44]/40 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group ${i === 4 ? "lg:col-start-2" : ""}`}
+              className={`bg-[#F8FAFC] rounded-xl p-6 border border-gray-100 hover:border-[#29B5D4]/40 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group ${i === 4 ? "lg:col-start-2" : ""}`}
             >
-              <div className="w-12 h-12 rounded-xl bg-[#00CC44]/10 text-[#00CC44] flex items-center justify-center mb-5 group-hover:bg-[#00CC44] group-hover:text-black transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-[#29B5D4]/10 text-[#29B5D4] flex items-center justify-center mb-5 group-hover:bg-[#29B5D4] group-hover:text-white transition-colors duration-300">
                 {b.icon}
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">{b.title}</h3>
@@ -80,11 +80,11 @@ export default function BonusBenefits() {
         </div>
 
         {/* Example callout */}
-        <div className="mt-14 bg-[#0A0D14] rounded-2xl p-8 lg:p-10 text-white text-center border border-white/5">
+        <div className="mt-14 bg-[#07111F] rounded-2xl p-8 lg:p-10 text-white text-center border border-white/5">
           <div className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-3">Example Illustration</div>
           <div className="text-2xl sm:text-3xl font-extrabold mb-2">
             Deposit $5,000 →{" "}
-            <span className="text-[#00CC44]">Get $1,000 Bonus Credit</span>
+            <span className="text-[#29B5D4]">Get $1,000 Bonus Credit</span>
           </div>
           <p className="text-white/40 max-w-xl mx-auto text-sm">
             A $5,000 qualifying deposit earns you $1,000 in trading bonus credit — giving you $6,000 in total margin to work with.

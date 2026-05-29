@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 

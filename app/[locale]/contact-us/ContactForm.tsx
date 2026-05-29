@@ -29,13 +29,13 @@ const ENQUIRY_TYPE_KEYS = [
 function FieldLabel({ label, required }: { label: string; required?: boolean }) {
   return (
     <label className="block text-[12px] font-semibold text-gray-600 uppercase tracking-wider mb-1.5">
-      {label}{required && <span className="text-[#00CC44] ml-0.5">*</span>}
+      {label}{required && <span className="text-[#29B5D4] ml-0.5">*</span>}
     </label>
   );
 }
 
 const inputClass =
-  "w-full border border-gray-200 rounded-xl px-4 py-3 text-[14px] text-[#111827] bg-white focus:outline-none focus:border-[#00CC44] focus:ring-2 focus:ring-[#00CC44]/10 transition-all placeholder-gray-300";
+  "w-full border border-gray-200 rounded-xl px-4 py-3 text-[14px] text-[#111827] bg-white focus:outline-none focus:border-[#29B5D4] focus:ring-2 focus:ring-[#29B5D4]/10 transition-all placeholder-gray-300";
 
 export default function ContactForm() {
   const t = useTranslations("forms.contact");
@@ -105,8 +105,8 @@ export default function ContactForm() {
     return (
       <div className="flex flex-col items-center justify-center text-center py-16 px-8">
         <div className="w-16 h-16 rounded-full flex items-center justify-center mb-5"
-          style={{ background: "rgba(0,204,68,0.12)", border: "2px solid rgba(0,204,68,0.25)" }}>
-          <svg className="w-8 h-8 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          style={{ background: "rgba(41,181,212,0.12)", border: "2px solid rgba(41,181,212,0.25)" }}>
+          <svg className="w-8 h-8 text-[#29B5D4]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
@@ -116,7 +116,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => { setForm(INITIAL); setSubmitted(false); }}
-          className="text-[13px] font-semibold text-[#00CC44] hover:text-[#00AA38] transition-colors underline underline-offset-4"
+          className="text-[13px] font-semibold text-[#29B5D4] hover:text-[#29B5D4] transition-colors underline underline-offset-4"
         >
           {t("success_link")}
         </button>
@@ -200,7 +200,7 @@ export default function ContactForm() {
         type="submit"
         disabled={submitting}
         className="w-full flex items-center justify-center gap-2 font-bold py-4 rounded-xl text-[15px] transition-all"
-        style={{ background: submitting ? "#00994D" : "#00CC44", color: "#000", opacity: submitting ? 0.8 : 1 }}
+        style={{ background: submitting ? "#00994D" : "#29B5D4", color: "#000", opacity: submitting ? 0.8 : 1 }}
       >
         {submitting ? (
           <>

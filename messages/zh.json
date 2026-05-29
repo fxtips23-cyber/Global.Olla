@@ -1,5 +1,5 @@
-{
-  "meta": {
+﻿{
+"meta": {
     "siteName": "Olla Trade",
     "defaultTitle": "Olla Trade | 专业在线交易平台",
     "defaultDescription": "使用 Olla Trade 交易外汇、贵金属、指数、加密货币、能源和股票。通过 MT4 平台访问全球市场，点差低至 0.0 点，杠杆最高 1:500。"
@@ -13,6 +13,8 @@
   "nav": {
     "markets": "市场",
     "trading": "交易",
+    "partners": "合作伙伴",
+    "learn": "学习",
     "tools": "工具",
     "company": "关于我们",
     "promotions": "优惠活动",
@@ -85,6 +87,16 @@
       "complaints_sub": "投诉流程",
       "cta": "联系支持 →",
       "badge": "24/5 全天候支持"
+    },
+    "partners_sub": {
+      "partner": "成为合作伙伴",
+      "partner_sub": "IB & 联盟计划"
+    },
+    "learn_sub": {
+      "articles": "文章",
+      "articles_sub": "市场资讯 & 分析",
+      "education": "教育",
+      "education_sub": "学习交易"
     }
   },
   "hero": {
@@ -393,18 +405,18 @@
       "support": "支持 (24/5)",
       "email": "电子邮箱",
       "entity": "主体",
-      "entityVal": "Olla Trade Ltd. · 纯执行服务"
+      "entityVal": "Olla Capital Financial Services L.L.C. · 纯执行服务"
     },
     "disclaimer": {
       "risk": "风险警告：",
       "risk_text": "外汇和差价合约交易存在固有风险，可能导致您损失全部投资本金。我们强烈建议您仅使用可以承受损失的资金进行交易。杠杆交易风险较高，可能不适合所有投资者。您的损失可能超过初始保证金。在交易前，请确保您充分了解所涉及的风险。",
       "exec": "纯执行服务：",
-      "exec_text": "Olla Trade Ltd. 仅作为纯执行服务运营，不提供投资建议、投资组合管理或咨询服务。本网站上的信息仅供一般参考，不构成对任何金融工具的交易建议。",
+      "exec_text": "Olla Capital Financial Services L.L.C. 仅作为纯执行服务运营，不提供投资建议、投资组合管理或咨询服务。本网站上的信息仅供一般参考，不构成对任何金融工具的交易建议。",
       "restricted": "受限司法管辖区：",
-      "restricted_text": "Olla Trade Ltd. 不向以下国家和地区的居民提供服务：美国、俄罗斯、缅甸、阿联酋、加拿大、以色列、新西兰、伊朗及朝鲜（DPRK）。",
+      "restricted_text": "Olla Capital Financial Services L.L.C. 不向以下国家和地区的居民提供服务：美国、俄罗斯、缅甸、阿联酋、加拿大、以色列、新西兰、伊朗及朝鲜（DPRK）。",
       "registered": "注册信息：",
-      "registered_text": "Olla Trade Ltd. 在安圭拉（注册号 A000001849）以国际商业公司形式注册。注册地址：Grace Complex, The Valley, AI 2640, 安圭拉。",
-      "copyright": "© 2026 Olla Trade Ltd. 保留所有权利。"
+      "registered_text": "Olla Capital Financial Services L.L.C. 在安圭拉（注册号 A000001849）以国际商业公司形式注册。注册地址：Grace Complex, The Valley, AI 2640, 安圭拉。",
+      "copyright": "© 2026 Olla Capital Financial Services L.L.C. 保留所有权利。"
     },
     "bottomLinks": {
       "terms": "条款",

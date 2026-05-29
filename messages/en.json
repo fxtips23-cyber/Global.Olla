@@ -1,8 +1,8 @@
-{
-  "meta": {
+﻿{
+"meta": {
     "siteName": "Olla Trade",
-    "defaultTitle": "Olla Trade | Professional Online Trading Platform",
-    "defaultDescription": "Trade Forex, Metals, Indices, Crypto, Energies and Stocks with Olla Trade. Access global markets with MT4, tight spreads from 0.0 pips, and leverage up to 1:500."
+    "defaultTitle": "Olla Trade | UAE Regulated Forex & CFD Broker",
+    "defaultDescription": "Trade Forex, Metals, Indices, Crypto, Energies and Stocks with Olla Trade — UAE SCA regulated broker. Access global markets with MT4, competitive spreads from 0.0 pips, and leverage up to 1:500."
   },
   "lang": {
     "en": "English",
@@ -13,44 +13,54 @@
   "nav": {
     "markets": "Markets",
     "trading": "Trading",
-    "tools": "Tools",
+    "partners": "Partners",
+    "learn": "Learn",
     "company": "Company",
+    "tools": "Tools",
     "promotions": "Promotions",
-    "login": "Login",
+    "login": "Log In",
     "openAccount": "Open Account",
     "markets_sub": {
-      "heading1": "FX & Commodities",
-      "heading2": "Indices & Digital",
       "forex": "Forex",
       "forex_sub": "70+ currency pairs",
       "metals": "Metals",
-      "metals_sub": "Gold & Silver",
-      "energies": "Energies",
-      "energies_sub": "Oil & Gas CFDs",
+      "metals_sub": "Gold & Silver CFDs",
       "indices": "Indices",
       "indices_sub": "Global stock indices",
+      "futures": "Futures",
+      "futures_sub": "Commodity & financial futures",
       "crypto": "Crypto",
       "crypto_sub": "BTC, ETH & more",
-      "stocks": "Stocks",
-      "stocks_sub": "1,000+ equities",
-      "cta": "View all markets →",
-      "badge": "500+ Instruments"
+      "energies": "Energies",
+      "energies_sub": "Oil & Gas CFDs"
     },
     "trading_sub": {
-      "heading1": "Platform & Accounts",
-      "heading2": "Funding & Execution",
-      "platform": "MetaTrader 4",
+      "platform": "Platform",
       "platform_sub": "Desktop, Web & Mobile",
-      "accounts": "Compare Accounts",
-      "accounts_sub": "Standard · Pro · Elite",
-      "conditions": "Trading Conditions",
-      "conditions_sub": "Spreads & leverage",
-      "execution": "Execution Information",
-      "execution_sub": "Order execution & pricing",
-      "funding": "Funding & Withdrawals",
-      "funding_sub": "Deposit, withdraw & methods",
-      "cta": "Open account →",
-      "badge": "Min. $10 Deposit"
+      "classic": "Classic Account",
+      "classic_sub": "For new & growing traders",
+      "pro": "Pro Account",
+      "pro_sub": "For experienced traders",
+      "raw": "RAW Account",
+      "raw_sub": "Raw spreads & ECN pricing",
+      "compare": "Compare Accounts",
+      "compare_sub": "Side-by-side comparison"
+    },
+    "partners_sub": {
+      "partner": "Partner with Us",
+      "partner_sub": "IB & affiliate programme"
+    },
+    "learn_sub": {
+      "articles": "Articles",
+      "articles_sub": "Market news & analysis",
+      "education": "Education",
+      "education_sub": "Learn to trade"
+    },
+    "company_sub": {
+      "about": "About Us",
+      "about_sub": "Our story & regulation",
+      "legal": "Legal Docs",
+      "legal_sub": "Terms, privacy & policies"
     },
     "tools_sub": {
       "heading1": "Analysis & Research",
@@ -64,34 +74,14 @@
       "vps": "VPS Guide",
       "vps_sub": "Run EAs 24/5",
       "articles": "Articles",
-      "articles_sub": "Analysis & insights",
-      "cta": "Explore tools →",
-      "badge": "Free for all clients"
-    },
-    "company_sub": {
-      "heading1": "About",
-      "heading2": "Support",
-      "about": "About Us",
-      "about_sub": "Our story & mission",
-      "affiliate": "Partner Program",
-      "affiliate_sub": "Earn commissions",
-      "contact": "Contact Us",
-      "contact_sub": "24/5 support",
-      "help": "Get Help",
-      "help_sub": "FAQs & guides",
-      "legal": "Legal Documents",
-      "legal_sub": "Terms & policies",
-      "complaints": "Complaints",
-      "complaints_sub": "Complaint process",
-      "cta": "Contact support →",
-      "badge": "24/5 Support"
+      "articles_sub": "Analysis & insights"
     }
   },
   "hero": {
-    "badge": "Trusted Online Trading Platform",
-    "headline": "Trade Global Markets",
-    "headline2": "with Confidence.",
-    "sub": "Access Forex, Metals, Indices, Stocks and Crypto CFDs on MetaTrader 4 with competitive spreads, fast execution, and accounts from $10.",
+    "badge": "UAE SCA Regulated · Trusted Forex Broker",
+    "headline": "Where Strategy",
+    "headline2": "Meets Technology.",
+    "sub": "Access Forex, Metals, Indices, Stocks and Crypto CFDs on MetaTrader 4 with competitive spreads, fast execution infrastructure, and accounts from $10.",
     "cta_primary": "Open Account",
     "cta_secondary": "Login",
     "cta_promo": "View promotions →",
@@ -105,9 +95,9 @@
   "home": {
     "why": {
       "label": "Why Olla Trade",
-      "title": "Built for Traders.",
-      "title2": "Not for Templates.",
-      "desc": "We combine professional trading conditions, transparent pricing, and genuine client support — so you can focus on the markets, not the platform.",
+      "title": "Where Strategy",
+      "title2": "Meets Technology.",
+      "desc": "We combine professional trading conditions, transparent pricing, fast execution infrastructure, and dedicated client support — so you can focus on informed trading decisions, not the platform.",
       "stats": {
         "clients_value": "21K+",
         "clients_label": "Active Clients",
@@ -208,8 +198,8 @@
     },
     "cta": {
       "title": "Start Trading with Olla Trade",
-      "subtitle": "Open a live account in minutes. Access 500+ instruments with professional conditions on MetaTrader 4.",
-      "primary": "Open Free Account",
+      "subtitle": "Open a live account in minutes. Access 500+ global instruments with competitive conditions on MetaTrader 4. UAE SCA regulated.",
+      "primary": "Open Account",
       "secondary": "View Trading Conditions"
     },
     "platform": {
@@ -394,18 +384,18 @@
       "support": "Support (24/5)",
       "email": "Email",
       "entity": "Entity",
-      "entityVal": "Olla Trade Ltd. · Execution-only service"
+      "entityVal": "Olla Capital Financial Services L.L.C. · UAE SCA Licensed · Cat. 5"
     },
     "disclaimer": {
       "risk": "Risk Warning:",
-      "risk_text": "Engaging in Forex and CFD trading involves inherent risks that may result in the loss of your invested capital. We strongly advise trading only with funds you can afford to lose. Leveraged trading is high risk and may not be suitable for all investors. It is possible to lose more than your initial deposit. Please ensure you fully understand the risks involved before trading.",
+      "risk_text": "Trading Forex and CFDs involves significant risk and may not be suitable for all investors. Leveraged trading amplifies both potential gains and losses. It is possible to lose more than your initial deposit. Please ensure you fully understand the risks involved and only trade with funds you can afford to lose.",
       "exec": "Execution Only:",
-      "exec_text": "Olla Trade Ltd. operates solely as an execution-only service and does not provide investment advice, portfolio management, or advisory services. Information on this website is for general informational purposes only and does not constitute a recommendation to trade any financial instrument.",
+      "exec_text": "Olla Capital Financial Services L.L.C. operates as an execution-only service and does not provide investment advice, portfolio management, or advisory services. Information on this website is for general informational purposes only and does not constitute a recommendation to trade any financial instrument.",
       "restricted": "Restricted Jurisdictions:",
-      "restricted_text": "Olla Trade Ltd. does not offer services to residents of the United States, Russia, Myanmar, United Arab Emirates, Canada, Israel, New Zealand, Iran, and North Korea (DPRK). It is the client's responsibility to comply with local laws prior to using our services.",
-      "registered": "Registered:",
-      "registered_text": "Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) as an International Business Company. Registered address: Grace Complex, The Valley, AI 2640, Anguilla.",
-      "copyright": "© 2026 Olla Trade Ltd. All rights reserved."
+      "restricted_text": "Olla Trade does not offer services to residents of certain jurisdictions. It is the client's responsibility to ensure compliance with applicable local laws and regulations prior to using our services.",
+      "registered": "Regulation:",
+      "registered_text": "Olla Capital Financial Services L.L.C. is regulated by the UAE Securities and Commodities Authority (SCA) under License No. 20200000416, Category 5 – Introduction to Financial Services. Registered address: Empire Heights Tower B, 904-Fountain St, Business Bay, Dubai, UAE.",
+      "copyright": "© 2026 Olla Capital Financial Services L.L.C. All rights reserved."
     },
     "bottomLinks": {
       "terms": "Terms",
@@ -1535,7 +1525,7 @@
       "cta_subtitle": "Open an account in minutes and join thousands of traders on Olla Trade.",
       "who_p1": "Olla Trade is a professional online trading platform providing access to global financial markets across Forex, Metals, Indices, Energies, Cryptocurrencies, and Stocks — all through the industry-standard MetaTrader 4 platform.",
       "who_p2": "We were built with one belief: that professional trading tools, competitive market conditions, and transparent service should be available to every trader — regardless of account size or experience level.",
-      "who_p3": "Olla Trade Ltd. is incorporated in Anguilla (Registration No. A000001849) and operates as an International Business Company under Anguilla law, offering trading services through MetaTrader 4.",
+      "who_p3": "Olla Capital Financial Services L.L.C. is incorporated in Anguilla (Registration No. A000001849) and operates as an International Business Company under Anguilla law, offering trading services through MetaTrader 4.",
       "vision_body": "To build a world where financial freedom is accessible to all — where anyone, anywhere can access global markets with professional tools and fair conditions.",
       "mission_body": "To provide a secure, intuitive, and reliable trading platform that enables individuals worldwide to trade global markets with confidence.",
       "commitment_body": "Transparency in pricing, honesty in risk communication, reliability in execution, and a client-first approach in every decision we make.",
@@ -1601,9 +1591,9 @@
           "desc": "Dedicated support, transparent policies, and a team that genuinely supports client growth as market participants."
         }
       ],
-      "legal_company": "Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) as an International Business Company under Anguilla law.",
+      "legal_company": "Olla Capital Financial Services L.L.C. is incorporated in Anguilla (Reg. No. A000001849) as an International Business Company under Anguilla law.",
       "legal_address": "Grace Complex, The Valley, AI 2640, Anguilla.",
-      "legal_execution": "Olla Trade Ltd. operates solely as an execution-only service and does not provide investment advice or portfolio management.",
+      "legal_execution": "Olla Capital Financial Services L.L.C. operates solely as an execution-only service and does not provide investment advice or portfolio management.",
       "legal_restricted": "Services not available to residents of the USA, Russia, Myanmar, UAE, Canada, Israel, New Zealand, Iran, and North Korea.",
       "cta_label_open": "Open Account",
       "cta_label_contact": "Contact Us"
@@ -1796,14 +1786,14 @@
       ],
       "address_section_label": "Our Address",
       "address_lines": [
-        "Olla Trade Ltd.",
+        "Olla Capital Financial Services L.L.C.",
         "Grace Complex, The Valley",
         "AI 2640, Anguilla",
         "Registration No. A000001849"
       ],
-      "address_legal_note": "Olla Trade Ltd. is incorporated in Anguilla as an International Business Company, operating as an execution-only trading service. Please use the contact channels above for all enquiries.",
+      "address_legal_note": "Olla Capital Financial Services L.L.C. is incorporated in Anguilla as an International Business Company, operating as an execution-only trading service. Please use the contact channels above for all enquiries.",
       "map_note": "Olla Trade does not operate client-facing offices. All account management is conducted through the secure online client portal. Please contact us via email or phone for all enquiries.",
-      "compliance_text": "Olla Trade staff will never request your account password or PIN via email, phone, or chat. If you receive such a request, do not comply and report it immediately to info@ollatrade.com. Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) and operates as an execution-only service.",
+      "compliance_text": "Olla Trade staff will never request your account password or PIN via email, phone, or chat. If you receive such a request, do not comply and report it immediately to info@ollatrade.com. Olla Capital Financial Services L.L.C. is incorporated in Anguilla (Reg. No. A000001849) and operates as an execution-only service.",
       "compliance_important": "Important:"
     },
     "help": {
@@ -2471,7 +2461,7 @@
         {
           "title": "Registered Address",
           "value": "Grace Complex, The Valley, AI 2640, Anguilla",
-          "sub": "Olla Trade Ltd. · Reg. No. A000001849"
+          "sub": "Olla Capital Financial Services L.L.C. · Reg. No. A000001849"
         }
       ],
       "submit_desc": "Email our complaints team directly at complaints@ollatrade.com. Include your account number and a clear description of your concerns. Alternatively, contact our support team first — many issues can be resolved without a formal complaint.",
@@ -2500,7 +2490,7 @@
           "a": "No. Submitting a complaint will not affect your account status, trading privileges, or any pending transactions. All complaints are reviewed independently and impartially by our compliance team."
         }
       ],
-      "legal_note": "Olla Trade Ltd. is incorporated in Anguilla (Reg. No. A000001849) and operates as an execution-only trading service. All complaints are handled in accordance with our internal Complaint Management Policy. Complaint records are retained for a minimum of 5 years.",
+      "legal_note": "Olla Capital Financial Services L.L.C. is incorporated in Anguilla (Reg. No. A000001849) and operates as an execution-only trading service. All complaints are handled in accordance with our internal Complaint Management Policy. Complaint records are retained for a minimum of 5 years.",
       "timeline_title": "What to Expect and When"
     },
     "affiliate": {
@@ -2768,14 +2758,14 @@
       "toc_label": "Sections",
       "company_details_title": "Company Details",
       "company_details": [
-        "Olla Trade Ltd. · Incorporated in Anguilla · Registration No. A000001849",
+        "Olla Capital Financial Services L.L.C. · Incorporated in Anguilla · Registration No. A000001849",
         "Registered Address: Grace Complex, The Valley, AI 2640, Anguilla"
       ],
       "sections": [
         {
           "id": "intro",
           "title": "1. Introduction",
-          "content": "These Terms and Conditions ('Terms') govern the relationship between Olla Trade Ltd. ('the Company', 'we', 'us') and the client ('you', 'the Client') and form an integral part of the Client Agreement. By registering an account with Olla Trade, you confirm that you have read, understood, and agreed to be bound by these Terms. Olla Trade Ltd. is incorporated in Anguilla (Registration No. A000001849) as an International Business Company, providing Forex and CFD trading services through the MetaTrader 4 platform."
+          "content": "These Terms and Conditions ('Terms') govern the relationship between Olla Capital Financial Services L.L.C. ('the Company', 'we', 'us') and the client ('you', 'the Client') and form an integral part of the Client Agreement. By registering an account with Olla Trade, you confirm that you have read, understood, and agreed to be bound by these Terms. Olla Capital Financial Services L.L.C. is incorporated in Anguilla (Registration No. A000001849) as an International Business Company, providing Forex and CFD trading services through the MetaTrader 4 platform."
         },
         {
           "id": "eligibility",
@@ -2820,7 +2810,7 @@
         {
           "id": "governing",
           "title": "10. Governing Law",
-          "content": "These Terms are governed by the laws of Anguilla. Any disputes shall be subject to the jurisdiction of the courts of Anguilla. The Company encourages clients to use our formal complaint process before initiating legal proceedings. Contact: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla."
+          "content": "These Terms are governed by the laws of Anguilla. Any disputes shall be subject to the jurisdiction of the courts of Anguilla. The Company encourages clients to use our formal complaint process before initiating legal proceedings. Contact: info@ollatrade.com | Olla Capital Financial Services L.L.C., Grace Complex, The Valley, AI 2640, Anguilla."
         }
       ]
     },
@@ -2833,7 +2823,7 @@
         {
           "id": "intro",
           "title": "1. Introduction",
-          "content": "Olla Trade Ltd. ('we', 'us', 'Company') is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and share your personal information when you use our services. This policy applies to all clients, visitors, and users of Olla Trade services. By using our services, you consent to the data practices described in this policy."
+          "content": "Olla Capital Financial Services L.L.C. ('we', 'us', 'Company') is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and share your personal information when you use our services. This policy applies to all clients, visitors, and users of Olla Trade services. By using our services, you consent to the data practices described in this policy."
         },
         {
           "id": "collect",
@@ -2873,7 +2863,7 @@
         {
           "id": "contact",
           "title": "9. Contact",
-          "content": "For privacy-related enquiries, data access requests, or to exercise your data protection rights, contact: info@ollatrade.com | Olla Trade Ltd., Grace Complex, The Valley, AI 2640, Anguilla. We aim to respond to all privacy-related requests within 30 days."
+          "content": "For privacy-related enquiries, data access requests, or to exercise your data protection rights, contact: info@ollatrade.com | Olla Capital Financial Services L.L.C., Grace Complex, The Valley, AI 2640, Anguilla. We aim to respond to all privacy-related requests within 30 days."
         }
       ]
     },
@@ -3036,7 +3026,7 @@
     "execution": {
       "badge": "Legal Document",
       "title": "Order Execution Policy",
-      "subtitle": "This policy describes how Olla Trade Ltd. executes client orders, the factors considered, and the obligations of both the Company and the client.",
+      "subtitle": "This policy describes how Olla Capital Financial Services L.L.C. executes client orders, the factors considered, and the obligations of both the Company and the client.",
       "effective_label": "Effective:",
       "reviewed_label": "Last Reviewed:",
       "crosslink_text": "For a practical guide to execution, see the Execution Information page.",
@@ -3099,7 +3089,7 @@
       "sections": [
         {
           "title": "Scope",
-          "body": "This Complaint Management Policy applies to all clients of Olla Trade Ltd. It sets out the procedures for submitting, acknowledging, investigating, and resolving formal complaints."
+          "body": "This Complaint Management Policy applies to all clients of Olla Capital Financial Services L.L.C. It sets out the procedures for submitting, acknowledging, investigating, and resolving formal complaints."
         },
         {
           "title": "How to Submit a Complaint",
@@ -3848,7 +3838,7 @@
       },
       {
         "q": "Can I use Expert Advisors (EAs) on Olla Trade?",
-        "a": "Yes. Expert Advisors, automated trading, scalping, hedging, and all standard MT4 approaches are permitted on all account types."
+        "a": "Yes. Expert Advisors, automated trading, scOllag, hedging, and all standard MT4 approaches are permitted on all account types."
       }
     ],
     "contact": [
@@ -4132,8 +4122,8 @@
           "body": "The market execution model means orders are not subject to requotes. All orders are accepted and executed at prevailing market prices. Slippage — execution at a price different from the requested price — may occur in fast-moving markets."
         },
         {
-          "title": "EA & Scalping Allowed",
-          "body": "Expert Advisors, scalping strategies, news trading, and hedging are permitted on all Olla Trade accounts. There are no restrictions on trading styles. All strategies must remain within the bounds of the account terms and conditions."
+          "title": "EA & ScOllag Allowed",
+          "body": "Expert Advisors, scOllag strategies, news trading, and hedging are permitted on all Olla Trade accounts. There are no restrictions on trading styles. All strategies must remain within the bounds of the account terms and conditions."
         }
       ],
       "accounts_label": "Account Types",
@@ -4149,7 +4139,7 @@
       "row_commission": "Commission",
       "row_leverage": "Max Leverage",
       "row_lot": "Min. Trade Size",
-      "row_ea": "EA / Scalping",
+      "row_ea": "EA / ScOllag",
       "row_mc": "Margin Call",
       "row_so": "Stop Out Level",
       "row_nbp": "Negative Bal. Prot.",
@@ -4188,7 +4178,7 @@
         },
         {
           "title": "EA Support",
-          "desc": "Fully supports Expert Advisors, automated strategies, scalping, hedging, and all standard MT4 trading approaches."
+          "desc": "Fully supports Expert Advisors, automated strategies, scOllag, hedging, and all standard MT4 trading approaches."
         }
       ],
       "exec_link": "Full Execution Information →",

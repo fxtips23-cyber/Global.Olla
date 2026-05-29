@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "../../../lib/constants";
-import FAQSection from "../../../components/ui/FAQSection";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
@@ -12,14 +11,14 @@ export const metadata: Metadata = {
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
     <div className="bg-[#0F1720] border border-white/8 rounded-2xl p-6 text-center">
-      <div className="text-3xl font-black text-[#00CC44] mb-1">{value}</div>
+      <div className="text-3xl font-black text-[#29B5D4] mb-1">{value}</div>
       <div className="text-[12px] text-white/35 uppercase tracking-wider">{label}</div>
     </div>
   );
 }
 
 function SectionLabel({ text }: { text: string }) {
-  return <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{text}</div>;
+  return <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{text}</div>;
 }
 
 export function generateStaticParams() {
@@ -31,14 +30,10 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
   setRequestLocale(locale);
   const t  = await getTranslations({ locale, namespace: "trading.conditions" });
   const tp = await getTranslations({ locale, namespace: "trading_pages.conditions" });
-  const fq = await getTranslations({ locale, namespace: "faq" });
-
   const overviewCards  = tp.raw("overview_cards")    as { title:string; body:string }[];
   const orderItems     = tp.raw("order_items")       as { name:string; desc:string }[];
   const execCards      = tp.raw("exec_cards")        as { title:string; desc:string }[];
   const instrDescs     = tp.raw("instruments_desc")  as { asset:string; count:string; desc:string }[];
-
-  const faqs = fq.raw("conditions") as { q:string; a:string }[];
 
   const HOURS_ROWS = [
     ["Forex",    "00:00 – 24:00", "Mon – Fri", locale === "pt" ? "Mercado abre domingo 22:00 GMT" : "Market open Sunday 22:00 GMT"],
@@ -56,7 +51,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
         <div className="pointer-events-none absolute inset-0"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px)", backgroundSize: "80px 80px" }} />
         <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[500px]"
-          style={{ background: "radial-gradient(ellipse at 80% 20%, rgba(0,204,68,0.06) 0%, transparent 60%)" }} />
+          style={{ background: "radial-gradient(ellipse at 80% 20%, rgba(41,181,212,0.06) 0%, transparent 60%)" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-[11px] text-white/22 mb-6">
             <Link href="/" className="hover:text-white/45 transition-colors">{locale === "pt" ? "Início" : "Home"}</Link>
@@ -65,13 +60,13 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
             <span className="text-white/10">/</span>
             <span className="text-white/40">{locale === "pt" ? "Condições de Trading" : "Trading Conditions"}</span>
           </nav>
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{tp("hero_badge")}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-5">{tp("hero_badge")}</div>
           <h1 className="text-5xl sm:text-6xl font-extrabold text-white mb-5 leading-tight max-w-3xl">{tp("hero_title")}</h1>
           <p className="text-[17px] text-white/40 max-w-2xl leading-relaxed mb-9">{tp("hero_subtitle")}</p>
           <div className="flex flex-wrap gap-3">
-            <Link href="https://direct.ollatrade.com/auth/register"
+            <Link href="https://portal.ollatrade.com/auth/register"
               className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
-              style={{ background: "#00CC44", color: "#000" }}>
+              style={{ background: "#29B5D4", color: "#000" }}>
               {tp("hero_cta1")}
             </Link>
             <Link href="/trading/accounts"
@@ -128,7 +123,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
                 <tr className="bg-[#F5F7FA] border-b border-gray-100">
                   <th className="px-6 py-4 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider">{tp("table_condition")}</th>
                   <th className="px-6 py-4 text-center text-[11px] font-bold text-gray-400 uppercase tracking-wider">{tp("table_standard")}</th>
-                  <th className="px-6 py-4 text-center text-[12px] font-bold uppercase tracking-wider" style={{ color: "#00CC44", background: "rgba(0,204,68,0.04)" }}>{tp("table_pro")}</th>
+                  <th className="px-6 py-4 text-center text-[12px] font-bold uppercase tracking-wider" style={{ color: "#29B5D4", background: "rgba(41,181,212,0.04)" }}>{tp("table_pro")}</th>
                   <th className="px-6 py-4 text-center text-[11px] font-bold text-gray-400 uppercase tracking-wider">{tp("table_elite")}</th>
                 </tr>
               </thead>
@@ -148,7 +143,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
                   <tr key={cond} className="hover:bg-[#F9FAFB]">
                     <td className="px-6 py-3.5 font-semibold text-[#111827] text-[13px]">{cond}</td>
                     <td className="px-6 py-3.5 text-center text-gray-600 text-[13px]">{std}</td>
-                    <td className="px-6 py-3.5 text-center font-semibold text-[13px]" style={{ color: "#00CC44", background: "rgba(0,204,68,0.03)" }}>{pro}</td>
+                    <td className="px-6 py-3.5 text-center font-semibold text-[13px]" style={{ color: "#29B5D4", background: "rgba(41,181,212,0.03)" }}>{pro}</td>
                     <td className="px-6 py-3.5 text-center text-gray-600 text-[13px]">{elite}</td>
                   </tr>
                 ))}
@@ -226,7 +221,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
                     </div>
                     <span className="text-[14px] font-semibold text-[#111827]">{asset}</span>
                   </div>
-                  <span className="text-[14px] font-bold text-[#00CC44]">{leverage}</span>
+                  <span className="text-[14px] font-bold text-[#29B5D4]">{leverage}</span>
                 </div>
               ))}
             </div>
@@ -245,7 +240,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {execCards.map(({ title, desc }) => (
               <div key={title} className="bg-white/4 border border-white/8 rounded-2xl p-6 hover:bg-white/6 hover:border-white/14 transition-all">
-                <div className="w-10 h-10 rounded-xl bg-[#00CC44]/10 border border-[#00CC44]/20 text-[#00CC44] flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#29B5D4]/10 border border-[#29B5D4]/20 text-[#29B5D4] flex items-center justify-center mb-4">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                   </svg>
@@ -256,7 +251,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/execution-information" className="text-[13px] font-semibold text-[#00CC44] hover:text-[#00DD4A] transition-colors">
+            <Link href="/execution-information" className="text-[13px] font-semibold text-[#29B5D4] hover:text-[#1FA5C4] transition-colors">
               {tp("exec_link")}
             </Link>
           </div>
@@ -271,7 +266,7 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {orderItems.map(({ name, desc }) => (
               <div key={name} className="bg-white border border-gray-100 rounded-2xl p-5 flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-[#00CC44] flex-shrink-0 mt-2" />
+                <div className="w-2 h-2 rounded-full bg-[#29B5D4] flex-shrink-0 mt-2" />
                 <div>
                   <h4 className="text-[14px] font-bold text-[#111827] mb-1">{name}</h4>
                   <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
@@ -322,11 +317,11 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
               <div key={asset} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-gray-200 hover:shadow-sm transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-[15px] font-bold text-[#111827]">{asset}</h3>
-                  <span className="text-[13px] font-bold text-[#00CC44] bg-[#00CC44]/8 border border-[#00CC44]/12 px-2.5 py-1 rounded-full">{count}</span>
+                  <span className="text-[13px] font-bold text-[#29B5D4] bg-[#29B5D4]/8 border border-[#29B5D4]/12 px-2.5 py-1 rounded-full">{count}</span>
                 </div>
                 <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
                 <Link href={`/markets/${asset.toLowerCase().replace("criptomoedas","crypto").replace("ações","stocks").replace("metais","metals").replace("índices","indices").replace("energias","energies")}`}
-                  className="text-[12px] font-semibold text-[#00CC44] hover:text-[#00AA38] transition-colors mt-3 block">
+                  className="text-[12px] font-semibold text-[#29B5D4] hover:text-[#29B5D4] transition-colors mt-3 block">
                   {tp("view_market")} {asset} →
                 </Link>
               </div>
@@ -349,19 +344,17 @@ export default async function ConditionsPage({ params }: { params: Promise<{ loc
         </div>
       </section>
 
-      {/* ── 12. FAQ ──────────────────────────────────────────────── */}
-      <FAQSection title={t("faq_title")} subtitle={locale === "pt" ? "Perguntas comuns sobre os spreads, alavancagem, execução e condições de conta da Olla Trade." : "Common questions about Olla Trade's spreads, leverage, execution, and account conditions."} faqs={faqs} />
 
       {/* ── 13. CTA ──────────────────────────────────────────────── */}
       <section className="py-20 bg-[#050C15]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-5">{locale === "pt" ? "Começar" : "Get Started"}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-5">{locale === "pt" ? "Começar" : "Get Started"}</div>
           <h2 className="text-4xl font-extrabold text-white mb-4">{tp("cta_title")}</h2>
           <p className="text-white/40 text-[16px] mb-8 leading-relaxed">{tp("cta_subtitle")}</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="https://direct.ollatrade.com/auth/register"
+            <Link href="https://portal.ollatrade.com/auth/register"
               className="inline-flex items-center gap-2 font-bold px-8 py-4 rounded-xl text-[15px] transition-colors"
-              style={{ background: "#00CC44", color: "#000" }}>
+              style={{ background: "#29B5D4", color: "#000" }}>
               {tp("hero_cta1")}
             </Link>
             <Link href="/trading/accounts"

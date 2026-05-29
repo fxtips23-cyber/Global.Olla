@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import CTASection from "../../../components/CTASection";
 import {
@@ -51,7 +51,7 @@ export default async function DepositPage({ params }: { params: Promise<{ locale
         title={t("title")}
         subtitle={t("subtitle")}
         breadcrumbs={[{ label: locale === "pt" ? "Trading" : "Trading", href: "/trading" }, { label: locale === "pt" ? "Depósito" : "Deposit" }]}
-        cta={{ label: t("cta_login"), href: "https://direct.ollatrade.com/auth/login" }}
+        cta={{ label: t("cta_login"), href: "https://portal.ollatrade.com/auth/login" }}
         stats={[{ value: "$10", label: t("stat_min_label") }, { value: "0%", label: t("stat_fee_label") }, { value: t("stat_card_val"), label: t("stat_card_label") }]}
       />
 
@@ -77,7 +77,7 @@ export default async function DepositPage({ params }: { params: Promise<{ locale
           <h2 className="text-2xl font-bold text-[#111827] mb-6">{t("methods_title")}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
             {METHOD_META.map(({ Icon, name, timeKey, min }) => (
-              <div key={name} className="group bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#00CC44]/30 hover:shadow-md transition-all duration-200">
+              <div key={name} className="group bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#29B5D4]/30 hover:shadow-md transition-all duration-200">
                 <div className="w-10 h-10 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-4 group-hover:border-[#111827]/20 group-hover:text-[#111827] transition-colors">
                   <Icon className="w-5 h-5" />
                 </div>
@@ -89,7 +89,7 @@ export default async function DepositPage({ params }: { params: Promise<{ locale
                   </div>
                   <div className="flex justify-between">
                     <span>{t("col_fee")}</span>
-                    <span className="text-[#00CC44] font-semibold">{t("fee_val")}</span>
+                    <span className="text-[#29B5D4] font-semibold">{t("fee_val")}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>{t("col_min")}</span>
@@ -106,7 +106,7 @@ export default async function DepositPage({ params }: { params: Promise<{ locale
             <ol className="space-y-3">
               {steps.map((s, i) => (
                 <li key={i} className="flex items-start gap-3 text-[13px] text-white/60">
-                  <span className="w-5 h-5 rounded-full bg-[#00CC44] text-black text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="w-5 h-5 rounded-full bg-[#29B5D4] text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                     {i + 1}
                   </span>
                   {s}
@@ -123,9 +123,9 @@ export default async function DepositPage({ params }: { params: Promise<{ locale
       <CTASection
         title={t("cta_title")}
         primaryLabel={t("cta_login2")}
-        primaryHref="https://direct.ollatrade.com/auth/login"
+        primaryHref="https://portal.ollatrade.com/auth/login"
         secondaryLabel={t("cta_open")}
-        secondaryHref="https://direct.ollatrade.com/auth/register"
+        secondaryHref="https://portal.ollatrade.com/auth/register"
       />
     </>
   );

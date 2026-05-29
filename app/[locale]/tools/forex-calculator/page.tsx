@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../../components/ui/PageHero";
 import ForexCalculator from "./ForexCalculator";
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Free professional Forex trading calculators — position size, pip value, margin requirements, and profit/loss. Calculate trade parameters before you open a position.",
 };
 
-const CALC_COLORS = ["#00CC44", "#1E88E5", "#AB47BC", "#F59E0B"];
+const CALC_COLORS = ["#29B5D4", "#1E88E5", "#AB47BC", "#F59E0B"];
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "pt" }];
@@ -49,7 +49,7 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
       {/* ── Calculator guide ─────────────────────────────────────── */}
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">{t("guide_label")}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4 text-center">{t("guide_label")}</div>
           <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">{t("guide_title")}</h2>
           <p className="text-gray-500 text-center mb-10 max-w-2xl mx-auto text-[15px]">{t("guide_desc")}</p>
           <div className="grid md:grid-cols-2 gap-5">
@@ -93,7 +93,7 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
       {/* ── Lot sizes reference ──────────────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">{t("lots_label")}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4 text-center">{t("lots_label")}</div>
           <h2 className="text-2xl font-extrabold text-[#111827] mb-4 text-center">{t("lots_title")}</h2>
           <p className="text-gray-500 text-center mb-8 max-w-xl mx-auto text-[14px]">{t("lots_desc")}</p>
           <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
@@ -110,7 +110,7 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
                   <tr key={name} className="hover:bg-[#F9FAFB]">
                     <td className="px-5 py-3.5 font-bold text-[#111827] text-[13px]">{name}</td>
                     <td className="px-5 py-3.5 font-mono text-gray-600 text-[13px]">{size}</td>
-                    <td className="px-5 py-3.5 font-mono text-[#00CC44] font-semibold text-[13px]">{pipValue}</td>
+                    <td className="px-5 py-3.5 font-mono text-[#29B5D4] font-semibold text-[13px]">{pipValue}</td>
                     <td className="px-5 py-3.5 text-gray-500 text-[12px]">{notes}</td>
                   </tr>
                 ))}
@@ -125,14 +125,14 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
       <section className="py-16 bg-[#050C15]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("risk_label")}</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{t("risk_label")}</div>
             <h2 className="text-3xl font-extrabold text-white mb-3">{t("risk_title")}</h2>
             <p className="text-white/40 text-[15px] max-w-2xl mx-auto leading-relaxed">{t("risk_desc")}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {riskRules.map(({ rule, desc }) => (
               <div key={rule} className="bg-white/4 border border-white/8 rounded-2xl p-5 hover:bg-white/6 transition-all">
-                <div className="w-2 h-2 rounded-full bg-[#00CC44] mb-3" />
+                <div className="w-2 h-2 rounded-full bg-[#29B5D4] mb-3" />
                 <h4 className="text-[13px] font-bold text-white mb-2">{rule}</h4>
                 <p className="text-[12px] text-white/40 leading-relaxed">{desc}</p>
               </div>
@@ -155,9 +155,9 @@ export default async function ForexCalculatorPage({ params }: { params: Promise<
               <div className="text-[13px] text-gray-500">{t("cta_subtitle")}</div>
             </div>
             <div className="flex gap-3 flex-shrink-0">
-              <Link href="https://direct.ollatrade.com/auth/register"
+              <Link href="https://portal.ollatrade.com/auth/register"
                 className="inline-flex items-center font-bold px-6 py-3 rounded-xl text-[13px] transition-colors"
-                style={{ background: "#00CC44", color: "#000" }}>
+                style={{ background: "#29B5D4", color: "#000" }}>
                 {t("cta_label_open")}
               </Link>
               <Link href="/trading/conditions"

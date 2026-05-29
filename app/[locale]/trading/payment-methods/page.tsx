@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import CTASection from "../../../components/CTASection";
 import {
@@ -89,7 +89,7 @@ export default async function PaymentMethodsPage({ params }: { params: Promise<{
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {items.map(({ Icon, name, depKey, wdKey }) => (
-                    <div key={name} className="group bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#00CC44]/30 hover:shadow-md transition-all duration-200">
+                    <div key={name} className="group bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#29B5D4]/30 hover:shadow-md transition-all duration-200">
                       <div className="w-10 h-10 rounded-xl border border-gray-200 bg-[#F5F7FA] text-gray-500 flex items-center justify-center mb-4 group-hover:border-[#111827]/20 group-hover:text-[#111827] transition-colors">
                         <Icon className="w-5 h-5" />
                       </div>
@@ -105,7 +105,7 @@ export default async function PaymentMethodsPage({ params }: { params: Promise<{
                         </div>
                         <div className="flex justify-between py-1">
                           <span>{t("col_fee")}</span>
-                          <span className="text-[#00CC44] font-semibold">{t("fee_val")}</span>
+                          <span className="text-[#29B5D4] font-semibold">{t("fee_val")}</span>
                         </div>
                       </div>
                     </div>
@@ -124,9 +124,9 @@ export default async function PaymentMethodsPage({ params }: { params: Promise<{
       <CTASection
         title={t("cta_title")}
         primaryLabel={t("cta_primary")}
-        primaryHref="https://direct.ollatrade.com/auth/login"
+        primaryHref="https://portal.ollatrade.com/auth/login"
         secondaryLabel={t("cta_secondary")}
-        secondaryHref="https://direct.ollatrade.com/auth/register"
+        secondaryHref="https://portal.ollatrade.com/auth/register"
       />
     </>
   );

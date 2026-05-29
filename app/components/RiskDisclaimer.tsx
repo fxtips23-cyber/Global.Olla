@@ -1,8 +1,9 @@
 export default function RiskDisclaimer() {
   return (
-    <div className="bg-[#050C15] border-b border-white/6 py-2.5">
-      <p className="text-[11px] text-white/22 text-center max-w-5xl mx-auto px-4">
-        <strong className="text-white/35">Risk Warning:</strong> CFD trading involves significant risk of loss and may not be suitable for all investors. Only trade with funds you can afford to lose.
+    <div className="w-full py-2 border-b" style={{ background: "#F6F8FB", borderColor: "#E5E7EB" }}>
+      <p className="text-[11px] text-center max-w-5xl mx-auto px-4 leading-relaxed" style={{ color: "#6B7280" }}>
+        <strong style={{ color: "#374151" }}>Risk Warning:</strong>{" "}
+        Trading Forex and CFDs carries significant risk and may not be suitable for all investors. Only invest what you can afford to lose. Past performance is not indicative of future results.
       </p>
     </div>
   );

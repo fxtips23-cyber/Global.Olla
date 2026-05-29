@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../../../components/ui/PageHero";
-import FAQSection from "../../../components/ui/FAQSection";
 import { IconCheck, IconShield, IconInfo, IconUsers, IconClock } from "../../../components/ui/Icons";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
@@ -24,7 +23,6 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
   const creditCards        = t.raw("credit_cards")         as { title: string; desc: string }[];
   const tableHeaders       = t.raw("table_headers")        as string[];
   const tableRows          = t.raw("table_rows")           as string[][];
-  const faqs               = t.raw("faqs")                 as { q: string; a: string }[];
 
   const ELIGIBILITY_ICONS = [IconUsers, IconShield, IconClock, IconInfo];
 
@@ -50,31 +48,31 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
 
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4 text-center">{t("current_label")}</div>
+          <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4 text-center">{t("current_label")}</div>
           <h2 className="text-3xl font-extrabold text-[#111827] mb-4 text-center">{t("current_title")}</h2>
           <p className="text-gray-500 max-w-xl mx-auto text-[15px] text-center mb-12">{t("current_subtitle")}</p>
           <div className="grid md:grid-cols-3 gap-6">
             {/* Active promotion */}
-            <div className="relative bg-white rounded-2xl flex flex-col overflow-hidden border-2 border-[#00CC44]/30 shadow-lg">
-              <div className="h-1 bg-[#00CC44]" />
+            <div className="relative bg-white rounded-2xl flex flex-col overflow-hidden border-2 border-[#29B5D4]/30 shadow-lg">
+              <div className="h-1 bg-[#29B5D4]" />
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center justify-between mb-5">
-                  <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#00CC44]/12 text-[#00CC44] border border-[#00CC44]/25">{t("offer1_badge")}</span>
-                  <span className="text-[10px] text-[#00CC44] font-bold">{t("offer1_featured")}</span>
+                  <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#29B5D4]/12 text-[#29B5D4] border border-[#29B5D4]/25">{t("offer1_badge")}</span>
+                  <span className="text-[10px] text-[#29B5D4] font-bold">{t("offer1_featured")}</span>
                 </div>
-                <div className="text-5xl font-extrabold text-[#00CC44] mb-1 leading-none">{t("offer1_amount")}</div>
+                <div className="text-5xl font-extrabold text-[#29B5D4] mb-1 leading-none">{t("offer1_amount")}</div>
                 <h3 className="text-xl font-extrabold text-[#111827] mt-1 mb-1">{t("offer1_title")}</h3>
                 <div className="text-[11px] text-gray-400 mb-4">{t("offer1_type")}</div>
                 <p className="text-[13px] text-gray-600 leading-relaxed mb-5 flex-1">{t("offer1_desc")}</p>
                 <div className="space-y-1.5 mb-6 border-t border-gray-100 pt-4">
                   {(t.raw("offer1_points") as string[]).map((item) => (
                     <div key={item} className="flex items-start gap-2 text-[11px] text-gray-500">
-                      <IconCheck className="w-3.5 h-3.5 text-[#00CC44] flex-shrink-0 mt-0.5" />{item}
+                      <IconCheck className="w-3.5 h-3.5 text-[#29B5D4] flex-shrink-0 mt-0.5" />{item}
                     </div>
                   ))}
                 </div>
-                <Link href="https://direct.ollatrade.com/auth/register"
-                  className="w-full flex items-center justify-center font-bold py-3 rounded-xl text-[13px] bg-[#00CC44] hover:bg-[#00DD4A] text-black transition-all">
+                <Link href="https://portal.ollatrade.com/auth/register"
+                  className="w-full flex items-center justify-center font-bold py-3 rounded-xl text-[13px] bg-[#29B5D4] hover:bg-[#1FA5C4] text-white transition-all">
                   {t("offer1_cta")}
                 </Link>
               </div>
@@ -97,7 +95,7 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
                     </div>
                   ))}
                 </div>
-                <Link href="https://direct.ollatrade.com/auth/register"
+                <Link href="https://portal.ollatrade.com/auth/register"
                   className="w-full flex items-center justify-center font-bold py-3 rounded-xl text-[13px] bg-[#F5F7FA] hover:bg-[#111827] hover:text-white text-[#111827] border border-gray-200 transition-all">
                   {t("offer2_cta")}
                 </Link>
@@ -135,7 +133,7 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("eligibility_label")}</div>
+              <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{t("eligibility_label")}</div>
               <h2 className="text-3xl font-extrabold text-[#111827] mb-5">{t("eligibility_title")}</h2>
               <div className="space-y-3">
                 {eligibilityItems.map(({ title, desc }, i) => {
@@ -155,12 +153,12 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
               </div>
             </div>
             <div>
-              <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("participation_label")}</div>
+              <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{t("participation_label")}</div>
               <h2 className="text-3xl font-extrabold text-[#111827] mb-5">{t("participation_title")}</h2>
               <div className="space-y-4">
                 {participationSteps.map(({ n, title, desc }) => (
                   <div key={n} className="flex items-start gap-3">
-                    <span className="w-7 h-7 rounded-full bg-[#00CC44] text-black text-[11px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{n}</span>
+                    <span className="w-7 h-7 rounded-full bg-[#29B5D4] text-white text-[11px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{n}</span>
                     <div>
                       <div className="text-[13px] font-bold text-[#111827] mb-0.5">{title}</div>
                       <div className="text-[12px] text-gray-500 leading-relaxed">{desc}</div>
@@ -176,14 +174,14 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
       <section className="py-16 bg-[#050C15]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("credit_label")}</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{t("credit_label")}</div>
             <h2 className="text-3xl font-extrabold text-white mb-3">{t("credit_title")}</h2>
             <p className="text-white/40 text-[15px] max-w-2xl mx-auto leading-relaxed">{t("credit_desc")}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {creditCards.map(({ title, desc }) => (
               <div key={title} className="bg-white/4 border border-white/8 rounded-2xl p-5">
-                <div className="w-2 h-2 rounded-full bg-[#00CC44] mb-3" />
+                <div className="w-2 h-2 rounded-full bg-[#29B5D4] mb-3" />
                 <h4 className="text-[13px] font-bold text-white mb-2">{title}</h4>
                 <p className="text-[12px] text-white/40 leading-relaxed">{desc}</p>
               </div>
@@ -203,7 +201,7 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
                   <tr key={feat} className="hover:bg-white/3">
                     <td className="px-5 py-3 text-[12px] font-semibold text-white/60">{feat}</td>
                     <td className="px-5 py-3 text-[12px] text-white/35">{credit}</td>
-                    <td className="px-5 py-3 text-[12px] text-[#00CC44] font-medium">{own}</td>
+                    <td className="px-5 py-3 text-[12px] text-[#29B5D4] font-medium">{own}</td>
                   </tr>
                 ))}
               </tbody>
@@ -225,7 +223,6 @@ export default async function PromotionsPage({ params }: { params: Promise<{ loc
         </div>
       </section>
 
-      <FAQSection title={t("faq_title")} subtitle={t("faq_subtitle")} faqs={faqs} />
     </>
   );
 }

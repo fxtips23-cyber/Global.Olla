@@ -49,8 +49,8 @@ export default function SessionClock() {
           <div className="text-[13px] font-bold text-white">{utcStr}</div>
         </div>
         <div className="flex items-center gap-1.5">
-          <div className={`w-2 h-2 rounded-full ${isWeekend ? "bg-red-400" : "bg-[#00CC44]"}`} />
-          <span className="text-[10px] font-semibold" style={{ color: isWeekend ? "#f87171" : "#00CC44" }}>
+          <div className={`w-2 h-2 rounded-full ${isWeekend ? "bg-red-400" : "bg-[#29B5D4]"}`} />
+          <span className="text-[10px] font-semibold" style={{ color: isWeekend ? "#f87171" : "#29B5D4" }}>
             {isWeekend ? "Weekend — Closed" : "Forex Open"}
           </span>
         </div>
@@ -77,22 +77,22 @@ export default function SessionClock() {
                     return (
                       <>
                         <div className="absolute left-0 top-0 h-full rounded-full"
-                          style={{ width: `${(c / total) * 100}%`, background: open ? "#00CC44" : "rgba(255,255,255,0.15)" }} />
+                          style={{ width: `${(c / total) * 100}%`, background: open ? "#29B5D4" : "rgba(255,255,255,0.15)" }} />
                         <div className="absolute top-0 h-full rounded-full"
-                          style={{ left: `${(o / total) * 100}%`, right: 0, background: open ? "#00CC44" : "rgba(255,255,255,0.15)" }} />
+                          style={{ left: `${(o / total) * 100}%`, right: 0, background: open ? "#29B5D4" : "rgba(255,255,255,0.15)" }} />
                       </>
                     );
                   }
                   return (
                     <div className="absolute top-0 h-full rounded-full"
-                      style={{ left: `${(o / total) * 100}%`, width: `${((c - o) / total) * 100}%`, background: open ? "#00CC44" : "rgba(255,255,255,0.15)" }} />
+                      style={{ left: `${(o / total) * 100}%`, width: `${((c - o) / total) * 100}%`, background: open ? "#29B5D4" : "rgba(255,255,255,0.15)" }} />
                   );
                 })()}
                 {/* Current time cursor */}
                 <div className="absolute top-1/2 -translate-y-1/2 w-0.5 h-3 bg-white/60 rounded-full"
                   style={{ left: `${pct}%` }} />
               </div>
-              <div className={`text-[9px] font-bold w-12 text-right ${open ? "text-[#00CC44]" : "text-white/25"}`}>
+              <div className={`text-[9px] font-bold w-12 text-right ${open ? "text-[#29B5D4]" : "text-white/25"}`}>
                 {open ? "OPEN" : "CLOSED"}
               </div>
             </div>

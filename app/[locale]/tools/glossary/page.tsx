@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
@@ -26,8 +26,8 @@ export default async function GlossaryPage({ params }: { params: Promise<{ local
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-3">
             {terms.map((item) => (
-              <div key={item.term} className="bg-white rounded-xl border border-gray-100 p-5 hover:border-[#00CC44]/30 transition-colors">
-                <div className="text-sm font-bold text-[#00AA38] mb-1">{item.term}</div>
+              <div key={item.term} className="bg-white rounded-xl border border-gray-100 p-5 hover:border-[#29B5D4]/30 transition-colors">
+                <div className="text-sm font-bold text-[#29B5D4] mb-1">{item.term}</div>
                 <div className="text-sm text-gray-600 leading-relaxed">{item.def}</div>
               </div>
             ))}

@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import ExecutionFlowVisual from "../../components/visuals/ExecutionFlowVisual";
-import FAQSection from "../../components/ui/FAQSection";
 import CTASection from "../../components/CTASection";
 import PageHero from "../../components/ui/PageHero";
 import {
@@ -59,8 +58,6 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  setRequestLocale(locale);
  const t  = await getTranslations({ locale, namespace: "trading.conditions" });
  const tp = await getTranslations({ locale, namespace: "trading_pages.execution" });
- const fq = await getTranslations({ locale, namespace: "faq" });
-
  const introCards   = tp.raw("intro_cards")    as {title:string;desc:string}[];
  const flowFeats    = tp.raw("flow_features")   as {label:string;desc:string}[];
  const modelCards   = tp.raw("model_cards")     as {title:string;desc:string}[];
@@ -68,7 +65,6 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  const infraCards   = tp.raw("infra_cards")     as {title:string;desc:string}[];
  const pricingPts   = tp.raw("pricing_points")  as string[];
  const orderTypes   = tp.raw("order_types")     as {name:string;desc:string;tag:string}[];
- const execFaqs     = fq.raw("execution") as {q:string;a:string}[];
  return (
  <>
  {/* ── 1. Hero (always dark — same as every inner page) ─────────── */}
@@ -84,9 +80,9 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  ]}
  >
  <div className="flex flex-wrap gap-3 mt-7">
- <Link href="https://direct.ollatrade.com/auth/register"
+ <Link href="https://portal.ollatrade.com/auth/register"
  className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl text-[14px] transition-colors"
- style={{ background: "#00CC44", color: "#000" }}>
+ style={{ background: "#29B5D4", color: "#000" }}>
  {locale === "pt" ? "Abrir Conta" : "Open Account"}
  </Link>
  <Link href="/contact-us"
@@ -102,7 +98,7 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
  <p className="text-[12px] text-white/35">{tp("crosslink_text")}</p>
  <Link href="/legal/execution-policy"
- className="text-[12px] font-semibold text-[#00CC44] hover:text-[#00DD4A] transition-colors flex items-center gap-1.5 flex-shrink-0">
+ className="text-[12px] font-semibold text-[#29B5D4] hover:text-[#1FA5C4] transition-colors flex items-center gap-1.5 flex-shrink-0">
  {tp("crosslink_link")}
  </Link>
  </div>
@@ -113,7 +109,7 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="grid lg:grid-cols-2 gap-14 items-start">
  <div>
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("intro_label")}</div>
+ <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("intro_label")}</div>
  <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] mb-5 leading-tight">{tp("intro_title")}</h2>
  <div className="space-y-4 text-[14px] text-gray-600 leading-relaxed">
  <p>{tp("intro_p1")}</p>
@@ -141,14 +137,14 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="grid lg:grid-cols-2 gap-12 items-center">
  <div>
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("flow_label")}</div>
+ <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("flow_label")}</div>
  <h2 className="text-3xl font-extrabold text-white mb-5">{tp("flow_title")}</h2>
  <p className="text-white/45 text-[14px] leading-relaxed mb-6">{tp("flow_desc")}</p>
  <div className="space-y-3">
  {flowFeats.map(({ label, desc }) => (
  <div key={label} className="flex items-start gap-3">
- <div className="w-5 h-5 rounded-full bg-[#00CC44]/15 border border-[#00CC44]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
- <svg className="w-3 h-3 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+ <div className="w-5 h-5 rounded-full bg-[#29B5D4]/15 border border-[#29B5D4]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+ <svg className="w-3 h-3 text-[#29B5D4]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
  <polyline points="20 6 9 17 4 12" />
  </svg>
  </div>
@@ -171,7 +167,7 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <section className="py-16 bg-[#F5F7FA]">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-12">
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("model_label")}</div>
+ <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("model_label")}</div>
  <h2 className="text-3xl font-extrabold text-[#111827] mb-3">{tp("model_title")}</h2>
  <p className="text-gray-500 max-w-2xl mx-auto text-[15px]">{tp("model_desc")}</p>
  </div>
@@ -190,7 +186,7 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <section className="py-16 bg-white">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-12">
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("infra_label")}</div>
+ <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("infra_label")}</div>
  <h2 className="text-3xl font-extrabold text-[#111827] mb-3">{tp("infra_title")}</h2>
  <p className="text-gray-500 max-w-2xl mx-auto text-[15px]">{tp("infra_desc")}</p>
  </div>
@@ -210,23 +206,23 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="grid lg:grid-cols-2 gap-14 items-start">
  <div>
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("pricing_label")}</div>
+ <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("pricing_label")}</div>
  <h2 className="text-3xl font-extrabold text-[#111827] mb-5 leading-tight">{tp("pricing_title")}</h2>
  <p className="text-[14px] text-gray-600 leading-relaxed mb-5">{tp("pricing_desc")}</p>
  <ul className="space-y-2 mb-5">
  {pricingPts.map((pt_item, i) => (
  <li key={i} className="flex items-start gap-2 text-[13px] text-gray-600">
- <span className="text-[#00CC44] font-bold mt-0.5 flex-shrink-0">›</span>
+ <span className="text-[#29B5D4] font-bold mt-0.5 flex-shrink-0">›</span>
  {pt_item}
  </li>
  ))}
  </ul>
- <a href="/legal/execution-policy" className="text-[13px] font-semibold text-[#00CC44] hover:text-[#00DD4A] transition-colors">{tp("pricing_link")}</a>
+ <a href="/legal/execution-policy" className="text-[13px] font-semibold text-[#29B5D4] hover:text-[#1FA5C4] transition-colors">{tp("pricing_link")}</a>
  </div>
  <div className="space-y-4">
  {slipCards.map(({ title, desc }) => (
  <div key={title} className="flex items-start gap-4 bg-white border border-gray-100 rounded-xl p-4">
- <div className="w-2 h-2 rounded-full bg-[#00CC44] flex-shrink-0 mt-2" />
+ <div className="w-2 h-2 rounded-full bg-[#29B5D4] flex-shrink-0 mt-2" />
  <div>
  <div className="text-[13px] font-bold text-[#111827] mb-1">{title}</div>
  <div className="text-[12px] text-gray-500 leading-relaxed">{desc}</div>
@@ -242,7 +238,7 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <section className="py-16 bg-white">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-12">
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("slippage_label")}</div>
+ <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("slippage_label")}</div>
  <h2 className="text-3xl font-extrabold text-[#111827] mb-3">{tp("slippage_title")}</h2>
  <p className="text-gray-500 max-w-2xl mx-auto text-[15px]">{tp("slippage_desc")}</p>
  </div>
@@ -261,7 +257,7 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <section className="py-16 bg-[#F5F7FA]">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-12">
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{tp("order_types_label")}</div>
+ <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{tp("order_types_label")}</div>
  <h2 className="text-3xl font-extrabold text-[#111827] mb-3">{tp("order_types_title")}</h2>
  <p className="text-gray-500 max-w-2xl mx-auto text-[15px]">{tp("order_types_desc")}</p>
  </div>
@@ -269,11 +265,11 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  {orderTypes.map(({ name, desc, tag }, i) => {
  const ICONS = [IconBolt, IconTarget, IconActivity, IconLock, IconCheck];
  const COLORS = [
- "bg-[#00CC44]/8 text-[#00AA38] border-[#00CC44]/12",
+ "bg-[#29B5D4]/8 text-[#29B5D4] border-[#29B5D4]/12",
  "bg-blue-50 text-blue-700 border-blue-200",
  "bg-purple-50 text-purple-700 border-purple-200",
  "bg-amber-50 text-amber-700 border-amber-200",
- "bg-[#00CC44]/8 text-[#00AA38] border-[#00CC44]/12",
+ "bg-[#29B5D4]/8 text-[#29B5D4] border-[#29B5D4]/12",
  ];
  const Icon = ICONS[i % ICONS.length];
  const tc = COLORS[i % COLORS.length];
@@ -296,7 +292,7 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  <section className="py-14 bg-white">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-8">
- <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">Compliance</div>
+ <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">Compliance</div>
  <h2 className="text-2xl font-extrabold text-[#111827]">Execution Risk Warning</h2>
  </div>
  <div className="border border-amber-200 bg-amber-50 rounded-2xl p-7">
@@ -316,18 +312,12 @@ export default async function ExecutionInformationPage({ params }: { params: Pro
  </div>
  </section>
 
- {/* ── 9. FAQ ─────────────────────────────────────────────────────── */}
- <FAQSection
- title={tp("faq_title")}
- subtitle={locale === "pt" ? "Perguntas comuns sobre execução de ordens, preços e condições de trading na Olla Trade." : "Common questions about order execution, pricing, and trading conditions at Olla Trade."}
- faqs={execFaqs}
- />
 
  <CTASection
  title={tp("cta_title")}
  subtitle={tp("cta_subtitle")}
  primaryLabel={locale === "pt" ? "Abrir Conta" : "Open Account"}
- primaryHref="https://direct.ollatrade.com/auth/register"
+ primaryHref="https://portal.ollatrade.com/auth/register"
  secondaryLabel={locale === "pt" ? "Contato" : "Contact Us"}
  secondaryHref="/contact-us"
  />

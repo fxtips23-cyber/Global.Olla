@@ -5,6 +5,7 @@ import { routing } from "../../i18n/routing";
 import type { ReactNode } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import RiskDisclaimer from "../components/RiskDisclaimer";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -28,6 +29,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <RiskDisclaimer />
       <Header />
       <main className="w-full overflow-x-hidden">{children}</main>
       <Footer />

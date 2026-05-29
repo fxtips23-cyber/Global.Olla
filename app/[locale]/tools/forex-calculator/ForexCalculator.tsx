@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useCallback } from "react";
 
@@ -67,7 +67,7 @@ function Field({
           className={`w-full border rounded-xl px-4 py-3 text-[14px] font-medium bg-white focus:outline-none transition-colors pr-${suffix ? "16" : "4"} ${
  error
  ? "border-red-400 text-red-700 focus:border-red-500"
- : "border-gray-200 text-[#111827] focus:border-[#00CC44] "
+ : "border-gray-200 text-[#111827] focus:border-[#29B5D4] "
  } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
         />
         {suffix && (
@@ -100,7 +100,7 @@ function SelectField({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-[14px] font-medium bg-white text-[#111827] focus:outline-none focus:border-[#00CC44] transition-colors appearance-none cursor-pointer"
+        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-[14px] font-medium bg-white text-[#111827] focus:outline-none focus:border-[#29B5D4] transition-colors appearance-none cursor-pointer"
       >
         {ungrouped.map((o) => (
           <option key={o.value} value={o.value}>{o.label}</option>
@@ -125,7 +125,7 @@ function ResultRow({ label, value, highlight, sub }: { label: string; value: str
         <span className="text-[13px] text-gray-500">{label}</span>
         {sub && <div className="text-[11px] text-gray-400 mt-0.5">{sub}</div>}
       </div>
-      <span className={`text-[15px] font-bold font-mono ${highlight ? "text-[#00CC44]" : "text-[#111827] "}`}>
+      <span className={`text-[15px] font-bold font-mono ${highlight ? "text-[#29B5D4]" : "text-[#111827] "}`}>
         {value}
       </span>
     </div>
@@ -160,7 +160,7 @@ function ResultsCard({ title, rows, empty }: {
 function CalcBtn({ onClick, loading = false }: { onClick: () => void; loading?: boolean }) {
   return (
     <button onClick={onClick} disabled={loading}
-      className="flex-1 bg-[#00CC44] hover:bg-[#00DD4A] text-black font-bold py-3.5 rounded-xl text-[14px] transition-colors disabled:opacity-60">
+      className="flex-1 bg-[#29B5D4] hover:bg-[#1FA5C4] text-white font-bold py-3.5 rounded-xl text-[14px] transition-colors disabled:opacity-60">
       {loading ? "Calculating…" : "Calculate"}
     </button>
   );
@@ -426,7 +426,7 @@ function PnLCalc() {
                   className={`flex-1 py-3 text-[13px] font-bold transition-colors capitalize ${
  direction === d
  ? d === "buy"
- ? "bg-[#00CC44] text-black"
+ ? "bg-[#29B5D4] text-white"
  : "bg-red-500 text-white"
  : "bg-white text-gray-400 hover:bg-gray-50 "
  }`}>{d}</button>
@@ -486,8 +486,8 @@ function SwapInfo() {
         </div>
       </div>
       <div className="space-y-4">
-        <div className="bg-[#F5F7FA] border border-[#00CC44]/20 rounded-2xl p-5">
-          <div className="text-[11px] font-bold text-[#00CC44] uppercase tracking-widest mb-3">Live Rates in MT4</div>
+        <div className="bg-[#F5F7FA] border border-[#29B5D4]/20 rounded-2xl p-5">
+          <div className="text-[11px] font-bold text-[#29B5D4] uppercase tracking-widest mb-3">Live Rates in MT4</div>
           <ol className="space-y-2 text-[13px] text-gray-600">
             {[
               "Open MetaTrader 4",
@@ -497,7 +497,7 @@ function SwapInfo() {
               "View Long Swap and Short Swap values",
             ].map((s, i) => (
               <li key={i} className="flex items-start gap-2.5">
-                <span className="w-5 h-5 rounded-full bg-[#00CC44] text-black text-[10px] font-black flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                <span className="w-5 h-5 rounded-full bg-[#29B5D4] text-white text-[10px] font-black flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
                 {s}
               </li>
             ))}
@@ -540,7 +540,7 @@ export default function ForexCalculator() {
             onClick={() => setActiveTab(key)}
             className={`flex-shrink-0 flex-1 px-3 py-2.5 rounded-xl text-[13px] font-semibold whitespace-nowrap transition-all ${
  activeTab === key
- ? "bg-[#00CC44] text-black shadow-sm"
+ ? "bg-[#29B5D4] text-white shadow-sm"
  : "text-gray-500 hover:text-[#111827] hover:bg-white "
  }`}
           >

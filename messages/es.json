@@ -1,5 +1,5 @@
-{
-  "meta": {
+﻿{
+"meta": {
     "siteName": "Olla Trade",
     "defaultTitle": "Olla Trade | Plataforma Profesional de Trading Online",
     "defaultDescription": "Opera Forex, Metales, Índices, Criptomonedas, Energías y Acciones con Olla Trade. Accede a los mercados globales con MT4, spreads desde 0,0 pips y apalancamiento hasta 1:500."
@@ -13,6 +13,8 @@
   "nav": {
     "markets": "Mercados",
     "trading": "Trading",
+    "partners": "Socios",
+    "learn": "Aprender",
     "tools": "Herramientas",
     "company": "Empresa",
     "promotions": "Promociones",
@@ -85,6 +87,16 @@
       "complaints_sub": "Proceso de reclamación",
       "cta": "Contactar soporte →",
       "badge": "Soporte 24/5"
+    },
+    "partners_sub": {
+      "partner": "Asóciate",
+      "partner_sub": "Programa de IB & afiliados"
+    },
+    "learn_sub": {
+      "articles": "Artículos",
+      "articles_sub": "Noticias & análisis de mercado",
+      "education": "Educación",
+      "education_sub": "Aprende a operar"
     }
   },
   "hero": {
@@ -393,18 +405,18 @@
       "support": "Soporte (24/5)",
       "email": "Correo Electrónico",
       "entity": "Entidad",
-      "entityVal": "Olla Trade Ltd. · Servicio solo de ejecución"
+      "entityVal": "Olla Capital Financial Services L.L.C. · Servicio solo de ejecución"
     },
     "disclaimer": {
       "risk": "Advertencia de Riesgo:",
       "risk_text": "El trading de Forex y CFDs conlleva riesgos inherentes que pueden resultar en la pérdida del capital invertido. Recomendamos operar solo con fondos que puedas permitirte perder. El trading con apalancamiento es de alto riesgo y puede no ser adecuado para todos los inversores.",
       "exec": "Solo Ejecución:",
-      "exec_text": "Olla Trade Ltd. opera exclusivamente como un servicio de solo ejecución y no proporciona asesoramiento de inversión, gestión de carteras ni servicios de consultoría.",
+      "exec_text": "Olla Capital Financial Services L.L.C. opera exclusivamente como un servicio de solo ejecución y no proporciona asesoramiento de inversión, gestión de carteras ni servicios de consultoría.",
       "restricted": "Jurisdicciones Restringidas:",
-      "restricted_text": "Olla Trade Ltd. no ofrece servicios a residentes de Estados Unidos, Rusia, Myanmar, Emiratos Árabes Unidos, Canadá, Israel, Nueva Zelanda, Irán y Corea del Norte (RPDC).",
+      "restricted_text": "Olla Capital Financial Services L.L.C. no ofrece servicios a residentes de Estados Unidos, Rusia, Myanmar, Emiratos Árabes Unidos, Canadá, Israel, Nueva Zelanda, Irán y Corea del Norte (RPDC).",
       "registered": "Registrada:",
-      "registered_text": "Olla Trade Ltd. está constituida en Anguila (Reg. No. A000001849) como Empresa de Negocios Internacional. Dirección registrada: Grace Complex, The Valley, AI 2640, Anguila.",
-      "copyright": "© 2026 Olla Trade Ltd. Todos los derechos reservados."
+      "registered_text": "Olla Capital Financial Services L.L.C. está constituida en Anguila (Reg. No. A000001849) como Empresa de Negocios Internacional. Dirección registrada: Grace Complex, The Valley, AI 2640, Anguila.",
+      "copyright": "© 2026 Olla Capital Financial Services L.L.C. Todos los derechos reservados."
     },
     "bottomLinks": {
       "terms": "Términos",

@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
-import FAQSection from "../../../components/ui/FAQSection";
 import CTASection from "../../../components/CTASection";
 import { IconShield, IconActivity, IconRefresh, IconDroplet, IconServer, IconInfo, IconBarChart } from "../../../components/ui/Icons";
-import { riskFaqs } from "../../../data/extra-faqs";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { ComponentType } from "react";
 
@@ -68,7 +66,7 @@ export default async function RiskDisclosuresPage({ params }: { params: Promise<
                 <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">{t("toc_label")}</div>
                 <nav className="space-y-0.5">
                   {riskCategories.map(s => (
-                    <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-white transition-colors">{s.title}</a>
+                    <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#29B5D4] px-2 py-1.5 rounded-lg hover:bg-white transition-colors">{s.title}</a>
                   ))}
                 </nav>
               </div>
@@ -94,14 +92,14 @@ export default async function RiskDisclosuresPage({ params }: { params: Promise<
       <section className="py-16 bg-[#050C15]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">{t("checklist_label")}</div>
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">{t("checklist_label")}</div>
             <h2 className="text-3xl font-extrabold text-white mb-3">{t("checklist_title")}</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {checklistItems.map((item, i) => (
               <div key={i} className="bg-white/4 border border-white/8 rounded-2xl p-5 flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-[#00CC44]/15 border border-[#00CC44]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg className="w-3 h-3 text-[#00CC44]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                <div className="w-5 h-5 rounded-full bg-[#29B5D4]/15 border border-[#29B5D4]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-3 h-3 text-[#29B5D4]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <p className="text-[12px] text-white/55 leading-relaxed">{item}</p>
               </div>
@@ -113,7 +111,7 @@ export default async function RiskDisclosuresPage({ params }: { params: Promise<
       <section className="py-16 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="text-[11px] font-semibold text-[#00CC44] uppercase tracking-widest mb-4">
+            <div className="text-[11px] font-semibold text-[#29B5D4] uppercase tracking-widest mb-4">
               {locale === "pt" ? "Avaliação Pessoal" : "Self-Assessment"}
             </div>
             <h2 className="text-3xl font-extrabold text-[#111827] mb-3">
@@ -124,7 +122,7 @@ export default async function RiskDisclosuresPage({ params }: { params: Promise<
             {selfCheckQA.map(({ q, warn }) => (
               <div key={q} className="bg-white border border-gray-100 rounded-2xl p-5">
                 <div className="flex items-start gap-3 mb-3">
-                  <div className="w-5 h-5 rounded border border-[#00CC44]/30 bg-[#00CC44]/10 flex-shrink-0 mt-0.5" />
+                  <div className="w-5 h-5 rounded border border-[#29B5D4]/30 bg-[#29B5D4]/10 flex-shrink-0 mt-0.5" />
                   <p className="text-[13px] font-semibold text-[#111827] leading-relaxed">{q}</p>
                 </div>
                 <p className="text-[11px] text-gray-400 leading-relaxed pl-8">{warn}</p>
@@ -157,11 +155,6 @@ export default async function RiskDisclosuresPage({ params }: { params: Promise<
         </div>
       </section>
 
-      <FAQSection
-        title={t("faq_title")}
-        subtitle={t("faq_subtitle")}
-        faqs={riskFaqs}
-      />
       <CTASection
         title={t("cta_title")}
         subtitle={t("cta_subtitle")}

@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "../../../components/ui/PageHero";
-import FAQSection from "../../../components/ui/FAQSection";
 import { IconCreditCard, IconShield, IconClock, IconDatabase, IconCheck, IconInfo } from "../../../components/ui/Icons";
-import { withdrawalCondFaqs } from "../../../data/extra-faqs";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = { title: "Withdrawal Conditions", description: "Olla Trade withdrawal conditions — requirements, processing times, verification, crypto withdrawals, fees, and bonus restrictions." };
@@ -19,7 +17,7 @@ export default async function WithdrawalConditionsPage({ params }: { params: Pro
   const isPT = locale === "pt";
 
   const reqItems  = isPT ? t.raw("req_items") as string[] : ["Full KYC/AML account verification must be completed (identity + proof of address)","Account must be in good standing with no outstanding compliance issues","Withdrawal method must match an approved method on your account","Withdrawal amount must meet any applicable minimum withdrawal thresholds","Any open positions should be reviewed before requesting a large withdrawal that may affect your margin level"];
-  const procSteps = isPT ? t.raw("process_steps") as string[][] : [["01","Log in to your client portal","Access your Olla Trade client portal at direct.ollatrade.com using your credentials."],["02","Navigate to Withdrawals","Go to the Funding and Withdrawals section and select 'Withdraw'."],["03","Select method & enter amount","Choose your withdrawal method, enter the withdrawal amount, and provide the required wallet address or account details."],["04","Submit your request","Review all details carefully and submit your withdrawal request. You should receive a confirmation notification."],["05","Processing and payment","Our team will review and process your request within 24–48 business hours. Payment processing time then depends on the method used."]];
+  const procSteps = isPT ? t.raw("process_steps") as string[][] : [["01","Log in to your client portal","Access your Olla Trade client portal at portal.ollatrade.com using your credentials."],["02","Navigate to Withdrawals","Go to the Funding and Withdrawals section and select 'Withdraw'."],["03","Select method & enter amount","Choose your withdrawal method, enter the withdrawal amount, and provide the required wallet address or account details."],["04","Submit your request","Review all details carefully and submit your withdrawal request. You should receive a confirmation notification."],["05","Processing and payment","Our team will review and process your request within 24–48 business hours. Payment processing time then depends on the method used."]];
   const timesHdrs = isPT ? t.raw("times_headers") as string[] : ["Method","Olla Trade Processing","Network/Bank Time","Notes"];
   const timesRows = isPT ? t.raw("times_rows") as string[][] : [["USDT TRC20","24–48 business hours","~1–5 min","Subject to network confirmation"],["USDT ERC20","24–48 business hours","~5–30 min","Subject to ETH network"],["Bitcoin (BTC)","24–48 business hours","~20–60 min","Subject to BTC network"],["Ethereum (ETH)","24–48 business hours","~5–30 min","Subject to ETH network"]];
   const cryptoItems = isPT ? t.raw("crypto_items") as string[] : ["Always double-check the wallet address before submitting — crypto transactions are irreversible once broadcast to the network","Ensure you provide the correct network (e.g. TRC20 for USDT TRC20 — sending to the wrong network may result in permanent loss of funds)","Olla Trade is not responsible for funds sent to incorrect addresses or wrong networks","Blockchain network confirmation times are outside Olla Trade's control and may vary significantly based on network congestion","Minimum withdrawal amounts may apply — check your client portal for current thresholds"];
@@ -37,7 +35,7 @@ export default async function WithdrawalConditionsPage({ params }: { params: Pro
               <div className="bg-[#F5F7FA] border border-gray-100 rounded-2xl p-5">
                 <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">{t("toc_label")}</div>
                 <nav className="space-y-0.5">
-                  {sectionsNav.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#00CC44] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
+                  {sectionsNav.map(s => <a key={s.id} href={`#${s.id}`} className="block text-[12px] text-gray-500 hover:text-[#29B5D4] px-2 py-1.5 rounded-lg hover:bg-gray-50 transition-colors">{s.title}</a>)}
                 </nav>
               </div>
             </div>
@@ -49,7 +47,7 @@ export default async function WithdrawalConditionsPage({ params }: { params: Pro
                 <div className="space-y-2">
                   {reqItems.map((r, i) => (
                     <div key={i} className="flex items-start gap-3 bg-[#F5F7FA] border border-gray-100 rounded-xl px-4 py-3">
-                      <IconCheck className="w-4 h-4 text-[#00CC44] flex-shrink-0 mt-0.5" />
+                      <IconCheck className="w-4 h-4 text-[#29B5D4] flex-shrink-0 mt-0.5" />
                       <span className="text-[13px] text-gray-600">{r}</span>
                     </div>
                   ))}
@@ -61,7 +59,7 @@ export default async function WithdrawalConditionsPage({ params }: { params: Pro
                 <div className="space-y-3">
                   {procSteps.map(([n, title, desc]) => (
                     <div key={n} className="flex items-start gap-4 bg-[#F5F7FA] border border-gray-100 rounded-xl p-4">
-                      <span className="w-7 h-7 rounded-full bg-[#00CC44] text-black text-[11px] font-bold flex items-center justify-center flex-shrink-0">{n}</span>
+                      <span className="w-7 h-7 rounded-full bg-[#29B5D4] text-white text-[11px] font-bold flex items-center justify-center flex-shrink-0">{n}</span>
                       <div><div className="text-[13px] font-bold text-[#111827] mb-0.5">{title}</div><div className="text-[12px] text-gray-500">{desc}</div></div>
                     </div>
                   ))}
@@ -132,7 +130,6 @@ export default async function WithdrawalConditionsPage({ params }: { params: Pro
         </div>
       </section>
 
-      <FAQSection title={t("faq_title")} faqs={withdrawalCondFaqs} />
     </>
   );
 }

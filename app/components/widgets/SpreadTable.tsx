@@ -22,8 +22,8 @@ export default function SpreadTable() {
           <div className="text-[9px] text-gray-400 mt-0.5">Typical under normal market conditions</div>
         </div>
         <div className="flex items-center gap-1.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#00CC44] animate-pulse" />
-          <span className="text-[10px] text-[#00CC44] font-semibold">Live</span>
+          <div className="w-1.5 h-1.5 rounded-full bg-[#29B5D4] animate-pulse" />
+          <span className="text-[10px] text-[#29B5D4] font-semibold">Live</span>
         </div>
       </div>
 
@@ -42,7 +42,7 @@ export default function SpreadTable() {
               <tr key={p.sym} className="hover:bg-[#F9FAFB] transition-colors">
                 <td className="px-4 py-2.5">
                   <div className="flex items-center gap-2">
-                    <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${p.dir === "up" ? "bg-[#00CC44]" : "bg-red-400"}`} />
+                    <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${p.dir === "up" ? "bg-[#29B5D4]" : "bg-red-400"}`} />
                     <div>
                       <div className="text-[12px] font-bold text-[#111827] font-mono">{p.sym}</div>
                       <div className="text-[9px] text-gray-400">{p.type}</div>
@@ -52,7 +52,7 @@ export default function SpreadTable() {
                 <td className="px-4 py-2.5 text-[12px] font-mono text-gray-600">{p.bid}</td>
                 <td className="px-4 py-2.5 text-[12px] font-mono text-gray-600">{p.ask}</td>
                 <td className="px-4 py-2.5">
-                  <span className="text-[11px] font-semibold text-[#00CC44] bg-[#00CC44]/8 border border-[#00CC44]/15 px-2 py-0.5 rounded-full">
+                  <span className="text-[11px] font-semibold text-[#29B5D4] bg-[#29B5D4]/8 border border-[#29B5D4]/15 px-2 py-0.5 rounded-full">
                     {p.spread}
                   </span>
                 </td>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const trustCards = [
   {
@@ -64,7 +64,7 @@ export default function WhyOllaTrade() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#00CC44]/10 text-[#00AA38] text-xs font-semibold px-4 py-2 rounded-full mb-4 uppercase tracking-wider border border-[#00CC44]/20">
+          <div className="inline-flex items-center gap-2 bg-[#29B5D4]/10 text-[#29B5D4] text-xs font-semibold px-4 py-2 rounded-full mb-4 uppercase tracking-wider border border-[#29B5D4]/20">
             Why Choose Us
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
@@ -80,18 +80,18 @@ export default function WhyOllaTrade() {
           {trustCards.map((card, i) => (
             <div
               key={card.title}
-              className="bg-[#F8FAFC] rounded-xl border border-gray-100 hover:border-[#00CC44]/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden group"
+              className="bg-[#F8FAFC] rounded-xl border border-gray-100 hover:border-[#29B5D4]/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden group"
             >
               {/* Top accent bar */}
-              <div className="h-0.5 bg-[#00CC44] w-0 group-hover:w-full transition-all duration-500" />
+              <div className="h-0.5 bg-[#29B5D4] w-0 group-hover:w-full transition-all duration-500" />
 
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#00CC44]/10 text-[#00CC44] flex items-center justify-center group-hover:bg-[#00CC44] group-hover:text-black transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#29B5D4]/10 text-[#29B5D4] flex items-center justify-center group-hover:bg-[#29B5D4] group-hover:text-white transition-colors duration-300">
                     {card.icon}
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-extrabold text-[#00CC44]">{card.stat}</div>
+                    <div className="text-2xl font-extrabold text-[#29B5D4]">{card.stat}</div>
                     <div className="text-xs text-gray-400 font-medium">{card.statLabel}</div>
                   </div>
                 </div>
@@ -111,8 +111,8 @@ export default function WhyOllaTrade() {
             </div>
             <div className="flex-shrink-0">
               <Link
-                href="https://direct.ollatrade.com/auth/register"
-                className="inline-flex items-center gap-2 bg-[#00CC44] hover:bg-[#00DD4A] text-black font-bold px-6 py-3 rounded-md text-sm transition-colors shadow-lg"
+                href="https://portal.ollatrade.com/auth/register"
+                className="inline-flex items-center gap-2 bg-[#29B5D4] hover:bg-[#1FA5C4] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors shadow-lg shadow-[#29B5D4]/20"
               >
                 Open Account
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
